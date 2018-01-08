@@ -1,10 +1,13 @@
 
-### BarcoS(eller) ###
+Barcoseller       | 
+------------|
+<img src="https://i.hizliresim.com/MdYrZM.png" width="800">  |
+# BarcoS(eller) #
 BarcoS(eller) is a simple Marketing and Selling desktop Application which has an barcode entegration with cool print options.
-# What's inside ? #
+## What's inside ? #
 I have used DevExpress 15.1 , Entity Framework , log4net logger and some cool clean codes with love and passion.
 
-## Export file options :
+### Export file options :
 * CSV
 * PDF
 * HTML
@@ -15,7 +18,7 @@ I have used DevExpress 15.1 , Entity Framework , log4net logger and some cool cl
 * CSV
 * TEXT FILE
 * IMAGE FILES
-## Features :
+### Features :
 * Currency Accaount's with risk limits and notifications.
 * Dynamic , Full Responsive UI with cool color gradiants.
 * Barcode writer tool , reader tool entegration.
@@ -33,7 +36,7 @@ FOLDER         | DESCRIPTION
 
 LOGIN        | 
 ------------|
-<img src="https://i.hizliresim.com/kW815r.png" width="800">  |
+<img src="https://i.hizliresim.com/8YnJO1.png" width="800">  |
 
 Products,Categories and Brands      | 
 ------------|
