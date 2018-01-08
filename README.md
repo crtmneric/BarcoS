@@ -1,7 +1,7 @@
 
 Barcoseller       | 
 ------------|
-<img src="https://i.hizliresim.com/MdYrZM.png" width="800">  |
+<img src="https://i.hizliresim.com/rOL74a.png" width="800">  |
 # BarcoS(eller) #
 BarcoS(eller) is a simple Marketing and Selling desktop Application which has an barcode entegration with cool print options.
 ## What's inside ? #
