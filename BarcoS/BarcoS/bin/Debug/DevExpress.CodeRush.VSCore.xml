@@ -1,0 +1,1429 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DevExpress.CodeRush.VSCore</name>
+    </assembly>
+    <members>
+        <member name="M:DevExpress.CodeRush.VSCore.Manager.VerifyState(DevExpress.CodeRush.VSCore.Manager.ManagerState)">
+            <summary>
+            Verifies that the current state of the VSCore manager is the same as the specified state. If
+            the states are different, an exception is raised.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.VSCore.Manager.LoadAndCreateObject(System.Reflection.AssemblyName,System.String)">
+            <summary>
+            Loads and creates an object from the specified assembly and type names.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.VSCore.Manager.CreateMenuManager">
+            <summary>
+            Creates a MenuManager object that is appropriate for the current version of Visual Studio.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.VSCore.Manager.CreateProjectManager">
+            <summary>
+            Creates a ProjectManager object that is appropriate for the current version of Visual Studio.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.VSCore.Manager.CreateSolutionManager">
+            <summary>
+            Creates a SolutionManager object that is appropriate for the current version of Visual Studio.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.VSCore.Manager.CreateVCProjectManager">
+            <summary>
+            Creates a VCProjectManager object that is appropriate for the current version of Visual Studio.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.VSCore.Manager.CreateWebProjectManager">
+            <summary>
+            Creates a WebProjectManager object that is appropriate for the current version of Visual Studio.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.VSCore.Manager.Initialize(System.Object)">
+            <summary>
+            Initializes the VSCore manager with the EnvDTE.DTE object for this instance of Visual
+            Studio .NET. This is called internally by the DXCore Package on SetSite
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.VSCore.Manager.BeginShutDown">
+            <summary>
+            This is called internally by the DXCore.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.VSCore.Manager.ShutDown">
+            <summary>
+            Shuts down the VSCore manager. This is called internally by the DXCore on shut down.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.VSCore.Manager.InvalidateMenuManager">
+            <summary>
+            Invalidates menu manager. This is called internally by the DXCore on Tools.ImportandExportSettings command.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.VSCore.Manager.InitializeDXCorePaths">
+            <summary>
+            Call oly from DXCore package
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.VSCore.Manager.ApplicationObject">
+            <summary>
+            Returns the EnvDTE.DTE object for this instance of Visual Studio .NET.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.VSCore.Manager.Initialized">
+            <summary>
+            Determines whether or not the Manager is initialized.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.VSCore.Manager.Menus">
+            <summary>
+            Returns the MenuManager to access the menu and toolbar system in Visual Studio.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.VSCore.Manager.Projects">
+            <summary>
+            Returns the ProjectManager to access projects in Visual Studio.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.VSCore.Manager.Solution">
+            <summary>
+            Returns the SolutionManager to access the solution in Visual Studio.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.VSCore.Manager.VCProject">
+            <summary>
+            Returns the VCProjectManager to access VisualC projects in Visual Studio.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.VSCore.Manager.WebProject">
+            <summary>
+            Returns the WebProjectManager to access web projects in Visual Studio.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.Menus.MenuObject">
+            <summary>
+            The ancestor of all DevExpress.CodeRush.Menus objects that are managed by a MenuManager instance.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuObject.Initialize">
+            <summary>
+            This must be called by the descendent's constructor to add itself to the MenuManager.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuContainer.Add(DevExpress.CodeRush.Menus.ControlType)">
+            <summary>
+            Creates and adds a IMenuControl of the specified type at the end of this container.
+            </summary>
+            <param name="type">The type of IMenuControl to add. Valid values are: Button, Edit, Dropdown, 
+            Combobox and Popup.</param>
+            <returns>The newly created IMenuControl.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuContainer.AddButton">
+            <summary>
+            Creates and adds a IMenuButton at the end of this container.
+            </summary>
+            <returns>The newly created IMenuButton.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuContainer.AddComboBox">
+            <summary>
+            Creates and adds a IMenuComboBox at the end of this container.
+            </summary>
+            <returns>The newly created IMenuComboBox.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuContainer.AddDropdown">
+            <summary>
+            Creates and adds a IMenuControl (of type Dropdown) at the end of this container.
+            </summary>
+            <returns>The newly created IMenuControl.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuContainer.AddEdit">
+            <summary>
+            Creates and adds a IMenuControl (of type Edit) at the end of this container.
+            </summary>
+            <returns>The newly created IMenuControl.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuContainer.AddPopup">
+            <summary>
+            Creates and adds a IMenuPopup at the end of this container.
+            </summary>
+            <returns>The newly created IMenuPopup.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuContainer.Find(DevExpress.CodeRush.Menus.ControlType,System.String,System.Boolean)">
+            <summary>
+            Searches this container for a specific IMenuControl.
+            </summary>
+            <param name="type">The ControlType of the IMenuControl to find.</param>
+            <param name="tag">The Tag value of the IMenuControl to find.</param>
+            <param name="recursive">If true, any containers found will also be searched.</param>
+            <returns>The first IMenuControl that matches. If no IMenuControl is found, null is returned.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuContainer.Find(DevExpress.CodeRush.Menus.ControlType,System.String)">
+            <summary>
+            Searches this container for a specific IMenuControl.
+            </summary>
+            <param name="type">The ControlType of the IMenuControl to find.</param>
+            <param name="tag">The Tag value of the IMenuControl to find.</param>
+            <returns>The first IMenuControl that matches. If no IMenuControl is found, null is returned.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuContainer.Find(DevExpress.CodeRush.Menus.ControlType,System.Boolean)">
+            <summary>
+            Searches this container for a specific IMenuControl.
+            </summary>
+            <param name="type">The ControlType of the IMenuControl to find.</param>
+            <param name="recursive">If true, any containers found will also be searched.</param>
+            <returns>The first IMenuControl that matches. If no IMenuControl is found, null is returned.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuContainer.Find(DevExpress.CodeRush.Menus.ControlType)">
+            <summary>
+            Searches this container for a specific IMenuControl.
+            </summary>
+            <param name="type">The ControlType of the IMenuControl to find.</param>
+            <returns>The first IMenuControl that matches. If no IMenuControl is found, null is returned.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuContainer.Find(System.String,System.Boolean)">
+            <summary>
+            Searches this container for a specific IMenuControl.
+            </summary>
+            <param name="tag">The Tag value of the IMenuControl to find.</param>
+            <param name="recursive">If true, any containers found will also be searched.</param>
+            <returns>The first IMenuControl that matches. If no IMenuControl is found, null is returned.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuContainer.Find(System.String)">
+            <summary>
+            Searches this container for a specific IMenuControl.
+            </summary>
+            <param name="tag">The Tag value of the IMenuControl to find.</param>
+            <returns>The first IMenuControl that matches. If no IMenuControl is found, null is returned.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuContainer.FindByCaption(DevExpress.CodeRush.Menus.ControlType,System.String,System.Boolean)">
+            <summary>
+            Searches this container for a specific IMenuControl by caption.
+            </summary>
+            <param name="type">The ControlType of the IMenuControl to find.</param>
+            <param name="caption">The caption of the IMenuControl to find.</param>
+            <param name="recursive">If true, any containers found will also be searched.</param>
+            <returns>The first IMenuControl that matches. If no IMenuControl is found, null is returned.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuContainer.FindByCaption(DevExpress.CodeRush.Menus.ControlType,System.String)">
+            <summary>
+            Searches this container for a specific IMenuControl by caption.
+            </summary>
+            <param name="type">The ControlType of the IMenuControl to find.</param>
+            <param name="caption">The caption of the IMenuControl to find.</param>
+            <returns>The first IMenuControl that matches. If no IMenuControl is found, null is returned.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuContainer.FindByCaption(System.String,System.Boolean)">
+            <summary>
+            Searches this container for a specific IMenuControl by caption.
+            </summary>
+            <param name="caption">The caption of the IMenuControl to find.</param>
+            <param name="recursive">If true, any containers found will also be searched.</param>
+            <returns>The first IMenuControl that matches. If no IMenuControl is found, null is returned.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuContainer.FindByCaption(System.String)">
+            <summary>
+            Searches this container for a specific IMenuControl by caption.
+            </summary>
+            <param name="caption">The caption of the IMenuControl to find.</param>
+            <returns>The first IMenuControl that matches. If no IMenuControl is found, null is returned.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuContainer.FindByCommandName(System.String)">
+            <summary>
+            Searches this container for a specific IMenuControl by associated command name.
+            </summary>
+            <param name="commandName">Name of command to find.</param>
+            <returns>The first IMenuControl that matches. If no IMenuControl is found, null is returned.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuContainer.Insert(System.Int32,DevExpress.CodeRush.Menus.ControlType)">
+            <summary>
+            Creates and inserts a IMenuControl of the specified type at the specified index.
+            </summary>
+            <param name="index">The position in this container where the MenuControl should be inserted.</param>
+            <param name="type">The type of IMenuControl to insert. Valid values are: Button, Edit, Dropdown, 
+            Combobox and Popup.</param>
+            <returns>The newly created IMenuControl.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuContainer.Remove(DevExpress.CodeRush.Menus.IMenuControl)">
+            <summary>
+            Removes the specified IMenuControl from this container.
+            </summary>
+            <param name="control">The specified IMenuControl to remove.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuContainer.RemoveAt(System.Int32)">
+            <summary>
+            Removes the IMenuControl at the specified index from this container.
+            </summary>
+            <param name="index">The position in this container of the IMenuControl to be removed.</param>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuContainer.Count">
+            <summary>
+            Returns the number of IMenuControls in this container.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuContainer.IsEmpty">
+            <summary>
+            Returns true if this container contains no IMenuControls.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuContainer.Item(System.Int32)">
+            <summary>
+            Returns the IMenuControl at the specified index in this container.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuBar.Delete">
+            <summary>
+            Removes this MenuBar from Visual Studio .NET.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuBar.Reset">
+            <summary>
+            Resets this MenuBar to its default configuration if it is a built-in Visual Studio .NET bar.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuBar.ShowPopup(System.Int32,System.Int32)">
+            <summary>
+            Displays this MenuBar as a context menu at the specified coordinates 
+            if its Position property is set to Popup.
+            </summary>
+            <param name="x">The x screen-coordinate to display the context menu.</param>
+            <param name="y">The y screen-coordinate to display the context menu.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuBar.ShowPopup">
+            <summary>
+            Displays this MenuBar as a context menu at the cursor if its Position 
+            property is set to Popup.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuBar.FindItemByActionName(DevExpress.CodeRush.Menus.MenuBar,System.String)">
+            <summary>
+            Gets the MenuControl inside this MenuBar corresponding to the specified Action name.
+            </summary>
+            <param name="menuBar">The MenuBar to search.</param>
+            <param name="actionName">The value assigned to the ActionName of the corresponding DXCore Action that the desired MenuControl was based upon.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuBar.AddButton">
+            <summary>
+            Creates and adds a IMenuButton at the end of this container.
+            </summary>
+            <returns>The newly created IMenuButton.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuBar.AddComboBox">
+            <summary>
+            Creates and adds a IMenuComboBox at the end of this container.
+            </summary>
+            <returns>The newly created IMenuComboBox.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuBar.AddDropdown">
+            <summary>
+            Creates and adds a IMenuControl (of type Dropdown) at the end of this container.
+            </summary>
+            <returns>The newly created IMenuControl.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuBar.AddEdit">
+            <summary>
+            Creates and adds a IMenuControl (of type Edit) at the end of this container.
+            </summary>
+            <returns>The newly created IMenuControl.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuBar.AddPopup">
+            <summary>
+            Creates and adds a IMenuPopup at the end of this container.
+            </summary>
+            <returns>The newly created IMenuPopup.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuBar.Find(DevExpress.CodeRush.Menus.ControlType,System.String)">
+            <summary>
+            Searches this container for a specific IMenuControl.
+            </summary>
+            <param name="type">The ControlType of the IMenuControl to find.</param>
+            <param name="tag">The Tag value of the IMenuControl to find.</param>
+            <returns>The first IMenuControl that matches. If no IMenuControl is found, null is returned.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuBar.Find(DevExpress.CodeRush.Menus.ControlType,System.Boolean)">
+            <summary>
+            Searches this container for a specific IMenuControl.
+            </summary>
+            <param name="type">The ControlType of the IMenuControl to find.</param>
+            <param name="recursive">If true, any containers found will also be searched.</param>
+            <returns>The first IMenuControl that matches. If no IMenuControl is found, null is returned.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuBar.Find(DevExpress.CodeRush.Menus.ControlType)">
+            <summary>
+            Searches this container for a specific IMenuControl.
+            </summary>
+            <param name="type">The ControlType of the IMenuControl to find.</param>
+            <returns>The first IMenuControl that matches. If no IMenuControl is found, null is returned.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuBar.Find(System.String,System.Boolean)">
+            <summary>
+            Searches this container for a specific IMenuControl.
+            </summary>
+            <param name="tag">The Tag value of the IMenuControl to find.</param>
+            <param name="recursive">If true, any containers found will also be searched.</param>
+            <returns>The first IMenuControl that matches. If no IMenuControl is found, null is returned.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuBar.Find(System.String)">
+            <summary>
+            Searches this container for a specific IMenuControl.
+            </summary>
+            <param name="tag">The Tag value of the IMenuControl to find.</param>
+            <returns>The first IMenuControl that matches. If no IMenuControl is found, null is returned.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuBar.FindByCaption(DevExpress.CodeRush.Menus.ControlType,System.String)">
+            <summary>
+            Searches this container for a specific IMenuControl by caption.
+            </summary>
+            <param name="type">The ControlType of the IMenuControl to find.</param>
+            <param name="caption">The caption of the IMenuControl to find.</param>
+            <returns>The first IMenuControl that matches. If no IMenuControl is found, null is returned.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuBar.FindByCaption(System.String,System.Boolean)">
+            <summary>
+            Searches this container for a specific IMenuControl by caption.
+            </summary>
+            <param name="caption">The caption of the IMenuControl to find.</param>
+            <param name="recursive">If true, any containers found will also be searched.</param>
+            <returns>The first IMenuControl that matches. If no IMenuControl is found, null is returned.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuBar.FindByCaption(System.String)">
+            <summary>
+            Searches this container for a specific IMenuControl by caption.
+            </summary>
+            <param name="caption">The caption of the IMenuControl to find.</param>
+            <returns>The first IMenuControl that matches. If no IMenuControl is found, null is returned.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuBar.Remove(DevExpress.CodeRush.Menus.IMenuControl)">
+            <summary>
+            Removes the specified IMenuControl from this container.
+            </summary>
+            <param name="control">The specified IMenuControl to remove.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuBar.FindByCommandName(System.String)">
+            <summary>
+            Searches this container for a specific IMenuControl.
+            </summary>
+            <param name="commandName">The name of command value of the IMenuControl to find.</param>
+            <returns>The first IMenuControl that matches. If no IMenuControl is found, null is returned.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuBar.FindByCommandId(System.Guid,System.UInt32)">
+            <summary>
+            Searches this container for a specific IMenuControl.
+            </summary>
+            <param name="commandGroup">Group command belongs to.</param>
+            <param name="commandId">Id of command.</param>
+            <returns>The first IMenuControl that matches. If no IMenuControl is found, null is returned.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuBar.Add(DevExpress.CodeRush.Menus.ControlType)">
+            <summary>
+            Creates and adds a IMenuControl of the specified type at the end of this container.
+            </summary>
+            <param name="type">The type of IMenuControl to add. Valid values are: Button, Edit, Dropdown, 
+            Combobox and Popup.</param>
+            <returns>The newly created IMenuControl.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuBar.Find(DevExpress.CodeRush.Menus.ControlType,System.String,System.Boolean)">
+            <summary>
+            Searches this container for a specific IMenuControl.
+            </summary>
+            <param name="type">The ControlType of the IMenuControl to find.</param>
+            <param name="tag">The Tag value of the IMenuControl to find.</param>
+            <param name="recursive">If true, any containers found will also be searched.</param>
+            <returns>The first IMenuControl that matches. If no IMenuControl is found, null is returned.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuBar.FindByCaption(DevExpress.CodeRush.Menus.ControlType,System.String,System.Boolean)">
+            <summary>
+            Searches this container for a specific IMenuControl by caption.
+            </summary>
+            <param name="type">The ControlType of the IMenuControl to find.</param>
+            <param name="caption">The caption of the IMenuControl to find.</param>
+            <param name="recursive">If true, any containers found will also be searched.</param>
+            <returns>The first IMenuControl that matches. If no IMenuControl is found, null is returned.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuBar.Insert(System.Int32,DevExpress.CodeRush.Menus.ControlType)">
+            <summary>
+            Creates and inserts a IMenuControl of the specified type at the specified index.
+            </summary>
+            <param name="index">The position in this container where the IMenuControl should be inserted.</param>
+            <param name="type">The type of IMenuControl to insert. Valid values are: Button, Edit, Dropdown, 
+            Combobox and Popup.</param>
+            <returns>The newly created IMenuControl.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuBar.RemoveAt(System.Int32)">
+            <summary>
+            Removes the IMenuControl at the specified index from this container.
+            </summary>
+            <param name="index">The position in this container of the IMenuControl to be removed.</param>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuBar.AdaptiveMenu">
+            <summary>
+            Gets or sets whether or not a personalized menu is enabled for this MenuBar.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuBar.BuiltIn">
+            <summary>
+            Returns true if this MenuBar is built into Visual Studio .NET; false if it is a custom MenuBar.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuBar.Context">
+            <summary>
+            Gets or sets a string that deterimines where the MenuBar will be saved.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuBar.Enabled">
+            <summary>
+            Gets or sets whether or not this MenuBar is enabled.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuBar.Height">
+            <summary>
+            Gets or sets the height of this menu bar.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuBar.ID">
+            <summary>
+            Returns the ID number of a built-in Visual Studio .NET bar.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuBar.Index">
+            <summary>
+            Returns the index of this MenuBar.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuBar.Left">
+            <summary>
+            Gets or sets the distance (in pixels) of this MenuBar from the left edge of the screen.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuBar.LocalizedName">
+            <summary>
+            Returns the name of this MenuBar specific to the language version of 
+            Visual Studio .NET it is running in.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuBar.Name">
+            <summary>
+            Gets or sets the name of this command bar.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuBar.Position">
+            <summary>
+            Gets or sets the position of this MenuBar.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuBar.Protection">
+            <summary>
+            Gets or sets the manner in which this MenuBar is protected from user customization.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuBar.RowIndex">
+            <summary>
+            Gets or sets the docking order or this MenuBar in relation to other bars in the docking area.
+            Valid values are: an integer greater than zero or the two constants, 
+            DevExpress.CodeRush.Menus.Constants.FirstBarRow and DevExpress.CodeRush.Menus.Constants.LastBarRow.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuBar.Top">
+            <summary>
+            Gets or sets the distance (in pixels) of this MenuBar from the top edge of the screen (if floating) or the
+            top edge of the docking area (if docked).
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuBar.Type">
+            <summary>
+            Returns the type of this MenuBar.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuBar.Visible">
+            <summary>
+            Gets or sets whether or not this MenuBar is visible.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuBar.Width">
+            <summary>
+            Gets or sets the width of this menu bar.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuBar.IsEmpty">
+            <summary>
+            Returns true if this container contains no IMenuControls.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuBar.Count">
+            <summary>
+            Returns the number of IMenuControls in this container.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuBar.Item(System.Int32)">
+            <summary>
+            Returns the IMenuControl at the specified index in this container.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuBarFinder.CommandBarFromId(DevExpress.CodeRush.Menus.CommandBarId)">
+            <summary>
+            Retrieves a Visual Studio CommandBar by its ID (GUID:ID pair).
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuBars.Add(System.String,DevExpress.CodeRush.Menus.BarPosition)">
+            <summary>
+            Creates a new MenuBar with the specified name and position.
+            </summary>
+            <param name="name">The name of the new MenuBar to create.</param>
+            <param name="position">The position to create the MenuBar in.</param>
+            <returns>The newly created MenuBar.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuBars.Add(System.String)">
+            <summary>
+            Creates a new MenuBar with the specified name.
+            </summary>
+            <param name="name">The name of the new MenuBar to create.</param>
+            <returns>The newly created MenuBar.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuBars.Add(System.String,System.Boolean)">
+            <summary>
+            Creates a new MenuBar with the specified name.
+            </summary>
+            <param name="name">The name of the new MenuBar to create.</param>
+            <param name="temprary">True to make the new command bar temporary.
+            Temporary command bars are deleted when the container application is closed.</param>
+            <returns>The newly created MenuBar.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuBars.Exists(System.String)">
+            <summary>
+            Determines if a MenuBar with the specified name exists.
+            </summary>
+            <param name="name">The name of the MenuBar to check.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuBars.ReleaseFocus">
+            <summary>
+            Releases focus from the Visual Studio .NET menus.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuBars.GetMenuBar(System.String)">
+            <summary>
+            Returns menu bar with the given name.
+            </summary>
+            <param name="name">The name of the menu bar to get.</param>
+            <returns>Returns menu bar with the given name.</returns>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuBars.Count">
+            <summary>
+            Returns the number of available MenuBars.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuBars.Item(System.Int32)">
+            <summary>
+            Returns a MenuBar by index.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuBars.Item(System.String)">
+            <summary>
+            Returns a MenuBar by name.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuBars.Item(DevExpress.CodeRush.Menus.VsCommonBar)">
+            <summary>
+            Returns a common Visual Studio .NET menu bar.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuControl.CopyTo(DevExpress.CodeRush.Menus.MenuBar,System.Int32)">
+            <summary>
+            Copies this MenuControl to the specified index in the specified MenuBar.
+            </summary>
+            <param name="bar">The MenuBar to copy this MenuControl to.</param>
+            <param name="index">The index in the specified MenuBar to copy this MenuControl to.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuControl.Copy(System.Int32)">
+            <summary>
+            Copies this MenuControl to the specified index in the MenuBar it is currently parented by.
+            </summary>
+            <param name="index">The index to copy this MenuControl to.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuControl.CopyToEnd(DevExpress.CodeRush.Menus.MenuBar)">
+            <summary>
+            Copies this MenuControl to the end of the specified MenuBar.
+            </summary>
+            <param name="bar">The MenuBar to copy this MenuControl to the end of.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuControl.CopyToEnd">
+            <summary>
+            Copies this MenuControl to the end of the MenuBar that it is currently parented by.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuControl.Delete">
+            <summary>
+            Deletes this MenuControl from the Visual Studio .NET toolbars.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuControl.Execute">
+            <summary>
+            Executes the command or macro assigned to this MenuControl.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuControl.MoveTo(DevExpress.CodeRush.Menus.MenuBar,System.Int32)">
+            <summary>
+            Moves this MenuControl to the specified index in the specified MenuBar.
+            </summary>
+            <param name="bar">The MenuBar to move this MenuControl to.</param>
+            <param name="index">The index in the specified MenuBar to move this MenuControl to.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuControl.MoveTo(System.Int32)">
+            <summary>
+            Moves this MenuControl to the specified index in the MenuBar it is currently parented by.
+            </summary>
+            <param name="index">The index to move this MenuControl to.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuControl.MoveToEnd(DevExpress.CodeRush.Menus.MenuBar)">
+            <summary>
+            Moves this MenuControl to the end of the specified MenuBar.
+            </summary>
+            <param name="bar">The MenuBar to move this MenuControl to the end of.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuControl.MoveToEnd">
+            <summary>
+            Moves this MenuControl to the end of the MenuBar that it is currently parented by.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuControl.Reset">
+            <summary>
+            Resets a built-in MenuControl to its original function and face. NOTE: Do not execute this method
+            on MenuControls that are *not* built-in to Visual Studio .NET.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuControl.SetFocus">
+            <summary>
+            Sets focus to this MenuControl.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuControl.BeginGroup">
+            <summary>
+            If true, this MenuControl starts a new group of MenuControls on its MenuBar parent. This places
+            a separator om the MenuBar parent before this MenuControl.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuControl.BuiltIn">
+            <summary>
+            Returns true if this MenuControl is a built-in Visual Studio .NET control that has *not* had its OnAction
+            property set. If it is a custom control or a built-in control with its OnAction property set, BuiltIn returns
+            false.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuControl.Caption">
+            <summary>
+            Gets or sets the caption of this MenuControl.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuControl.IsAlive">
+            <summary>
+            Gets value indicating whether underlying control is alive.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuControl.Command">
+            <summary>
+            Gets the EnvDTE.Command that this MenuControl is associated with.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuControl.DescriptionText">
+            <summary>
+            Gets or sets the description of this MenuControl.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuControl.Enabled">
+            <summary>
+            Gets or sets whether or not this MenuControl is enabled.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuControl.Height">
+            <summary>
+            Gets or sets the height of this MenuControl.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuControl.HelpContextID">
+            <summary>
+            Gets or sets the help context ID number fot the help topic associated with this MenuControl.
+            Use this in conjunction with the HelpFile property.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuControl.HelpFile">
+            <summary>
+            Gets or sets the file name of the help file associated with this MenuControl. Use this in
+            conjunction with the HelpContextID property.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuControl.ID">
+            <summary>
+            Returns the ID number of a built-in Visual Studio .NET control.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuControl.Index">
+            <summary>
+            Returns the index of this MenuControl in its parent container.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuControl.IsPriorityDropped">
+            <summary>
+            Returns true if this MenuControl is currently dropped from its parent container 
+            based on usage statistics and layout space.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuControl.OnAction">
+            <summary>
+            Retursn or sets the name of a macro that will execute when this MenuControl is clicked or changed.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuControl.Parameter">
+            <summary>
+            Gets or sets a string that is used when this MenuControl is executed.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuControl.Parent">
+            <summary>
+            Returns the MenuBar that this MenuControl is parented by.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuControl.Priority">
+            <summary>
+            Gets or sets a number (between 0 and 7) that determine whether this MenuControl can be dropped
+            from a MenuBar due to layout space. 1 means that the MenuControl cannot be dropped.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuControl.Tag">
+            <summary>
+            Gets a sets a general purpose string associated with this MenuControl.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuControl.TooltipText">
+            <summary>
+            Gets or sets the tooltip for this MenuControl. By default, the caption is used for the tooltip.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuControl.Type">
+            <summary>
+            Returns the ControlType of this MenuControl.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuControl.Visible">
+            <summary>
+            Gets or sets whether this MenuControl is visible.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuControl.Width">
+            <summary>
+            Gets or sets the width of this MenuControl.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuControl.Copy(System.Int32)">
+            <summary>
+            Copies this MenuControl to the specified index in the MenuBar it is currently parented by.
+            </summary>
+            <param name="index">The index to copy this MenuControl to.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuControl.CopyToEnd(DevExpress.CodeRush.Menus.MenuBar)">
+            <summary>
+            Copies this MenuControl to the end of the specified MenuBar.
+            </summary>
+            <param name="bar">The MenuBar to copy this MenuControl to the end of.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuControl.CopyToEnd">
+            <summary>
+            Copies this MenuControl to the end of the MenuBar that it is currently parented by.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuControl.Delete">
+            <summary>
+            Deletes this MenuControl from the Visual Studio .NET toolbars.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuControl.MoveTo(System.Int32)">
+            <summary>
+            Moves this MenuControl to the specified index in the MenuBar it is currently parented by.
+            </summary>
+            <param name="index">The index to move this MenuControl to.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuControl.MoveToEnd(DevExpress.CodeRush.Menus.MenuBar)">
+            <summary>
+            Moves this MenuControl to the end of the specified MenuBar.
+            </summary>
+            <param name="bar">The MenuBar to move this MenuControl to the end of.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuControl.MoveToEnd">
+            <summary>
+            Moves this MenuControl to the end of the MenuBar that it is currently parented by.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuControl.CopyTo(DevExpress.CodeRush.Menus.MenuBar,System.Int32)">
+            <summary>
+            Copies this MenuControl to the specified index in the specified MenuBar.
+            </summary>
+            <param name="bar">The MenuBar to copy this MenuControl to.</param>
+            <param name="index">The index in the specified MenuBar to copy this MenuControl to.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuControl.Execute">
+            <summary>
+            Executes the command or macro assigned to this MenuControl.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuControl.MoveTo(DevExpress.CodeRush.Menus.MenuBar,System.Int32)">
+            <summary>
+            Moves this MenuControl to the specified index in the specified MenuBar.
+            </summary>
+            <param name="bar">The MenuBar to move this MenuControl to.</param>
+            <param name="index">The index in the specified MenuBar to move this MenuControl to.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuControl.Reset">
+            <summary>
+            Resets a built-in MenuControl to its original function and face. NOTE: Do not execute this method
+            on MenuControls that are *not* built-in to Visual Studio .NET.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuControl.SetFocus">
+            <summary>
+            Sets focus to this MenuControl.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuControl.BeginGroup">
+            <summary>
+            If true, this MenuControl starts a new group of MenuControls on its MenuBar parent. This places
+            a separator om the MenuBar parent before this MenuControl.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuControl.BuiltIn">
+            <summary>
+            Returns true if this MenuControl is a built-in Visual Studio .NET control that has *not* had its OnAction
+            property set. If it is a custom control or a built-in control with its OnAction property set, BuiltIn returns
+            false.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuControl.Caption">
+            <summary>
+            Gets or sets the caption of this MenuControl.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuControl.Command">
+            <summary>
+            Gets the EnvDTE.Command that this MenuControl is associated with.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuControl.DescriptionText">
+            <summary>
+            Gets or sets the description of this MenuControl.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuControl.Enabled">
+            <summary>
+            Gets or sets whether or not this MenuControl is enabled.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuControl.Height">
+            <summary>
+            Gets or sets the height of this MenuControl.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuControl.HelpContextID">
+            <summary>
+            Gets or sets the help context ID number fot the help topic associated with this MenuControl.
+            Use this in conjunction with the HelpFile property.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuControl.HelpFile">
+            <summary>
+            Gets or sets the file name of the help file associated with this MenuControl. Use this in
+            conjunction with the HelpContextID property.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuControl.ID">
+            <summary>
+            Returns the ID number of a built-in Visual Studio .NET control.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuControl.Index">
+            <summary>
+            Returns the index of this MenuControl in its parent container.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuControl.IsPriorityDropped">
+            <summary>
+            Returns true if this MenuControl is currently dropped from its parent container 
+            based on usage statistics and layout space.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuControl.OnAction">
+            <summary>
+            Retursn or sets the name of a macro that will execute when this MenuControl is clicked or changed.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuControl.Parameter">
+            <summary>
+            Gets or sets a string that is used when this MenuControl is executed.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuControl.Parent">
+            <summary>
+            Returns the MenuBar that this MenuControl is parented by.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuControl.Priority">
+            <summary>
+            Gets or sets a number (between 0 and 7) that determine whether this MenuControl can be dropped
+            from a MenuBar due to layout space. 1 means that the MenuControl cannot be dropped.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuControl.Tag">
+            <summary>
+            Gets a sets a general purpose string associated with this MenuControl.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuControl.TooltipText">
+            <summary>
+            Gets or sets the tooltip for this MenuControl. By default, the caption is used for the tooltip.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuControl.Type">
+            <summary>
+            Returns the ControlType of this MenuControl.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuControl.Visible">
+            <summary>
+            Gets or sets whether this MenuControl is visible.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuControl.Width">
+            <summary>
+            Gets or sets the width of this MenuControl.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuButton.CopyFace">
+            <summary>
+            Copies this Button's face to the clipboard.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuButton.PasteFace">
+            <summary>
+            Pastes the contents of the clipbard onto this MenuButton.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuButton.ResetFace">
+            <summary>
+            Resets the face of this MenuButton to its original built-in face.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuButton.SetFace(System.Drawing.Bitmap)">
+            <summary>
+            Sets the face of this MenuButton to the specified System.Drawing.Bitmap.
+            </summary>
+            <param name="bmp">The System.Drawing.Bitmap to set the face to.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.IMenuButton.SetFace(System.Drawing.Bitmap,System.Drawing.Bitmap)">
+            <summary>
+            Sets the face and mask of this MenuButton to the specified System.Drawing.Bitmaps.
+            </summary>
+            <param name="bmp">The System.Drawing.Bitmap to set the face to.</param>
+            <param name="mask">The System.Drawing.Bitmap to set the mask to.</param>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuButton.BuiltInFace">
+            <summary>
+            Returns true if this MenuButton is displaying its original built-in face.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuButton.FaceID">
+            <summary>
+            Gets or sets the ID of the face used by this MenuButton.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuButton.ShortcutText">
+            <summary>
+            Gets or sets the shortcut key text that appears next to the MenuButton when it appears on a menu,
+            submenu or context menu.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuButton.State">
+            <summary>
+            Gets or sets the "checked" state of this MenuButton.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuButton.Style">
+            <summary>
+            Gets or sets the manner in which this MenuButton is displayed.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuButton.IsDown">
+            <summary>
+            Get or set menu button in down state
+            </summary>
+        </member>
+        <member name="E:DevExpress.CodeRush.Menus.IMenuButton.Click">
+            <summary>
+            Occurs when this MenuButton is clicked.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuComboBox.Count">
+            <summary>
+            Returns the number of items in this MenuComboBox.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuComboBox.DropDownLines">
+            <summary>
+            Gets or sets the number of lines in this MenuComboBox. NOTE: Only use this property if this
+            is a custom control and is of type ComboBox.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuComboBox.DropDownWidth">
+            <summary>
+            Gets or sets the width (in pixels) of the list for this MenuComboBox. NOTE: Only use this property 
+            if this is a custom control and is of type ComboBox.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuComboBox.HeaderCount">
+            <summary>
+            Gets or sets the number of list items that appear above the separator line. NOTE:
+            Do not set this property for built-in Visual Studio .NET controls.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.Menus.MenuManager">
+            <summary>
+            The MenuManager handles access to the Visual Studio .NET menus and toolbars.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuManager.ShutDown">
+            <summary>
+            Called immediately before this MenuManager is released to garbage collection.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuManager.Initialize(EnvDTE.DTE)">
+            <summary>
+            Called immediately after this MenuManager has been created to perform any initialization tasks.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuManager.ClearAll">
+            <summary>
+            Disposes all DevExpress.CodeRush.Core.MenuObject references and clears them from the manager.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuManager.CreateControl(System.Object)">
+            <summary>
+            Creates a MenuControl for the passed control object.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuManager.CreateControlForCommand(EnvDTE.Command,DevExpress.CodeRush.Menus.MenuBar,System.Int32)">
+            <summary>
+            Creates a MenuControl for an EnvDTE.Command. This is used instead of calling EnvDTE.Command.AddControl
+            to decouple control creation from the Visual Studio .NET menu and toolbar system.
+            </summary>
+            <param name="command">The EnvDTE.Command to create the control for.</param>
+            <param name="bar">The MenuBar that will parent the control.</param>
+            <param name="index">The index in the MenuBar at which the control will be created.</param>
+            <returns>The newly created MenuControl.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuManager.CreateControlForCommand(System.String,DevExpress.CodeRush.Menus.MenuBar,System.Int32)">
+            <summary>
+            Creates a MenuControl for registered VS command.
+            </summary>
+            <param name="commandName">Name of command to create the control for.</param>
+            <param name="bar">The MenuBar that will parent the control.</param>
+            <param name="index">The index in the MenuBar at which the control will be created.</param>
+            <returns>The newly created MenuControl.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuManager.GetBar(System.Object)">
+            <summary>
+            Gets a MenuBar for the passed bar object.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuManager.GetControl(System.Object)">
+            <summary>
+            Gets a MenuControl for the passed control object.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Menus.MenuManager.GetMenuBarFinder">
+            <summary>
+            Gets a helper object for finding MenuBars.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.MenuManager.Bars">
+            <summary>
+            Provides access to the various MenuBars in Visual Studio .NET.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Menus.IMenuPopup.Bar">
+            <summary>
+            Each MenuPopup has a MenuBar inside of it that holds its MenuControls. This property gives
+            access to that MenuBar.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Menus.VsCommonBar.MainMenu">
+            <summary>
+            The Visual Studio .NET main menu bar.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Menus.VsCommonBar.FileMenu">
+            <summary>
+            The Visual Studio .NET File menu.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Menus.VsCommonBar.EditMenu">
+            <summary>
+            The Visual Studio .NET Edit menu.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Menus.VsCommonBar.DebugMenu">
+            <summary>
+            The Visual Studio Debug menu.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Menus.VsCommonBar.ToolsMenu">
+            <summary>
+            The Visual Studio .NET Tools menu.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Menus.VsCommonBar.WindowMenu">
+            <summary>
+            The Visual Studio .NET Window menu.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Menus.VsCommonBar.HelpMenu">
+            <summary>
+            The Visual Studio .NET Help menu.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Menus.VsCommonBar.EditorContext">
+            <summary>
+            The context menu of the Visual Studio .NET code editor.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Menus.VsCommonBar.ProjectContext">
+            <summary>
+            The context menu for a Visual Studio .NET project.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Menus.VsCommonBar.SolutionContext">
+            <summary>
+            The context menu for a Visual Studio .NET solution.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Menus.VsCommonBar.DevExpress">
+            <summary>
+            The DevExpress menu.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Menus.VsCommonBar.ModulesWindowContext">
+            <summary>
+            The context menu of the DEBUG->Windows->Modules tool window.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.TextViews.TextViewManager.CreateTextView(Microsoft.VisualStudio.TextManager.Interop.IVsTextView)">
+            <summary>
+            Creates new TextView instance.
+            </summary>
+            <param name="view">IVsTextView implementer.</param>
+            <returns>New TextView instance.</returns>
+        </member>
+        <member name="M:DevExpress.DXCore.TextViews.TextViewManager.Start">
+            <summary>
+            Starts text view manager.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.TextViews.TextViewManager.Stop">
+            <summary>
+            Stops text view manager.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.TextViews.TextViewManager.ImeCompositionActive">
+            <summary>
+            Returns true if IME composition mode is active.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.VCProjectInfo.IVCProjectEngineEventsListener">
+            <summary>
+            Listens VC project engine specific events
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.VCProjectInfo.IVCProjectEngineEventsListener.ReferenceAdded(VSLangProj.Reference)">
+            <summary>
+            ReferenceAdded is called when new reference is added to the project.
+            </summary>
+            <param name="reference">The reference added.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.VCProjectInfo.IVCProjectEngineEventsListener.ReferenceRemoved(VSLangProj.Reference)">
+            <summary>
+            ReferenceRemoved is called when new reference is removed from the project.
+            </summary>
+            <param name="reference">The reference removed.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.VCProjectInfo.IVCProjectEngineEventsListener.ProjectItemAdded(EnvDTE.ProjectItem)">
+            <summary>
+            ProjectItemAdded is called when a new item was added to the project.
+            </summary>
+            <param name="projectItem">The item that was added.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.VCProjectInfo.IVCProjectEngineEventsListener.ProjectItemRemoved(EnvDTE.ProjectItem)">
+            <summary>
+            ProjectItemRemoved is called when the specified item was removed from the project.
+            </summary>
+            <param name="projectItem">The item to be removed.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.VCProjectInfo.IVCProjectEngineEventsListener.ProjectItemMoved(EnvDTE.ProjectItem)">
+            <summary>
+            ProjectItemMoved is called when the specified item was moved within the project.
+            </summary>
+            <param name="projectItem">The item moved.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.VCProjectInfo.IVCProjectEngineEventsListener.ProjectItemRenamed(EnvDTE.ProjectItem,System.String)">
+            <summary>
+            ProjectItemRenamed is called when the specified item in the project was renamed.
+            </summary>
+            <param name="projectItem">The item.</param>
+            <param name="oldName">The previous name.</param>
+        </member>
+        <member name="T:DevExpress.DXCore.VCProjectInfo.VCProjectInfo">
+            <summary>
+            Contains information about C++ project.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.VCProjectInfo.VCProjectInfo.#ctor(EnvDTE.Project)">
+            <summary>
+            Creates new instance of the VCProjectInfo class using the specified project.
+            </summary>
+            <param name="project">The project to use.</param>
+        </member>
+        <member name="P:DevExpress.DXCore.VCProjectInfo.VCProjectInfo.Project">
+            <summary>
+            Gets target project.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.VCProjectInfo.VCProjectInfo.PreprocessorDefinitions">
+            <summary>
+            Gets preprocessor definitions.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.VCProjectInfo.VCProjectInfo.IncludeDirectories">
+            <summary>
+            Gets include directories.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.VCProjectInfo.VCProjectInfo.AdditionalIncludeDirectories">
+            <summary>
+            Gets additional include directories.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.VCProjectInfo.VCProjectInfo.Files">
+            <summary>
+            Gets project files.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.VCProjectInfo.VCProjectInfo.PredefinedMacros">
+            <summary>
+            Gets table of predefined macro values.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.VCProjectInfo.VCProjectInfo.OutputFilePath">
+            <summary>
+            Gets project output file path.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.VCProjectInfo.VCProjectInfo.CompileAsNative">
+            <summary>
+            Gets a value indicating if project will be compiled as native application.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.VCProjectInfo.VCProjectInfo.CompileAsOldSyntax">
+            <summary>
+            Gets a value indicating if project will be compiled as old syntax code.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.VCProjectInfo.VCProjectInfo.CLRSupport">
+            <summary>
+            Gets a CLR support type for project.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.VCProjectInfo.VCProjectManager.HookEvents(DevExpress.DXCore.VCProjectInfo.IVCProjectEngineEventsListener)">
+            <summary>
+            Hooks VC specific events.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.VCProjectInfo.VCProjectManager.UnhookEvents">
+            <summary>
+            Unhooks VC specic events.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.VSCore.WarningDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.VSCore.WarningDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.WebProjectInfo.IWebSiteProjectEngineEventsListener.ReferenceAdded(DevExpress.DXCore.WebProjectInfo.WebSiteReferenceInfo)">
+            <summary>
+            ReferenceAdded is called when new reference is added to the project.
+            </summary>
+            <param name="reference">The reference added.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.WebProjectInfo.IWebSiteProjectEngineEventsListener.ReferenceRemoved(DevExpress.DXCore.WebProjectInfo.WebSiteReferenceInfo)">
+            <summary>
+            ReferenceRemoved is called when new reference is removed from the project.
+            </summary>
+            <param name="reference">The reference removed.</param>
+        </member>
+        <member name="T:DevExpress.DXCore.WebProjectInfo.WebProjectInfo">
+            <summary>
+            Contains information about web project.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.WebProjectInfo.WebProjectInfo.#ctor(EnvDTE.Project)">
+            <summary>
+            Creates new instance of the VCProjectInfo class using the specified project.
+            </summary>
+            <param name="project">The project to use.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.WebProjectInfo.WebProjectInfo.GetReferences">
+            <summary>
+            Gets assembly references for the project.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.WebProjectInfo.WebProjectInfo.GetAssemblyReferences">
+            <summary>
+            Gets assembly references for the project.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.WebProjectInfo.WebProjectInfo.Project">
+            <summary>
+            Gets target project.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.WebProjectInfo.WebProjectInfo.AssemblyReferences">
+            <summary>
+            Gets assembly references for the project.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.WebProjectInfo.WebSiteReferenceInfo.Project">
+            <summary>
+            Gets or sets reference project.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.WebProjectInfo.WebSiteReferenceInfo.ReferencedProject">
+            <summary>
+            Gets or sets referenced project.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.WebProjectInfo.WebSiteReferenceInfo.Name">
+            <summary>
+            Gets or sets reference name.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.WebProjectInfo.WebSiteReferenceInfo.FullPath">
+            <summary>
+            Gets or sets reference full path.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.WebProjectInfo.WebSiteReferenceInfo.StrongName">
+            <summary>
+            Gets or sets reference strong name.
+            </summary>
+        </member>
+    </members>
+</doc>

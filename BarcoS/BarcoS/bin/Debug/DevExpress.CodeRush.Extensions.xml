@@ -1,0 +1,565 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DevExpress.CodeRush.Extensions</name>
+    </assembly>
+    <members>
+        <member name="M:DevExpress.CodeRush.Extensions.CodeMetricProvider.IsLanguageSupported(System.String)">
+            <summary>
+            Determines whether the specific language is supported by this code metric provider.
+            </summary>
+            <param name="languageID">The language ID to check.</param>
+        </member>
+        <member name="E:DevExpress.CodeRush.Extensions.CodeMetricProvider.GetMetricComparer">
+            <summary>
+            Handle this optional event to provide comparer for the code metric provider.
+            The comparer should contain implementation dependent operations for 
+            the code metric provider.
+            </summary>
+        </member>
+        <member name="E:DevExpress.CodeRush.Extensions.CodeMetricProvider.LanguageSupported">
+            <summary>
+            Handle this optional event if you want to restrict your code metric provider to one or more programming languages. If you do not handle this event, the DXCore makes your code metric provider available in all programming languages.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Extensions.CodeMetricProvider.WarningValue">
+            <summary>
+            A threshold value indicating an excessively complex member when measured by 
+            this metric. This value is used for graphing member metrics.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Extensions.DefaultCodeMetricComparer.Provider">
+            <summary>
+            Gets code metric provider for this comparer.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Extensions.GetMetricValueEventArgs.LanguageElement">
+            <summary>
+            The LanguageElement to retrieve a metric value.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Extensions.GetMetricValueEventArgs.Value">
+            <summary>
+            Gets or sets the metric value of LanguageElement.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Extensions.ValidMetricEventArgs.LanguageElement">
+            <summary>
+            The LanguageElement to retrieve a metric value.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Extensions.GetMetricComparerEventArgs.Comparer">
+            <summary>
+            Gets or sets comparer for code metric provider.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.Extensions.ContextProvider">
+            <summary>
+            Summary description for ContentProvider.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Extensions.ContextProvider.Parameters">
+            <summary>
+            A collection of expected parameters for this context provider.
+            </summary>
+        </member>
+        <member name="E:DevExpress.CodeRush.Extensions.ContextProvider.LanguageSupported">
+            <summary>
+            Handle this optional event if you want to restrict your context to one or more programming languages. If you do not handle this event, the DXCore makes your context available in all programming languages.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.Extensions.DuplicateLineEventArgs">
+            <summary>
+            EventArgs for the GetDuplicateLine event.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Extensions.DuplicateLineEventArgs.Statement">
+            <summary>
+            The line to match.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Extensions.DuplicateLineEventArgs.Result">
+            <summary>
+            Set this property to the new duplicated line if your duplicate line extension is appropriate for the Statement.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Extensions.DuplicateLineEventArgs.Found">
+            <summary>
+            Set this property to true if your duplicate line extension is appropriate for the specified Statement.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Extensions.DuplicateLineEventArgs.ActionHintText">
+            <summary>
+            If your duplicate line extension is appropriate for the specified Statement, set this string property to the text that should appear in the Duplicate Line action hint.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.Extensions.DuplicateLineExtension">
+            <summary>
+            Summary description for DuplicateLineExtension.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Extensions.DuplicateLineExtension.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Extensions.DuplicateLineExtension.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Extensions.DuplicateLineExtension.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="E:DevExpress.CodeRush.Extensions.DynamicListProvider.LanguageSupported">
+            <summary>
+            Handle this optional event if you want to restrict your DynamicListProvider to one or more programming languages. If you do not handle this event, the DXCore makes your string provider available in all programming languages.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.Extensions.ExpressionDisplayFormatProvider">
+            <summary>
+            Allows to customize the way value of expression or variable is displayed in Debug Visualizer.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Extensions.ExpressionDisplayFormatProvider.IsAvailable(DevExpress.CodeRush.Core.RuntimeContext,System.String)">
+            <summary>
+            Gets the current availability of this provider.
+            </summary>
+            <param name="context">Context for which availability of provider is checked.</param>
+            <param name="displayText">Display text.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Extensions.ExpressionDisplayFormatProvider.FormatDisplayValue(DevExpress.CodeRush.Core.RuntimeContext,DevExpress.CodeRush.Core.FormattableString)">
+            <summary>
+            Formats display text for given value evaluated by debugger.
+            </summary>
+            <param name="context">Context for which format display text.</param>
+            <param name="formattedValue">Display text with formatting capabilities.</param>
+            <returns>Formatted text to display for particular value evaluated by debugger.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Extensions.ExpressionDisplayFormatProvider.OnLanguageSupported(DevExpress.CodeRush.Core.LanguageSupportedEventArgs)">
+            <summary>
+            Triggers the LanguageSupported event and returns a TriggerResult value to indicate whether the event succeeded or failed.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Extensions.ExpressionDisplayFormatProvider.OnCheckAvailability(DevExpress.CodeRush.Core.CheckExpressionPreviewAvailabilityEventArgs)">
+            <summary>
+            Triggers the CheckAvailability event and returns a TriggerResult value to indicate whether the event succeeded or failed.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Extensions.ExpressionDisplayFormatProvider.OnApply(DevExpress.CodeRush.Core.GetExpressionDisplayFormatEventArgs)">
+            <summary>
+            Triggers the Apply event and returns a TriggerResult value to indicate whether the event succeeded or failed.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Extensions.ExpressionDisplayFormatProvider.LogEventTriggerException(System.String,System.Exception)">
+            <summary>
+            Logs an exception raised during an event trigger.
+            </summary>
+            <param name="eventName">The name of the event that raised an exception.</param>
+            <param name="ex">The exception that was raised.</param>
+        </member>
+        <member name="E:DevExpress.CodeRush.Extensions.ExpressionDisplayFormatProvider.CheckAvailability">
+            <summary>
+            Occurs when the availability of this provider in the current context is being tested. 
+            Handle this event to indicate what conditions this provider is available or recommended
+            under.
+            </summary>
+        </member>
+        <member name="E:DevExpress.CodeRush.Extensions.ExpressionDisplayFormatProvider.Apply">
+            <summary>
+            Occurs when the provider needs to be applied. Handle this event to apply this provider
+            to the value evaluated by debugger. NOTE: This event will never fire if
+            the provider is not available so code that checks for provider availability is not
+            necessary in a handler for this event.
+            </summary>
+        </member>
+        <member name="E:DevExpress.CodeRush.Extensions.ExpressionDisplayFormatProvider.LanguageSupported">
+            <summary>
+            Handle this optional event if you want to restrict your provider to one or more 
+            programming languages. If you do not handle this event, your provider will be available 
+            in all programming languages.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.Extensions.ExpressionDisplayValueProvider">
+            <summary>
+            Allows to customize text displayed for expression or variable values in Debug Visualizer.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Extensions.ExpressionDisplayValueProvider.IsAvailable(DevExpress.CodeRush.Core.RuntimeContext)">
+            <summary>
+            Gets the current availability of this provider.
+            </summary>
+            <param name="context">Context for which availability of provider is checked.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Extensions.ExpressionDisplayValueProvider.GetDisplayValue(DevExpress.CodeRush.Core.RuntimeContext)">
+            <summary>
+            Gets value to display for given value evaluated by debugger.
+            </summary>
+            <param name="context">Context for which calculate display text.</param>
+            <returns>Text to display for particular value evaluated by debugger.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Extensions.ExpressionDisplayValueProvider.OnLanguageSupported(DevExpress.CodeRush.Core.LanguageSupportedEventArgs)">
+            <summary>
+            Triggers the LanguageSupported event and returns a TriggerResult value to indicate whether the event succeeded or failed.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Extensions.ExpressionDisplayValueProvider.OnCheckAvailability(DevExpress.CodeRush.Core.CheckExpressionPreviewAvailabilityEventArgs)">
+            <summary>
+            Triggers the CheckAvailability event and returns a TriggerResult value to indicate whether the event succeeded or failed.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Extensions.ExpressionDisplayValueProvider.OnApply(DevExpress.CodeRush.Core.GetExpressionDisplayValueEventArgs)">
+            <summary>
+            Triggers the Apply event and returns a TriggerResult value to indicate whether the event succeeded or failed.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Extensions.ExpressionDisplayValueProvider.LogEventTriggerException(System.String,System.Exception)">
+            <summary>
+            Logs an exception raised during an event trigger.
+            </summary>
+            <param name="eventName">The name of the event that raised an exception.</param>
+            <param name="ex">The exception that was raised.</param>
+        </member>
+        <member name="E:DevExpress.CodeRush.Extensions.ExpressionDisplayValueProvider.CheckAvailability">
+            <summary>
+            Occurs when the availability of this provider in the current context is being tested. 
+            Handle this event to indicate what conditions this provider is available or recommended
+            under.
+            </summary>
+        </member>
+        <member name="E:DevExpress.CodeRush.Extensions.ExpressionDisplayValueProvider.Apply">
+            <summary>
+            Occurs when the provider needs to be applied. Handle this event to apply this provider
+            to the value evaluated by debugger. NOTE: This event will never fire if
+            the provider is not available so code that checks for provider availability is not
+            necessary in a handler for this event.
+            </summary>
+        </member>
+        <member name="E:DevExpress.CodeRush.Extensions.ExpressionDisplayValueProvider.LanguageSupported">
+            <summary>
+            Handle this optional event if you want to restrict your provider to one or more 
+            programming languages. If you do not handle this event, your provider will be available 
+            in all programming languages.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Extensions.GetIntellassistSuggestionsEventArgs.ValueToMatch">
+            <summary>
+            This is the text that the user has entered at the cursor. Your Intellassist suggestions should all 
+            start with this text.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Extensions.GetIntellassistSuggestionsEventArgs.InComment">
+            <summary>
+            True if the caret is inside a comment.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Extensions.GetIntellassistSuggestionsEventArgs.InString">
+            <summary>
+            True if the caret is inside a string.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Extensions.GetIntellassistSuggestionsEventArgs.InMethod">
+            <summary>
+            True if the caret is inside a method or property.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Extensions.GetIntellassistSuggestionsEventArgs.InClass">
+            <summary>
+            True if the caret is inside a class, struct, or interface.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Extensions.GetIntellassistSuggestionsEventArgs.CaseSensitive">
+            <summary>
+            Determines whether the matches need to be case-sensitive. GetIntellassistSuggestions event handlers 
+            need to check this value and deliver matches accordingly.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Extensions.GetIntellassistSuggestionsEventArgs.TextToRight">
+            <summary>
+            Relevant characters to the right of the cursor.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Extensions.GetIntellassistSuggestionsEventArgs.TextToLeft">
+            <summary>
+            Relevant characters to the left of the cursor.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Extensions.GetIntellassistSuggestionsEventArgs.StandardPriorityList">
+            <summary>
+            Add your auto-fill suggestions to this list. If you have high-priority suggestions 
+            (e.g., suggestions with a very high probability of being accepted), use 
+            HighPriorityList instead.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Extensions.GetIntellassistSuggestionsEventArgs.HighPriorityList">
+            <summary>
+            Add any suggestions with a very high probability of being accepted to this list. 
+            Other suggestions should be added to StandardPriorityList.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Extensions.SuggestionAcceptedEventArgs.AcceptedSuggestion">
+            <summary>
+            Gets the suggestion that was accepted by the user.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Extensions.SuggestionAcceptedEventArgs.AcceptKey">
+            <summary>
+            Returns the key pressed by the user to accept this suggestion.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Extensions.IntellassistExtension.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Extensions.IntellassistExtension.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Extensions.IntellassistExtension.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Extensions.IntellassistExtension.OnGetSuggestions(DevExpress.CodeRush.Extensions.GetIntellassistSuggestionsEventArgs)">
+            <summary>
+            Triggers the GetSuggestions event.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Extensions.IntellassistExtension.OnSuggestionAccepted(DevExpress.CodeRush.Extensions.SuggestionAcceptedEventArgs)">
+            <summary>
+            Triggers the SuggestionAccepted event.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Extensions.IntellassistSuggestion.#ctor(System.String)">
+            <summary>
+            Creates an instance of a new IntellassistSuggestion object.
+            </summary>
+            <param name="text">The text for Intellassist.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Extensions.IntellassistSuggestion.#ctor(System.String,System.String)">
+            <summary>
+            Creates an instance of a new IntellassistSuggestion object.
+            </summary>
+            <param name="text">The text for Intellassist.</param>
+            <param name="hint">A hint describing the origin of the text.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Extensions.IntellassistSuggestion.#ctor(System.String,System.String,System.Int32)">
+            <summary>
+            Creates an instance of a new IntellassistSuggestion object.
+            </summary>
+            <param name="text">The text for Intellassist.</param>
+            <param name="hint">A hint describing the origin of the text.</param>
+            <param name="imageIndex">An image index into CodeRush.Resources.SourceModelImages.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Extensions.IntellassistSuggestion.#ctor(System.String,System.String,System.Int32,System.Object)">
+            <summary>
+            Creates an instance of a new IntellassistSuggestion object.
+            </summary>
+            <param name="text">The text for Intellassist.</param>
+            <param name="hint">A hint describing the origin of the text.</param>
+            <param name="imageIndex">An image index into CodeRush.Resources.SourceModelImages.</param>
+            <param name="customData">Custom data associated with this text. If this text is 
+            accepted, the custom data is made available to handlers of the IntellassistAccepted event.</param>
+        </member>
+        <member name="P:DevExpress.CodeRush.Extensions.IntellassistSuggestion.CustomData">
+            <summary>
+            Custom data associated with this text. If this text is 
+            accepted, the custom data is made available to handlers of the 
+            IntellassistAccepted event.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Extensions.IntellassistSuggestion.Hint">
+            <summary>
+            A hint for this text.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Extensions.IntellassistSuggestion.ImageIndex">
+            <summary>
+            An image index into CodeRush.Resources.SourceModelImages. 
+            If this text is coming from a LanguageElement, this field 
+            corresponds to the result of its GetImageIndex() method.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Extensions.IntellassistSuggestion.Owner">
+            <summary>
+            The Intellassist extension that originally supplied this text.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Extensions.IntellassistSuggestion.RepeatCount">
+            <summary>
+            The number of times this text has been repeated. This property returns zero 
+            if this text has only been repeated once. You can set this property inside your 
+            GetSuggestions event handler, and query it inside 
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Extensions.IntellassistSuggestion.Text">
+            <summary>
+            The suggested text.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Extensions.IntellassistSuggestionCollection.IndexOf(System.String)">
+            <summary>
+            Searches for the specified string and returns the zero-based index of the first 
+            occurrence within the IntellassistSuggestionCollection. This is a case-sensitive operation.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Extensions.IntellassistSuggestionCollection.Item(System.Int32)">
+            <summary>
+            Returns the text text associated with the indexed IntellassistSuggestion.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.Extensions.LanguageExtension">
+            <summary>
+            Summary description for LanguageExtension.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Extensions.LanguageExtension.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Extensions.LanguageExtension.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Extensions.LanguageExtension.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Extensions.SelectionInversionExtension.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Extensions.SelectionInversionExtension.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Extensions.SmartPasteExtension.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Extensions.SmartPasteExtension.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Extensions.SmartPasteExtension.Priority">
+            <summary>
+            Set this to specify the priority for this smart paste extension.
+            Priority defines the resolution order, independent of plugins load
+            order.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Extensions.SmartPasteExtension.DefaultPriority">
+            <summary>
+            Gets default priority for smart paste extensions.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Extensions.StateProvider.Activate">
+            <summary>
+            Activates the state. Makes context active.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Extensions.StateProvider.Deactivate">
+            <summary>
+            Deactivates the state. Remove this state from the StateStack
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Extensions.StateProvider.Suspend">
+            <summary>
+            Triggers Suspend event.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Extensions.StateProvider.Resume">
+            <summary>
+            Triggers Resume event.
+            </summary>
+        </member>
+        <member name="E:DevExpress.CodeRush.Extensions.StateProvider.LanguageSupported">
+            <summary>
+            Handle this optional event if you want to restrict your state provider to one or more programming languages. If you do not handle this event, your state provider will be available in all programming languages.
+            </summary>
+        </member>
+        <member name="E:DevExpress.CodeRush.Extensions.StateProvider.Activated">
+            <summary>
+            Handle this optional event if you want to make something on the activation of the state.
+            </summary>
+        </member>
+        <member name="E:DevExpress.CodeRush.Extensions.StateProvider.Deactivated">
+            <summary>
+            Handle this optional event if you want to make something on the deactivation of the state.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Extensions.StateProvider.StateContext">
+            <summary>
+            Gets context provider associated with this state.
+            </summary>
+        </member>
+        <member name="E:DevExpress.CodeRush.Extensions.StringProvider.LanguageSupported">
+            <summary>
+            Handle this optional event if you want to restrict your string provider to one or more programming languages. If you do not handle this event, the DXCore makes your string provider available in all programming languages.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.Extensions.TestProvider">
+            <summary>
+            TestProvider is a base class for all test providers.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Extensions.TestProvider.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Extensions.TestProvider.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.Extensions.TutorialContentEventArgs">
+            <summary>
+            Summary description for TutorialContentEventArgs.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Extensions.TutorialContentEventArgs.Params">
+            <summary>
+            Parameters passed to your tutorial provider.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Extensions.TutorialContentEventArgs.Result">
+            <summary>
+            Your tutorial provider should set this to the HTML content it produces.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.Extensions.TutorialContentProvider">
+            <summary>
+            Summary description for TutorialContentProvider.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.Extensions.TutorialPageProvider">
+            <summary>
+            Summary description for TutorialProvider.
+            </summary>
+            
+        </member>
+        <member name="E:DevExpress.CodeRush.Extensions.TypeInitializersProvider.LanguageSupported">
+            <summary>
+            Handle this optional event if you want to restrict your TypeInitializersProvider to one or more programming languages. If you do not handle this event, the DXCore makes your TypeInitializersProvider available in all programming languages.
+            </summary>
+        </member>
+    </members>
+</doc>

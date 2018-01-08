@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RnaModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="RnaModelStoreContainer">
+    <EntitySet Name="Banks" EntityType="RnaModel.Store.Banks" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Brands" EntityType="RnaModel.Store.Brands" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Companies" EntityType="RnaModel.Store.Companies" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Features" EntityType="RnaModel.Store.Features" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Products" EntityType="RnaModel.Store.Products" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Warehouses" EntityType="RnaModel.Store.Warehouses" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Banks">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="company_id" Type="int" />
+    <Property Name="bank_name" Type="int" />
+    <Property Name="auth_name" Type="nvarchar(max)" />
+    <Property Name="iban_number" Type="nvarchar(max)" />
+    <Property Name="pos" Type="int" />
+  </EntityType>
+  <EntityType Name="Brands">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="company_id" Type="int" />
+    <Property Name="name" Type="nvarchar(max)" />
+    <Property Name="sef" Type="nvarchar(max)" />
+    <Property Name="text" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Companies">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="tax_number" Type="nvarchar(max)" />
+    <Property Name="tax_office" Type="nvarchar(max)" />
+    <Property Name="phone" Type="int" />
+    <Property Name="adress" Type="nvarchar(max)" />
+    <Property Name="auth_name" Type="nvarchar(max)" />
+    <Property Name="auth_phone" Type="int" />
+    <Property Name="tax_rate" Type="int" />
+    <Property Name="tax_rate_is_inc" Type="int" />
+    <Property Name="sale_print" Type="int" />
+    <Property Name="barcode_paper_width" Type="nvarchar" MaxLength="50" />
+    <Property Name="barcode_paper_height" Type="nvarchar" MaxLength="50" />
+    <Property Name="sales_screen" Type="int" />
+    <Property Name="reg_date" Type="date" />
+    <Property Name="licence_end_date" Type="date" />
+  </EntityType>
+  <EntityType Name="Features">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="company_id" Type="int" />
+    <Property Name="name" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="company_id" Type="int" />
+    <Property Name="name" Type="nvarchar(max)" />
+    <Property Name="sef" Type="nvarchar(max)" />
+    <Property Name="stock_code" Type="nvarchar(max)" />
+    <Property Name="shelf_number" Type="nvarchar(max)" />
+    <Property Name="current" Type="int" />
+    <Property Name="text" Type="nvarchar(max)" />
+    <Property Name="stock" Type="decimal" Precision="10" Scale="4" />
+    <Property Name="brand_id" Type="int" />
+    <Property Name="category_id" Type="int" />
+    <Property Name="risk_limit" Type="decimal" Precision="10" Scale="4" />
+    <Property Name="barcode_number" Type="nvarchar(max)" />
+    <Property Name="purchase_price" Type="decimal" Precision="19" Scale="4" />
+    <Property Name="sale_price" Type="decimal" Precision="19" Scale="4" />
+    <Property Name="third_price" Type="decimal" Precision="19" Scale="4" />
+    <Property Name="features" Type="nvarchar(max)" />
+    <Property Name="product_İmage" Type="image" />
+    <Property Name="unit" Type="int" />
+    <Property Name="registertime" Type="date" />
+    <Property Name="updatetime" Type="date" />
+  </EntityType>
+  <EntityType Name="Warehouses">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="company_id" Type="int" />
+    <Property Name="name" Type="nvarchar(max)" />
+    <Property Name="auth_name" Type="nvarchar(max)" />
+    <Property Name="auth_phone" Type="nvarchar(max)" />
+    <Property Name="adress" Type="nvarchar(max)" />
+    <Property Name="reg_date" Type="date" />
+  </EntityType>
+</Schema>

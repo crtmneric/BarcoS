@@ -1,0 +1,1963 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DevExpress.CodeRush.PlugInCore</name>
+    </assembly>
+    <members>
+        <member name="M:DevExpress.CodeRush.PlugInCore.ActionHint.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.ActionHint.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.AnimationFrame.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.AnimationFrame.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.AnimationFrame.Start(DevExpress.CodeRush.Core.TextView,System.Int32,System.Int32)">
+            <summary>
+            Starts the animation.
+            </summary>
+            <param name="textView">The TextView for the window to animate over.</param>
+            <param name="line">The line for the window that will contain the animation.</param>
+            <param name="column">The column for the window that will contain the animation.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.AnimationFrame.Stop">
+            <summary>
+            Stops the animation.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.AnimationFrame.OnStarting">
+            <summary>
+            Triggers the Starting event.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.AnimationFrame.OnStopping">
+            <summary>
+            Triggers the Stopping event.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.AnimationFrame.OnProgress">
+            <summary>
+            Triggers the Progress event.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.AnimationFrame.Tick(System.Object,System.EventArgs)">
+            <summary>
+            Timer tick -- drives the animation.
+            </summary>
+        </member>
+        <member name="E:DevExpress.CodeRush.PlugInCore.AnimationFrame.Starting">
+            <summary>
+            Occurs before animation commences.
+            </summary>
+        </member>
+        <member name="E:DevExpress.CodeRush.PlugInCore.AnimationFrame.Stopping">
+            <summary>
+            Occurs when animation completes or is interrupted.
+            </summary>
+        </member>
+        <member name="E:DevExpress.CodeRush.PlugInCore.AnimationFrame.Progress">
+            <summary>
+            Occurs for each frame of animation when drawing a new frame.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.AnimationFrame.Duration">
+            <summary>
+            Animation duration, in milliseconds.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.AnimationFrame.IsActive">
+            <summary>
+            True if the animation is currently running.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.BlockHighlighter.IsHighLevel(DevExpress.CodeRush.StructuralParser.LanguageElement)">
+            <summary>
+            Returns true if this is a high-level language element, like a class, struct, etc.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.BlockHighlighter.SelectionBarStyle">
+            <summary>
+            Determines the thickness of the selection bars. Thick bars are two pixels wide. Thin bars are one pixel wide.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.BlockHighlighter.DrawSelectionBars">
+            <summary>
+            If true, the source range will have selection bars drawn at the upper left and bottom right corners of the selection.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.BlockHighlighter.OutlineRange">
+            <summary>
+            If true, the highlighted source range will also be outlined in a color that is 30% the transparency of LineColor.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.BlockHighlighter.FillRange">
+            <summary>
+            If true, the highlighted source range will also be "filled" with a 15% transparent overlay in LineColor.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.BlockHighlighter.IsSelection">
+            <summary>
+            If true, the highlighted source range will be painted as editor selection.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.BaseHintManager.#ctor">
+            <summary>
+            Creates a new instance of BaseHintManager
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.BaseHintManager.SelectedIndex">
+            <summary>
+            Gets the selected index of the refactoring menu associated with this this hint manager.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.BaseHintManager.MenuItemHeight">
+            <summary>
+            Gets the height of the selected refactoring menu item.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.BaseHintManager.MenuItemWidth">
+            <summary>
+            Gets the width of the selected refactoring menu item.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.BaseHintManager.MenuRect">
+            <summary>
+            Gets a rectangle representing the screen coordinates of the refactoring menu.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.BaseHintManager.SubMenuRect">
+            <summary>
+            Gets a rectangle representing the screen coordinates of the refactoring sub menu.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.BigHint.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.BigHint.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.BigHint.InitializeEvents">
+            <summary>
+            Starts watching for events to process stuck big hint
+            positioning.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.BigHint.FinalizeEvents">
+            <summary>
+            Starts watching for events.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.BigHint.StickToTextView(DevExpress.CodeRush.Core.MessageHintBase,DevExpress.CodeRush.Core.TextView,System.Int32,System.Int32,DevExpress.CodeRush.StructuralParser.SourceRange)">
+            <summary>
+            Sticks the given hint to the specified text view using passed line and offset.
+            The hint will be shown while caret is in the specified source range.
+            If caret will move out of the range, then the hint will be closed.
+            </summary>
+            <param name="hint">The hint to stick.</param>
+            <param name="view">The TextView to use.</param>
+            <param name="line">The line number where to stick the hint.</param>
+            <param name="offset">The offset number where to stick the hint.</param>
+            <param name="stickRange">The SourceRange that will be used to validate the hint.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.BigHint.StickToTextView(DevExpress.CodeRush.Core.MessageHintBase,DevExpress.CodeRush.Core.TextView,System.Int32,System.Int32)">
+            <summary>
+            Sticks the given hint to the specified text view using passed line and offset.
+            </summary>
+            <param name="hint">The hint to stick.</param>
+            <param name="view">The TextView to use.</param>
+            <param name="line">The line number where to stick the hint.</param>
+            <param name="offset">The offset number where to stick the hint.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.BigHint.StickToTextView(DevExpress.CodeRush.Core.MessageHintBase,DevExpress.CodeRush.Core.TextView,DevExpress.CodeRush.StructuralParser.SourcePoint)">
+            <summary>
+            Sticks the given hint to the specified text view using passed source point.
+            </summary>
+            <param name="hint">The hint to stick.</param>
+            <param name="view">The TextView to use.</param>
+            <param name="point">The SourcePoint where to stick the hint.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.BigHint.StickToTextView(DevExpress.CodeRush.Core.MessageHintBase,DevExpress.CodeRush.Core.TextView,DevExpress.CodeRush.StructuralParser.SourcePoint,DevExpress.CodeRush.StructuralParser.SourceRange)">
+            <summary>
+            Sticks the given hint to the specified text view at the given source point.
+            The hint will be shown while caret is in the specified source range.
+            If caret will move out of the range, then the hint will be closed.
+            </summary>
+            <param name="hint">The hint to stick.</param>
+            <param name="view">The TextView to use.</param>
+            <param name="point">The SourcePoint where to stick the hint.</param>
+            <param name="stickRange">The SourceRange that will be used to validate the hint.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.BigHint.StickToTextView(DevExpress.CodeRush.Core.TextView,System.Int32,System.Int32)">
+            <summary>
+            Creates a hint window and sticks it to the given text view.
+            </summary>
+            <param name="view">The TextView to use.</param>
+            <param name="line">The line number where to stick the hint.</param>
+            <param name="offset">The offset number where to stick the hint.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.BigHint.StickToTextView(DevExpress.CodeRush.Core.TextView,DevExpress.CodeRush.StructuralParser.SourcePoint)">
+            <summary>
+            Creates a hint window and sticks it to the given text view.
+            </summary>
+            <param name="view">The TextView to use.</param>
+            <param name="point">The SourcePoint where to stick the hint.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.BigHint.StickToTextView(DevExpress.CodeRush.Core.MessageHintBase,System.Int32,System.Int32)">
+            <summary>
+            Sticks the given hint to the active text view using passed line and offset.
+            </summary>
+            <param name="hint">The hint to stick.</param>
+            <param name="line">The line number where to stick the hint.</param>
+            <param name="offset">The offset number where to stick the hint.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.BigHint.StickToTextView(DevExpress.CodeRush.Core.MessageHintBase,DevExpress.CodeRush.StructuralParser.SourcePoint)">
+            <summary>
+            Sticks the given hint to the active text view using passed source point.
+            </summary>
+            <param name="hint">The hint to stick.</param>
+            <param name="point">The SourcePoint where to stick the hint.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.BigHint.StickToTextView(System.Int32,System.Int32)">
+            <summary>
+            Creates a hint window and sticks it to the active text view.
+            </summary>
+            <param name="line">The line number where to stick the hint.</param>
+            <param name="offset">The offset number where to stick the hint.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.BigHint.StickToTextView(DevExpress.CodeRush.StructuralParser.SourcePoint)">
+            <summary>
+            Creates a hint window and sticks it to the active text view.
+            </summary>
+            <param name="point">The SourcePoint where to stick the hint.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.BigHint.UnstickFromTextView">
+            <summary>
+            Removes all bingings to text view from this
+            big hint.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.BigHint.StickRange">
+            <summary>
+            Gets stick range that is source range which is used as
+            flag to hide this big hint when caret is moved out of the range.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.PlugInCore.DXCoreEvents.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.PlugInCore.DXCoreEvents.AddHandler(System.Object)">
+            <summary>
+            Used to keep an internal list of event handlers for this plug-in so that they can
+            be removed from the EventNexus when this DXCoreEvents instance is disposed. All events
+            in should call this method when a handler is added.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.PlugInCore.DXCoreEvents.RemoveHandler(System.Object)">
+            <summary>
+            Used to keep an internal list of event handlers for this plug-in so that they can
+            be removed from the EventNexus when this DXCoreEvents instance is disposed. All events
+            in should call this method when a handler is removed.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.BuildBegin">
+            <summary>
+            Occurs before the solution builds, before a batch build begins, or just 
+            before a project begins to build.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.BuildDone">
+            <summary>
+            Occurs after a solution build completes.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.ProjectBuildBegin">
+            <summary>
+            Occurs when a project configuration build begins.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.ProjectBuildDone">
+            <summary>
+            Occurs after a project configuration build completes.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.CommandExecuting">
+            <summary>
+            Occurs when a Visual Studio command is about to execute.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.CommandExecuted">
+            <summary>
+            Occurs when Visual Studio command has been executed.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.DebuggerContextChanged">
+            <summary>
+            Occurs whenever the current process, program, thread, or stack is changed.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.DebuggerEnterBreakMode">
+            <summary>
+            Occurs when the debugger enters break mode. This event is fired regardless 
+            of how break mode is established.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.DebuggerEnterDesignMode">
+            <summary>
+            Occurs when the debugger leaves run mode or debug mode. This event is fired 
+            whenever design mode is established after debugging.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.DebuggerEnterRunMode">
+            <summary>
+            Occurs when entering run mode. This event may not fire when stepping. It is 
+            typically best used when you are updating the user interface.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.DebuggerExceptionNotHandled">
+            <summary>
+            Thrown before OnEnterBreakMode.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.DebuggerExceptionThrown">
+            <summary>
+            Thrown before OnEnterBreakMode.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.WindowActivated">
+            <summary>
+            Occurs when a window or document receives focus.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.WindowClosing">
+            <summary>
+            Occurs when a window or document closes.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.WindowCreated">
+            <summary>
+            Occurs when a window is created or a document is opened.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.WindowMoved">
+            <summary>
+            Occurs when a window is moved.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.DocumentClosing">
+            <summary>
+            Occurs when a document is closing.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.DocumentOpened">
+            <summary>
+            Occurs when a document is opened.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.DocumentOpening">
+            <summary>
+            Occurs when a document is opening.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.DocumentSaved">
+            <summary>
+            Occurs when a document is saved.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.DocumentRenamed">
+            <summary>
+            Occurs when a document is renamed.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.DocumentActivated">
+            <summary>
+            Occurs when a document is activated.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.DocumentDeactivated">
+            <summary>
+            Occurs when a document is deactivated.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.TextDocumentActivated">
+            <summary>
+            Occurs when a document is activated.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.TextDocumentDeactivated">
+            <summary>
+            Occurs when a document is deactivated.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.DocumentLanguageChanged">
+            <summary>
+            Occurs when a document with a different source language is activated.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.DocumentExtensionChanged">
+            <summary>
+            Occurs when the file extension of a newly activated document is different from the 
+            file extension of the previously active document.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.DesignerDeactivated">
+            <summary>
+            Occurs when a designer is deactivated.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.DesignerActivated">
+            <summary>
+            Occurs when a designer is activated.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.ProjectSelectionChange">
+            <summary>
+            Occurs when a selection in the Solution Explorer changes. 
+            This event is also fired when project files are renamed.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.AfterClosingSolution">
+            <summary>
+            Occurs immediately after closing a solution.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.BeforeClosingSolution">
+            <summary>
+            Occurs immediately before closing a solution.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.SolutionOpened">
+            <summary>
+            Occurs immediately after opening a solution or project.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.ProjectAdded">
+            <summary>
+            Occurs immediately after adding a project to the solution.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.ProjectRemoved">
+            <summary>
+            Occurs immediately after removing a project from the solution.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.ProjectRenamed">
+            <summary>
+            Occurs immediately after renaming a project in the solution.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.QueryCloseSolution">
+            <summary>
+            Occurs before the BeforeClosingSolution event.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.SolutionRenamed">
+            <summary>
+            Occurs after renaming a solution.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.ModeChanged">
+            <summary>
+            Occurs when the IDE mode changes (e.g., from Design mode to Debug mode).
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.BeginShutdown">
+            <summary>
+            Occurs just before Visual Studio shuts down.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.MacrosRuntimeReset">
+            <summary>
+            Occurs when the macro runtime execution engine resets, clearing all 
+            global variable data and losing all event connections.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.StartupComplete">
+            <summary>
+            Occurs after the host application completes its startup routines, 
+            provided that both DXCore and your Add-in load at environment startup.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.FindDone">
+            <summary>
+            Occurs after a Find-in-files with a results list operation completes.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.MiscFileAdded">
+            <summary>
+            Occurs immediately after you open a file that is not contained inside of any open projects.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.MiscFileRemoved">
+            <summary>
+            Occurs immediately after you remove a file that is not contained inside of any open projects.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.MiscFileRenamed">
+            <summary>
+            Occurs immediately after you rename a file that is not contained inside of any open projects.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.ProjectItemAdded">
+            <summary>
+            Occurs immediately after you add an item to a project.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.ProjectItemRemoved">
+            <summary>
+            Occurs immediately after you remove an item from a project.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.ProjectItemRenamed">
+            <summary>
+            Occurs immediately after you rename an item in a project.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.SolutionItemAdded">
+            <summary>
+            Occurs immediately after you add a solution item to the solution.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.SolutionItemRemoved">
+            <summary>
+            Occurs immediately after you remove a solution item from the solution.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.SolutionItemRenamed">
+            <summary>
+            Occurs immediately after you rename a solution item in the solution.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.SolutionConfigurationChanged">
+            <summary>
+            Occurs after changing the solution configuration.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.OptionsChanged">
+            <summary>
+            Occurs when DXCore options have changed.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.BeforeParse">
+            <summary>
+            Occurs before DXCore is about to parse a file.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.AfterParse">
+            <summary>
+            Occurs after the DXCore parses a file.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.AfterPreprocessMacro">
+            <summary>
+            Occurs after the DXCore parses a file.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.FeatureInvoked">
+            <summary>
+            Occurs when a feature that displays an ActionHint is invoked.
+            This event will fire even if the ActionHint is disabled.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.EditorMouseDoubleClick">
+            <summary>
+            Occurs when the mouse double-clicks in the editor.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.EditorMouseEnter">
+            <summary>
+            Occurs when the mouse enters the editor.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.EditorMouseLeave">
+            <summary>
+            Occurs when the mouse leaves the editor.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.EditorMouseHover">
+            <summary>
+            Occurs when the mouse is hovering in the editor.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.EditorMouseDown">
+            <summary>
+            Occurs when the mouse is down in the editor.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.EditorMouseUp">
+            <summary>
+            Occurs when the mouse is up in the editor.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.EditorMouseMove">
+            <summary>
+            Occurs when the mouse is moved in the editor. This event only fires if the 
+            editor has focus. It will not fire if the VS menu system is active (e.g., 
+            the editor context menu is up or a VS 2005 smart tag is active).
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.EditorMouseWheel">
+            <summary>
+            Occurs when the mouse wheel is moved in the editor.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.EditorCharacterCancelled">
+            <summary>
+            Occurs when a character being typed in the editor has been cancelled by another plug-in.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.EditorCharacterTyping">
+            <summary>
+            Occurs when a character is being typed in the editor.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.EditorCharacterTyped">
+            <summary>
+            Occurs when a character is typed in the editor.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.EditorContextMenuShowing">
+            <summary>
+            Occurs when the context menu is about to be displayed in the editor.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.EditorFontChanged">
+            <summary>
+            Occurs when the user changes the editor font.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.EditorIdle">
+            <summary>
+            Occurs when the editor initially becomes idle, and is subsequently called at repeated 
+            intervals until the editor returns to an active state.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.EditorMappingChanged">
+            <summary>
+            Occurs when the Visual Studio remaps the lines visible in editor. This happens when a region is expanded or
+            collapsed, word wrapping is enabled or a file is opened in the editor.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.EditorPaintBackground">
+            <summary>
+            Occurs when the editor is painting, called before the EditorPaint event, used for low-priority 
+            screen adornments that can be overlapped by higher priority adornments.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.EditorPaint">
+            <summary>
+            Occurs when the editor is painting.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.EditorPaintLanguageElement">
+            <summary>
+            Occurs when the editor is painting, called once for each language element in the text view.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.EditorPaintString">
+            <summary>
+            Occurs when the editor is painting, called once for each string in the text view.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.EditorPaintComment">
+            <summary>
+            Occurs when the editor is painting, called once for each comment in the text view.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.EditorPaintXmlDocComment">
+            <summary>
+            Occurs when the editor is painting, called once for each XML Doc comment in the text view.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.EditorPaintForeground">
+            <summary>
+            Occurs when the editor is painting, called after the EditorPaint event, used for 
+            high-priority screen adornments that should not be obscurred by other adornments.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.EditorScrolled">
+            <summary>
+            Occurs when the editor is scrolled.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.EditorValidateClipRegion">
+            <summary>
+            Occurs before Visual Studio paints a TextView. If your plug-in paints 
+            entirely over an area of the view, you can handle this event to block 
+            out the area that will be painted. This will prevent Visual Studio 
+            from painting in areas you reserve.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.EditorValidateLanguageElementClipRegion">
+            <summary>
+            Occurs before Visual Studio paints a TextView, called once for each 
+            LanguageElement in view. If your plug-in paints entirely over an area 
+            of the view that corresponds to a LanguageElement, you can handle this 
+            event to block out the area that will be painted. This will prevent 
+            Visual Studio from painting in areas you reserve.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.IntellisenseActivated">
+            <summary>
+            Occurs when the intellisense is activated in the editor.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.IntellisenseDeactivated">
+            <summary>
+            Occurs when the intellisense is deactivated in the editor.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.TipWindowActivated">
+            <summary>
+            Occurs when the tip window is activated in the editor.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.TipWindowDeactivated">
+            <summary>
+            Occurs when the tip window is deactivated in the editor.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.TextChanged">
+            <summary>
+            Occurs when any text is changed in the editor.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.LineChangesCommitted">
+            <summary>
+            Occurs when line changes are committed (e.g., Enter key is pressed or the 
+            cursor moves away from the line that was modified).
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.TextViewActivated">
+            <summary>
+            Occurs when focus is set to a text view.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.TextViewDeactivated">
+            <summary>
+            Occurs when focus is removed from a text view.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.CaretMoved">
+            <summary>
+            Occurs when the line number or column changes in 
+            the active file. Also occurs when a file is activated.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.DocumentSetText">
+            <summary>
+            Occurs when the TextDocument.Set method is called, indicating code has been programmatically added, replaced, or deleted in the editor.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.SelectionChanged">
+            <summary>
+            Occurs when the selection changes in the active file. Also occurs when a file is activated.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.DecorateEditor">
+            <summary>
+            Occurs when the editor is being decorated.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.DecorateLanguageElement">
+            <summary>
+            Occurs when language elements are being decorated, called once for each language element in the text view.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.SmartTagShowing">
+            <summary>
+            Occurs when smart tag is about to be shown.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.SmartTagHiding">
+            <summary>
+            Occurs when smart tag is about to be hidden.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.SmartTagMenuHiding">
+            <summary>
+            Occurs when smart tag menu is about to be hidden.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.MarkerDropped">
+            <summary>
+            Occurs when a marker is dropped.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.MarkerCollected">
+            <summary>
+            Occurs when a marker is collected.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.ReferenceAdded">
+            <summary>
+            Occurs when a reference is added to a project.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.ReferenceChanged">
+            <summary>
+            Occurs when a project reference is changed.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.ReferenceRemoved">
+            <summary>
+            Occurs when a reference is removed from a project.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.ImportAdded">
+            <summary>
+            Occurs when an import is added to a project.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.ImportRemoved">
+            <summary>
+            Occurs when an import is removed from a project.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.LanguageElementActivated">
+            <summary>
+            Occurs when the caret moves into a different language element (e.g., try block, for-loop, method, property, class, etc.).
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.GetAvailableShortcuts">
+            <summary>
+            Occurs when a hinting or discoverability plug-in requests a list of available shortcuts for the current context. If you would like your plug-in to participate in this discoverability, handle this event and add the Actions that are available.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.PopupMemberMenu">
+            <summary>
+            Occurs when a member popup menu appears. Handlers may add custom menu items 
+            to participate on this special menu.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.KeyPressed">
+            <summary>
+            Occurs when a key is pressed in the IDE.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.VisualStudioActivated">
+            <summary>
+            Occurs immediately after Visual Studio .NET becomes active.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.VisualStudioDeactivated">
+            <summary>
+            Occurs immediately after Visual Studio .NET becomes inactive.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.ClipboardChanged">
+            <summary>
+            Occurs when data is cut or copied to the clipboard.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.UndoExecuting">
+            <summary>
+            Occurs immediately before undo is about to execute.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.UndoExecuted">
+            <summary>
+            Occurs after undo is executed.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.RedoExecuting">
+            <summary>
+            Occurs immediately before redo is about to execute.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.RedoExecuted">
+            <summary>
+            Occurs after redo is executed.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.LanguageOptionsChanged">
+            <summary>
+            Occurs immediately after the Visual Studio options for a language have changed.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.BeforeExecuteCommand">
+            <summary>
+            Occurs before an IDE command is executed.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.PlugInCore.DXCoreEvents.AfterExecuteCommand">
+            <summary>
+            Occurs after an IDE command is executed.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.PlugInCore.CustomDesignerButton">
+            <summary>
+            Summary description for CustomDesignerButton.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.CustomDesignerButton.OnClick(System.EventArgs)">
+            <summary>
+            Triggers the Click event.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.CustomDesignerButton.Section">
+            <summary>
+            The section (in the Designer Toolbar) where this button resides.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.CustomDesignerButton.ButtonName">
+            <summary>
+            The name of this button.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.CustomDesignerButton.Image">
+            <summary>
+            The image for this designer's activation button.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.CustomDesignerButtonCollection.OnClick(System.String,System.String)">
+            <summary>
+            Finds the specified button and triggers it's Click event.
+            </summary>
+            <param name="aSection">The button section.</param>
+            <param name="aName">The button name.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.CustomDesignerButtonCollection.GetImage(System.String,System.String)">
+            <summary>
+            Finds the specified button and triggers it's Click event.
+            </summary>
+            <param name="aSection">The button section.</param>
+            <param name="aName">The button name.</param>
+            <returns>The image for the custom button.</returns>
+        </member>
+        <member name="T:DevExpress.CodeRush.PlugInCore.DrawCellEventArgs">
+            <summary>
+            Summary description for DrawCellEventArgs.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.DrawCellEventArgs.Graphics">
+            <summary>
+            The graphics surface to draw your custom animation on. This surface is as big as the target 
+            rectangle. Upper-left coordinates are 0,0.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.DrawCellEventArgs.StopAnimation">
+            <summary>
+            Set to true in your event handler if animation is complete.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.PlugInCore.GdiTextHighlighter">
+            <summary>
+            Summary description for TextHighlighter.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiTextHighlighter.PaintFocused(DevExpress.CodeRush.Core.TextView,DevExpress.CodeRush.StructuralParser.SourceRange,System.Drawing.Color)">
+            <summary>
+            Draws focused TextHighlighter for the custom range.
+            </summary>
+            <param name="view">The TextView to paint</param>
+            <param name="range">The SourceRange to paint</param>
+            <param name="borderColor">The Color of border</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiTextHighlighter.PaintFocused(DevExpress.CodeRush.Core.TextView,DevExpress.CodeRush.StructuralParser.SourceRange,System.Drawing.Color,System.Int32,System.Int32)">
+            <summary>
+            Draws focused TextHighlighter for the custom range.
+            </summary>
+            <param name="view">The TextView to paint</param>
+            <param name="range">The SourceRange to paint</param>
+            <param name="borderColor">The Color of border</param>
+            <param name="inflateWidth">The amount to inflate highlighting horizontally</param>
+            <param name="inflateHeight">The amount to inflate highlighting vertically</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiTextHighlighter.PaintUnfocused(DevExpress.CodeRush.Core.TextView,DevExpress.CodeRush.StructuralParser.SourceRange,System.Drawing.Color,System.Drawing.Color)">
+            <summary>
+            Draws unfocused TextHighlighter for the custom range.
+            </summary>
+            <param name="view">The TextView to paint</param>
+            <param name="range">The SourceRange to paint</param>
+            <param name="borderColor">The Color of border</param>
+            <param name="fillColor">The Color of the filling</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiTextHighlighter.PaintUnfocused(DevExpress.CodeRush.Core.TextView,DevExpress.CodeRush.StructuralParser.SourceRange,System.Drawing.Color,System.Drawing.Color,System.Int32,System.Int32)">
+            <summary>
+            Draws unfocused TextHighlighter for the custom range.
+            </summary>
+            <param name="view">The TextView to paint</param>
+            <param name="range">The SourceRange to paint</param>
+            <param name="borderColor">The Color of border</param>
+            <param name="fillColor">The Color of the filling</param>
+            <param name="inflateWidth">The amount to inflate highlighting horizontally</param>
+            <param name="inflateHeight">The amount to inflate highlighting vertically</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiTextHighlighter.PaintFocused(System.Drawing.Graphics,System.Drawing.Rectangle,System.Drawing.Color)">
+            <summary>
+            Draws focused TextHighlighter for the custom range.
+            </summary>
+            <param name="gr">The Graphics to paint</param>
+            <param name="rect">The Rectangle to paint</param>
+            <param name="borderColor">The Color of border</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiTextHighlighter.PaintUnfocused(System.Drawing.Graphics,System.Drawing.Rectangle,System.Drawing.Color,System.Drawing.Color)">
+            <summary>
+            Draws focused TextHighlighter for the custom range.
+            </summary>
+            <param name="gr">The Graphics to paint</param>
+            <param name="rect">The Rectangle to paint</param>
+            <param name="borderColor">The Color of border</param>
+            <param name="fillColor">The Color of the filling</param>
+        </member>
+        <member name="T:DevExpress.CodeRush.PlugInCore.GdiAnimatedArrow">
+            <summary>
+            Animates an arrow across the code. Start method accepts source and target EditPoints.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.PlugInCore.GdiMovingAnimation">
+            <summary>
+            An AnimationFrame that can move across a Graphics.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiAnimationFrame.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiAnimationFrame.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiAnimationFrame.Start(DevExpress.CodeRush.Win32.HWND,System.Drawing.Rectangle)">
+            <summary>
+            Starts the animation.
+            </summary>
+            <param name="handle">The handle to the window to animate over.</param>
+            <param name="rectangle">The rectangle within the window that will contain the animation.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiAnimationFrame.Stop">
+            <summary>
+            Stops the animation.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiAnimationFrame.OnStarting">
+            <summary>
+            Triggers the Starting event.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiAnimationFrame.OnStopping">
+            <summary>
+            Triggers the Stopping event.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiAnimationFrame.OnDrawCell(System.Drawing.Graphics)">
+            <summary>
+            Draws a single cell in the animation. Returns false if the animation is complete.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiAnimationFrame.OnProgress">
+            <summary>
+            Triggers the Progress event.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiAnimationFrame.RefreshTarget">
+            <summary>
+            Invalidates and repaints the animated area on the target. No animation is drawn in this 
+            method. This method is called before animation starts (which gives the window a chance to 
+            draw any last-minute changes before acquiring a background image for the target window.
+            This method is also called at the end of the animation sequence to clear any final frames 
+            of the animation.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiAnimationFrame.AnimationComplete">
+            <summary>
+            Calculates PercentRemaining and returns false if animation frames remain, or true 
+            if we're out of time (e.g., animation time exceeds Duration).
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiAnimationFrame.EraseArea(System.Drawing.Rectangle)">
+            <summary>
+            Erases the specified area by copying from the background image onto the specified rectangle.
+            </summary>
+            <param name="area">The rectangle to erase.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiAnimationFrame.GetBackgroundImage(System.Drawing.Rectangle)">
+            <summary>
+            Gets a background image from the specified area.
+            </summary>
+            <param name="workArea"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiAnimationFrame.GetBackgroundImage">
+            <summary>
+            Gets the background bitmap to work with.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiAnimationFrame.GetDestinationRectangle">
+            <summary>
+            Gets the destination rectangle to draw a cell of animation to.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiAnimationFrame.PrepareToDrawSingleFrame">
+            <summary>
+            Called before committing changes for each cell of animation.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiAnimationFrame.DoPaint">
+            <summary>
+            Prepares a special Graphics object that contains a clean background to animate across. Calls DrawCell, 
+            passing that Graphics object as a parameter.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiAnimationFrame.Tick(System.Object,System.EventArgs)">
+            <summary>
+            Timer tick -- drives the animation.
+            </summary>
+        </member>
+        <member name="E:DevExpress.CodeRush.PlugInCore.GdiAnimationFrame.Starting">
+            <summary>
+            Occurs before animation commences.
+            </summary>
+        </member>
+        <member name="E:DevExpress.CodeRush.PlugInCore.GdiAnimationFrame.Stopping">
+            <summary>
+            Occurs when animation completes or is interrupted.
+            </summary>
+        </member>
+        <member name="E:DevExpress.CodeRush.PlugInCore.GdiAnimationFrame.DrawCell">
+            <summary>
+            Occurs for each frame of animation. Use the PercentRemaining property of the AnimationFrame to determine what to draw.
+            </summary>
+        </member>
+        <member name="E:DevExpress.CodeRush.PlugInCore.GdiAnimationFrame.DrawOutOfBounds">
+            <summary>
+            Occurs when painting occurs entirely outside the TargetRectangle and the client rectangle of the window we are animating in.
+            </summary>
+        </member>
+        <member name="E:DevExpress.CodeRush.PlugInCore.GdiAnimationFrame.Progress">
+            <summary>
+            Occurs for each frame of animation when the PecentRemaining property is changed.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.GdiAnimationFrame.TargetFrame">
+            <summary>
+            The target rectangle in the window where animation is rendered.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.GdiAnimationFrame.Duration">
+            <summary>
+            Animation duration, in milliseconds.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.GdiAnimationFrame.Center">
+            <summary>
+            The center of the target frame.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.GdiAnimationFrame.PercentRemaining">
+            <summary>
+            Calculated percentage (between 0 and 1) of the remaining animation. Based on Duration and 
+            the number of milliseconds that have passed since the animation started.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.GdiAnimationFrame.IsActive">
+            <summary>
+            True if the animation is currently running.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiMovingAnimation.OnDrawCell(System.Drawing.Graphics)">
+            <summary>
+            Calls EraseLastFrame() followed by base functionality (to trigger any event handlers).
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiMovingAnimation.GetAffectedRectangle">
+            <summary>
+            Returns a rectangle that encloses areas drawn in and erased in this animation cell.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiMovingAnimation.PrepareToDrawSingleFrame">
+            <summary>
+            Called by base class before committing changes for each cell of animation.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiMovingAnimation.EraseLastFrame">
+            <summary>
+            Erases the last part of the graphics that we drew in. 
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiMovingAnimation.Start(DevExpress.CodeRush.Win32.HWND,System.Drawing.Rectangle)">
+            <summary>
+            Starts the animation.
+            </summary>
+            <param name="handle">The HWND to draw on.</param>
+            <param name="rectangle">The rectangle that covers the entire animation.</param>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.GdiMovingAnimation.StopAnimationOnOutOfBounds">
+            <summary>
+            If true, animation will end when drawing happens completely out of bounds. If you set this property to true, make sure your animation doesn't start out of bounds (e.g., offscreen), or it will never be seen. You can also handle the DrawOutOfBounds event if you want to have greater control over when animation stops.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiAnimatedArrow.InitializeArrowColor">
+            <summary>
+            Initializes the colors for all pieces of the arrow.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiAnimatedArrow.InitializeArrowShapes(System.Drawing.SizeF)">
+            <summary>
+            Initializes the arrow shapes to fit inside the specified SizeF object.
+            </summary>
+            <param name="arrowSize">The SizeF object that specifies the width and height of this arrow.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiAnimatedArrow.Rotate(System.Single)">
+            <summary>
+            Rotates the arrow by the specified angle. Note that rotations are cumulative. Rotating twice by 45 degrees is 
+            equivalent to a single 90 degree rotation. Arrow initially points to the right, so rotating 270 degrees will
+            have it pointing straight up.
+            </summary>
+            <param name="angle">The angle to rotate by.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiAnimatedArrow.AngleFromPoints(System.Drawing.PointF,System.Drawing.PointF)">
+            <summary>
+            Returns the angle needed to rotate a line pointing right (on the horizontal) with the origin at source, so it intercects with target.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiAnimatedArrow.Start(DevExpress.CodeRush.Win32.HWND,System.Drawing.PointF,System.Drawing.PointF)">
+            <summary>
+            Starts the AnimatedArrow animation. Note: If you are animating over a TextView, you might want to use one of the other Start method overloads that accept a TextView.
+            </summary>
+            <param name="handle">HWND to the window we are animating in.</param>
+            <param name="source">The starting PointF of the animation.</param>
+            <param name="target">The ending PointF of the animation.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiAnimatedArrow.Start(DevExpress.CodeRush.Core.TextView,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Animates a moving arrow between the specified points in the code in the specified TextView.
+            </summary>
+            <param name="textView">The TextView to animate over.</param>
+            <param name="startLine">The line number of the starting point of the animation.</param>
+            <param name="startOffset">The character offset of the starting point of the animation.</param>
+            <param name="stopLine">The line number of the ending point of the animation.</param>
+            <param name="stopOffset">The character offset of the ending point of the animation.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiAnimatedArrow.Start(DevExpress.CodeRush.Core.TextView,EnvDTE.EditPoint,EnvDTE.EditPoint)">
+            <summary>
+            Starts the arrow-pointing animation, running from the specified start point to the stop point.
+            </summary>
+            <param name="textView">The view to animate in.</param>
+            <param name="start">The EditPoint that marks the start of the animation.</param>
+            <param name="stop">The EditPoint that marks the end of the animation.</param>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.GdiAnimatedArrow.BorderOpacity">
+            <summary>
+            The opacity of the arrow border. 255 is opaque; 0 is transparent.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.GdiAnimatedArrow.FillOpacity">
+            <summary>
+            The opacity of the arrow fill. 255 is opaque; 0 is transparent.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.GdiAnimatedArrow.BorderColor">
+            <summary>
+            The border color of the arrow.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.GdiAnimatedArrow.FillColor">
+            <summary>
+            The fill color of the arrow.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.GdiAnimatedArrow.PixelsPerSecond">
+            <summary>
+            Sets the arrow velocity in pixels per second. Must be between 10 and 3000. Default is 200.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiLocatorBeacon.OnDrawCell(System.Drawing.Graphics)">
+            <summary>
+            Draws a single cell in the animation. Returns false if the animation is complete.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.GdiLocatorBeacon.Color">
+            <summary>
+            The color of the locator beacon.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiCornerBeacon.CalculateBounds(System.Drawing.Point,System.Boolean,System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+            <summary>
+            Calculates the left, top, right, and bottom sides based on a given point and a boolean indicating whether that point is 
+            going to be visible on screen.
+            </summary>
+            <param name="point">The point in client coordinates.</param>
+            <param name="showingPoint">If false, this point is ignored and left, top, right, and bottom ref parameters are not changed.</param>
+            <param name="left">The left coordinate.</param>
+            <param name="top">The top coordinate.</param>
+            <param name="right">The right coordinate.</param>
+            <param name="bottom">The bottom coordinate.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiCornerBeacon.GetTargetRect">
+            <summary>
+            Gets the target rectangle needed to contain the points.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiCornerBeacon.OnDrawCell(System.Drawing.Graphics)">
+            <summary>
+            Draws a single cell in the animation. Returns false if the animation is complete.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiCornerBeacon.Start(DevExpress.CodeRush.Core.TextView,DevExpress.CodeRush.StructuralParser.SourcePoint,DevExpress.CodeRush.StructuralParser.SourcePoint,DevExpress.CodeRush.StructuralParser.SourcePoint,DevExpress.CodeRush.StructuralParser.SourcePoint)">
+            <summary>
+            Starts the CornerBeacon animation. CornerBeacons draw four corner locator beacons and are
+            useful for drawing attention to selections and rectangular areas of the screen.
+            </summary>
+            <param name="view">The TextView to draw on.</param>
+            <param name="upperLeft">A SourcePoint representing the upper left corner of the beacon.</param>
+            <param name="upperRight">A SourcePoint representing the upper right corner of the beacon.</param>
+            <param name="lowerRight">A SourcePoint representing the lower right corner of the beacon.</param>
+            <param name="lowerLeft">A SourcePoint representing the lower left corner of the beacon.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.GdiCornerBeacon.Start(DevExpress.CodeRush.Core.TextView,DevExpress.CodeRush.StructuralParser.SourcePoint,DevExpress.CodeRush.StructuralParser.SourcePoint,DevExpress.CodeRush.StructuralParser.SourcePoint,DevExpress.CodeRush.StructuralParser.SourcePoint,System.Int32)">
+            <summary>
+            Starts the CornerBeacon animation. CornerBeacons draw four corner locator beacons and are
+            useful for drawing attention to selections and rectangular areas of the screen.
+            </summary>
+            <param name="view">The TextView to draw on.</param>
+            <param name="upperLeft">A SourcePoint representing the upper left corner of the beacon.</param>
+            <param name="upperRight">A SourcePoint representing the upper right corner of the beacon.</param>
+            <param name="lowerRight">A SourcePoint representing the lower right corner of the beacon.</param>
+            <param name="lowerLeft">A SourcePoint representing the lower left corner of the beacon.</param>
+            <param name="distance">The distance out from the corners that the animation should start.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TargetPicker.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TargetPicker.OnDispose">
+            <summary>
+            Override to clean up of any sensitive resources when this picker is disposed.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TargetPicker.GetHintSourcePoint">
+            <summary>
+            Returns source point to show attached to the picker big hint.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TargetPicker.GetPickerStartSourcePoint">
+            <summary>
+            Returns start source point for the picker.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TargetPicker.StartWithPicker(DevExpress.CodeRush.Core.TextView,DevExpress.CodeRush.StructuralParser.LanguageElement)">
+            <summary>
+            Starts target picker. Target picker becomes visible.
+            </summary>
+            <param name="view">The text view to use.</param>
+            <param name="start">The start language element.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TargetPicker.StartSilent(DevExpress.CodeRush.Core.TextView,DevExpress.CodeRush.StructuralParser.LanguageElement,System.Boolean)">
+            <summary>
+            Starts target picker in silent mode. Silent mode means, that there 
+            will be no user interface provided and target picker will 
+            accept it's position immediately.
+            </summary>
+            <param name="view">The text view to use.</param>
+            <param name="start">The start language element.</param>
+            <param name="afterTarget">Set this to true to start after target.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TargetPicker.InitializeLocation(DevExpress.CodeRush.StructuralParser.LanguageElement)">
+            <summary>
+            Initializes target picker location with the given language element.
+            </summary>
+            <param name="start">The language element to start.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TargetPicker.Start(DevExpress.CodeRush.Core.TextView)">
+            <summary>
+            Starts picker at the given text view using active method or property as initial location.
+            </summary>
+            <param name="view">The TextView to use.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TargetPicker.Start(DevExpress.CodeRush.Core.TextView,System.Object)">
+            <summary>
+            Starts picker at the given text view using active method or property as initial location.
+            </summary>
+            <param name="view">The TextView to use.</param>
+            <param name="state">The state object.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TargetPicker.Start(DevExpress.CodeRush.Core.TextView,DevExpress.CodeRush.StructuralParser.LanguageElement)">
+            <summary>
+            Start picker at the given text view using passed LanguageElement as initial location.
+            </summary>
+            <param name="view">The text view to use.</param>
+            <param name="start">The start language element.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TargetPicker.Start(DevExpress.CodeRush.Core.TextView,DevExpress.CodeRush.StructuralParser.LanguageElement,System.Object)">
+            <summary>
+            Start picker at the given text view using passed LanguageElement as initial location.
+            </summary>
+            <param name="view">The text view to use.</param>
+            <param name="start">The start language element.</param>
+            <param name="state">The state object.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TargetPicker.Start(DevExpress.CodeRush.Core.TextView,DevExpress.CodeRush.StructuralParser.LanguageElement,DevExpress.CodeRush.PlugInCore.InsertCode)">
+            <summary>
+            Start picker at the given text view using passed LanguageElement as initial location.
+            </summary>
+            <param name="view">The text view to use.</param>
+            <param name="start">The start language element.</param>
+            <param name="insertAt">The option to specify the location of code insertion.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TargetPicker.Start(DevExpress.CodeRush.Core.TextView,DevExpress.CodeRush.StructuralParser.LanguageElement,DevExpress.CodeRush.PlugInCore.InsertCode,System.Object)">
+            <summary>
+            Start picker at the given text view using passed LanguageElement as initial location.
+            </summary>
+            <param name="view">The text view to use.</param>
+            <param name="start">The start language element.</param>
+            <param name="insertAt">The option to specify the location of code insertion.</param>
+            <param name="state">The state object.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TargetPicker.Start(DevExpress.CodeRush.Core.TextView,DevExpress.CodeRush.Core.TextView,DevExpress.CodeRush.StructuralParser.LanguageElement,DevExpress.CodeRush.PlugInCore.InsertCode,System.Object)">
+            <summary>
+            Start picker at the given text view using passed LanguageElement as initial location.
+            </summary>
+            <param name="initialView">The initial text view where the picker starts from. This view will be restored if the picker is cancelled.</param>
+            <param name="view">The text view to use.</param>
+            <param name="start">The start language element.</param>
+            <param name="insertAt">The option to specify the location of code insertion.</param>
+            <param name="state">The state object.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TargetPicker.OnTargetSelected(DevExpress.CodeRush.PlugInCore.TargetPickerLocation)">
+            <summary>
+            Triggers the TargetSelected event.
+            </summary>
+            <param name="location">The location of target picker.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TargetPicker.OnTargetSelected(DevExpress.CodeRush.PlugInCore.TargetPickerLocation,System.Object)">
+            <summary>
+            Triggers the TargetSelected event.
+            </summary>
+            <param name="location">The location of target picker.</param>
+            <param name="state">The state object.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TargetPicker.OnCanceled">
+            <summary>
+            Triggers the Cancel event.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TargetPicker.OnLocationChanged">
+            <summary>
+            Triggers the LocationChanged event.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.TargetPicker.AcceptOnAlphaChar">
+            <summary>
+            Set this property to true if the target picker location should be accepted by an alpha-numeric key.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.TargetPicker.InsertionPoint">
+            <summary>
+            Gets or sets insertion point, that is drawn on a text view.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.TargetPicker.Location">
+            <summary>
+            Gets the location of this target picker.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.TargetPicker.MinimumLength">
+            <summary>
+            Gets or sets the minimum number of chars that target picker could have.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.TargetPicker.ShowHint">
+            <summary>
+            Gets or sets flag that determines whether hint is shown.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.TargetPicker.Options">
+            <summary>
+            Gets or sets target picker options.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.TargetPicker.Code">
+            <summary>
+            Gets or sets inserting code that will be shown when picker is started.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.TargetPicker.CenterLocationAfterSelect">
+            <summary>
+            Should be set to true if target location must be centered after refactoring applied.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.TargetPicker.BigHint">
+            <summary>
+            Gets or sets BigHint that will be shown when picker is started.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.TargetPicker.ShortcutsHint">
+             <summary>
+             Gets or sets ShortcutsHint that will be shown when picker is started.
+             </summary>
+            
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.TargetPicker.LineColor">
+            <summary>
+            Gets or sets picker line color.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.TargetPicker.FillColor">
+            <summary>
+            Gets or sets picker fill color.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.TargetPicker.FillOpacity">
+            <summary>
+            Gets or sets picker fill opacity.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.TargetPicker.Appearance">
+            <summary>
+            Gets or sets target picker appearance options.
+            </summary>
+        </member>
+        <member name="E:DevExpress.CodeRush.PlugInCore.TargetPicker.TargetSelected">
+            <summary>
+            Occurs when a target location is selected (e.g., by pressing Enter).
+            </summary>
+        </member>
+        <member name="E:DevExpress.CodeRush.PlugInCore.TargetPicker.Canceled">
+            <summary>
+            Occurs when the target picker is canceled (e.g., by pressing Esc).
+            </summary>
+        </member>
+        <member name="E:DevExpress.CodeRush.PlugInCore.TargetPicker.LocationChanged">
+            <summary>
+            Occurs whenever the target picker location is moved.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.BlockTargetPicker.InitializeLocation(DevExpress.CodeRush.StructuralParser.LanguageElement)">
+            <summary>
+            Initializes target picker location with the given language element.
+            </summary>
+            <param name="start">The language element to start.</param>
+        </member>
+        <member name="E:DevExpress.CodeRush.PlugInCore.BlockTargetPicker.IterateElement">
+            <summary>
+            Handle this event if you want control motion of the picker.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TargetPickerLocation.AdjustExpansion(System.String)">
+            <summary>
+            Adjusts expansion for insertion.
+            </summary>
+            <param name="expansion">The expansion to adjust.</param>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.TargetPickerLocation.EditPoint">
+            <summary>
+            Gets edit point representing current picker location.
+            Note that ActiveStartPoint, ActiveEndPoint, InsertionPoint, StartInsertionPoint
+            and EndInsertionPoint may return invalid values due to code changes.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.TargetPickerLocation.SourcePoint">
+            <summary>
+            Gets source point representing current picker location.
+            Note that ActiveStartPoint, ActiveEndPoint, InsertionPoint, StartInsertionPoint
+            and EndInsertionPoint may return invalid values due to code changes.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.TargetPickerLocation.IsUnderActive">
+            <summary>
+            Gets or sets position of the target picker relative to the active
+            element.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.TargetPickerOptions.UseFullBlock">
+            <summary>
+            Gets or sets whether target picker should use full block coordinates.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.TargetPickerOptions.AllowSeparateLines">
+            <summary>
+            Gets or sets whether target picker could move on separate lines.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.PlugInCore.TargetSelectedEventHandler">
+            <summary>
+            Delegate for the TargetSelectedEvent event.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.PlugInCore.TargetSelectedEventArgs">
+            <summary>
+            Arguments for the TargetSelectedEvent event.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.TargetSelectedEventArgs.Location">
+            <summary>
+            Gets or sets picker location.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.TargetSelectedEventArgs.State">
+            <summary>
+            Gets or sets state object.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.ReorderSelector.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.ReorderSelector.Sign">
+            <summary>
+            Gets the object which draws the selelector on the active TextView.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.ReorderSelector.Appearance">
+            <summary>
+            Gets or sets the color of the selector.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.ReorderSelector.ShowArrows">
+            <summary>
+            Gets or sets the visibility of the selector position arrows.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.ReorderSelector.SelectorArrowType">
+            <summary>
+            Gets or sets the type of the selector arrows.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.ReorderSelector.SelectedRange">
+            <summary>
+            Gets the SourceRange of the current selector.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.ReorderSelector.SelectorPosition">
+            <summary>
+            Gets the position of the current selector.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.PlugInCore.SelectorMovedEventArgs">
+            <summary>
+            Arguments for the SelectorMovedEvent event.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.ChangeRepresentor.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.PlugInCore.HintProgressBar">
+            <summary>
+            Summary description for HintProgressBar.
+            </summary>	
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TextChangeControlPanel.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TextChangeSelector.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TextChangeSelector.FocusNext">
+            <summary>
+            Moves the focus to the next call.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TextChangeSelector.FocusPrevious">
+            <summary>
+            Moves the focus to the previous call.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TextChangeSelector.Accept">
+            <summary>
+            Accepts currently selected target.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TextChangeSelector.AcceptAll">
+            <summary>
+            Accepts all targets.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TextChangeSelector.Cancel">
+            <summary>
+            Cancels selector.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TextChangeSelector.Suspend">
+            <summary>
+            Suspends selector.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TextChangeSelector.Resume">
+            <summary>
+            Resumes selector.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TextChangeSelectorUI.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.Shape.Transform(System.Drawing.Drawing2D.Matrix)">
+            <summary>
+            Applies a transform matrix to this shape.
+            </summary>
+            <param name="matrix">A Matrix object that represents the transform to apply.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.Shape.Draw(System.Drawing.Graphics)">
+            <summary>
+            Draws this Shape on the specified graphics object.
+            </summary>
+            <param name="graphics">The Graphics object to draw on.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.Shape.GetBounds">
+            <summary>
+            Returns a rectangle that bounds this Shape.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.Shape.FillColor">
+            <summary>
+            Fill color of this Shape.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.Shape.BorderColor">
+            <summary>
+            Border color of this Shape.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.ShapeCollection.Transform(System.Drawing.Drawing2D.Matrix)">
+            <summary>
+            Applies a transform matrix to all Shapes in this collection.
+            </summary>
+            <param name="matrix">A Matrix object that represents the transform to apply.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.ShapeCollection.MoveTo(System.Single,System.Single)">
+            <summary>
+            Translates the shape so the origin -- point (0,0) in the original shape -- is now the position specified -- (x,y).
+            </summary>
+            <param name="x">The X-axis coordinate.</param>
+            <param name="y">The Y-axis coordinate.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.ShapeCollection.Draw(System.Drawing.Graphics)">
+            <summary>
+            Draws all Shapes in this collection on the specified graphics object.
+            </summary>
+            <param name="graphics">The Graphics object to draw on.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.ShapeCollection.GetBounds">
+            <summary>
+            Returns the bounding rectangle for the collection of shapes.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.ShapeCollection.GetSize">
+            <summary>
+            Returns a SizeF object that represents the size of all the Shapes in this collection.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.ShapeCollection.SetFillColor(System.Drawing.Color)">
+            <summary>
+            Sets the fill color of all shapes to the specified color.
+            </summary>
+            <param name="fillColor">The fill color.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.ShapeCollection.SetBorderColor(System.Drawing.Color)">
+            <summary>
+            Sets the border color of all shapes to the specified color.
+            </summary>
+            <param name="borderColor">The color for the border</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.ShapeCollection.SpreadBorderColor(System.Drawing.Color,System.Drawing.Color,System.Int32)">
+            <summary>
+            Sets the border color of all shapes to a gradual blend between startColor (assigned to the first shape in the 
+            collection) and stopColor (assigned to the last shape in the collection).
+            </summary>
+            <param name="startColor">The color for the first shape in the collection.</param>
+            <param name="stopColor">The color for the last shape in the collection.</param>
+            <param name="opacity">The opacity for all borders. 255 is opaque; 0 is transparent.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.ShapeCollection.SpreadBorderColor(System.Drawing.Color,System.Drawing.Color)">
+            <summary>
+            Sets the border color of all shapes to a gradual blend between startColor (assigned to the first shape in the 
+            collection) and stopColor (assigned to the last shape in the collection).
+            </summary>
+            <param name="startColor">The color for the first shape in the collection.</param>
+            <param name="stopColor">The color for the last shape in the collection.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.ShapeCollection.SpreadFillColor(System.Drawing.Color,System.Drawing.Color,System.Int32)">
+            <summary>
+            Sets the fill color of all shapes to a gradual blend between startColor (assigned to the first shape in the 
+            collection) and stopColor (assigned to the last shape in the collection).
+            </summary>
+            <param name="startColor">The fill color for the first shape in the collection.</param>
+            <param name="stopColor">The fill color for the last shape in the collection.</param>
+            <param name="opacity">The opacity for all fills. 255 is opaque; 0 is transparent.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.ShapeCollection.SpreadFillColor(System.Drawing.Color,System.Drawing.Color)">
+            <summary>
+            Sets the fill color of all shapes to a gradual blend between startColor (assigned to the first shape in the 
+            collection) and stopColor (assigned to the last shape in the collection).
+            </summary>
+            <param name="startColor">The fill color for the first shape in the collection.</param>
+            <param name="stopColor">The fill color for the last shape in the collection.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TestFixture.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.PlugInCore.TextHighlighter">
+            <summary>
+            Summary description for TextHighlighter.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TextHighlighter.PaintFocused(DevExpress.CodeRush.Core.TextView,DevExpress.CodeRush.StructuralParser.SourceRange,DevExpress.DXCore.Platform.Drawing.ColorProperty)">
+            <summary>
+            Draws focused TextHighlighter for the custom range.
+            </summary>
+            <param name="view">The TextView to paint</param>
+            <param name="range">The SourceRange to paint</param>
+            <param name="borderColor">The Color of border</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TextHighlighter.PaintFocused(DevExpress.CodeRush.Core.TextView,DevExpress.CodeRush.StructuralParser.SourceRange,DevExpress.DXCore.Platform.Drawing.ColorProperty,System.Int32,System.Int32)">
+            <summary>
+            Draws focused TextHighlighter for the custom range.
+            </summary>
+            <param name="view">The TextView to paint</param>
+            <param name="range">The SourceRange to paint</param>
+            <param name="borderColor">The Color of border</param>
+            <param name="inflateWidth">The amount to inflate highlighting horizontally</param>
+            <param name="inflateHeight">The amount to inflate highlighting vertically</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TextHighlighter.PaintUnfocused(DevExpress.CodeRush.Core.TextView,DevExpress.CodeRush.StructuralParser.SourceRange,DevExpress.DXCore.Platform.Drawing.ColorProperty,DevExpress.DXCore.Platform.Drawing.ColorProperty)">
+            <summary>
+            Draws unfocused TextHighlighter for the custom range.
+            </summary>
+            <param name="view">The TextView to paint</param>
+            <param name="range">The SourceRange to paint</param>
+            <param name="borderColor">The Color of border</param>
+            <param name="fillColor">The Color of the filling</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TextHighlighter.PaintUnfocused(DevExpress.CodeRush.Core.TextView,DevExpress.CodeRush.StructuralParser.SourceRange,DevExpress.DXCore.Platform.Drawing.ColorProperty,DevExpress.DXCore.Platform.Drawing.ColorProperty,System.Int32,System.Int32)">
+            <summary>
+            Draws unfocused TextHighlighter for the custom range.
+            </summary>
+            <param name="view">The TextView to paint</param>
+            <param name="range">The SourceRange to paint</param>
+            <param name="borderColor">The Color of border</param>
+            <param name="fillColor">The Color of the filling</param>
+            <param name="inflateWidth">The amount to inflate highlighting horizontally</param>
+            <param name="inflateHeight">The amount to inflate highlighting vertically</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TextHighlighter.PaintFocused(DevExpress.DXCore.Platform.Drawing.IDrawingSurface,DevExpress.DXCore.Platform.Drawing.Rect,DevExpress.DXCore.Platform.Drawing.ColorProperty)">
+            <summary>
+            Draws focused TextHighlighter for the custom range.
+            </summary>
+            <param name="context">The context to paint</param>
+            <param name="rect">The Rectangle to paint</param>
+            <param name="borderColor">The Color of border</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TextHighlighter.PaintFocused(DevExpress.DXCore.Platform.Drawing.IDrawingSurface,DevExpress.DXCore.Platform.Drawing.Rect,DevExpress.DXCore.Platform.Drawing.ColorProperty,System.Boolean)">
+            <summary>
+            Draws focused TextHighlighter for the custom range.
+            </summary>
+            <param name="context">The context to paint</param>
+            <param name="rect">The Rectangle to paint</param>
+            <param name="borderColor">The Color of border</param>
+            <param name="isCorrectRect">The rectangle to paint is correct</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TextHighlighter.PaintUnfocused(DevExpress.DXCore.Platform.Drawing.IDrawingSurface,DevExpress.DXCore.Platform.Drawing.Rect,DevExpress.DXCore.Platform.Drawing.ColorProperty,DevExpress.DXCore.Platform.Drawing.ColorProperty)">
+            <summary>
+            Draws focused TextHighlighter for the custom range.
+            </summary>
+            <param name="context">The context to paint</param>
+            <param name="rect">The Rectangle to paint</param>
+            <param name="borderColor">The Color of border</param>
+            <param name="fillColor">The Color of the filling</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.TextHighlighter.PaintUnfocused(DevExpress.DXCore.Platform.Drawing.IDrawingSurface,DevExpress.DXCore.Platform.Drawing.Rect,DevExpress.DXCore.Platform.Drawing.ColorProperty,DevExpress.DXCore.Platform.Drawing.ColorProperty,System.Boolean)">
+            <summary>
+            Draws focused TextHighlighter for the custom range.
+            </summary>
+            <param name="context">The context to paint</param>
+            <param name="rect">The Rectangle to paint</param>
+            <param name="borderColor">The Color of border</param>
+            <param name="fillColor">The Color of the filling</param>
+            /// <param name="isCorrectRect">The rectangle to paint is correct</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.PlugInCore.ToolWindowPlugIn.SetTabPicture(EnvDTE.Window)">
+            <summary>
+            Can be overridden to perform custom setting of the tab picture for this tool window.
+            </summary>
+            <param name="window">The EnvDTE.Window to call SetTabPicture on.</param>
+            <returns>Return true if the tab picture was set; otherwise, false.</returns>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.ToolWindowPlugIn.Title">
+            <summary>
+            The title/caption of your Tool Window. If you intend to update this dynamically,
+            we recommend that you do this in the form of "MyToolWindow - my additional information".
+            Visual Studio uses the title text for the tab (when your tool window is docked).
+            If the title includes the text " -", Visual Studio will use only the text before
+            the " -" for the tab (e.g., "MyToolWindow"). This allows you to change the Title without
+            changing the text of the tab when docked.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.ToolWindowPlugIn.Image">
+            <summary>
+            Load a 16x16 image, 16-bit depth, using only the standard 16 Windows colors (for compatibility with 
+            VS 2002 and VS 2003). The background (transparent) color should be RGB (0, 254, 0).
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.PlugInCore.ToolWindowPlugIn.IsAutoHides">
+            <summary>
+            Returns true if window auto hide mode is on.
+            </summary>
+        </member>
+        <member name="E:DevExpress.CodeRush.PlugInCore.ToolWindowPlugIn.WindowHide">
+            <summary>
+            Occurs when this tool window is hidden in Visual Studio.
+            </summary>
+        </member>
+        <member name="E:DevExpress.CodeRush.PlugInCore.ToolWindowPlugIn.WindowShow">
+            <summary>
+            Occurs when this tool window is shown in Visual Studio.
+            </summary>
+        </member>
+        <member name="E:DevExpress.CodeRush.PlugInCore.ToolWindowPlugIn.WindowClose">
+            <summary>
+            Occurs when this tool window is closed in Visual Studio.
+            </summary>
+        </member>
+        <member name="E:DevExpress.CodeRush.PlugInCore.ToolWindowPlugIn.ProcessArgs">
+            <summary>
+            Occurs when this tool window processes additional arguments..
+            </summary>
+        </member>
+    </members>
+</doc>

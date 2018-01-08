@@ -1,0 +1,3227 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DevExpress.CodeRush.Common</name>
+    </assembly>
+    <members>
+        <member name="M:DevExpress.CodeRush.Common.AssemblyManager.RegisterAssembly(System.Reflection.Assembly)">
+            <summary>
+            Registers a DXCore assembly. This method should not be called by plug-in developers. It
+            is used by the DXCore loader.
+            </summary>
+            <param name="assembly">The System.Reflection.Assembly to register.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.AssemblyManager.ResolveAssembly(System.String)">
+            <summary>
+            Resolves an assembly by its fully qualified name.
+            </summary>
+            <param name="name">The fully qualified name of the assembly.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.AssemblyManager.GetAssembly(System.String)">
+            <summary>
+            Returns a registered DXCore assembly by name.
+            </summary>
+            <param name="name">The name of the registered DXCore assembly.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.AssemblyManager.GetAssemblies(DevExpress.CodeRush.Common.DXCoreAssemblyType)">
+            <summary>
+            Returns an array of registered DXCore assemblies of the requested DXCoreAssemblyType.
+            </summary>
+            <param name="type">The DXCoreAssemblyType of the assemblies to return.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.AssemblyManager.CoreAssemblies">
+            <summary>
+            Returns an array of the registered DXCore assemblies.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.AssemblyManager.SystemPlugInAssemblies">
+            <summary>
+            Returns an array of the registered DXCore system plug-ins.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.AssemblyManager.PlugInAssemblies">
+            <summary>
+            Returns an array of the registered DXCore plug-ins (non-system).
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.VisualStudioVersionRestrictionAttribute.VersionAtLeast">
+            <summary>
+            Specifies the minimum version of Visual Studio that this plug-in is permitted to load in.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.VisualStudioVersionRestrictionAttribute.VersionAtMost">
+            <summary>
+            Specifies the maximum version of Visual Studio that this plug-in is permitted to load in.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.Common.Constants.Str.Language">
+            <summary>
+            Language-independent string constants.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Common.Constants.Str.Language.All">
+            <summary>
+            The common Language ID of all languages.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Common.Constants.Str.Language.CSharp">
+            <summary>
+            The Language ID of C# ("CSharp").
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Common.Constants.Str.Language.VisualBasic">
+            <summary>
+            The Language ID of Visual Basic ("Basic").
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Common.Constants.Str.Language.CPlusPlus">
+            <summary>
+            The Language ID of C++ ("C/C++").
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Common.Constants.Str.Language.CSS">
+            <summary>
+            The Language ID of CSS ("CSS").
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Common.Constants.Str.Language.HTML">
+            <summary>
+            The Language ID of HTML ("HTML").
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Common.Constants.Str.Language.XML">
+            <summary>
+            The Language ID of XML ("HTML/XML").
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Common.Constants.Str.Language.XMLOnly">
+            <summary>
+            The Language ID of XML ("XML").
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Common.Constants.Str.Language.XAML">
+            <summary>
+            The Language ID of XAML ("XAML").
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Common.Constants.Str.Language.JavaScript">
+            <summary>
+            The Language ID of JavaScript ("JavaScript").
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Common.Constants.Str.Language.IDL">
+            <summary>
+            The Language ID of IDL
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.Common.DisposableObject">
+            <summary>
+            Class that implements IDisposable.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.DisposableObject.Finalize">
+            <summary>
+            This is called when the object is garbage collected unless the 
+            Dispose() method is called.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.DisposableObject.Dispose(System.Boolean)">
+            <summary>
+            Override this method to dispose of data
+            </summary>
+            <param name="disposing">If true, this method is called because the object is being 
+            disposed with the Dispose() method. If false, the object is being disposed by the 
+            garbage collector.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.DisposableObject.Dispose">
+            <summary>
+            Call this method to dispose the object.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Diagnostics.ExceptionViewer.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Diagnostics.ExceptionViewer.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Diagnostics.ExceptionViewer.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Diagnostics.LogBase`1.SendExceptionSync(System.Exception)">
+            <summary>
+            Sends exeption to the message log.
+            </summary>
+            <param name="ex">The exception to log.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Diagnostics.LogBase`1.SendExceptionSync(System.String,System.Exception)">
+            <summary>
+            Sends exeption to the message log.
+            </summary>
+            <param name="message">The message to log.</param>
+            <param name="ex">The exception to log.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Diagnostics.LogBase`1.SendWin32Error">
+            <summary>
+            Sends an error message to this log object for the last Win32 error.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Diagnostics.LogBase`1.SendWin32Error(System.Boolean)">
+            <summary>
+            Sends an error message to this log object for the last Win32 error and optionally includes the
+            call stack.
+            </summary>
+            <param name="includeStack">If true, the call stack will be included as extra data to the message.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Diagnostics.LogBase`1.SendWin32Error(System.Int32)">
+            <summary>
+            Sends an error message to this log object for the specified Win32 error.
+            </summary>
+            <param name="code">The Win32 error to send.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Diagnostics.LogBase`1.SendWin32Error(System.Int32,System.Boolean)">
+            <summary>
+            Sends an error message to this log object for the specified Win32 error and optionally includes
+            the call stack.
+            </summary>
+            <param name="code">The Win32 error to send.</param>
+            <param name="includeStack">If true, the call stack will be included as extra data to the message.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Diagnostics.LogBase`1.GetExecutingPlugIn">
+            <summary>
+            Returns the of the most recent plug-in on the call stack.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Diagnostics.LogObject.SendExceptionSync(System.Exception)">
+            <summary>
+            Sends exeption to the message log.
+            </summary>
+            <param name="ex">The exception to log.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Diagnostics.LogObject.SendExceptionSync(System.String,System.Exception)">
+            <summary>
+            Sends exeption to the message log.
+            </summary>
+            <param name="message">The message to log.</param>
+            <param name="ex">The exception to log.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Diagnostics.LogObject.SendWin32Error">
+            <summary>
+            Sends an error message to this log object for the last Win32 error.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Diagnostics.LogObject.SendWin32Error(System.Boolean)">
+            <summary>
+            Sends an error message to this log object for the last Win32 error and optionally includes the
+            call stack.
+            </summary>
+            <param name="includeStack">If true, the call stack will be included as extra data to the message.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Diagnostics.LogObject.SendWin32Error(System.Int32)">
+            <summary>
+            Sends an error message to this log object for the specified Win32 error.
+            </summary>
+            <param name="code">The Win32 error to send.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Diagnostics.LogObject.SendWin32Error(System.Int32,System.Boolean)">
+            <summary>
+            Sends an error message to this log object for the specified Win32 error and optionally includes
+            the call stack.
+            </summary>
+            <param name="code">The Win32 error to send.</param>
+            <param name="includeStack">If true, the call stack will be included as extra data to the message.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Diagnostics.LogObject.GetExecutingPlugIn">
+            <summary>
+            Returns the of the most recent plug-in on the call stack.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Diagnostics.LogObject.GetTypeName(System.Type)">
+            <summary>
+            Helper function to return a good name for the given type.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Diagnostics.LogObject.GetTypeName(System.Object)">
+            <summary>
+            Helper function to return a good name for the given object.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Diagnostics.MasterLog.Disable">
+            <summary>
+            Disables logging.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Diagnostics.MasterLog.Enable">
+            <summary>
+            Enables logging.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Diagnostics.MasterLog.AddItem(DevExpress.CodeRush.Diagnostics.LogItem)">
+            <summary>
+            Adds new log item to this master log.
+            </summary>
+            <param name="item">The log item to add.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Diagnostics.MasterLog.IncreaseLevel">
+            <summary>
+            Increases logging level.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Diagnostics.MasterLog.DecreaseLevel">
+            <summary>
+            Decreases logging level.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:DevExpress.CodeRush.Diagnostics.MasterLog.LogToDisk">
+            <summary>
+            Gets or sets value determining if message log is written to disk.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Diagnostics.MasterLog.EnableLoggingMessages">
+            <summary>
+            Gets or sets value determining if logging messages is enabled.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Drawing.GraphicUtilities.GetSize(System.Drawing.Image,System.Drawing.GraphicsUnit)">
+            <summary>
+            Returns the size of a System.Drawing.Image in the specified System.Drawing.GraphicsUnit.
+            </summary>
+            <param name="img">The System.Drawing.Image to check.</param>
+            <param name="unit">The System.Drawing.GraphicsUnit to use when determining the size.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Drawing.GraphicUtilities.GetSize(System.Drawing.Image)">
+            <summary>
+            Returns the size of a System.Drawing.Image in pixels.
+            </summary>
+            <param name="img">The System.Drawing.Image to check.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Drawing.GraphicUtilities.IsImageIndexed(System.Drawing.Image)">
+            <summary>
+            Determines whether the colors in a System.Drawing.Image are indexed or not.
+            </summary>
+            <param name="img">The System.Drawing.Image to check.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Drawing.GraphicUtilities.ColorToString(System.Drawing.Color)">
+            <summary>
+            Converts a System.Drawing.Color into a string representation.
+            </summary>
+            <param name="value">The System.Drawing.Color to convert.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Drawing.GraphicUtilities.StringToColor(System.String)">
+            <summary>
+            Converts a string representation of a color into a System.Drawing.Color structure.
+            </summary>
+            <param name="value">The string to convert.</param>
+        </member>
+        <member name="T:DevExpress.CodeRush.Common.DXCoreAssembly">
+            <summary>
+            Represents an assembly loaded into the DXCore.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.DXCoreAssembly.IsDXCoreAssembly(System.Reflection.Assembly)">
+            <summary>
+            Determines whether or not the given assembly is a DXCore assembly.
+            </summary>
+            <param name="assembly">The System.Reflection.Assembly to check.</param>
+        </member>
+        <member name="T:DevExpress.CodeRush.Common.DXCorePaths">
+            <summary>
+            Encapsulates logic to determine DXCore paths. Plug-ins should not create 
+            instances of this. Instead, plug-ins should access CodeRush.Options.Paths. 
+            However, this can be instantiated by objects that need to discover DXCore paths 
+            without actually loading loading the DXCore (e.g., the plug-in creation wizards).
+            </summary>  
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.DXCorePaths.#ctor">
+            <summary>
+            Initializes a new instance of the DXCorePaths class.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.DXCorePaths.GetLogFilePath(System.String)">
+            <summary>
+            Gets log file path using the given base file name.
+            </summary>
+            <param name="baseFileName">The base file name to use.</param>
+            <returns>Log file path for the given base file name.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.DXCorePaths.PrepareLogFile(System.String)">
+            <summary>
+            Removes old log files with the given base file name.
+            </summary>
+            <param name="baseFileName">The base file name to use.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.DXCorePaths.ClearOverridePath">
+            <summary>
+            Clears the overide path if one has been set.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.DXCorePaths.GetSettingsReadPath(System.String)">
+            <summary>
+            Returns the appropriate path to read settings from the specified file name.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.DXCorePaths.GetSettingsWritePath(System.String)">
+            <summary>
+            Returns the appropriate path to write settings to for the specified file name.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.DXCorePaths.GetUserDefaultPath">
+            <summary>
+            Returns default path for user settings.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.DXCorePaths.SetUserPath(System.String)">
+            <summary>
+            Sets the path for reading and writing user data.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.DXCorePaths.UpdateUserPath(System.String)">
+            <summary>
+            Sets the user path for settings, log and chache files.
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.DXCorePaths.SetCommunityPath(System.String)">
+            <summary>
+            Sets the path for community plugins
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.DXCorePaths.GetCommunityPath">
+            <summary>
+            Returns the path of the community plugins directory if corresponding registry kay contains it.
+            Attention! It's value may be changed during seance!
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.DXCorePaths.InstallPath">
+            <summary>
+            Returns the path that DXCore is installed to.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.DXCorePaths.RegistryRoot">
+            <summary>
+            Returns the path of the DXCore registry root. Note that this may be located in either
+            the HKEY_CURRENT_USER or the HKEY_LOCAL_MACHINE registry hives.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.DXCorePaths.SettingsInstallPath">
+            <summary>
+            Returns the path where DXCore settings are installed to.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.DXCorePaths.SettingsOverrideExists">
+            <summary>
+            Returns true if an override path for DXCore settings has been set.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.DXCorePaths.SettingsOverridePath">
+            <summary>
+            Returns or sets an override path for DXCore settings. Note: Plug-ins 
+            should not use this.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.DXCorePaths.SettingsPreferredPath">
+            <summary>
+            Returns the preferred path for reading and storing Settings.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.DXCorePaths.UserOverridePath">
+            <summary>
+            Gets the storage folder path for user settings, log and cache files.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.DXCorePaths.UserPath">
+            <summary>
+            Returns the path for reading and writing user data.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.DXCorePaths.LogPath">
+            <summary>
+            Returns the root path for the log files.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.DXCorePaths.CacheStorageRoot">
+            <summary>
+            Returns the root path for cache storages.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.DXCorePaths.CommunitySystemPath">
+            <summary>
+            Returns the path of the community system plugins directory.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.DXCorePaths.CommunityPlugInsPath">
+            <summary>
+            Returns the path of the community plugins directory.
+            Attention! It's value may be changed during seance!
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.DXCorePaths.CommunityPath">
+            <summary>
+            Returns the path of the community directory.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.DXCorePaths.SeanceCommunityPlugInsPath">
+            <summary>
+            Returns the path of the community plugins directory, which is used in current seance. 
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.DXCorePaths.SeanceCommunitySystemPath">
+            <summary>
+            Returns the path of the community system plugins directory, which is used in current seance. 
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.DXCorePaths.PlugInsPath">
+            <summary>
+            Returns the path of the DXCore plug-ins directory.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.DXCorePaths.SystemPlugInsPath">
+            <summary>
+            Returns the path of the DXCore system plug-ins directory.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.DXInfoProvider.OldRegistryRoot">
+            <summary>
+            Returns the path of the "old" DXCore registry root (1.1). Note that this may be located in either
+            the HKEY_CURRENT_USER or the HKEY_LOCAL_MACHINE registry hives.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.DXInfoProvider.RegistryRoot">
+            <summary>
+            Returns the path of the DXCore registry root. Note that this may be located in either
+            the HKEY_CURRENT_USER or the HKEY_LOCAL_MACHINE registry hives.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.Common.DXCoreProduct">
+            <summary>
+            Represents a product built on the DXCore.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.DXCoreProduct.Expires">
+            <summary>
+            Returns true if this product expires.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.DXCoreProduct.StartDate">
+            <summary>
+            Returns the starting date of this product's operating window if it expires.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.DXCoreProduct.ExpirationDate">
+            <summary>
+            Returns the expiration date of this product's operating window if it expires.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.Common.DXCoreProductComparer">
+            <summary>
+            Compares two DXCoreProducts.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.Common.ProductModule">
+            <summary>
+            ProductModules are used to describe products (collections of plug-ins) that the DXCore is aware of.
+            To use, add an assembly-level CodeRushProductAttribute passing the type of a ProductModule
+            descendent. DXCore will automatically create the ProductModule and use it to gather information
+            when necessary.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ProductModule.BuildDefenition">
+            <summary>
+            Builds product module definition.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ProductModule.BuildDefinition">
+            <summary>
+            Builds product module definition.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ProductModule.GetPlugIn(System.String)">
+            <summary>
+            Returns plugin with the specified name.
+            </summary>
+            <param name="name">The name of the plugin to get.</param>
+            <returns>Returns plugin with the specified name.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ProductModule.GetRestrictedFeature(System.String)">
+            <summary>
+            Returns restrictes feature with the specified name.
+            </summary>
+            <param name="name">The name of the feature to get.</param>
+            <returns>Returns feature with the specified name.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ProductModule.GetExtendedFeature(System.String)">
+            <summary>
+            Returns extended feature with the specified name.
+            </summary>
+            <param name="name">The name of the feature to get.</param>
+            <returns>Returns feature with the specified name.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ProductModule.HasPriority(DevExpress.CodeRush.Common.ProductModule)">
+            <summary>
+            Checks if this module has priority over
+            the given one.
+            </summary>
+            <param name="module">The module to compare priority.</param>
+            <returns>
+            Returns true if this module has priority over
+            the given one.
+            </returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ProductModule.GetImage">
+            <summary>
+            Gets the image that will be displayed in the DevExpress About dialog. The image should be 243 (width) by 137 (height).
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ProductModule.SupportsLanguage(System.String)">
+            <summary>
+            Returns true if this product module supports specified language.
+            </summary>
+            <param name="languageID"></param>
+            <returns></returns>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.ProductModule.PlugIns">
+            <summary>
+            Gets all plugins of this module.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.ProductModule.PlugInCount">
+            <summary>
+            Gets number of plugins inside this module.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.ProductModule.RestrictedFeatures">
+            <summary>
+            Gets restricted features of this module.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.ProductModule.ExtendedFeatures">
+            <summary>
+            Gets extended features of this module.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.ProductModule.RestrictedFeatureCount">
+            <summary>
+            The number of features inside this module.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.ProductModule.ModuleType">
+            <summary>
+            Gets module type.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.ProductModule.ProductDocumentation">
+            <summary>
+            Gets product documentation string identifier.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.ProductModule.HidesMenu">
+            <summary>
+            Returns true if this product hides menu.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.ProductModule.Expires">
+            <summary>
+            Returns true if this product expires.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.ProductModule.StartDate">
+            <summary>
+            Returns the starting date of this product's operating window if it expires.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.ProductModule.ExpirationDate">
+            <summary>
+            Returns the expiration date of this product's operating window if it expires.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.ProductModule.ID">
+            <summary>
+            Returns the ID of this product.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.ProductModule.Name">
+            <summary>
+            Returns the name of this product.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.ProductModule.InternalName">
+            <summary>
+            Returns the name of this product.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.ProductModule.Description">
+            <summary>
+            A short description of this product.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.ProductModule.MinimumEngineVersion">
+            <summary>
+            Returns the minimum version of CodeRush engine required to run this product.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.ProductModule.Version">
+            <summary>
+            Returns the version of this product.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.ProductModule.Copyright1">
+            <summary>
+            The first line of the copyright displayed in the DX about dialog.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.ProductModule.Copyright2">
+            <summary>
+            The second line of the copyright displayed in the DX about dialog.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.ProductModule.Title">
+            <summary>
+            Gets the title of the product module displayed in the DevExpress About dialog.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Common.RestrictionType.Required">
+            <summary>
+            Plug-in is restricted from loading unless the specified product is installed.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Common.RestrictionType.Denied">
+            <summary>
+            Plug-in is restricted if the specified product is installed and no other products that don't restrict the plug-in are installed.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.Common.VisualStudioVersion">
+            <summary>
+            Represents a version of Visual Studio.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.Common.VisualStudioVersion.Unknown">
+            <summary>
+            An unknown version of Visual Studio.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.Common.VisualStudioVersion.VS2002">
+            <summary>
+            Visual Studio .NET 2002
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.Common.VisualStudioVersion.VS2003">
+            <summary>
+            Visual Studio .NET 2003
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.Common.VisualStudioVersion.VS2005">
+            <summary>
+            Visual Studio 2005
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.Common.VisualStudioVersion.VS2008">
+            <summary>
+            Visual Studio 2008
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.Common.VisualStudioVersion.VS2010">
+            <summary>
+            Visual Studio 2010
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.Common.VisualStudioVersion.VS2011">
+            <summary>
+            Visual Studio 2011
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.Common.VisualStudioVersion.VS2013">
+            <summary>
+            Visual Studio 2013
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.Common.VisualStudioVersion.VS2015">
+            <summary>
+            Visual Studio 2015
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ExceptionDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ExceptionDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ExceptionDialog.GetCrashLogFile">
+            <summary>
+            Saves the current log to a temporary file. NOTE: This file should be deleted after it is used.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ExceptionDialog.GetProcessDetailsFile">
+            <summary>
+            Saves details of the current process to a temporary file. NOTE: This file should be deleted after it is used.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.GetKeys(System.String)">
+            <summary>
+            Returns a string array of keys for the given section.
+            </summary>
+            <param name="section">The section to check.</param>
+            <returns>The string array of keys for aSection.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.GetSections">
+            <summary>
+            Returns a string array of sections.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.ReadString(System.String,System.String)">
+            <summary>
+            Reads a string value from the storage object. If the section or key was not found, 
+            this method returns an empty string value.
+            </summary>
+            <param name="section">The section to read from.</param>
+            <param name="key">The key to read from.</param>
+            <returns>The requested string value or an empty string if not found.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.ReadString(System.String,System.String,System.Boolean)">
+            <summary>
+            Reads a string value from the storage object. If the section or key was not found, 
+            this method returns an empty string value.
+            </summary>
+            <param name="section">The section to read from.</param>
+            <param name="key">The key to read from.</param>
+            <param name="encoded">If true, the string value is assumed to be in HTTP encoding and will be decoded.</param>
+            <returns>The requested string value or an empty string if not found.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.ReadString(System.String,System.String,System.String)">
+            <summary>
+            Reads a string value from the storage object. If the section or key was not found, 
+            this method returns the value passed in defaultValue.
+            </summary>
+            <param name="section">The section to read from.</param>
+            <param name="key">The key to read from.</param>
+            <param name="defaultValue">The string value to return if the section or key is not found.</param>
+            <returns>The requested string value or defaultValue if not found.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.ReadString(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Reads a string value from the storage object. If the section or key was not found, 
+            this method returns the value passed in defaultValue.
+            </summary>
+            <param name="section">The section to read from.</param>
+            <param name="key">The key to read from.</param>
+            <param name="defaultValue">The string value to return if the section or key is not found.</param>
+            <param name="encoded">If true, the string value is assumed to be in HTTP encoding and will be decoded.</param>
+            <returns>The requested string value or defaultValue if not found.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.ReadInt32(System.String,System.String)">
+            <summary>
+            Reads a Int32 value from the storage object. If the section or key was not found, 
+            this method returns zero.
+            </summary>
+            <param name="section">The section to read from.</param>
+            <param name="key">The key to read from.</param>
+            <returns>The requested Int32 value or zero if not found.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.ReadInt32(System.String,System.String,System.Int32)">
+            <summary>
+            Reads a System.Int32 value from the storage object. If the section or key was not found, 
+            this method returns the value passed in defaultValue.
+            </summary>
+            <param name="section">The section to read from.</param>
+            <param name="key">The key to read from.</param>
+            <param name="defaultValue">The Int32 value to return if the section or key is not found.</param>
+            <returns>The requested Int32 value or defaultValue if not found.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.ReadColor(System.String,System.String)">
+            <summary>
+            Reads a Color value from the storage object. If the section or key was not found, 
+            this method returns a value of zero.
+            </summary>
+            <param name="section">The section to read from.</param>
+            <param name="key">The key to read from.</param>
+            <returns>The requested Color value or Color.Empty if not found.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.ReadColor(System.String,System.String,System.Drawing.Color)">
+            <summary>
+            Reads a Color value from the storage object. If the section or key was not found, 
+            this method returns the value passed in defaultValue.
+            </summary>
+            <param name="section">The section to read from.</param>
+            <param name="key">The key to read from.</param>
+            <param name="defaultValue">The Color value to return if the section or key is not found.</param>
+            <returns>The requested Color value or aDefault if not found.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.ReadChar(System.String,System.String)">
+            <summary>
+            Reads a char value from the storage object. If the section or key was not found, 
+            this method returns an null char value.
+            </summary>
+            <param name="section">The section to read from.</param>
+            <param name="key">The key to read from.</param>
+            <returns>The requested char value or an empty string if not found.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.ReadChar(System.String,System.String,System.Char)">
+            <summary>
+            Reads a char value from the storage object. If the section or key was not found, 
+            this method returns the value passed in defaultValue.
+            </summary>
+            <param name="section">The section to read from.</param>
+            <param name="key">The key to read from.</param>
+            <param name="defaultValue">The char value to return if the section or key is not found.</param>
+            <returns>The requested char value or defaultValue if not found.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.ReadBoolean(System.String,System.String)">
+            <summary>
+            Reads a Boolean value from the storage object. If the section or key was not found, 
+            this method returns a Boolean value of false.
+            </summary>
+            <param name="section">The section to read from.</param>
+            <param name="key">The key to read from.</param>
+            <returns>The requested Boolean value or false if not found.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.ReadBoolean(System.String,System.String,System.Boolean)">
+            <summary>
+            Reads a Boolean value from the storage object. If the section or key was not found, 
+            this method returns the value passed in defaultValue.
+            </summary>
+            <param name="section">The section to read from.</param>
+            <param name="key">The key to read from.</param>
+            <param name="defaultValue">The Boolean value to return if the section or key is not found.</param>
+            <returns>The requested Boolean value or or defaultValue if not found.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.ReadDateTime(System.String,System.String)">
+            <summary>
+            Reads a DateTime value from the storage object. If the section or key was not found, 
+            this method returns a the current date and time.
+            </summary>
+            <param name="section">The section to read from.</param>
+            <param name="key">The key to read from.</param>
+            <returns>The requested DateTime value or the current date and time if not found.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.ReadDateTime(System.String,System.String,System.DateTime)">
+            <summary>
+            Reads a DateTime value from the storage object. If the section or key was not found, 
+            this method returns the value passed in defaultValue.
+            </summary>
+            <param name="section">The section to read from.</param>
+            <param name="key">The key to read from.</param>
+            <param name="defaultValue">The DateTime value to return if the section or key is not found.</param>
+            <returns>The requested DateTime value or or aDefault if not found.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.ReadSingle(System.String,System.String)">
+            <summary>
+            Reads a Single value from the storage object. If the section or key was not found, 
+            this method returns a value of zero.
+            </summary>
+            <param name="section">The section to read from.</param>
+            <param name="key">The key to read from.</param>
+            <returns>The requested Single value or zero if not found.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.ReadSingle(System.String,System.String,System.Single)">
+            <summary>
+            Reads a Single value from the storage object. If the section or key was not found, 
+            this method returns the value passed in defaultValue.
+            </summary>
+            <param name="section">The section to read from.</param>
+            <param name="key">The key to read from.</param>
+            <param name="defaultValue">The Single value to return if the section or key is not found.</param>
+            <returns>The requested Single value or or defaultValue if not found.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.ReadDouble(System.String,System.String)">
+            <summary>
+            Reads a Double value from the storage object. If the section or key was not found, 
+            this method returns a value of zero.
+            </summary>
+            <param name="section">The section to read from.</param>
+            <param name="key">The key to read from.</param>
+            <returns>The requested Double value or zero if not found.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.ReadDouble(System.String,System.String,System.Double)">
+            <summary>
+            Reads a Double value from the storage object. If the section or key was not found, 
+            this method returns the value passed in defaultValue.
+            </summary>
+            <param name="section">The section to read from.</param>
+            <param name="key">The key to read from.</param>
+            <param name="defaultValue">The Double value to return if the section or key is not found.</param>
+            <returns>The requested Double value or or defaultValue if not found.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.ReadStrings(System.String,System.String)">
+            <summary>
+            Reads a string array value from the storage object. If the section or key is not found,
+            this method returns null.
+            </summary>
+            <param name="section">The section to read from.</param>
+            <param name="key">The key to read from.</param>
+            <returns>The requested string array value or an emtpy string array if not found.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.ReadStrings(System.String,System.String,System.Boolean)">
+            <summary>
+            Reads a string array value from the storage object. If the section or key is not found,
+            this method returns null.
+            </summary>
+            <param name="section">The section to read from.</param>
+            <param name="key">The key to read from.</param>
+            <param name="encoded">If true, the string values are assumed to be in HTTP encoding and will be decoded.</param>
+            <returns>The requested string array value or an emtpy string array if not found.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.ReadStrings(System.String,System.String,System.String[])">
+            <summary>
+            Reads a string array value from the storage object. If the section or key is not found,
+            this method returns the value passed in defaultValue.
+            </summary>
+            <param name="section">The section to read from.</param>
+            <param name="key">The key to read from.</param>
+            <param name="defaultValue">The string array value to return if the section or key is not found.</param>
+            <returns>The requested string array value or or aDefault if not found.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.ReadStrings(System.String,System.String,System.String[],System.Boolean)">
+            <summary>
+            Reads a string array value from the storage object. If the section or key is not found,
+            this method returns the value passed in defaultValue.
+            </summary>
+            <param name="section">The section to read from.</param>
+            <param name="key">The key to read from.</param>
+            <param name="defaultValue">The string array value to return if the section or key is not found.</param>
+            <param name="encoded">If true, the string values are assumed to be in HTTP encoding and will be decoded.</param>
+            <returns>The requested string array value or or defaultValue if not found.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.ReadEnum(System.String,System.String,System.Type,System.Object)">
+            <summary>
+            Reads a enumeration element value from the storage object. If the section or key was not found, 
+            this method returns the value passed in defaultValue.
+            </summary>
+            <param name="section">The section to read from.</param>
+            <param name="key">The key to read from.</param>
+            <param name="enumType">The Type of the enumeration to read.</param>
+            <param name="defaultValue">The default value to return if the section or key is not found.</param>
+            <returns>The requested value or defaultValue if not found.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.WriteString(System.String,System.String,System.String)">
+            <summary>
+            Writes a string value to the storage object.
+            </summary>
+            <param name="section">The section to write to.</param>
+            <param name="key">The key to write to.</param>
+            <param name="value">The string value to write.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.WriteString(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Writes a string value to the storage object.
+            </summary>
+            <param name="section">The section to write to.</param>
+            <param name="key">The key to write to.</param>
+            <param name="value">The string value to write.</param>
+            <param name="encoded">If true, the string value will be encoded in HTTP encoding.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.WriteInt32(System.String,System.String,System.Int32)">
+            <summary>
+            Writes a Int32 value to the storage object.
+            </summary>
+            <param name="section">The section to write to.</param>
+            <param name="key">The key to write to.</param>
+            <param name="value">The Int32 value to write.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.WriteColor(System.String,System.String,System.Drawing.Color)">
+            <summary>
+            Writes a Color value to the storage object.
+            </summary>
+            <param name="section">The section to write to.</param>
+            <param name="key">The key to write to.</param>
+            <param name="value">The Color value to write.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.WriteChar(System.String,System.String,System.Char)">
+            <summary>
+            Writes a char value to the storage object.
+            </summary>
+            <param name="section">The section to write to.</param>
+            <param name="key">The key to write to.</param>
+            <param name="value">The char value to write.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.WriteBoolean(System.String,System.String,System.Boolean)">
+            <summary>
+            Writes a Boolean value to the storage object.
+            </summary>
+            <param name="section">The section to write to.</param>
+            <param name="key">The key to write to.</param>
+            <param name="value">The bool value to write.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.WriteDateTime(System.String,System.String,System.DateTime)">
+            <summary>
+            Writes a DateTime value to the storage object.
+            </summary>
+            <param name="section">The section to write to.</param>
+            <param name="key">The key to write to.</param>
+            <param name="value">The DateTime value to write.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.WriteSingle(System.String,System.String,System.Single)">
+            <summary>
+            Writes a Single value to the storage object.
+            </summary>
+            <param name="section">The section to write to.</param>
+            <param name="key">The key to write to.</param>
+            <param name="value">The Single value to write.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.WriteDouble(System.String,System.String,System.Double)">
+            <summary>
+            Writes a Double value to the storage object.
+            </summary>
+            <param name="section">The section to write to.</param>
+            <param name="key">The key to write to.</param>
+            <param name="value">The Double value to write.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.WriteStrings(System.String,System.String,System.String[])">
+            <summary>
+            Writes a string array value to the storage object.
+            </summary>
+            <param name="section">The section to write to.</param>
+            <param name="key">The key to write to.</param>
+            <param name="value">The Double value to write.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.WriteStrings(System.String,System.String,System.String[],System.Boolean)">
+            <summary>
+            Writes a string array value to the storage object.
+            </summary>
+            <param name="section">The section to write to.</param>
+            <param name="key">The key to write to.</param>
+            <param name="value">The Double value to write.</param>
+            <param name="encoded">If true, the string values will be encoded in HTTP encoding.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IDecoupledStorage.WriteEnum(System.String,System.String,System.Object)">
+            <summary>
+            Writes a enumeration value to the storage object.
+            </summary>
+            <param name="section">The section to write to.</param>
+            <param name="key">The key to write to.</param>
+            <param name="value">The value to write.</param>
+        </member>
+        <member name="T:DevExpress.DXCore.Interop.ShellUtils">
+            <summary>
+            Utility methods for retrieving information from the Visual Studio Shell.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.Interop.VisualStudioServices">
+            <summary>
+            Provides access to Visual Studio shell services.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.Interop.VisualStudioServices.Start(Microsoft.VisualStudio.OLE.Interop.IServiceProvider)">
+            <summary>
+            Called by DevExpress.DXCore.Shell.Package.SetSite(). Do not use.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.Interop.VisualStudioServices.Stop">
+            <summary>
+            Called by DevExpress.DXCore.Shell.Package.Close(). Do not use.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.Interop.VisualStudioServices.Query``2">
+            <summary>
+            Queries for a Visual Studio shell service.
+            </summary>
+            <typeparam name="TService">The type of the service.</typeparam>
+            <typeparam name="TInterface">The interface to retrieve for the service</typeparam>
+            <returns>Returns the queried service, cast to <typeparamref name="TInterface"/>.</returns>
+        </member>
+        <member name="M:DevExpress.DXCore.Interop.VisualStudioServices.Query``1(System.Guid)">
+            <summary>
+            Queries for a Visual Studio shell service.
+            </summary>
+            <typeparam name="TInterface">The interface to retrieve for the service</typeparam>
+            <param name="serviceId">The GUID of the service to retrieve.</param>
+            <returns>Returns the queried service, cast to <typeparamref name="TInterface"/>.</returns>
+        </member>
+        <member name="M:DevExpress.DXCore.Interop.VisualStudioServices.Query(System.Type,System.Guid)">
+            <summary>
+            Queries for a Visual Studio shell service.
+            </summary>
+            <param name="TInterface">The interface to retrieve for the service</param>
+            <param name="serviceId">The GUID of the service to retrieve.</param>
+            <returns>Returns the queried service.</returns>
+        </member>
+        <member name="M:DevExpress.DXCore.Interop.VisualStudioServices.QueryLanguageService(System.Guid)">
+            <summary>
+            Queries for a Visual Studio language service.
+            </summary>
+            <param name="languageServiceId">The ID of the language service to retrieve.</param>
+        </member>
+        <member name="P:DevExpress.DXCore.Interop.VisualStudioServices.DTE">
+            <summary>
+            Gets the Visual Studio DTE service.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.Interop.VisualStudioServices.VsRegisterPriorityCommandTarget">
+            <summary>
+            Gets the Visual Studio IVsRegisterPriorityCommandTarget service.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.Interop.VisualStudioServices.VsFilterKeys2">
+            <summary>
+            Gets the Visual Studio IVsFilterKeys2 service.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.Interop.VisualStudioServices.VsCmdNameMapping">
+            <summary>
+            Gets the Visual Studio IVsCmdNameMapping service.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.Interop.VisualStudioServices.VsFontAndColorCacheManager">
+            <summary>
+            Gets the Visual Studio IVsFontAndColorCacheManager service.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.Interop.VisualStudioServices.VsFontAndColorStorage">
+            <summary>
+            Gets the Visual Studio IVsFontAndColorStorage service.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.Interop.VisualStudioServices.VsHiddenTextManager">
+            <summary>
+            Gets the Visual Studio IVsHiddenTextManager service.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.Interop.VisualStudioServices.VsLinkedUndoTransactionManager">
+            <summary>
+            Gets the Visual Studio IVsLinkedUndoTransactionManager service.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.Interop.VisualStudioServices.VsQueryEditQuerySave">
+            <summary>
+            Gets the Visual Studio IVsQueryEditQuerySave2 service.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.Interop.VisualStudioServices.VsRunningDocumentTable">
+            <summary>
+            Gets the Visual Studio IVsRunningDocumentTable service.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.Interop.VisualStudioServices.VsSccManager">
+            <summary>
+            Gets the Visual Studio IVsSccManager2 service.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.Interop.VisualStudioServices.VsSccToolsOptions">
+            <summary>
+            Gets the Visual Studio IVsSccToolsOptions service.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.Interop.VisualStudioServices.VsShellDebugger">
+            <summary>
+            Gets the Visual Studio IVsDebugger service.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.Interop.VisualStudioServices.VsShellMonitorSelection">
+            <summary>
+            Gets the Visual Studio IVsMonitorSelection service.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.Interop.VisualStudioServices.VsShell">
+            <summary>
+            Gets the Visual Studio IVsShell service.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.Interop.VisualStudioServices.VsSolution">
+            <summary>
+            Gets the Visual Studio IVsSolution2 service.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.Interop.VisualStudioServices.VsSolutionBuildManager">
+            <summary>
+            Gets the Visual Studio IVsSolutionBuildManager2 service.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.Interop.VisualStudioServices.VsTextOut">
+            <summary>
+            Gets the Visual Studio IVsTextOut service.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.Interop.VisualStudioServices.VsTextManager">
+            <summary>
+            Gets the Visual Studio IVsTextManager service.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.Interop.VisualStudioServices.VsTextManager2">
+            <summary>
+            Gets the Visual Studio IVsTextManager2 service.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.Interop.VisualStudioServices.VsToolboxClipboardCycler">
+            <summary>
+            Gets the Visual Studio IVsToolboxClipboardCycler service.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.Interop.VisualStudioServices.VsTrackProjectDocuments">
+            <summary>
+            Gets the Visual Studio IVsTrackProjectDocuments2 service.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.Interop.VisualStudioServices.VsUIShell">
+            <summary>
+            Gets the Visual Studio IVsUIShell service.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.Interop.VisualStudioServices.VsUIShell2">
+            <summary>
+            Gets the Visual Studio IVsUIShell2 service.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.Interop.VisualStudioServices.VsProfferCommands">
+            <summary>
+            Gets the Visual Studio IVsProfferCommands service.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.Interop.VisualStudioServices.VsStatusbar">
+            <summary>
+            Gets the Visual Studio IVsStatusbar service.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.Interop.VisualStudioServices.LocalRegistry">
+            <summary>
+            Gets VisualStudio ILocalRegistry3 service
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.Interop.WindowFrameUtils">
+            <summary>
+            Utility methods for working with Visual Studio IVsWindowFrames.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.IO.FileUtilities.StreamToByteArray(System.IO.Stream)">
+            <summary>
+            This method reads a stream into a byte array from the stream's current position.
+            It is optimized not to access the Length property of the stream in case the stream
+            does not support it.
+            </summary>
+            <param name="stream">The stream to read.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.IO.FileUtilities.ReadFile(System.String)">
+            <summary>
+            Reads the file at the given file name and returns it as an array of bytes.
+            </summary>
+            <param name="fileName">The name of the file to read.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown when the <paramref name="fileName"/> parameter is null.</exception>
+            <exception cref="T:System.ArgumentException">Thrown when the <paramref name="fileName"/> parameter is as empty string.</exception>
+        </member>
+        <member name="M:DevExpress.DXCore.IO.FileUtilities.ReadFile(System.String,System.IO.Stream)">
+            <summary>
+            Reads a file from a given file name and writes it to the current position of the specified stream.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">Thrown when the <paramref name="fileName"/> or the <paramref name="stream"/> parameter is null.</exception>
+            <exception cref="T:System.ArgumentException">Thrown when the <paramref name="fileName"/> parameter is as empty string.</exception>
+        </member>
+        <member name="M:DevExpress.DXCore.IO.FileUtilities.WriteFile(System.String,System.Byte[])">
+            <summary>
+            Writes the contents of the specified byte array to a file at the given file name.
+            </summary>
+            <param name="fileName">The name of the file to write.</param>
+            <param name="buffer">The byte array to write.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown when the <paramref name="fileName"/> or the <paramref name="buffer"/> parameter is null.</exception>
+            <exception cref="T:System.ArgumentException">Thrown when the <paramref name="fileName"/> parameter is as empty string.</exception>
+        </member>
+        <member name="M:DevExpress.DXCore.IO.FileUtilities.WriteFile(System.String,System.Byte[],System.Exception@)">
+            <summary>
+            Writes the contents of the specified byte array to a file at the given file name.
+            </summary>
+            <param name="fileName">The name of the file to write.</param>
+            <param name="buffer">The byte array to write.</param>
+            <param name="error">The error occured while writing.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown when the <paramref name="fileName"/> or the <paramref name="buffer"/> parameter is null.</exception>
+            <exception cref="T:System.ArgumentException">Thrown when the <paramref name="fileName"/> parameter is as empty string.</exception>
+        </member>
+        <member name="M:DevExpress.DXCore.IO.FileUtilities.WriteFile(System.String,System.IO.Stream)">
+            <summary>
+            Writes the contents of the specified stream to the given file name.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">Thrown when the <paramref name="fileName"/> or the <paramref name="stream"/> parameter is null.</exception>
+            <exception cref="T:System.ArgumentException">Thrown when the <paramref name="fileName"/> parameter is as empty string.</exception>
+        </member>
+        <member name="M:DevExpress.DXCore.IO.FileUtilities.WriteFile(System.String,System.IO.Stream,System.Exception@)">
+            <summary>
+            Writes the contents of the specified stream to the given file name.
+            </summary>
+            <param name="fileName">The name of the file to write.</param>
+            <param name="stream">The stream to get data from.</param>
+            <param name="error">The error occured while writing.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown when the <paramref name="fileName"/> or the <paramref name="stream"/> parameter is null.</exception>
+            <exception cref="T:System.ArgumentException">Thrown when the <paramref name="fileName"/> parameter is as empty string.</exception>
+        </member>
+        <member name="M:DevExpress.DXCore.IO.FileUtilities.LoadStreamFromFile(System.String,System.IO.Stream)">
+            <summary>
+            Reads a file from a given file name and writes it to the current position of the specified stream.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.IO.FileUtilities.SaveStreamToFile(System.String,System.IO.Stream)">
+            <summary>
+            Writes the current position of the specified stream to the given file name.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.IO.IniFile">
+            <summary>
+            Handles basic manipulation of INI files.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.IPlugInAssembly.DemandableItems">
+            <summary>
+            Returns the demandable item collection for this plug-in assembly.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.IPlugInAssembly.FileName">
+            <summary>
+            Returns the file name of this plug-in assembly.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.IPlugInAssembly.LoadTime">
+            <summary>
+            Returns the time spent loading this assembly, in seconds.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.IPlugInAssembly.EvaluationStatus">
+            <summary>
+            Returns the evaluation status of this plug-in assembly.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.IPlugInAssembly.Name">
+            <summary>
+            Returns the name of this plug-in assembly.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.IPlugInAssembly.UpdateLinkText">
+            <summary>
+            Returns the text of the update link for this plug-in assembly.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.IPlugInAssembly.UpdateLinkURL">
+            <summary>
+            Returns the text of the update URL for this plug-in assembly.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.IPlugInAssembly.AssemblyType">
+            <summary>
+            Returns the assembly type of this plug-in assembly.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.IPlugInAssembly.StartDate">
+            <summary>
+            Returns the starting date of this plug-in assembly.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.IPlugInAssembly.ExpirationDate">
+            <summary>
+            Returns the expiration date of this plug-in assembly.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.IPlugInAssembly.AssemblyName">
+            <summary>
+            Returns the name of this assembly.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.IPlugInAssembly.AssemblyTitle">
+            <summary>
+            Returns the value of the AssemblyTitleAttribute for this plug-in assembly.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.IPlugInAssembly.AssemblyDescription">
+            <summary>
+            Returns the value of the AssemblyDescriptionAttribute for this plug-in assembly.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.IPlugInAssembly.AssemblyProduct">
+            <summary>
+            Returns the value of the AssemblyProductAttribute for this plug-in assembly.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.IPlugInAssembly.AssemblyCompany">
+            <summary>
+            Returns the value of the AssemblyCompanyAttribute for this plug-in assembly.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.IPlugInAssembly.AssemblyCopyright">
+            <summary>
+            Returns the value of the AssemblyCopyrightAttribute for this plug-in assembly.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.IPlugInAssembly.AssemblyTrademark">
+            <summary>
+            Returns the value of the AssemblyTrademarkAttribute for this plug-in assembly.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.IPlugInAssembly.AssemblyCulture">
+            <summary>
+            Returns the value of the AssemblyCultureAttribute for this plug-in assembly.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.IPlugInAssembly.AssemblyVersion">
+            <summary>
+            Returns the value of the AssemblyVersionAttribute for this plug-in assembly.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IProfilingTask.Start(System.String)">
+            <summary>
+            Starts the profiling task.
+            </summary>
+            <param name="title">This one will be displayed as title of the task in the log file</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IProfilingTask.End">
+            <summary>
+            Ends the profiling task and logs the result.		
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IProfilingTask.End(System.Boolean)">
+            <summary>
+            Ends the profiling task.		
+            </summary>
+            <param name="logData">Defines if the result of profiling should be logged</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.IProfilingTask.LogData">
+            <summary>
+            Logs profiling data.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.IProfilingTask.WorkTime">
+            <summary>
+            The time of the task working.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.IProfilingTask.AllocatedMemory">
+            <summary>
+            The memory in bytes which was allocated by current task.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.IProfilingTask.Stack">
+            <summary>
+            The call stack for the current task.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.Common.Localization.Str.Action">
+            <summary>
+            Names of common Actions
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Common.Localization.Str.Action.TextReplacerShowNext">
+            <summary>
+            The "Text Replacer Show Next" Action.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Common.Localization.Str.Action.TextReplacerShowPrevious">
+            <summary>
+            The "Text Replacer Show Previous" Action.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Common.Localization.Str.Action.TextReplacerAccept">
+            <summary>
+            The "Text Replacer Accept" Action.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Common.Localization.Str.Action.TextReplacerAcceptAll">
+            <summary>
+            The "Text Replacer Accept All" Action.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Common.Localization.Str.Action.TextReplacerStop">
+            <summary>
+            The "Text Replacer Stop" Action.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Common.Localization.Str.Action.TextReplacerSuspend">
+            <summary>
+            The "Text Replacer Suspend" Action.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Common.Localization.Str.Action.TextReplacerResume">
+            <summary>
+            The "Text Replacer Resume" Action.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.Common.Localization.UI.TextChangeSelector">
+            <summary>
+            Names of common Actions
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.Common.ObjectUsageHistory">
+            <summary>
+            Object usage history.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.Common.UsageHistoryBase">
+            <summary>
+            Class to store usage history for a set of objects.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.UsageHistoryBase.#ctor">
+            <summary>
+            Creates a new instance of UsageHistoryBase
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.UsageHistoryBase.GetObjectUsage(System.Object)">
+            <summary>
+            Gets object usage count.
+            </summary>
+            <param name="item">The object to get usage count for.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.UsageHistoryBase.SetObjectUsage(System.Object,System.Int32)">
+            <summary>
+            Sets object usage count.
+            </summary>
+            <param name="item">The object to set usage count for.</param>
+            <param name="usage">The usage count for the object.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.UsageHistoryBase.UseObject(System.Object)">
+            <summary>
+            Uses the given object. This method increments usage count for the object
+            and stores the object inside MostRecentlyUsed property.
+            </summary>
+            <param name="item">The object to use.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.UsageHistoryBase.ResetObject(System.Object)">
+            <summary>
+            Resets object usage count.
+            </summary>
+            <param name="item">The object to reset.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.UsageHistoryBase.RemoveObject(System.Object)">
+            <summary>
+            Removes object from the usage history.
+            </summary>
+            <param name="item">The object to remove.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.UsageHistoryBase.ResetAll">
+            <summary>
+            Resets usage history data for all objects.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.UsageHistoryBase.Clear">
+            <summary>
+            Clears usage history.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.UsageHistoryBase.Save(DevExpress.CodeRush.Common.IDecoupledStorage,System.String)">
+            <summary>
+            Saves usage history to decoupled storage.
+            </summary>
+            <param name="storage">The storage to use.</param>
+            <param name="section">The section to store usage history.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.UsageHistoryBase.Load(DevExpress.CodeRush.Common.IDecoupledStorage,System.String)">
+            <summary>
+            Loads usage history from the given decoupled storage.
+            </summary>
+            <param name="storage">The storage to use.</param>
+            <param name="section">The section to load usage history from.</param>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.UsageHistoryBase.History">
+            <summary>
+            Gets hashtable that stores objects usage data.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.UsageHistoryBase.MostRecentlyUsedObject">
+            <summary>
+            Gets most recently used object.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.UsageHistoryBase.IsEmpty">
+            <summary>
+            Returns true if the history is empty.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.UsageHistoryBase.Count">
+            <summary>
+            Returns the number of tracked objects.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.Common.UsageHistoryBase.Usage">
+            <summary>
+            Represents object usage count value.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.UsageHistoryBase.Usage.#ctor(System.Int32)">
+            <summary>
+            Creates a new instance of Usage
+            </summary>
+            <param name="count">The usage count.</param>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.UsageHistoryBase.Usage.Count">
+            <summary>
+            Gets or sets object usage count.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ObjectUsageHistory.#ctor">
+            <summary>
+            Creates a new instance of ObjectUsageHistory
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.ObjectUsageHistory.MostRecentlyUsed">
+            <summary>
+            Gets most recently used object.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.ObjectUsageHistory.Item(System.Object)">
+            <summary>
+            Gets or sets object usage count. Setting object usage count doesn't change the
+            MostRecentlyUsed property.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.Common.ObjectUsageHistoryWithContext">
+            <summary>
+            Object usage count history with context.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.Common.UsageHistoryWithContextBase">
+            <summary>
+            Class to store usage history for a set of objects with context knowledge.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.UsageHistoryWithContextBase.#ctor">
+            <summary>
+            Creates a new instance of UsageHistoryWithContextBase
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.UsageHistoryWithContextBase.GetObjectUsageHistory(System.Object)">
+            <summary>
+            Gets usage history for the given context.
+            </summary>
+            <param name="context">The context to get usage history for.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.UsageHistoryWithContextBase.GetObjectUsage(System.Object,System.Object)">
+            <summary>
+            Gets object usage count.
+            </summary>
+            <param name="context">The context to get usage history for.</param>
+            <param name="item">The object to get usage count for.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.UsageHistoryWithContextBase.SetObjectUsage(System.Object,System.Object,System.Int32)">
+            <summary>
+            Sets object usage count.
+            </summary>
+            <param name="context">The context to get usage history for.</param>
+            <param name="item">The object to set usage count for.</param>
+            <param name="usage">The usage count for the object.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.UsageHistoryWithContextBase.SetMostRecentlyUsedObject(System.Object,System.Object)">
+            <summary>
+            Sets most recently used object for the given context.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="item">The object used.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.UsageHistoryWithContextBase.GetMostRecentlyUsedObject(System.Object)">
+            <summary>
+            Gets object most recently used in the given context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.UsageHistoryWithContextBase.UseObject(System.Object)">
+            <summary>
+            Uses the given object in global context.
+            This method increments usage count for the object
+            and stores the object inside MostRecentlyUsed property for the global context.
+            </summary>
+            <param name="item">The object to use.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.UsageHistoryWithContextBase.ResetObject(System.Object)">
+            <summary>
+            Resets object usage count for global context.
+            </summary>
+            <param name="item">The object to reset.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.UsageHistoryWithContextBase.RemoveObject(System.Object)">
+            <summary>
+            Removes object from the usage history for global context.
+            </summary>
+            <param name="item">The object to remove.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.UsageHistoryWithContextBase.UseObject(System.Object,System.Object)">
+            <summary>
+            Uses the given object in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="item">The object to use.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.UsageHistoryWithContextBase.ResetObject(System.Object,System.Object)">
+            <summary>
+            Resets object usage count for the given context.
+            </summary>
+            <param name="context">The context to reset.</param>
+            <param name="item">The object to reset.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.UsageHistoryWithContextBase.RemoveObject(System.Object,System.Object)">
+            <summary>
+            Removes object from the usage history for the given context.
+            </summary>
+            <param name="context">The context to use.</param>
+            <param name="item">The object to remove.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.UsageHistoryWithContextBase.ResetContext(System.Object)">
+            <summary>
+            Resets usage history data for the given context.
+            </summary>
+            <param name="context">The context to reset usage history data.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.UsageHistoryWithContextBase.ResetGlobalContext">
+            <summary>
+            Resets usage history data for global context.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.UsageHistoryWithContextBase.ResetContexts">
+            <summary>
+            Resets usage history data for all contexts, except global.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.UsageHistoryWithContextBase.ClearGlobalContext">
+            <summary>
+            Clears usage history data for global context.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.UsageHistoryWithContextBase.ClearContexts">
+            <summary>
+            Clears all contexts except for global context.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.UsageHistoryWithContextBase.Clear">
+            <summary>
+            Clears usage history data. Global context data is cleared too.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.UsageHistoryWithContextBase.Save(DevExpress.CodeRush.Common.IDecoupledStorage)">
+            <summary>
+            Saves usage history to decoupled storage.
+            </summary>
+            <param name="storage">The storage to use.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.UsageHistoryWithContextBase.Load(DevExpress.CodeRush.Common.IDecoupledStorage)">
+            <summary>
+            Loads usage history from the given decoupled storage.
+            </summary>
+            <param name="storage">The storage to use.</param>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.UsageHistoryWithContextBase.Contexts">
+            <summary>
+            Gets hashtable that stores objects usage data.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.UsageHistoryWithContextBase.GlobalContext">
+            <summary>
+            Gets global context usage history.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.UsageHistoryWithContextBase.MostRecentlyUsedObject">
+            <summary>
+            Gets object most recently used in global context.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.UsageHistoryWithContextBase.IsEmpty">
+            <summary>
+            Returns true if the history doesn't contain any context except for global.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.UsageHistoryWithContextBase.Count">
+            <summary>
+            Returns the number of tracked history contexts.
+            This number doesn't include global context.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ObjectUsageHistoryWithContext.#ctor">
+            <summary>
+            Creates a new instance of ObjectUsageHistoryWithContext
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ObjectUsageHistoryWithContext.GetUsageHistory(System.Object)">
+            <summary>
+            Gets usage history for the given context.
+            </summary>
+            <param name="context">The context to get usage history for.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ObjectUsageHistoryWithContext.GetMostRecentlyUsed(System.Object)">
+            <summary>
+            Gets object most recently used in global context.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.ObjectUsageHistoryWithContext.MostRecentlyUsed">
+            <summary>
+            Gets object most recently used in global context.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.ObjectUsageHistoryWithContext.Item(System.Object)">
+            <summary>
+            Gets or sets usage count for this given object.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.ObjectUsageHistoryWithContext.Item(System.Object,System.Object)">
+            <summary>
+            Gets or sets usage count for this given object in the specified context.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.CodeRushAssemblyAttribute.#ctor(DevExpress.CodeRush.Common.CodeRushAssemblyType,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Binds a CodeRushAssemblyAttribute to the assembly. This attribute is useful for evaluation plug-ins that can only be loaded within the specified time window.
+            </summary>
+            <param name="assemblyType">One of PlugIn, Core, or SystemPlugIn.</param>
+            <param name="name">The name of this assembly.</param>
+            <param name="startDate">The starting date for this assembly. If the system date/time is prior to this date, the assembly will not be loaded.</param>
+            <param name="expirationDate">The ending date for this assembly. If the system date/time falls after this date, the assembly will not be loaded.</param>
+            <param name="updateURL">A URL where a user can get more information on this plug-in (for updates, purchase, registration, etc.). This URL appears in the "Plug-ins Will Expire Soon" dialog.</param>
+            <param name="updateLinkText">The text that will be displayed for the updateURL link.</param>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.CodeRushAssemblyAttribute.UpdateURL">
+            <summary>
+            The URL where customers can get updates for this plug-in.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.CodeRushAssemblyAttribute.UpdateLinkText">
+            <summary>
+            The text for the link (provided by UpdateURL) where customers can get updates for this plug-in. If this field is not specified, the UpdateURL is returned.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.Core.CodeRushPaths">
+            <summary>
+            Encapsulates logic to determine DXCore paths. Plug-ins should not create 
+            instances of this. Instead, plug-ins should access CodeRush.Options.Paths. 
+            However, this can be instantiated by objects that need to discover DXCore paths 
+            without actually loading loading the DXCore (e.g., the plug-in creation wizards).
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.Core.IniFile">
+            <summary>
+            Handles basic manipulation of INI files.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.Patterns.ISharedObjectListener">
+            <summary>
+            Implement this interface and register it using SharedObjectManager.AddListener to be notified
+            of various events from a SharedObjectManager.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Patterns.ISharedObjectListener.Created(DevExpress.CodeRush.Patterns.SharedObject)">
+            <summary>
+            Called when a new shared object is created.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Patterns.ISharedObjectListener.Destroying(DevExpress.CodeRush.Patterns.SharedObject)">
+            <summary>
+            Called when a shared object is about to be destroyed.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Patterns.ISharedObjectListener.Allocating(DevExpress.CodeRush.Patterns.SharedObject)">
+            <summary>
+            Called when a shared object is being allocated from the manager.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Patterns.ISharedObjectListener.Allocated(DevExpress.CodeRush.Patterns.SharedObject)">
+            <summary>
+            Called when a shared object is allocated from the manager.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Patterns.ISharedObjectListener.Releasing(DevExpress.CodeRush.Patterns.SharedObject)">
+            <summary>
+            Called when a shared object is being released to the manager.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Patterns.ISharedObjectListener.Released(DevExpress.CodeRush.Patterns.SharedObject)">
+            <summary>
+            Called when a shared object is released to the manager.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Patterns.ISharedObjectListener.Disconnect">
+            <summary>
+            Called when the listener is disconnected by the manager. This will be called if the manager is disposed.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Patterns.SharedObject.OnAllocate(System.Object[])">
+            <summary>
+            Called immediately after this SharedObject is allocated from its manager.
+            </summary>
+            <param name="args">Optional arguments.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Patterns.SharedObject.OnCreate(System.Object[])">
+            <summary>
+            Called immediately after this SharedObject is created. Override to perform any special
+            initialization.
+            </summary>
+            <param name="args">Optional arguments.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Patterns.SharedObject.OnDestroy">
+            <summary>
+            Called when the SharedObject is being destroyed. Override to perform any special finalization.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Patterns.SharedObject.OnRelease">
+            <summary>
+            Called when this SharedObject is released to its manager.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Patterns.SharedObject.SetManager(DevExpress.CodeRush.Patterns.SharedObjectManager)">
+            <summary>
+            Called by this object's SharedObjectManager on creation.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Patterns.SharedObject.Release">
+            <summary>
+            Releases this object to its shared object manager.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Patterns.SharedObject.InUse">
+            <summary>
+            Returns true if this shared object is currently in use.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Patterns.SharedObject.Manager">
+            <summary>
+            The shared object manager this shared object belongs to.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.Patterns.SharedObjectManager">
+            <summary>
+            Descend from SharedObjectManager and SharedObject to create an object pooling mechansim for
+            a specific type of object.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Patterns.SharedObjectManager.CreateObject">
+            <summary>
+            Override to create a new instance of the SharedObject that this manager handles.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Patterns.SharedObjectManager.Allocate(System.Object[])">
+            <summary>
+            Allocates a new SharedObject from the available objects or creates a new one if necessary.
+            This can be overridden to provide special handling.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Patterns.SharedObjectManager.Dispose(System.Boolean)">
+            <summary>
+            Called when the SharedObjectManager is being disposed. The disposing parameter determines whether
+            this method was called explicitly or during garbage collection.
+            </summary>
+            <param name="disposing">Determines whether this method was called explicitly or during 
+            garbage collection.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Patterns.SharedObjectManager.NewObject(System.Object[])">
+            <summary>
+            Creates a new instance of the SharedObject that this manager handles.
+            </summary>
+            <param name="args">Optional arguments.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Patterns.SharedObjectManager.OnAllocating(DevExpress.CodeRush.Patterns.SharedObject)">
+            <summary>
+            Call to notify all listeners that a shared object is being allocated.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Patterns.SharedObjectManager.OnAllocated(DevExpress.CodeRush.Patterns.SharedObject)">
+            <summary>
+            Call to notify all listeners that a shared object has been allocated.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Patterns.SharedObjectManager.OnCreated(DevExpress.CodeRush.Patterns.SharedObject)">
+            <summary>
+            Call to notify all listeners that a shared object has been created.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Patterns.SharedObjectManager.OnDestroying(DevExpress.CodeRush.Patterns.SharedObject)">
+            <summary>
+            Call to notify all listeners that a shared object is being destroyed.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Patterns.SharedObjectManager.OnDisconnect">
+            <summary>
+            Call to notify all listeners that this shared object manager has been disposed.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Patterns.SharedObjectManager.OnReleasing(DevExpress.CodeRush.Patterns.SharedObject)">
+            <summary>
+            Call to notify all listeners that a shared object is being released.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Patterns.SharedObjectManager.OnReleased(DevExpress.CodeRush.Patterns.SharedObject)">
+            <summary>
+            Call to notify all listeners that a shared object has been released.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Patterns.SharedObjectManager.TriggerOnAllocate(DevExpress.CodeRush.Patterns.SharedObject,System.Object[])">
+            <summary>
+            Calls the specified SharedObject's OnAllocate method.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Patterns.SharedObjectManager.TriggerOnCreate(DevExpress.CodeRush.Patterns.SharedObject,System.Object[])">
+            <summary>
+            Calls the specified SharedObject's OnCreate method.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Patterns.SharedObjectManager.TriggerOnDestroy(DevExpress.CodeRush.Patterns.SharedObject)">
+            <summary>
+            Calls the specified SharedObject's OnDestroy method.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Patterns.SharedObjectManager.TriggerOnRelease(DevExpress.CodeRush.Patterns.SharedObject)">
+            <summary>
+            Calls the specified SharedObject's OnRelease method.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Patterns.SharedObjectManager.ReleaseObject(DevExpress.CodeRush.Patterns.SharedObject)">
+            <summary>
+            Called by the SharedObject when it is disposed to add itself to the list of available objects.
+            This can be overridden to provide special handling.
+            </summary>
+            <param name="obj">The SharedObject to be released.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Patterns.SharedObjectManager.AddListener(DevExpress.CodeRush.Patterns.ISharedObjectListener)">
+            <summary>
+            Adds a listener object to this shared object manager. Store the Int32 value returned by this method 
+            to call RemoveListener with.
+            </summary>
+            <param name="listener">The listener object to add.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Patterns.SharedObjectManager.RemoveListener(System.Int32)">
+            <summary>
+            Removes a listener object from this shared object manager.
+            </summary>
+            <param name="listenerCookie">A cookie identifying the listener object to remove.</param>
+        </member>
+        <member name="P:DevExpress.CodeRush.Patterns.SharedObjectManager.AllObjects">
+            <summary>
+            Gets an ArrayList of all objects owned by this shared object manager. The objects in this ArrayList
+            are stored by weak reference.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Patterns.SharedObjectManager.AvailableObjects">
+            <summary>
+            Gets the stack of available objects.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Patterns.SharedObjectManager.AvailableCount">
+            <summary>
+            Returns the number of available objects in this manager.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Patterns.SharedObjectManager.TotalCount">
+            <summary>
+            Returns the total number of objects handled by this manager.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Patterns.SharedObjectManager.AliveCount">
+            <summary>
+            Returns the number of alive objects.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ProductManager.Register(DevExpress.CodeRush.Common.DXCoreProductAttribute)">
+            <summary>
+            Registers DXCoreProductAttribute inside this manager.
+            Do not call this directly.
+            </summary>
+            <param name="attribute">The attribute to register.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ProductManager.GetProductModuleKey(System.Reflection.Assembly)">
+            <summary>
+            Return product module key for the given assembly.
+            </summary>
+            <param name="assembly"></param>
+            <returns>Product module key.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ProductManager.GetEvalDates(DevExpress.CodeRush.Common.ProductModule,System.DateTime@,System.DateTime@)">
+            <summary>
+            Loads evaluation dates for the specified product module.
+            </summary>
+            <param name="module">The product module.</param>
+            <param name="startDate">Start date.</param>
+            <param name="expirationDate">Expiration date.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ProductManager.IsProductTrial(System.String)">
+            <summary>
+            Checks if product with the specified string id is trial.
+            </summary>
+            <param name="id">The string id of the product to check.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ProductManager.IsProductTrial(System.Guid)">
+            <summary>
+            Checks if product with the specified id is trial.
+            </summary>
+            <param name="id">The id of the product to check.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ProductManager.IsProductLoaded(System.String)">
+            <summary>
+            Checks if product with the specified string id is loaded by the DxCore.
+            </summary>
+            <param name="id">The string id of the product to check.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ProductManager.IsProductLoaded(System.Guid)">
+            <summary>
+            Checks if product with the specified id is loaded by the DxCore.
+            </summary>
+            <param name="id">The id of the product to check.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ProductManager.GetPlugIn(System.String)">
+            <summary>
+            Gets plugin with the specified name.
+            </summary>
+            <param name="name">The name of the plugin to get.</param>
+            <returns>Returns plugin with the specified name.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ProductManager.GetRestrictedFeature(System.String)">
+            <summary>
+            Gets restricted feature with the specified name.
+            </summary>
+            <param name="name">The name of the feature to get.</param>
+            <returns>Returns feature with the specified name.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ProductManager.GetExtendedFeature(System.String)">
+            <summary>
+            Gets extended feature with the specified name.
+            </summary>
+            <param name="name">The name of the feature to get.</param>
+            <returns>Returns feature with the specified name.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ProductManager.GetFeature(System.String)">
+            <summary>
+            Gets feature with the specified name.
+            </summary>
+            <param name="name">The name of the feature to get.</param>
+            <returns>Returns feature with the specified name.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ProductManager.CanLoadPlugIn(System.Reflection.Assembly,System.String)">
+            <summary>
+            Checks assembly plugin if it can be loaded.
+            </summary>
+            <param name="assembly">The assembly to check.</param>
+            <param name="path">The path to check.</param>
+            <returns>Returns true if assembly can be loaded.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ProductManager.CanLoadPlugIn(System.String,System.String)">
+            <summary>
+            Checks assembly plugin if it can be loaded.
+            </summary>
+            <param name="key">The assembly product module key.</param>
+            <param name="path">The path to check.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ProductManager.CanLoadExtension(System.String,System.String)">
+            <summary>
+            Checks plugin extension if it can be loaded.
+            </summary>
+            <param name="name">The name of the extension to check.</param>
+            <param name="key">The key of product module.</param>
+            <returns>Returns true if extension can be loaded.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ProductManager.CanLoadExtension(System.Reflection.Assembly,System.Object,System.String)">
+            <summary>
+            Checks plugin extension if it can be loaded.
+            </summary>
+            <param name="callingAssembly">The extension calling assembly to check.</param>
+            <param name="extension">The extension to check.</param>
+            <param name="name">The name of the extension to check.</param>
+            <returns>Returns true if extension can be loaded.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ProductManager.IsLanguageSupported(System.String,System.String)">
+            <summary>
+            Checks plugin extension if it supports specified language.
+            </summary>
+            <param name="name">The name of the extension to check.</param>
+            <param name="language">The language to check</param>
+            <returns>Returns true if extension can be loaded.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ProductManager.IsVSVersionSupported(System.String,DevExpress.DXCore.Common.VisualStudioVersion)">
+            <summary>
+            Checks plugin extension if it supports specified Visual Studio version.
+            </summary>
+            <param name="name">The name of the extension to check.</param>
+            <param name="version">The version to check</param>
+            <returns>Returns true if extension can be loaded.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ProductManager.IsSignedPlugIn(System.Reflection.Assembly)">
+            <summary>
+            Returns true if plugin assembly is signed.
+            </summary>
+            <param name="assembly">The assembly to check.</param>
+            <returns>Returns true if plugin assembly is signed.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ProductManager.GetEvaluationStatus(System.String)">
+            <summary>
+            Returns evaluation status for the specified plugin.
+            </summary>
+            <param name="path">The path to the plugin.</param>
+            <returns>Returns evaluation status for the specified plugin.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ProductManager.GetEvaluationStatus(System.DateTime,System.DateTime)">
+            <summary>
+            Returns evaluation status based on the given time window.
+            </summary>
+            <param name="startDate">The start date.</param>
+            <param name="expirationDate">The expiration date.</param>
+            <returns>Returns evaluation status based on the given time window.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ProductManager.SupportsLanguage(System.String)">
+            <summary>
+            Returns true if there is a product module that supports specified language exist.
+            </summary>
+            <param name="languageID">The language ID to check.</param>
+            <returns></returns>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.ProductManager.HidesMenu">
+            <summary>
+            Returns true if menu must be hidden.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.ProductManager.RestrictedMode">
+            <summary>
+            Returns true if restricted subset of products was installed.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.ProductManager.ProductModules">
+            <summary>
+            Gets array of registered product modules.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.ProductManager.Products">
+            <summary>
+            Gets array of registered products.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.ProductManager.TrialProducts">
+            <summary>
+            Gets array of trial products.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ProductModuleContent.#ctor(DevExpress.CodeRush.Common.ProductModule,System.String)">
+            <summary>
+            Creates new ProductModuleContent instance.
+            </summary>
+            <param name="productModule">The parent product module.</param>
+            <param name="name">The name of this product module content.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ProductModuleContent.#ctor(DevExpress.CodeRush.Common.ProductModule,System.String,System.Boolean)">
+            <summary>
+            Creates new ProductModuleContent instance.
+            </summary>
+            <param name="productModule">The parent product module.</param>
+            <param name="name">The name of this product module content.</param>
+            <param name="isDisabled">Defines if product module content is disabled.</param>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.ProductModuleContent.Name">
+            <summary>
+            Gets or sets product module content name.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.ProductModuleContent.Product">
+            <summary>
+            Gets parent product module.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.ProductModuleContent.IsDisabled">
+            <summary>
+            Gets value indicating if content is disabled.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.Threading.BackgroundQueueWorker`1.ProcessProportion">
+            <summary>
+            Gets status of the queue in percents.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.Threading.SynchronizedInvoker">
+            <summary>
+            Special delegate that can used with the Invoke and BeginInvoke methods of the DevExpress.DXCore.Threading.SynchronizationManager
+            or the DevExpress.CodeRush.Core.SynchronizationService (i.e. CodeRush.Synchronization).
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.Threading.SynchronizationManager">
+            <summary>
+            Provides low-level APIs for synchronization on the Visual Studio UI thread. DXCore plug-in should not use this
+            class. Instead, they should use the CodeRush.Synchronization service.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.Threading.SynchronizationManager.Start(EnvDTE.DTE)">
+            <summary>
+            Used internally by the DXCore. Do not use.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.Threading.SynchronizationManager.Stop">
+            <summary>
+            Used internally by the DXCore. Do not use.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.Threading.SynchronizationManager.Enter(System.Object)">
+            <summary>
+            Attempts to acquire an exclusive lock on the specified object.
+            If calling thread is UI thread then Application.DoEvents is called while
+            exclusive lock is not acquired.
+            </summary>
+            <param name="obj">The object on which to acquire the lock.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.Threading.SynchronizationManager.Exit(System.Object)">
+            <summary>
+            Releases an exclusive lock on the specified object.
+            </summary>
+            <param name="obj">The object on which to release the lock.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.Threading.SynchronizationManager.OnIDEThread">
+            <summary>
+            Determines if the currently executing thread is the same as the thread that the IDE was created on (the UI thread).
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.Threading.SynchronizationManager.InvokeMarshalledCallbacks">
+            <summary>
+            Calls the synchronized callbacks in the callback queue. NOTE: This method should *always* be called on the UI thread.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.Threading.SynchronizationManager.MarshalledInvoke(System.Delegate,System.Object[],System.Boolean)">
+            <summary>
+            Called from Invoke and BeginInvoke to enqueue a new callback for marshalling on the UI thread and,
+            depending on the <paramref name="synchronous"/> parameter and the current thread, either invoke
+            the marshalled callbacks or post a message to the IDE that will invoke the marshalled callbacks
+            when it is handled.
+            </summary>
+            <param name="method">The Delegate to be called on the UI thread.</param>
+            <param name="args">The arguments to be passed to <paramref name="method"/>.</param>
+            <param name="synchronous">If true this method will not return until the callback is executed on the UI thread;
+            otherwise, it will return immediately.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.Threading.SynchronizationManager.BeginInvoke(System.Delegate,System.Object[])">
+            <summary>
+            Executes the specified delegate asynchronously with the specified arguments, on the thread that the IDE's underlying handle was created on (the UI thread).
+            </summary>
+            <param name="method">A delegate to a method that takes parameters of the same number and type that are contained in the <paramref name="args"/> parameter to be called in the IDE's thread context.</param>
+            <param name="args">An array of objects to pass as arguments to the specified method. This parameter can be a null reference (<b>Nothing</b> in Visual Basic) if the method takes no arguments.</param>
+            <returns>An IAsyncResult that represents the result of the BeginInvoke operation.</returns>
+        </member>
+        <member name="M:DevExpress.DXCore.Threading.SynchronizationManager.EndInvoke(System.IAsyncResult)">
+            <summary>
+            Retrieves the return value of the asynchronous operation represented by the IAsyncResult passed.
+            </summary>
+            <param name="result">The IAsyncResult that represents a specific invoke asynchronous operation, returned when calling BeginInvoke.</param>
+            <returns>The object generated by the asynchronous operation.</returns>
+        </member>
+        <member name="M:DevExpress.DXCore.Threading.SynchronizationManager.Invoke(System.Delegate,System.Object[])">
+            <summary>
+            Executes the specified delegate, with the specified list of arguments, on the thread that owns the IDE's underlying window handle (the UI thread). 
+            </summary>
+            <param name="method">A delegate to a method that takes parameters of the same number and type that are contained in the <paramref name="args"/> parameter to be called in the TextView's thread context.</param>
+            <param name="args">An array of objects to pass as arguments to the specified method. This parameter can be a null reference (<b>Nothing</b> in Visual Basic) if the method takes no arguments.</param>
+            <returns>An object that contains the return value from the delegate being invoked, or a null reference (<b>Nothing</b> in Visual Basic) if the delegate has no return value.</returns>
+        </member>
+        <member name="P:DevExpress.DXCore.Threading.SynchronizationManager.IsActive">
+            <summary>
+            Returns true if SynchronizationManager is active.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.Threading.SynchronizationManager.InvokeRequired">
+            <summary>
+            Gets a value indicating whether the caller must call an invoke method when making method calls because the caller 
+            is on a different thread than the one that the IDE was created on (the UI thread).
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Text.StringUtils.AddTypeTagsToText(System.String)">
+            <summary>
+            Adds spicial tags to text that will be used in code dom services.
+            </summary>
+            <param name="text">The text to process</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Text.StringUtils.ExtractStartingWord(System.String)">
+            <summary>
+            Extracts the first word from the passed string.
+            </summary>
+            <param name="s">The string from which to get starting word.</param>
+            <returns>Starting word of the passed string.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Text.StringUtils.SubstringToUpper(System.String,System.Int32,System.Int32)">
+            <summary>
+            Converts the specified part of the given string to upper case.
+            </summary>
+            <param name="s">The string to convert.</param>
+            <param name="start">The start position.</param>
+            <param name="count">The number of chars to upcase.</param>
+            <returns>Srting with substring converted to upper case.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Text.StringUtils.GetLeadingWhiteSpaceCharCount(System.String)">
+            <summary>
+            Returns the number of leading white space characters (tabs and spaces) on the passed-in text.
+            </summary>
+            <param name="text">The text to check.</param>
+            <returns>Returns the number of leading white space characters (tabs and spaces) found.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Text.StringUtils.GetLeadingWhiteSpace(System.String)">
+            <summary>
+            Returns the leading white space (tabs and spaces) for the specified text.
+            </summary> 
+            <param name="text">The text to check.</param>
+            <returns>The leading white space (tabs and spaces) for the specified text.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Text.StringUtils.GetClosingWhiteSpaceCharCount(System.String)">
+            <summary>
+            Returns the number of closing white space characters (tabs and spaces) on the passed-in text.
+            </summary>
+            <param name="text">The text to check.</param>
+            <returns>Returns the number of leading white space characters (tabs and spaces) found.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Text.StringUtils.GetClosingWhiteSpace(System.String)">
+            <summary>
+            Returns the closing white space (tabs and spaces) for the specified text.
+            </summary> 
+            <param name="text">The text to check.</param>
+            <returns>The leading white space (tabs and spaces) for the specified text.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Text.StringUtils.CloneStringCollection(System.Collections.Specialized.StringCollection)">
+            <summary>
+            Clones string collection.
+            </summary>
+            <param name="source">The source collection to clone.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Text.StringUtils.IsNullOrEmpty(System.String)">
+            <summary>
+            Determines if the specified string is null or an empty string containing no text.
+            </summary>
+            <param name="value">The string to check.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Text.StringUtils.SplitPath(System.String)">
+            <summary>
+            Splits path string into separate parts. '\' is used as a path separator, '\\' - is used to escape '\' char.
+            </summary>
+            <param name="path">The path to split.</param>
+            <returns>An array of path parts.</returns>
+        </member>
+        <member name="T:DevExpress.DXCore.Threading.SpinWaitLock">
+            <summary>
+            Simple, light-weight spin lock. NOTE: This is implemented as a struct to be light on memory. Be careful not
+            to box or thread safety will be lost.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.Common.ObjectUsageComparer">
+            <summary>
+            Compares objects taking into account thier usage history data.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ObjectUsageComparer.#ctor(DevExpress.CodeRush.Common.ObjectUsageHistoryWithContext,System.String)">
+            <summary>
+            Creates a new instance of ObjectUsageComparer
+            </summary>
+            <param name="history">The history data to use.</param>
+            <param name="context">The context to compare objects.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ObjectUsageComparer.ToComparableItem(System.Object)">
+            <summary>
+            Returns object that is stored inside the usage history.
+            </summary>
+            <param name="obj">The original object.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.ObjectUsageComparer.Compare(System.Object,System.Object)">
+            <summary>
+            Compares two objects taking into account their usage history.
+            </summary>
+            <param name="x">First object.</param>
+            <param name="y">Second object.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.Common.ArrayEx.Copy``1(``0[])">
+            <summary>
+            Copies the elements from an <see cref="T:System.Array">Array</see> to a new <see cref="T:System.Array">Array</see>. 
+            </summary>
+            <typeparam name="T">The type of the elements in the array.</typeparam>
+            <param name="array">The one-dimensional, zero-based <see cref="T:System.Array">Array</see>
+            that will be copied.</param>
+            <returns>An <see cref="T:System.Array">Array</see> containing all the elements from <paramref name="array"/>.</returns>
+            <exception cref="T:System.ArgumentException"><paramref name="array"/> is a null reference.</exception>
+        </member>
+        <member name="M:DevExpress.DXCore.Common.ArrayEx.Copy``1(``0[],System.Int32)">
+            <summary>
+            Copies a range of elements from an <see cref="T:System.Array">Array</see> starting at the specified 
+            index to a new <see cref="T:System.Array">Array</see>.
+            </summary>
+            <typeparam name="T">The type of the elements in the array.</typeparam>
+            <param name="array">The one-dimensional, zero-based <see cref="T:System.Array">Array</see>
+            that will be copied.</param>
+            <param name="startIndex">The index in <paramref name="array"/> at which copying begins.</param>
+            <returns>An <see cref="T:System.Array">Array</see> containing the elements from <paramref name="array"/>
+            starting at <paramref name="startIndex"/>.</returns>
+            <exception cref="T:System.ArgumentException"><paramref name="array"/> is a null reference.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="startIndex"/> is less than 0 or 
+            greater than the last index in <paramref name="array"/>.</exception>
+        </member>
+        <member name="M:DevExpress.DXCore.Common.ArrayEx.Copy``1(System.Collections.Generic.IList{``0},System.Int32,System.Int32)">
+            <summary>
+            Copies a range of elements from an <see cref="T:System.Array">Array</see> starting at the specified 
+            index to a new <see cref="T:System.Array">Array</see>.
+            </summary>
+            <typeparam name="T">The type of the elements in the array.</typeparam>
+            <param name="array">The one-dimensional, zero-based <see cref="T:System.Array">Array</see>
+            that will be copied.</param>
+            <param name="startIndex">The index in <paramref name="array"/> at which copying begins.</param>
+            <param name="length">The number of elements to copy.</param>
+            <returns>An <see cref="T:System.Array">Array</see> containing the elements from <paramref name="array"/>
+            starting at <paramref name="startIndex"/>.</returns>
+            <exception cref="T:System.ArgumentException"><paramref name="array"/> is a null reference.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="startIndex"/> is less than 0 or 
+            greater than the last index in <paramref name="array"/>.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="length"/> is less than 0 or 
+            exceeds the length of <paramref name="array"/>.</exception>
+        </member>
+        <member name="M:DevExpress.DXCore.Common.ArrayEx.Convert``2(``0[])">
+            <summary>
+            Converts elements from an <see cref="T:System.Array">Array</see> to a new <see cref="T:System.Array">Array</see>. 
+            </summary>
+            <typeparam name="TSource">The type of the elements in the array.</typeparam>
+            <typeparam name="TDestination">The type of the elements in the destination array.</typeparam>
+            <param name="array">The one-dimensional, zero-based <see cref="T:System.Array">Array</see>
+            that will be copied.</param>
+            <returns>An <see cref="T:System.Array">Array</see> containing all the elements from <paramref name="array"/>.</returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="array"/> is a null reference.</exception>
+        </member>
+        <member name="M:DevExpress.DXCore.Common.ArrayEx.TrimStart``1(``0[],System.Predicate{``0})">
+            <summary>
+            Removes the elements from the start of the specified <see cref="T:System.Array">Array</see> that 
+            match the given predicate.
+            </summary>
+            <typeparam name="T">The type of the elements in the array.</typeparam>
+            <param name="array">The one-dimensional, zero-based <see cref="T:System.Array">Array</see> whose 
+            elements will be trimmed.</param>
+            <param name="predicate">The <see cref="T:System.Predicate`1">Predicate</see> that defines the 
+            conditions of the elements to trim.</param>
+            <returns>An <see cref="T:System.Array">Array</see> containing the elements starting at the first 
+            element that does not match the  conditions defined by the specified predicate, if found; 
+            otherwise, an empty <see cref="T:System.Array">Array</see>.</returns>
+            <exception cref="T:System.ArgumentException"><paramref name="array"/> is a null reference.</exception>
+        </member>
+        <member name="M:DevExpress.DXCore.Common.ArrayEx.TrimEnd``1(``0[],System.Predicate{``0})">
+            <summary>
+            Removes the elements from the end of the specified <see cref="T:System.Array">Array</see> that 
+            do match the given predicate.
+            </summary>
+            <typeparam name="T">The type of the elements in the array.</typeparam>
+            <param name="array">The one-dimensional, zero-based <see cref="T:System.Array">Array</see> whose 
+            elements will be trimmed.</param>
+            <param name="predicate">The <see cref="T:System.Predicate`1">Predicate</see> that defines the 
+            conditions of the elements to trim.</param>
+            <returns>An <see cref="T:System.Array">Array</see> containing the elements up to the first 
+            element that does not match the  conditions defined by the specified predicate, if found; 
+            otherwise, an empty <see cref="T:System.Array">Array</see>.</returns>
+            <exception cref="T:System.ArgumentException"><paramref name="array"/> is a null reference.</exception>
+        </member>
+        <member name="T:DevExpress.DXCore.Utils.DictionaryUtils">
+            <summary>
+            Utilities methods for working with <see cref="T:System.Collections.Generic.Dictionary`2"/> types.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.Utils.DictionaryUtils.FindAll``2(System.Collections.Generic.Dictionary{``0,``1},System.Predicate{System.Collections.Generic.KeyValuePair{``0,``1}})">
+            <summary>
+            Retrieves the all the <see cref="T:System.Collections.Generic.KeyValuePair`2">KeyValuePair&lt;TKey, TValue&gt;s</see> 
+            from <paramref name="dictionary"/> that match the conditions defined by the specified predicate.
+            </summary>
+            <typeparam name="TKey">The type of the keys in <paramref name="dictionary"/>.</typeparam>
+            <typeparam name="TValue">The type of the values in <paramref name="dictionary"/>.</typeparam>
+            <param name="dictionary">The <see cref="T:System.Collections.Generic.Dictionary`2"/> to search.</param>
+            <param name="match">The <see cref="T:System.Predicate`1"/> that defines the conditions 
+            of the elements to search for.</param>
+            <returns>A <see cref="T:System.Collections.Generic.List`1"/> containing all the elements that match the conditions defined 
+            by the specified predicate, if found; otherwise, an empty <see cref="T:System.Collections.Generic.List`1"/>.</returns>
+        </member>
+        <member name="M:DevExpress.DXCore.Utils.DictionaryUtils.FindAllKeys``2(System.Collections.Generic.Dictionary{``0,``1},System.Predicate{System.Collections.Generic.KeyValuePair{``0,``1}})">
+            <summary>
+            Retrieves all of the keys from <paramref name="dictionary"/> that match the conditions 
+            defined by the specified predicate.
+            </summary>
+            <typeparam name="TKey">The type of the keys in <paramref name="dictionary"/>.</typeparam>
+            <typeparam name="TValue">The type of the values in <paramref name="dictionary"/>.</typeparam>
+            <param name="dictionary">The <see cref="T:System.Collections.Generic.Dictionary`2"/> to search.</param>
+            <param name="match">The <see cref="T:System.Predicate`1"/> that defines the conditions 
+            of the elements to search for.</param>
+            <returns>A <see cref="T:System.Collections.Generic.List`1"/> containing all the elements that match the conditions defined 
+            by the specified predicate, if found; otherwise, an empty <see cref="T:System.Collections.Generic.List`1"/>.</returns>
+        </member>
+        <member name="M:DevExpress.DXCore.Utils.DictionaryUtils.FindAllValues``2(System.Collections.Generic.Dictionary{``0,``1},System.Predicate{System.Collections.Generic.KeyValuePair{``0,``1}})">
+            <summary>
+            Retrieves all of the values from <paramref name="dictionary"/> that match the conditions 
+            defined by the specified predicate.
+            </summary>
+            <typeparam name="TKey">The type of the keys in <paramref name="dictionary"/>.</typeparam>
+            <typeparam name="TValue">The type of the values in <paramref name="dictionary"/>.</typeparam>
+            <param name="dictionary">The <see cref="T:System.Collections.Generic.Dictionary`2"/> to search.</param>
+            <param name="match">The <see cref="T:System.Predicate`1"/> that defines the conditions 
+            of the elements to search for.</param>
+            <returns>A <see cref="T:System.Collections.Generic.List`1"/> containing all the elements that match the conditions defined 
+            by the specified predicate, if found; otherwise, an empty <see cref="T:System.Collections.Generic.List`1"/>.</returns>
+        </member>
+        <member name="T:DevExpress.DXCore.Utils.EnumEx`1">
+            <summary>
+            Utility methods for working with enumeration types.
+            </summary>
+            <typeparam name="T">Type of the System.Enum to work with.
+            <b>Note:</b> This <i>must</i> be a System.Enum type; otherwise, 
+            an exception will be thrown.</typeparam>
+        </member>
+        <member name="M:DevExpress.DXCore.Utils.EnumEx`1.IsDefined(System.Object)">
+            <summary>
+            Returns an indication whether a constant with a specified
+            value exists in this enumeration.
+            </summary>
+            <param name="value">The value or name of a constant in <typeparamref name="T"/>.</param>
+            <returns>true if a constant in <typeparamref name="T"/> has a value equal to 
+            <paramref name="value"/>; otherwise, false.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.VisualStudioManager.Start(EnvDTE.DTE)">
+            <summary>
+            Called by CodeRush.IDTExtensibility2.OnConnection(). Do not use.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.VisualStudioManager.Stop">
+            <summary>
+            Used by CodeRush.IDTExtensibility2.OnDisconnection(). Do not use.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.VisualStudioManager.VersionAtLeast(DevExpress.DXCore.Common.VisualStudioVersion)">
+            <summary>
+            Determines whether the currently running version of Visual Studio is the same or greater
+            than the specified version.
+            </summary>
+            <param name="version">The version to check against.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.VisualStudioManager.VersionAtMost(DevExpress.DXCore.Common.VisualStudioVersion)">
+            <summary>
+            Determines whether the currently running version of Visual Studio is the same or less
+            than the specified version.
+            </summary>
+            <param name="version">The version to check against.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.VisualStudioManager.VersionLessThan(DevExpress.DXCore.Common.VisualStudioVersion)">
+            <summary>
+            Determines whether the currently running version of Visual Studio is less than the specified
+            version.
+            </summary>
+            <param name="version">The version to check against.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.VisualStudioManager.VersionGreaterThan(DevExpress.DXCore.Common.VisualStudioVersion)">
+            <summary>
+            Determines whether the currently running version of Visual Studio is greater than the
+            specified version.
+            </summary>
+            <param name="version">The version to check against.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.VisualStudioManager.VersionIs(DevExpress.DXCore.Common.VisualStudioVersion)">
+            <summary>
+            Determines whether the currently running version of Visual Studio is the same as the specified version.
+            </summary>
+            <param name="version">The version to check against.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Common.VisualStudioManager.GetVisualStudioVersionText(DevExpress.DXCore.Common.VisualStudioVersion)">
+            <summary>
+            Returns readable Visual Studio version text from enum value.
+            </summary>
+            <param name="version">The enum value.</param>
+            <returns>Readable Visual Studio version text from enum value.</returns>
+        </member>
+        <member name="P:DevExpress.CodeRush.Common.VisualStudioManager.Version">
+            <summary>
+            Returns a VisualStudioVersion enumeration value that represents the currently running version of Visual Studio.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.Win32.ComUtilities">
+            <summary>
+            A collection of utility functions for working with COM objects.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.Win32.ComUtilities.GetConnectionPoint(System.Object,System.Type)">
+            <summary>
+            Gets an <see cref="T:DevExpress.DXCore.Win32.IComConnectionPoint"/> instance from the given COM object 
+            using the IConnectionPoint identified by the specified interface.
+            </summary>
+            <param name="comObj">The COM object to get an <see cref="T:DevExpress.DXCore.Win32.IComConnectionPoint"/> from.</param>
+            <param name="interfaceType">The <see cref="T:System.Type"/> of the interface that identifies the 
+            IConnectionPoint to use.</param>
+            <returns>Returns a new <see cref="T:DevExpress.DXCore.Win32.IComConnectionPoint"/> instance from <paramref name="comObj"/>
+            using the IConnectionPoint identified by <paramref name="interfaceType"/>. If this method fails, it returns null.</returns>
+        </member>
+        <member name="M:DevExpress.DXCore.Win32.ComUtilities.GetConnectionPoint``1(System.Object)">
+            <summary>
+            Gets an <see cref="T:DevExpress.DXCore.Win32.IComConnectionPoint"/> instance from the given COM object 
+            using the IConnectionPoint identified by the specified interface.
+            </summary>
+            <typeparam name="TInterface">The interface that identifies the IConnectionPoint to use.</typeparam>
+            <param name="comObj">The COM object to get an <see cref="T:DevExpress.DXCore.Win32.IComConnectionPoint"/> from.</param>
+            <returns>Returns a new <see cref="T:DevExpress.DXCore.Win32.IComConnectionPoint"/> instance from <paramref name="comObj"/>
+            using the IConnectionPoint identified by TInterface. If this method fails, it returns null.</returns>
+        </member>
+        <member name="M:DevExpress.DXCore.Win32.ComUtilities.GetConnectionPoint(System.Object,System.Guid)">
+            <summary>
+            Gets an <see cref="T:DevExpress.DXCore.Win32.IComConnectionPoint"/> instance from the given COM object 
+            using the IConnectionPoint identified by the specified interface.
+            </summary>
+            <param name="comObj">The COM object to get an <see cref="T:DevExpress.DXCore.Win32.IComConnectionPoint"/> from.</param>
+            <param name="iid">The <see cref="T:System.Guid"/> of the interface that identifies the
+            IConnectionPoint to use.</param>
+            <returns>Returns a new <see cref="T:DevExpress.DXCore.Win32.IComConnectionPoint"/> instance from <paramref name="comObj"/>
+            using the IConnectionPoint identified by <paramref name="iid"/>. If this method fails, it returns null.</returns>
+        </member>
+        <member name="M:DevExpress.DXCore.Win32.ComUtilities.HasInterface(System.IntPtr,System.Type)">
+            <summary>
+            Determines whether the given IUnknown pointer supports the specifed interface.
+            </summary>
+            <param name="punk">The IUnknown pointer to test.</param>
+            <param name="interfaceType">The <see cref="T:System.Type"/> of the interface to test.</param>
+            <returns>Returns true if <paramref name="punk"/> supports <paramref name="interfaceType"/>; otherwise false.</returns>
+        </member>
+        <member name="M:DevExpress.DXCore.Win32.ComUtilities.HasInterface``1(System.IntPtr)">
+            <summary>
+            Determines whether the given IUnknown pointer supports the specifed interface.
+            </summary>
+            <typeparam name="TInterface">The interface to test.</typeparam>
+            <param name="pUnk">The IUnknown pointer to test.</param>
+            <returns>Returns true if <paramref name="pUnk"/> supports TInterface; otherwise false.</returns>
+        </member>
+        <member name="M:DevExpress.DXCore.Win32.ComUtilities.HasInterface(System.IntPtr,System.Guid)">
+            <summary>
+            Determines whether the given IUnknown pointer supports the specifed interface.
+            </summary>
+            <param name="punk">The IUnknown pointer to test.</param>
+            <param name="iid">The <see cref="T:System.Guid"/> of the interface to test.</param>
+            <returns>Returns true if <paramref name="punk"/> supports <paramref name="iid"/>; otherwise false.</returns>
+        </member>
+        <member name="M:DevExpress.DXCore.Win32.ComUtilities.HasInterface(System.Object,System.Type)">
+            <summary>
+            Determines whether the given COM object supports the specified interface.
+            </summary>
+            <param name="comObj">The COM object to test.</param>
+            <param name="interfaceType">The <see cref="T:System.Type"/> of the interface to test.</param>
+            <returns>Returns true if <paramref name="comObj"/> supports <paramref name="interfaceType"/>; otherwise false.</returns>
+        </member>
+        <member name="M:DevExpress.DXCore.Win32.ComUtilities.HasInterface``1(System.Object)">
+            <summary>
+            Determines whether the given COM object supports the specified interface.
+            </summary>
+            <typeparam name="TInterface">The interface to test.</typeparam>
+            <param name="comObj">The COM object to test.</param>
+            <returns>Returns true if <paramref name="comObj"/> supports TInterface; otherwise false.</returns>
+        </member>
+        <member name="M:DevExpress.DXCore.Win32.ComUtilities.HasInterface(System.Object,System.Guid)">
+            <summary>
+            Determines whether the given COM object supports the specified interface.
+            </summary>
+            <param name="comObj">The COM object to test.</param>
+            <param name="iid">The <see cref="T:System.Guid"/> of the interface to test.</param>
+            <returns>Returns true if <paramref name="comObj"/> supports <paramref name="iid"/>; otherwise false.</returns>
+        </member>
+        <member name="M:DevExpress.DXCore.Win32.ComUtilities.SupportsConnectionPoint``1(System.Object)">
+            <summary>
+            Determines whether the given COM object supports the IConnectionPoint identified by the specified interface.
+            </summary>
+            <typeparam name="TInterface">The interface that identifies the IConnectionPoint to test.</typeparam>
+            <param name="comObj">The COM object to test.</param>
+            <returns>Returns true if <paramref name="comObj"/> supports an
+            IConnectionPoint identified by TInterface; otherwise, false.</returns>
+        </member>
+        <member name="T:DevExpress.DXCore.Win32.IComConnectionPoint">
+            <summary>
+            Interface that represents a COM connection point and manages its interaction with a single event sink object.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.Win32.IComConnectionPoint.Advise(System.Object)">
+            <summary>
+            Establishes an advisory connection between this connection point and a specific sink object.
+            </summary>
+            <param name="sink">Reference to the sink to receive calss for the outgoing 
+            interface managed by this <see cref="T:DevExpress.DXCore.Win32.IComConnectionPoint"/></param>
+        </member>
+        <member name="M:DevExpress.DXCore.Win32.IComConnectionPoint.Unadvise">
+            <summary>
+            Terminates a previously established advisory established through <see cref="M:DevExpress.DXCore.Win32.IComConnectionPoint.Advise(System.Object)"/>.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.MenuItemMask.MIIM_STATE">
+            <summary>
+            Retrieves or sets the menu item State.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.MenuItemMask.MIIM_ID">
+            <summary>
+            Retrieves or sets the menu item ID.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.MenuItemMask.MIIM_SUBMENU">
+            <summary>
+            Retrieves or sets the menu item SubMenu.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.MenuItemMask.MIIM_CHECKMARKS">
+            <summary>
+            Retrieves or sets the menu item checked and unchecked bitmaps.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.MenuItemMask.MIIM_TYPE">
+            <summary>
+            Retrieves or sets the menu item's Type *and* TypeData.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.MenuItemMask.MIIM_DATA">
+            <summary>
+            Retrieves or sets the menu item's ItemData.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.MenuItemMask.MIIM_STRING">
+            <summary>
+            Retrieves or sets the menu item's TypeData.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.MenuItemMask.MIIM_BITMAP">
+            <summary>
+            Retrieves or sets the menu item bitmap.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.MenuItemMask.MIIM_FTYPE">
+            <summary>
+            Retrieves or sets the menu item's Type.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.MenuItemState.MFS_ENABLED">
+            <summary>
+            Enables the menu item so that it can be selected. This is the default state.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.MenuItemState.MFS_UNCHECKED">
+            <summary>
+            Unchecks the menu item.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.MenuItemState.MFS_UNHILITE">
+            <summary>
+            Removes the highlight from the menu item. This is the default state.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.MenuItemState.MFS_GRAYED">
+            <summary>
+            Disables the menu item and grays it so that it cannot be selected. This is equivalent to MFS_DISABLED.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.MenuItemState.MFS_DISABLED">
+            <summary>
+            Disables the menu item and grays it so that it cannot be selected. This is equivalent to MFS_GRAYED.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.MenuItemState.MFS_CHECKED">
+            <summary>
+            Checks the menu item.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.MenuItemState.MFS_HILITE">
+            <summary>
+            Highlights the menu item.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.MenuItemState.MFS_DEFAULT">
+            <summary>
+            Specifies that the menu item is the default. A menu can contain only one default menu item, which is displayed in bold.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.Win32.MenuItemType">
+            <summary>
+            Menu item type. This member can be one or more of the following values. Note: 
+            The MFT_BITMAP, MFT_SEPARATOR, and MFT_STRING values cannot be combined with 
+            one another. Set Mask to MenuItemMask.MIIM_TYPE to use Type.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.MenuItemType.MFT_BITMAP">
+            <summary>
+            Displays the menu item using a bitmap. The low-order word of the TypeData member 
+            is the bitmap handle, and the cch member is ignored. In Windows 98/Me/2000/XP, 
+            MFT_BITMAP is replaced by MIIM_BITMAP and hbmpItem.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.MenuItemType.MFT_MENUBARBREAK">
+            <summary>
+            Places the menu item on a new line (for a menu bar) or in a new column (for a 
+            drop-down menu, submenu, or shortcut menu). For a drop-down menu, submenu, or 
+            shortcut menu, a vertical line separates the new column from the old.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.MenuItemType.MFT_MENUBREAK">
+            <summary>
+            Places the menu item on a new line (for a menu bar) or in a new column (for a 
+            drop-down menu, submenu, or shortcut menu). For a drop-down menu, submenu, or 
+            shortcut menu, the columns are not separated by a vertical line.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.MenuItemType.MFT_OWNERDRAW">
+            <summary>
+            Assigns responsibility for drawing the menu item to the window that owns the menu. 
+            The window receives a WM_MEASUREITEM message before the menu is displayed for the 
+            first time, and a WM_DRAWITEM message whenever the appearance of the menu item must 
+            be updated. If this value is specified, the TypeData member contains an 
+            application-defined value.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.MenuItemType.MFT_RADIOCHECK">
+            <summary>
+            Displays selected menu items using a radio-button mark instead of a check mark if 
+            the bmpChecked member is NULL.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.MenuItemType.MFT_SEPARATOR">
+            <summary>
+            Specifies that the menu item is a separator. A menu item separator appears as a 
+            horizontal dividing line. The TypeData and cch members are ignored. This value 
+            is valid only in a drop-down menu, submenu, or shortcut menu.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.MenuItemType.MFT_RIGHTORDER">
+            <summary>
+            In Windows 95/98/Me/2000/XP, specifies that menus cascade right-to-left (the 
+            default is left-to-right). This is used to support right-to-left languages, such 
+            as Arabic and Hebrew.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.MenuItemType.MFT_RIGHTJUSTIFY">
+            <summary>
+            Right-justifies the menu item and any subsequent items. This value is valid only 
+            if the menu item is in a menu bar.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.SendMessageTimeoutFlags.Normal">
+            <summary>
+            The calling thread is not prevented from processing other requests while waiting for the function to return.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.SendMessageTimeoutFlags.Block">
+            <summary>
+            Prevents the calling thread from processing any other requests until the function returns.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.SendMessageTimeoutFlags.AbortIfHung">
+            <summary>
+            Returns without waiting for the time-out period to elapse if the receiving thread appears to not respond or "hangs."
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.SendMessageTimeoutFlags.NoTimeoutIfNotHung">
+            <summary>
+            Microsoft Windows 2000/Windows XP: Does not return when the time-out period elapses if the receiving thread stops responding.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.RasterOperations.SRCCOPY">
+            <summary>
+            Source directly copied onto destination.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.RasterOperations.SRCPAINT">
+            <summary>
+            Source first bitwise-OR'd with destination, and then copied onto destination.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.RasterOperations.SRCAND">
+            <summary>
+            Source first bitwise-AND'd with destination, and then copied onto destination.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.RasterOperations.SRCINVERT">
+            <summary>
+            Source first bitwise-XOR'd with destination, and then copied onto destination.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.RasterOperations.SRCERASE">
+            <summary>
+            Source first bitwise-AND'd with a NOT of the destination, and then copied onto destination.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.RasterOperations.NOTSRCCOPY">
+            <summary>
+            Source first bitwise-NOT'd, and then copied onto destination.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.RasterOperations.NOTSRCERASE">
+            <summary>
+            Source first bitwise-NOT'd and AND'd with a NOT of the destination, and then copied onto destination.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.RasterOperations.MERGECOPY">
+            <summary>
+            Source first bitwise-AND'd with pattern, and then copied onto destination.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.RasterOperations.MERGEPAINT">
+            <summary>
+            Source first bitwise-NOT'd and OR'd with the destination, and then copied onto destination.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.RasterOperations.PATCOPY">
+            <summary>
+            Pattern is copied onto destination.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.RasterOperations.PATINVERT">
+            <summary>
+            Pattern is first bitwise-XOR'd with destination, and then copied onto destination.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.RasterOperations.DSTINVERT">
+            <summary>
+            Destination becomes inverted.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.RasterOperations.BLACKNESS">
+            <summary>
+            Destination becomes black.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.RasterOperations.WHITENESS">
+            <summary>
+            Destination becomes white.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.CodePageEnum.CP_ACP">
+            <summary>
+            ANSI code page
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.CodePageEnum.CP_OEMCP">
+            <summary>
+            OEM  code page
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.CodePageEnum.CP_MACCP">
+            <summary>
+            MAC  code page
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.CodePageEnum.CP_THREAD_ACP">
+            <summary>
+            Current thread's ANSI code page
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.CodePageEnum.CP_SYMBOL">
+            <summary>
+            SYMBOL translations
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.CodePageEnum.CP_UTF7">
+            <summary>
+            UTF-7 translation
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.CodePageEnum.CP_UTF8">
+            <summary>
+            UTF-8 translation
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.LCType.LOCALE_IDEFAULTLANGUAGE">
+            <summary>
+            default language id
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.LCType.LOCALE_IDEFAULTCOUNTRY">
+            <summary>
+            default country code
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.LCType.LOCALE_IDEFAULTCODEPAGE">
+            <summary>
+            default oem code page
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.LCType.LOCALE_IDEFAULTANSICODEPAGE">
+            <summary>
+            default ansi code page
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.Win32.LCType.LOCALE_IDEFAULTMACCODEPAGE">
+            <summary>
+            default mac code page
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Win32.NativeMethods.SetCursor(System.IntPtr)">
+            <summary>
+            The SetCursor function sets the cursor shape.
+            </summary>
+            <param name="hCursor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Win32.NativeMethods.GetCursor">
+            <summary>
+            The GetCursor function retrieves a handle to the current cursor.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Win32.NativeMethods.SetSystemCursor(System.IntPtr,System.Int32)">
+            <summary>
+            The SetSystemCursor function enables an application to customize the system cursors. It replaces the contents of the system cursor specified by the id parameter with the contents of the cursor specified by the hcur parameter and then destroys hcur.
+            </summary>
+            <param name="hCursor"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.Win32.NativeMethods.SelectClipRgn(DevExpress.CodeRush.Win32.HDC)">
+            <summary>
+            Selects a null cliping region into the specified HDC.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Win32.NativeMethods.GetDC(DevExpress.CodeRush.Win32.HWND)">
+            <summary>
+            Returns the DC for the client area of a window.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Win32.NativeMethods.GetWindowDC(DevExpress.CodeRush.Win32.HWND)">
+            <summary>
+            Returns the DC for the entire window, including including title bar, menus, and scroll bars.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Win32.NativeMethods.TranslateMouseButtons(System.IntPtr)">
+            <summary>
+            Converts a wParam IntPtr to a MouseButtons instance.
+            </summary>
+            <param name="wParam">The wParam instance to convert.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.Win32.HDC.Delete">
+            <summary>
+            Deletes this device context.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Win32.HWND.SendMessageTimeout(DevExpress.CodeRush.Win32.WindowMessage,System.IntPtr,System.IntPtr,System.Int32)">
+            <summary>
+            Sends a message to this window handle with a timeout value. This method will block until
+            the message is processed or the timeout (in milliseconds) is reached.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Win32.HWND.SendMessageTimeout(DevExpress.CodeRush.Win32.WindowMessage,System.IntPtr,System.IntPtr,DevExpress.CodeRush.Win32.SendMessageTimeoutFlags,System.Int32)">
+            <summary>
+            Sends a message to this window handle with a timeout value. This method will block until
+            the message is processed or the timeout (in milliseconds) is reached.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.Win32.MENUITEMINFO">
+            <summary>
+            The MENUITEMINFO structure is used with the GetMenuItemInfo, InsertMenuItem, and 
+            SetMenuItemInfo methods.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Win32.MENUITEMINFO.Initialize">
+            <summary>
+            Sets the size for this struct and also initializes properties to defaults.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Win32.RECT.GetSize">
+            <summary>
+            Returns the size of this structure, in bytes.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Win32.RECT.Intersect(DevExpress.CodeRush.Win32.RECT,DevExpress.CodeRush.Win32.RECT)">
+            <summary>
+            Returns the intersection of two RECT structures.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.Win32.TRACKMOUSEEVENT.Initialize">
+            <summary>
+            Sets the size for this struct and also initializes properties to defaults.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Win32.TRACKMOUSEEVENT.Window">
+            <summary>
+            The window to track.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Win32.TRACKMOUSEEVENT.Service">
+            <summary>
+            Specifies the services requested. This member can be a combination values in the TrackMouseService enum. 
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.Win32.TRACKMOUSEEVENT.HoverTime">
+            <summary>
+            Specifies the hover time-out (if Service includes TrackMouseService.TME_HOVER), in milliseconds. Can be 
+            TRACKMOUSEEVENT.HOVER_DEFAULT, which means the system default hover time-out will be used.
+            </summary>
+        </member>
+    </members>
+</doc>

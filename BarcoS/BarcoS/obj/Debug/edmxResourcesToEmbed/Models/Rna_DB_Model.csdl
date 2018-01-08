@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RnaModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="RnaEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Banks" EntityType="RnaModel.Bank" />
+    <EntitySet Name="Brands" EntityType="RnaModel.Brand" />
+    <EntitySet Name="Companies" EntityType="RnaModel.Company" />
+    <EntitySet Name="Features" EntityType="RnaModel.Feature" />
+    <EntitySet Name="Products" EntityType="RnaModel.Product" />
+    <EntitySet Name="Warehouses" EntityType="RnaModel.Warehouse" />
+  </EntityContainer>
+  <EntityType Name="Bank">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="company_id" Type="Int32" />
+    <Property Name="bank_name" Type="Int32" />
+    <Property Name="auth_name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="iban_number" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="pos" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Brand">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="company_id" Type="Int32" />
+    <Property Name="name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="sef" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="text" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="tax_number" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="tax_office" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="phone" Type="Int32" />
+    <Property Name="adress" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="auth_name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="auth_phone" Type="Int32" />
+    <Property Name="tax_rate" Type="Int32" />
+    <Property Name="tax_rate_is_inc" Type="Int32" />
+    <Property Name="sale_print" Type="Int32" />
+    <Property Name="barcode_paper_width" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="barcode_paper_height" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="sales_screen" Type="Int32" />
+    <Property Name="reg_date" Type="DateTime" Precision="0" />
+    <Property Name="licence_end_date" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="Feature">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="company_id" Type="Int32" />
+    <Property Name="name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="company_id" Type="Int32" />
+    <Property Name="name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="sef" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="stock_code" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="shelf_number" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="current" Type="Int32" />
+    <Property Name="text" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="stock" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="brand_id" Type="Int32" />
+    <Property Name="category_id" Type="Int32" />
+    <Property Name="risk_limit" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="barcode_number" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="purchase_price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="sale_price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="third_price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="features" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="product_İmage" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="unit" Type="Int32" />
+    <Property Name="registertime" Type="DateTime" Precision="0" />
+    <Property Name="updatetime" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="Warehouse">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="company_id" Type="Int32" />
+    <Property Name="name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="auth_name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="auth_phone" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="adress" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="reg_date" Type="DateTime" Precision="0" />
+  </EntityType>
+</Schema>

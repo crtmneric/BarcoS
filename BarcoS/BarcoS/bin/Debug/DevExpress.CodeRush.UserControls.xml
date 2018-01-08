@@ -1,0 +1,2268 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DevExpress.CodeRush.UserControls</name>
+    </assembly>
+    <members>
+        <member name="T:DevExpress.CodeRush.UserControls.ColorSwatch">
+            <summary>
+            Summary description for ColorSwatch.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.UserControls.ColorSwatch.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.ColorSwatch.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.ColorSwatch.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.ColorSwatch.DoCloseUp">
+            <summary>
+            Closes the popup color grid if displayed.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.ColorSwatch.OnCloseHoveredColorPickers(DevExpress.CodeRush.UserControls.ColorSwatch)">
+            <summary>
+            Triggers the CloseHoveredColorPickers event. If a ColorSwatch is showing it's popup color picker due to a mouse hover event, this will clean that up.
+            </summary>
+            <param name="aColorSwatch">The ColorSwatch requesting the close.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.ColorSwatch.OnShowingColorPicker(DevExpress.CodeRush.UserControls.ColorSwatch)">
+            <summary>
+            Triggers the ShowingColorPicker event.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.ColorSwatch.ColorSwatch_ShowingColorPicker(DevExpress.CodeRush.UserControls.ColorSwatch)">
+            <summary>
+            This event handler prevents more than one color swatch from appearing at once...
+            </summary>
+            <param name="aColorSwatch">The color swatch that is about to appear.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.ColorSwatch.ColorSwatch_CloseHoveredColorPickers(DevExpress.CodeRush.UserControls.ColorSwatch)">
+            <summary>
+            This event handler prevents more than one color swatch from appearing at once...
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.ColorSwatch.GetNonPublicPropertyInfo(System.Object,System.String)">
+            <summary>
+            Returns a PropertyInfo instance representing the specified non-public (e.g., private, protected, etc.) property.
+            </summary>
+            <param name="aObject">The object to test.</param>
+            <param name="aPropName">The name of the non-public property to find.</param>
+            <returns>A PropertyInfo instance representing the specified non-public property.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.ColorSwatch.SetNonPublicValue(System.Object,System.String,System.Object)">
+            <summary>
+            Sets a value for a non-public property in an object.
+            </summary>
+            <param name="aObject">The object to manipulate.</param>
+            <param name="aPropName">The non-public property to change.</param>
+            <param name="aValue">The value to set.</param>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.ColorSwatch.Color">
+            <summary>
+            The selected color.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.ColorSwatch.DropDownOnMouseHover">
+            <summary>
+            Determines whether mouse hovers over the color swatch will cause the color picker grid to drop down.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.ColorSwatch.ToolTip">
+            <summary>
+            Reference to a ToolTip component. This ColorSwatch will automatically set its hint 
+            to the color name when the color changes.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.UserControls.ColorSwatchPicker">
+            <summary>
+            Summary description for ColorSwatch.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.UserControls.ColorSwatchPicker.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.ColorSwatchPicker.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.ColorSwatchPicker.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.ColorSwatchPicker.Color">
+            <summary>
+            The selected color.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.ColorSwatchPicker.ToolTip">
+            <summary>
+            Reference to a ToolTip component. This ColorSwatch will automatically set its hint 
+            to the color name when the color changes.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.UserControls.DXCoreUserControlInternal">
+            <summary>
+            Internal usage only.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.UserControls.CodeRushPopupContainer">
+            <summary>
+            Summary description for CodeRushPopupContainer.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.UserControls.CodeBrush">
+            <summary>
+            Provides both opaque and semi-opaque brushes efficiently, as well as low-contrast 
+            versions of these.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodeBrush.GetOpaqueBrush">
+            <summary>
+            Gets an opaque brush.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodeBrush.GetTransparentBrush(System.Int32)">
+            <summary>
+            Gets a transparent brush in the specified opacity.
+            </summary>
+            <param name="opacity">The opacity for this brush. 255 = opaque, 0 = transparent.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodeBrush.GetDecreasedEmphasisBrush(DevExpress.CodeRush.UserControls.TextLayer)">
+            <summary>
+            Gets a decreased emphasis version of this CodeBrush (either low-contrast or normal if the EmphasisOption is set to EmphasisOption.Highlight).
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodeBrush.GetIncreasedEmphasisBrush(DevExpress.CodeRush.UserControls.TextLayer)">
+            <summary>
+            Gets an emphasized version of this CodeBrush (either high-contrast or highlighted with a specified background or foreground color).
+            </summary>
+            <param name="textLayer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodeBrush.DisposeBrush(System.Drawing.Brush@)">
+            <summary>
+            Disposes the passed-in brush if it's assigned, and nulls out the reference.
+            </summary>
+            <param name="brush">The Brush to dispose.</param>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.CodeBrush.Color">
+            <summary>
+            Gets code brush color.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.CodeEmphasisSettings.Style">
+            <summary>
+            Gets or sets the style in which to emphasize code.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.CodeEmphasisSettings.EvenLowerContrastBlendPercent">
+            <summary>
+            The percent of the original color when blended with medium gray to use for very low contrast
+            painting. This is used for border lines around emphasized areas in the code window.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.CodeEmphasisSettings.LowContrastBlendPercent">
+            <summary>
+            The percent of the original color when blended with medium gray to use for low contrast
+            painting. This is used for low contrast code (outside of emphasized areas in the code window).
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodePreviewWindow.AddCode(System.String)">
+            <summary>
+            Adds a code string to the PreviewCodeWindow.
+            </summary>
+            <param name="text">Code string.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodePreviewWindow.AddCode(System.String,System.Boolean)">
+            <summary>
+            Adds a code string to the PreviewCodeWindow.
+            </summary>
+            <param name="text">Code string.</param>
+            <param name="isHighlighted">Defines is code string highlighted</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodePreviewWindow.AddCode(System.String,System.Int32,System.Int32)">
+            <summary>
+            Adds a code string to the PreviewCodeWindow.
+            </summary>
+            <param name="text">Code string.</param>
+            <param name="highlightStart">Start position of the highlited code in the code string.</param>
+            <param name="highlightEnd">End position of the highlited code in the code string.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodePreviewWindow.AddHighlightedCode(System.String)">
+            <summary>
+            Adds a highlighted code string to the PreviewCodeWindow.
+            </summary>
+            <param name="text"></param>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.CodePreviewWindow.BackColor">
+            <summary>
+            Sets the back color of the PreviewCodeWindow.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.CodePreviewWindow.CodeColor">
+            <summary>
+            Sets the color of the code string.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.CodePreviewWindow.HighlightedCodeColor">
+            <summary>
+            Sets the color of the highlighted code string.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.UserControls.Contrast">
+            <summary>
+            Helper class to reduce contrast in colors.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.Contrast.Lower(System.Drawing.Color)">
+            <summary>
+            Gets a low-contrast version (using CodeEmphasisSettings.LowContrastBlendPercent) of the specified color.
+            </summary>
+            <param name="color">The color to base the result on.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.Contrast.Lower(System.Drawing.Color,System.Int32)">
+            <summary>
+            Gets a low-contrast version (using CodeEmphasisSettings.LowContrastBlendPercent) of the specified color, in the specified opacity.
+            </summary>
+            <param name="color">The color to base the result on.</param>
+            <param name="opacity">The opacity for this color. 255 = opaque, 0 = transparent.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.Contrast.Lower(System.Drawing.Color,System.Int32,System.Byte)">
+            <summary>
+            Gets a low-contrast version of the specified color in the specified opacity. 
+            Contrast is determined by the percentOfOriginalColor parameter.
+            </summary>
+            <param name="color">The color to base the result on.</param>
+            <param name="opacity">The opacity of the color (255 = opaque; 0 = transparent).</param>
+            <param name="percentOfOriginalColor">The percent of the original color to 
+            keep, when blended with middle gray.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.Contrast.EvenLower(System.Drawing.Color)">
+            <summary>
+            Gets a low-contrast version (using CodeEmphasisSettings.EvenLowerContrastBlendPercent) of the specified color.
+            </summary>
+            <param name="color">The color to base the result on.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.Contrast.EvenLower(System.Drawing.Color,System.Int32)">
+            <summary>
+            Gets a low-contrast version (using CodeEmphasisSettings.EvenLowerContrastBlendPercent) of the specified color, in the specified opacity.
+            </summary>
+            <param name="color">The color to base the result on.</param>
+            <param name="opacity">The opacity for this color. 255 = opaque, 0 = transparent.</param>
+        </member>
+        <member name="F:DevExpress.CodeRush.UserControls.EmphasisStyle.None">
+            <summary>
+            No emphasis.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.UserControls.EmphasisStyle.UseContrast">
+            <summary>
+            Contrast is adjusted (emphasized code is rendered normally -- everything else is low-contrast).
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.UserControls.EmphasisStyle.Highlight">
+            <summary>
+            Emphasized code is rendered using the specified BackgroundHighlightColor and ForegroundHighlightColor inside CodeEmphasisSettings. 
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.UserControls.TextPalette">
+            <summary>
+            A class to manage the painting of source code.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextPalette.#ctor(DevExpress.CodeRush.Core.IFontAndColorSetting)">
+            <summary>
+            Creates a new instance of CodePainter
+            </summary>
+            <param name="fontAndColorSetting">The FontAndColorSetting to base this CodePainter on.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextPalette.DisposeBrush(System.Drawing.Brush@)">
+            <summary>
+            Disposes the passed-in brush if it's assigned, and nulls out the reference.
+            </summary>
+            <param name="brush">The Brush to dispose.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextPalette.DisposeBrush(DevExpress.CodeRush.UserControls.CodeBrush@)">
+            <summary>
+            Disposes the passed-in brush if it's assigned, and nulls out the reference.
+            </summary>
+            <param name="codeBrush">The CodeBrush to dispose.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextPalette.InvalidateSharedBrushes">
+            <summary>
+            Invalidates all static brushes. Call this method 
+            whenever VS color settings change.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.TextPalette.UsesBackgroundColor">
+            <summary>
+            Gets whether this CodePainter uses the default background color.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.UserControls.TextViewer">
+            <summary>
+            A base class for presenting read-only text.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.UserControls.TextViewer.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.CreateSharedStringFormat">
+            <summary>
+            Initializes the shared _StringFormat class variable.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.AdjustLeftPixelForResize">
+            <summary>
+            Ensures the LeftPixel property is still valid after a resize.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.AdjustTopLineForResize">
+            <summary>
+            Ensures the TopLine property is still valid after a resize.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.CalculateLineHeight">
+            <summary>
+            Calculates the height of a single line.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.CalculateLongestLine">
+            <summary>
+            Calculates the longest line in Text.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.CalculateVisibleLineCount">
+            <summary>
+            Calculates the number of visible lines inside txtView.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.GetPositiveInBoundsValue(System.Int32,System.Int32)">
+            <summary>
+            Returns a value between zero and the specified upperBound. If suggestedValue
+            falls within this range, suggestedValue will be returned. If suggestedValue
+            is less than zero, zero will be returned. If suggestedValue is greater than 
+            upperBound, upperBound will be returned (or zero if upperBound is less than 
+            zero).
+            </summary>
+            <param name="suggestedValue">The value to check.</param>
+            <param name="upperBound">The maximum value.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.GetValidLeftPixel(System.Int32)">
+            <summary>
+            Returns a valid left pixel, greater than or equal to zero, and less than 
+            the longest line in pixels, minus the width of the txtView control.
+            </summary>
+            <param name="suggestedValue">The suggested value for the left pixel. 
+            This method will return this suggested value as long as it is within 
+            the bounds mentioned above.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.GetValidTopLine(System.Int32)">
+            <summary>
+            Returns a valid top line, greater than or equal to zero, and less than 
+            the line count minus the number of visible lines.
+            </summary>
+            <param name="suggestedValue">The suggested value for the top line. 
+            This method will return this value as long as it is within the bounds 
+            mentioned above.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.PaintLine(System.Int32,System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Paints the specified line, drawing both background and foreground (text).
+            </summary>
+            <param name="lineIndex">The line index to paint.</param>
+            <param name="ea">The PaintEventArgs from a Paint event handler.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.SetHorizontalScrollBarLargeChange">
+            <summary>
+            Sets the LargeChange property in the Horizontal scroll bar.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.ShowHorizontalScrollBarIfNecessary">
+            <summary>
+            Sets the horizontal scroll bar visibility to true if the 
+            longest line does not fit within txtView, and if the height
+            of this control is greater than the height of the horizontal
+            scrollbar.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.ShowScrollBarsIfNecessary">
+            <summary>
+            Shows the horizontal and vertical scroll bars, if needed.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.ShowVerticalScrollBarIfNecessary">
+            <summary>
+            Sets the vertical scroll bar visibility to true if the line count 
+            is greater than the number of visible lines.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.SizeControls">
+            <summary>
+            Positions the scrollbars, the txtView control, and the pnlScrollbarSpacer control
+            based on the visibility of the vertical and horizontal scrollbars.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.AdjustForResize">
+            <summary>
+            Adjusts the top line and left pixel, scrolling up and left,
+            allowing more data to be seen if either of these are greater
+            than zero and the bottom or far right is in view.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.GetClientRect">
+            <summary>
+            Gets the client rect where painting can occur. This defaults to the 
+            rectangle of txtView.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.GetLineRect(System.Int32)">
+            <summary>
+            Calculates a rectangle for the given lineIndex.
+            </summary>
+            <param name="lineIndex">The index of the line to calculate.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.GetTextImage">
+            <summary>
+            Gets an image (Bitmap) of the text in the viewer.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.GetTextWidth(System.Drawing.Graphics,System.String)">
+            <summary>
+            Gets the width of the text using this control's Font.
+            </summary>
+            <param name="graphics">The Graphics object to measure with.</param>
+            <param name="text">The text to measure.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.GetTextWidth(System.Drawing.Graphics,System.String,System.Drawing.Font)">
+            <summary>
+            Gets the width of the text using the specified font.
+            </summary>
+            <param name="graphics">The Graphics object to measure with.</param>
+            <param name="text">The text to measure.</param>
+            <param name="font">The font to measure with.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.LinesChanged">
+            <summary>
+            Called when the text lines in the Lines property are assigned.
+            Descendants can override to respond to updated data.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.MeasureLine(System.Drawing.Graphics,System.Int32)">
+            <summary>
+            Measures the length of the specified line number.
+            </summary>
+            <param name="graphics">The Graphics object to measure with.</param>
+            <param name="lineIndex">The index into the _Lines array.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.MouseWheelScrolled(System.Int32,System.Windows.Forms.MouseButtons,System.Int32,System.Int32)">
+            <summary>
+            Called when the mouse wheel is rotated.
+            </summary>
+            <param name="delta">The number of mouse wheel notches rotated, times 120.</param>
+            <param name="mouseButtons">The mouse buttons pressed.</param>
+            <param name="x">The x position of the mouse.</param>
+            <param name="y">The y position of the mouse.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.PaintBackground(System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>
+            Paints the background of the entire control.
+            </summary>
+            <param name="graphics">The Graphics object to paint on.</param>
+            <param name="controlRect">The rectangle to paint.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.PaintLineBackground(System.Drawing.Graphics,System.Drawing.Rectangle,System.Int32)">
+            <summary>
+            Paints the background of the specified rectangle. Called before text is painted.
+            </summary>
+            <param name="graphics">The Graphics object to paint on.</param>
+            <param name="lineRect">The rectangle to paint.</param>
+            <param name="lineIndex">The index of the line to paint.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.PaintBorder(System.Drawing.Graphics)">
+            <summary>
+            Paints the outside border of this control.
+            </summary>
+            <param name="graphics">The Graphics object to paint.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.PaintLineForeground(System.Drawing.Graphics,System.Drawing.Rectangle,System.Int32)">
+            <summary>
+            Virtual method to paint on top of the text. Called after PaintLineText. Descendants can override
+            (and call base implementation) to implement custom painting on the text.
+            </summary>
+            <param name="graphics">The Graphics object to paint on.</param>
+            <param name="lineRect">The rectangle to paint.</param>
+            <param name="lineIndex">The index of the line to paint.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.PaintLineText(System.Drawing.Graphics,System.Drawing.Rectangle,System.Int32)">
+            <summary>
+            Paints the specified text.
+            </summary>
+            <param name="graphics">The Graphics object to paint with.</param>
+            <param name="lineRect">The rectangle to paint in.</param>
+            <param name="lineIndex">The index of the line to paint.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.ProcessDialogKey(System.Windows.Forms.Keys)">
+            <summary>
+            Handles the dialog keys that don't get sent to the KeyDown event. 
+            Specifically the up, down, left and right arrow keys.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.SetViewSize(System.Int32,System.Int32)">
+            <summary>
+            Sets the size for the txtView control.
+            </summary>
+            <param name="newWidth">The new width for the txtView control.</param>
+            <param name="newHeight">The new height for the txtView control.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.WndProc(System.Windows.Forms.Message@)">
+            <summary>
+            Listens to the WM_MOUSEWHEEL message, and calls the 
+            MouseWheelScrolled method if the mouse wheel is spinning.
+            </summary>
+            <param name="m">The Message.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.GetIdealSize">
+            <summary>
+            Gets the ideal size of this control, given the value of its 
+            Text and Font properties, so that scroll bars are not needed 
+            to see all the data.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.MoveDown(System.Int32)">
+            <summary>
+            Scrolls the text down.
+            </summary>
+            <param name="amount">The number of lines to scroll.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.MoveUp(System.Int32)">
+            <summary>
+            Scrolls the text up.
+            </summary>
+            <param name="amount">The number of lines to scroll.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.MoveLeft(System.Int32)">
+            <summary>
+            Scrolls the text left.
+            </summary>
+            <param name="amount">The number of pixels to scroll.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.MoveRight(System.Int32)">
+            <summary>
+            Scrolls the text right.
+            </summary>
+            <param name="amount">The number of pixels to scroll.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TextViewer.txtView_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Handles the KeyDown event, and directs the nav keys to their appropriate behavior.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.TextViewer.AvailableHorizontalPixels">
+            <summary>
+            The number of pixels from left to right, excluding margins.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.TextViewer.AvailableVerticalPixels">
+            <summary>
+            The number of pixels from top to bottom, excluding margins.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.TextViewer.HScroll">
+            <summary>
+            Gets or sets whether the horizontal scroll bar is visible.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.TextViewer.HScrollHeight">
+            <summary>
+            Gets the height of the horizontal scroll bar if it's visible; otherwise returns zero.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.TextViewer.VScroll">
+            <summary>
+            Gets or sets whether the vertical scroll bar is visible.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.TextViewer.VScrollWidth">
+            <summary>
+            Gets the width of the vertical scroll bar if it's visible; otherwise returns zero.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.TextViewer.BorderColor">
+            <summary>
+            The color of the outer border. Set to Color.Empty to get the default border.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.TextViewer.ClientRectangle">
+            <summary>
+            Gets the client rectangle for this control (excluding any scroll bars).
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.TextViewer.LeftPixel">
+            <summary>
+            The left pixel in the TextViewer. This will be zero unless the 
+            data is scrolled to the left (by sliding the horizontal scrollbar
+            right). This value equals the number of pixels scrolled offscreen.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.TextViewer.LineCount">
+            <summary>
+            Number of text lines displayed in the view.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.TextViewer.LineHeight">
+            <summary>
+            Gets the height of each line.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.TextViewer.Lines">
+            <summary>
+            Access to the individual lines (delimited by CR, LF, and CRLF) in Text.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.TextViewer.LongestLine">
+            <summary>
+            Gets the longest line, in pixels.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.TextViewer.ScrollBars">
+            <summary>
+            Determines which ScrollBars should automatically appear if needed.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.TextViewer.Text">
+            <summary>
+            The text to display in this TextViewer. Text lines can be separated with CRLF, CR, 
+            and/or LF characters. 
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.TextViewer.TopLine">
+            <summary>
+            Gets or sets the index of the top visible line in the TextViewer.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.TextViewer.PrimaryViewControl">
+            <summary>
+            Returns the inner control the displays the text.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.TextViewer.VisibleLineCount">
+            <summary>
+            The number of visible lines in the display. Note: the last 
+            line may be partially visible.
+            </summary>
+        </member>
+        <member name="E:DevExpress.CodeRush.UserControls.TextViewer.Painted">
+            <summary>
+            Occurs after the main viewer text has been painted.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.UserControls.WheelPanel">
+            <summary>
+            A FlickerFreePanel descendant that can handle WM_MouseWheel messages. 
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.UserControls.FlickerFreePanel">
+            <summary>
+            A custom panel which allows users to paint on its surface without flicker.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.UserControls.WinTools">
+            <summary>
+            Methods for getting an image from a window.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.UserControls.CodeView">
+            <summary>
+            A syntax-highlighting code viewer that uses the syntax highighting settings of Visual Studio.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodeView.AddMultiLineToken(DevExpress.CodeRush.StructuralParser.Token)">
+            <summary>
+            Takes a multi-line token and adds one new token for each line. 
+            This is necessary for the syntax-highlighting.
+            </summary>
+            <param name="token">The multi-line token to add.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodeView.AnimateTransition">
+            <summary>
+            Changes the TransitionOpacity as time moves forward. Also stops the animation if 
+            the TransitionTime has been exceeded.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodeView.CalculateEmphasisMargins">
+            <summary>
+            Calculates the left and right emphasis margins, 
+            ignoring leading and trailing white space.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodeView.CalculateTransitionOpacity(System.Single)">
+            <summary>
+            Calculates the opacity corresponding to a percentage through the 
+            allotted time to transition.
+            </summary>
+            <param name="percentComplete"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodeView.CreateBoldFont">
+            <summary>
+            Creates a bold font, based on the prototype base.Font.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodeView.DistributeTokensByLine">
+            <summary>
+            Copies the tokens into collections, grouped by line number.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodeView.GetEmphasisLeftPos(System.Drawing.Graphics,System.Int32,DevExpress.CodeRush.UserControls.CodeView.EmphasisData)">
+            <summary>
+            Calculates and returns the left edge for the emphasis highlight region.
+            </summary>
+            <param name="graphics">The Graphics object containing the code.</param>
+            <param name="lineIndex">The index of the line we're painting.</param>
+            <param name="data">The emphasis data</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodeView.GetEmphasisRightPos(System.Drawing.Graphics,System.Int32,DevExpress.CodeRush.UserControls.CodeView.EmphasisData)">
+            <summary>
+            Gets the right edge for the emphasis highlight region.
+            </summary>
+            <param name="graphics">The Graphics object containing the code.</param>
+            <param name="lineIndex">The index of the line we're painting.</param>
+            <param name="data">The emphasis data</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodeView.GetLineTokens(System.Int32)">
+            <summary>
+            Gets an existing TokenCollection (or creates a new one) for the specified
+            lineIndex.
+            </summary>
+            <param name="lineIndex">The index of the line number to get tokens for.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodeView.GetTextWidth(System.Drawing.Graphics,System.String,System.Drawing.Font)">
+            <summary>
+            Gets the width of the text using the specified font.
+            </summary>
+            <param name="graphics">The Graphics object to measure with.</param>
+            <param name="text">The text to measure.</param>
+            <param name="font">The font to measure with.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodeView.GetTokenCollection(System.Int32)">
+            <summary>
+            Gets a collection of tokens for the specified line index.
+            </summary>
+            <param name="lineIndex">The line index (starting at zero) to get tokens for.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodeView.GetTokens">
+            <summary>
+            Gets tokens from the assigned Text for the current _LanguageID.
+            </summary>
+            <returns>Returns true if successful; false otherwise.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodeView.StartTransition">
+            <summary>
+            Starts the visual transition (in response to new code 
+            being displayed in the CodeView).
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodeView.StopTransition">
+            <summary>
+            Stops the visual transition. Called from AnimateTransition after the transition time has passed.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodeView.TextHasMoreThanWhiteSpace(System.String)">
+            <summary>
+            Returns true if the specified text contains something besides white space.
+            </summary>
+            <param name="text">The text to check.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodeView.ValidateLanguageID">
+            <summary>
+            Ensures the _LanguageID field is valid.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodeView.GetLineEmphasis(System.Drawing.Graphics,System.Int32,System.Int32@,System.Int32@,DevExpress.CodeRush.UserControls.CodeView.EmphasisData)">
+            <summary>
+            Gets a LineEmphasis enum value for the specified lineIndex, and also sets the 
+            emphasisStartPos and emphasisEndPos out parameters.
+            </summary>
+            <param name="graphics">The Graphics surface to paint on.</param>
+            <param name="lineIndex">The index of the line to evaluate.</param>
+            <param name="emphasisStartPos">The x-coordinate of the left side emphasized text.</param>
+            <param name="emphasisEndPos">The x-coordinate of the right side emphasized text.</param>
+            <param name="data">The emphasis data</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodeView.GetTabSize(System.String)">
+            <summary>
+            Gets the tab size for the specified language.
+            </summary>
+            <param name="languageID">The ID of the language to get the tab settings for.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodeView.HorizontalLine(System.Drawing.Graphics,System.Single,System.Single,System.Single)">
+            <summary>
+            Draws a horizontal line in the BorderPen.
+            </summary>
+            <param name="graphics">The Graphics object to paint on.</param>
+            <param name="yPos">The y-coordinate of the line.</param>
+            <param name="left">The left of the line.</param>
+            <param name="right">The right of the line.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodeView.VerticalLine(System.Drawing.Graphics,System.Single,System.Single,System.Single)">
+            <summary>
+            Draws a vertical line in the BorderPen.
+            </summary>
+            <param name="graphics">The Graphics object to paint on.</param>
+            <param name="xPos">The x-coordinate of the line.</param>
+            <param name="top">The top of the line.</param>
+            <param name="bottom">The bottom of the line.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodeView.PaintBackground(System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>
+            Paints the background of the entire control.
+            </summary>
+            <param name="graphics">The Graphics object to paint on.</param>
+            <param name="controlRect">The rectangle specifying the bounds of the paint operation.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodeView.GetEmphasis(DevExpress.CodeRush.UserControls.EmphasisCallbackArgs)">
+            <summary>
+            This callback method determines how the token at the specified column should be 
+            rendered.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodeView.SetFontFromEditor">
+            <summary>
+            Sets this Font to match the one set in the Visual Studio editor, if 
+            the UseEditorFont property is true.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodeView.ShowCode(System.String,System.String)">
+            <summary>
+            Syntax-highlights the specified code in the specified language.
+            </summary>
+            <param name="code">The code to syntax-highlight.</param>
+            <param name="language">The language of the source code.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodeView.ShowCode(DevExpress.CodeRush.StructuralParser.SourcePoint,System.String,System.String)">
+            <summary>
+            Syntax-highlights the specified code in the specified language.
+            </summary>
+            <param name="topLeft">The top line and left column of the specified code.</param>
+            <param name="code">The code to syntax-highlight.</param>
+            <param name="language">The language of the source code.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodeView.ShowCode(DevExpress.CodeRush.StructuralParser.SourcePoint,System.String,System.String,DevExpress.CodeRush.StructuralParser.SourceRange[])">
+            <summary>
+            Syntax-highlights the specified code in the specified language.
+            </summary>
+            <param name="topLeft">The top line and left column of the specified code.</param>
+            <param name="code">The code to syntax-highlight.</param>
+            <param name="language">The language of the source code.</param>
+            <param name="emphasisRanges">The range to emphasize. Source code in 
+            this range will be drawn normally, while the contrast of surrounding 
+            code will be lowered.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodeView.ProtectedShowCode(DevExpress.CodeRush.StructuralParser.SourcePoint,System.String,System.String,DevExpress.CodeRush.StructuralParser.SourceRange[])">
+            <summary>
+            Syntax-highlights the specified code in the specified language.
+            </summary>
+            <param name="topLeft">The top line and left column of the specified code.</param>
+            <param name="code">The code to syntax-highlight.</param>
+            <param name="language">The language of the source code.</param>
+            <param name="emphasisRanges">The range to emphasize. Source code in 
+            this range will be drawn normally, while the contrast of surrounding 
+            code will be lowered.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodeView.MakeSureEmphasisIsVisible">
+            <summary>
+            Ensures the EmphasisRange is in view.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodeView.MakeSureEmphasisIsVisible(DevExpress.CodeRush.StructuralParser.SourceRange)">
+            <summary>
+            Ensures the EmphasisRange is in view. If an oldEmphasisRange is specified (something other than 
+            SourceRange.Empty), then the view will use the old TopLine if possible.
+            </summary>
+            <param name="oldEmphasisRange">The previously-emphasized SourceRange.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.CodeView.MakeSureEmphasisIsVisible(DevExpress.CodeRush.StructuralParser.SourceRange,DevExpress.CodeRush.UserControls.CodeView.EmphasisData)">
+            <summary>
+            Ensures the EmphasisRange is in view. If an oldEmphasisRange is specified (something other than 
+            SourceRange.Empty), then the view will use the old TopLine if possible.
+            </summary>
+            <param name="oldEmphasisRange">The previously-emphasized SourceRange.</param>
+            <param name="data">The emphasis data</param>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.CodeView.BoldFont">
+            <summary>
+            Gets a bold version of the Font for this control.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.CodeView.BorderPen">
+            <summary>
+            The pen for painting the border around the EmphasisRange.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.CodeView.DefaultBackBrush">
+            <summary>
+            Gets the default brush for painting the background of source code.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.CodeView.EmphasisLeftPos">
+            <summary>
+            Gets the left edge of the emphasis highlight range.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.CodeView.EmphasisRightPos">
+            <summary>
+            Gets the right edge of the emphasis highlight range.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.CodeView.DecreasedEmphasisBackBrush">
+            <summary>
+            Gets the brush for painting low unemphasized background of source code.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.CodeView.TokenCount">
+            <summary>
+            The number of tokens displayed.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.CodeView.TransitionOpacity">
+            <summary>
+            Gets or sets the opacity of the new text during a transition to new code.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.CodeView.TransitionTimer">
+            <summary>
+            Gets the TransitionTimer.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.CodeView.AnimationSpeed">
+            <summary>
+            Gets or sets the animation speed for transition effects. When AnimationSpeed is high,
+            slow downs may be noticable in other parts of the app. This property allows clients to 
+            change the speed in the middle of a transition effect. This setting only impacts the 
+            transition in progress. Subsequent transitions will be applied at the fastest 
+            settings.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.CodeView.EmphasisRange">
+            <summary>
+            Gets or sets the range to highlight for this view. Text in the highlighted range 
+            is drawn normally -- the contrast of everything else is lowered. Set to 
+            SourceRange.Empty to disable this feature.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.CodeView.Font">
+            <summary>
+            Gets or sets the font for this control. Attempts to change the font will 
+            be ignored if the UseEditorFont property is true.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.CodeView.UseEditorFont">
+            <summary>
+            Determines whether this control uses the Visual Studio editor font.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.CodeView.TextChangeEffect">
+            <summary>
+            Gets or sets the visual effect that will occur when the code changes through 
+            an assignment to the Text property.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.CodeView.TransitionTime">
+            <summary>
+            Gets or sets the time for the visual transition that occurs 
+            (according to the value of the TextChangeEffect property) 
+            when new code is shown in the viewer.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.UserControls.ColorCell">
+            <summary>
+            Summary description for ColorCell.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.ColorCell.AdjustBrightness(System.Drawing.Color,System.Int32)">
+            <summary>
+            Adjusts the brightness of a specified color by the specified amount.
+            </summary>
+            <param name="aColor">The color to adjust.</param>
+            <param name="aAmount">The amount of brightness to add, or subtract if negative (-100 to 100).</param>
+            <returns>The new color.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.ColorCell.Blend(System.Drawing.Color,System.Drawing.Color,System.Single)">
+            <summary>
+            Blends two colors to produce a third color.
+            </summary>
+            <param name="aColor1">The first color to blend.</param>
+            <param name="aColor2">The second color to blend.</param>
+            <param name="aPercentOfColor1">The percentage of the first color (0-100).</param>
+            <returns>The blend of the two colors.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.ColorCell.ContainsPoint(System.Int32,System.Int32)">
+            <summary>
+            Returns true if the specified point is in this cell.
+            </summary>
+            <param name="aX"></param>
+            <param name="aY"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DevExpress.CodeRush.UserControls.ColorEventHandler">
+            <summary>
+            Summary description for ColorGridPicker.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.UserControls.ColorGridPicker.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.ColorGridPicker.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.ColorGridPicker.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.ColorGridPicker.OnColorChange(System.Drawing.Color)">
+            <summary>
+            Triggers the ColorChange event.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.ContextPicker.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.ContextPicker.ConvertToCSV(System.String[],System.Boolean)">
+            <summary>
+            Converts a string array to a comma-separated string. If quoteCommas is set to true, any
+            values in the string array containing commas are added inside double-quotes.
+            </summary>
+            <param name="parts">The string array to convert.</param>
+            <param name="quoteCommas">If  true, any values in the string array containing commas are 
+            added inside double-quotes.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.ContextPicker.ParseCSV(System.String,System.Boolean)">
+            <summary>
+            Parse a comma separated string into a string array. Optionally handles 
+            text command quotes ("«" and "»") as well as regular double quotes. 
+            </summary>
+            <param name="commaSeparatedString">String to parse</param>
+            <param name="lookForCmdQuote">if true, will handle text command quotes
+            as if they were normal quotes.</param>
+            <returns>A string collection parsed from commaSeparatedString.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.ContextPicker.ParseCSV(System.String)">
+            <summary>
+            Parse a comma separated string into a string array.</summary>
+            <param name="commaSeparatedString">String to parse</param>
+            <returns>A string collection parsed from commaSeparatedString.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.ContextPicker.Add(DevExpress.CodeRush.Core.IContextProvider)">
+            <summary>
+            Adds a context provider to the context tree structure.
+            </summary>
+            <param name="iContextProvider">The IContextProvider implementor.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.ContextPicker.WalkTreePaths(DevExpress.DXCore.Controls.XtraTreeList.Nodes.TreeListNodes,System.Int32,System.Collections.Specialized.StringCollection)">
+            <summary>
+            Recursively walks through the tree nodes looking for nodes matching the specified state, 
+            placing the DataPath and Parameters of each matching context in the string collection.
+            </summary>
+            <param name="nodes">The nodes of the context tree to recursively process.</param>
+            <param name="stateIndex">The state to match (e.g., "(int)CheckState.Selected", "(int)CheckState.Excluded").</param>
+            <param name="paths">An StringCollection that will be populated with matching contexts in the tree.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.ContextPicker.GetNodeAtPosition(DevExpress.DXCore.Controls.XtraTreeList.TreeList,System.Drawing.Point)">
+            <summary>
+            Returns the TreeListNode at the specified position in client coordinates.
+            </summary>
+            <param name="aTreeList"></param>
+            <param name="aScreenPos">The position to check in client coordinates.</param>
+            <returns>Returns the TreeListNode if found, or null otherwise.</returns>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.ContextPicker.RootContext">
+            <summary>
+            If not blank, is a comma-separated list of contexts to include in the tree. For instance, if RootContext = "Editor", 
+            only nodes that start with "Editor\" will be in the tree. 
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.ContextPicker.ShowHint">
+            <summary>		
+            Determinies if ContextPicker should display the hint for the context Descriptions.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.ContextPicker.HintDisplayTime">
+            <summary>		
+            Defines display time for the hint
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.ContextPicker.HintWindowWidth">
+            <summary>		
+            Defines the width of the hint window
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.ContextPicker.ContextPickerNodeData.Description">
+            <summary>
+            A description of this context. Used to provide tooltip hints when 
+            the cursor hovers over the context.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.UserControls.WebBrowserElementEventHandler">
+            <summary>
+            Web browser element event.
+            </summary>
+            <param name="sender">The sender object.</param>
+            <param name="ea">The event args.</param>
+        </member>
+        <member name="T:DevExpress.CodeRush.UserControls.WebBrowserElementEventArgs">
+            <summary>
+            Web browser event args.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.WebBrowserElementEventArgs.SrcElement">
+            <summary>
+            Gets source html element.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.WebBrowserElementEventArgs.EventType">
+            <summary>
+            Gets event type raised.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.WebBrowserElementEventArgs.ReturnValue">
+            <summary>
+            Gets or sets return value.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.WebBrowserElementEventArgs.AltKeyPressed">
+            <summary>
+            Returns true if ALT key is pressed.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.WebBrowserElementEventArgs.CtrlKeyPressed">
+            <summary>
+            Returns true if CTRL key is pressed.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.WebBrowserElementEventArgs.ShiftKeyPressed">
+            <summary>
+            Returns true if SHIFT key is pressed.
+            </summary>
+        </member>
+        <member name="E:DevExpress.CodeRush.UserControls.CRWebBrowser.WebBrowserElementEvent">
+            <summary>
+            Raised when document element is clicked.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.UserControls.GetParamValueForm">
+            <summary>
+            Summary description for GetParamValueForm.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.UserControls.GetParamValueForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.GetParamValueForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.GetParamValueForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.UserControls.HueSatLight">
+            <summary>
+            Summary description for HueSatLight.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.HueSatLight.AsRGB">
+            <summary> 
+            Returns an equivalent Color instance.
+            </summary> 
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.HueSatLight.AsGrayScale">
+            <summary>
+            Returns an equivalent Color object converted to gray scale.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.HueSatLight.IsLight">
+            <summary>
+            Returns true if this color is brighter than medium gray.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.HueSatLight.IsDark">
+            <summary>
+            Returns true if this color is darker than medium gray.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.HueSatLight.IsGrayScale">
+            <summary>
+            Returns true if saturation is at zero.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.HueSatLight.GrayScale">
+            <summary>
+            Returns the percentage on the gray scale.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.UserControls.GdiHueSatLight">
+            <summary>
+            Summary description for GdiHueSatLight.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.GdiHueSatLight.AsRGB">
+            <summary> 
+            Returns an equivalent Color instance.
+            </summary> 
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.GdiHueSatLight.AsGrayScale">
+            <summary>
+            Returns an equivalent Color object converted to gray scale.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.GdiHueSatLight.IsLight">
+            <summary>
+            Returns true if this color is brighter than medium gray.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.GdiHueSatLight.IsDark">
+            <summary>
+            Returns true if this color is darker than medium gray.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.GdiHueSatLight.IsGrayScale">
+            <summary>
+            Returns true if saturation is at zero.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.GdiHueSatLight.GrayScale">
+            <summary>
+            Returns the percentage on the gray scale.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.UserControls.LineEmphasis.Normal">
+            <summary>
+            The line contains only normal (high-contrast) code.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.UserControls.LineEmphasis.Mixed">
+            <summary>
+            The line contains a mix of normal (high-contrast) code and low-contrast (less important) code.
+            </summary>
+        </member>
+        <member name="F:DevExpress.CodeRush.UserControls.LineEmphasis.LowContrast">
+            <summary>
+            The line contains only unemphasized (low-contrast) code.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.OrderableListBoxControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.OrderableListBoxControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.UserControls.PreviewPanel">
+            <summary>
+            A panel descendant that does not paint or erase its background, useful for custom previews
+            inside options dialogs.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.PreviewPanel.BorderColor">
+            <summary>
+            The color of the border painted around the edge of this panel. Set to 
+            Color.Transparent if you don't want a border painted.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.ScopeComboBox.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.ScopeComboBox.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.ScopeComboBox.Language">
+            <summary>
+            Gets or sets language ID.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.UserControls.SourceTree">
+            <summary>
+            Summary description for SourceTree.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SourceTree.AddElementsFromList(DevExpress.CodeRush.StructuralParser.NodeList,DevExpress.DXCore.Controls.XtraTreeList.Nodes.TreeListNode)">
+            <summary>
+            Adds the nodes from ArrayList to the specified parent TreeListNode.
+            </summary>
+            <param name="nodes">An ArrayList of LanguageElements to add.</param>
+            <param name="parent">The TreeListNode to parent the newly-added elements.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SourceTree.ElementIsFilteredOut(DevExpress.CodeRush.StructuralParser.LanguageElement)">
+            <summary>
+            Returns true if the specified LanguageElement should be excluded from the list.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SourceTree.AddChildren(DevExpress.CodeRush.StructuralParser.LanguageElement,DevExpress.DXCore.Controls.XtraTreeList.Nodes.TreeListNode)">
+            <summary>
+            Adds the children of the specified LanguageElement to the SourceTree. 
+            For maximum performance, wrap calls to AddChildren, AppendElement, and 
+            AppendTopLevelElement between calls to BeginUnboundLoad (before) and 
+            EndUnboundLoad (after).
+            </summary>
+            <param name="parentElement">The LanguageElement to add.</param>
+            <param name="parentTreeNode">The TreeListNode to parent the children of parentElement.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SourceTree.AppendElement(DevExpress.CodeRush.StructuralParser.LanguageElement,DevExpress.DXCore.Controls.XtraTreeList.Nodes.TreeListNode)">
+            <summary>
+            Appends the specified LanguageElement to the tree list.
+            For maximum performance, wrap calls to AddChildren, AppendElement, and 
+            AppendTopLevelElement between calls to BeginUnboundLoad (before) and 
+            EndUnboundLoad (after).
+            </summary>
+            <param name="element">The LanguageElement to append.</param>
+            <param name="parent">The TreeListNode to parent the element.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SourceTree.AppendTopLevelElement(DevExpress.CodeRush.StructuralParser.LanguageElement)">
+            <summary>
+            Appends the specified LanguageElement to the top of tree list.
+            For maximum performance, wrap calls to AddChildren, AppendElement, and 
+            AppendTopLevelElement between calls to BeginUnboundLoad (before) and 
+            EndUnboundLoad (after).
+            </summary>
+            <param name="element">The LanguageElement to append.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SourceTree.FindTreeNode(DevExpress.CodeRush.StructuralParser.LanguageElement)">
+            <summary>
+            Returns a TreeListNode corresponding to the specified elementToMatch.
+            </summary>
+            <param name="elementToMatch">The LanguageElement to match.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SourceTree.GetElement(DevExpress.DXCore.Controls.XtraTreeList.Nodes.TreeListNode)">
+            <summary>
+            Gets the LanguageElement associated with the specified tree node.
+            </summary>
+            <param name="treeListNode">The TreeListNode to get the element for.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SourceTree.InitializeColors">
+            <summary>
+            Sets the colors of regular nodes, Comments and XmlDocComments to match VS settings.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SourceTree.LoadElementsForActiveDocument">
+            <summary>
+            Populates the SourceTree with all elements from the active document.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SourceTree.LoadElementsForActiveDocument(System.Boolean)">
+            <summary>
+            Populates the SourceTree with all elements from the active document.
+            </summary>
+            <param name="fullExpand">If true, all nodes will be expanded after the load.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SourceTree.LoadElement(DevExpress.CodeRush.StructuralParser.LanguageElement)">
+            <summary>
+            Loads an element and all its children into the SourceTree.
+            </summary>
+            <param name="element">The LanguageElement to load.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SourceTree.LoadElement(DevExpress.CodeRush.StructuralParser.LanguageElement,System.Boolean)">
+            <summary>
+            Loads an element and all its children into the SourceTree.
+            </summary>
+            <param name="element">The LanguageElement to load.</param>
+            <param name="fullExpand">If true, all nodes will be expanded after the load.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SourceTree.LoadElementCollection(DevExpress.CodeRush.StructuralParser.LanguageElementCollection)">
+            <summary>
+            Loads a collection of LanguageElements (and all their children) into the SourceTree.
+            </summary>
+            <param name="elements">The LanguageElementCollection to load.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SourceTree.LoadElementCollection(DevExpress.CodeRush.StructuralParser.LanguageElementCollection,System.Boolean)">
+            <summary>
+            Loads a collection of LanguageElements (and all their children) into the SourceTree.
+            </summary>
+            <param name="elements">The LanguageElementCollection to load.</param>
+            <param name="fullExpand">If true, all nodes will be expanded after the load.</param>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.SourceTree.AttributeBackgroundColor">
+            <summary>
+            The background color for Attributes.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.SourceTree.AttributeTextColor">
+            <summary>
+            The text color for Attributes.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.SourceTree.DetailBackgroundColor">
+            <summary>
+            The background color for DetailNodes.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.SourceTree.DetailTextColor">
+            <summary>
+            The text color for DetailNodes.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.SourceTree.XmlDocCommentBackgroundColor">
+            <summary>
+            The background color for XmlDocComments.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.SourceTree.XmlDocCommentTextColor">
+            <summary>
+            The text color for XmlDocComments.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.SourceTree.CommentBackgroundColor">
+            <summary>
+            The background color for Comments.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.SourceTree.CommentTextColor">
+            <summary>
+            The text color for Comments.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.SourceTree.PlainTextColor">
+            <summary>
+            The text color for plain text.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.SourceTree.PlainTextBackgroundColor">
+             <summary>
+            The background color for plain text.
+             </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.SourceTree.FocusedElement">
+            <summary>
+            The LanguageElement that has focus.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.SourceTree.SelectCodeOnFocus">
+            <summary>
+            Gets/sets whether code in the editor should be selected when a node receives focus.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.SourceTree.ShowAttributes">
+            <summary>
+            Determines whether Attributes will appear in the SourceTree.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.SourceTree.ShowComments">
+            <summary>
+            Determines whether Comments will appear in the SourceTree.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.SourceTree.ShowDetailNodes">
+            <summary>
+            Determines whether DetailNodes will be displayed in the SourceTree.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.SourceTree.ShowXmlDocComments">
+            <summary>
+            Determines whether XmlDocComments will be displayed in the SourceTree.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.SourceTree.TrackActiveNode">
+            <summary>
+            If true, the active node in the editor will be focused in this tree list.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.UserControls.EmphasisCallback">
+            <summary>
+            A callback used to determine if the specified token should be rendered with emphasis.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.UserControls.SyntaxPainter">
+            <summary>
+            A low-level class with static methods to assist with painting syntax-highlighted code.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.CreateBoldFont">
+            <summary>
+            Creates a bold font, based on the prototype _EditorFont.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.SetFontFromEditor">
+            <summary>
+            Makes sure the EditorFont matches the one set in the Visual Studio editor.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.GetBackBrush(DevExpress.CodeRush.UserControls.TextPalette,DevExpress.CodeRush.UserControls.CodeEmphasis,System.Boolean,System.Int32)">
+            <summary>
+            Gets a background Brush from the specified TextPalette. The brush returned will be 
+            fully opaque, unless we're inside a transition.
+            </summary>
+            <param name="textPalette">The TextPalette to derive the Brush from.</param>
+            <param name="codeEmphasis">The CodeEmphasis option for this brush.</param>
+            <param name="isTransitioning">Whether we're in a transitioning state.</param>
+            <param name="transitionOpacity">The opacity of the transition (used if the isTransitioning parameter is true).</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.GetEmphasisBrush(DevExpress.CodeRush.UserControls.CodeBrush,DevExpress.CodeRush.UserControls.CodeEmphasis,System.Boolean,System.Int32,DevExpress.CodeRush.UserControls.TextLayer)">
+            <summary>
+            Gets a brush, based on the specified codeEmphasis parameter. The brush returned will be fully opaque unless we're inside a transition.</summary>
+            <param name="codeBrush">The CodeBrush to derive the Brush from.</param>
+            <param name="codeEmphasis">The CodeEmphasis option for this brush.</param>
+            <param name="isTransitioning">Whether we're in a transitioning state.</param>
+            <param name="transitionOpacity">The opacity of the transition (used if the isTransitioning parameter is true).</param>
+            <param name="textLayer">The TextLayer of the brush.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.GetTextBrush(DevExpress.CodeRush.UserControls.TextPalette,DevExpress.CodeRush.UserControls.CodeEmphasis,System.Boolean,System.Int32)">
+            <summary>
+            Gets a foreground text Brush from the specified TextPalette. The brush returned will be 
+            fully opaque, unless we're inside a transition.
+            </summary>
+            <param name="textPalette">The TextPalette to derive the Brush from.</param>
+            <param name="codeEmphasis">The CodeEmphasis option for this brush.</param>
+            <param name="isTransitioning">Whether we're in a transitioning state.</param>
+            <param name="transitionOpacity">The opacity of the transition (used if the isTransitioning parameter is true).</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.GetTransitionBrush(DevExpress.CodeRush.UserControls.CodeBrush,System.Boolean,System.Int32)">
+            <summary>
+            Gets a brush that expresses the specified transition. This method is used for 
+            fast disolves between one text state and the next.
+            </summary>
+            <param name="codeBrush">The CodeBrush to get a brush from.</param>
+            <param name="isTransitioning">Whether we're in a transitioning state.</param>
+            <param name="transitionOpacity">The opacity of the transition (used if the isTransitioning parameter is true).</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.PaintLeftBackground(System.Drawing.Graphics,System.Drawing.Brush,System.Drawing.Rectangle,System.Int32,System.Single,System.Boolean,System.Int32)">
+            <summary>
+            Paints the low-contrast backround to the left of the emphasis left position. Returns the calculated left position.
+            </summary>
+            <param name="graphics">The Graphics object to paint on.</param>
+            <param name="backgroundBrush">The brush to paint the background with. Pass null to paint with the default low-contrast brush.</param>
+            <param name="lineRect">A rectangle representing the current line.</param>
+            <param name="leftPixel">The x-coordinate of the first visible pixel. This will normally be zero unless the view is scrolled to the right.</param>
+            <param name="emphasisStartPos">The x-coordinate where emphasized text starts.</param>
+            <returns>Returns the calculated left position.</returns>
+            <param name="isTransitioning">Whether we're in a transitioning state.</param>
+            <param name="transitionOpacity">The opacity of the transition (used if the isTransitioning parameter is true).</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.PaintMiddleBackground(System.Drawing.Graphics,System.Drawing.Brush,System.Single,System.Single,System.Single,System.Single,System.Boolean,System.Int32)">
+            <summary>
+            Paints the high-contrast code in the EmphasisRange.
+            </summary>
+            <param name="graphics">The Graphics object to paint on.</param>
+            <param name="backgroundBrush">The brush to paint the background with. Pass null to paint with the default high-contrast brush.</param>
+            <param name="leftEdge">The x-coordinate of the left side of the EmphasisRange for this line.</param>
+            <param name="topEdge">The top of this line.</param>
+            <param name="fillWidth">The width of this code that needs emphasis.</param>
+            <param name="lineHeight">The height of the line to paint.</param>
+            <param name="isTransitioning">Whether we're in a transitioning state.</param>
+            <param name="transitionOpacity">The opacity of the transition (used if the isTransitioning parameter is true).</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.PaintRightBackground(System.Drawing.Graphics,System.Drawing.Brush,System.Drawing.Rectangle,System.Int32,System.Single,System.Boolean,System.Int32)">
+            <summary>
+            Paints the low-contrast backround to the right of the emphasis right position.
+            </summary>
+            <param name="graphics">The Graphics object to paint on.</param>
+            <param name="backgroundBrush">The brush to paint the background with. Pass null to paint with the default low-contrast brush.</param>
+            <param name="lineRect">A rectangle representing the current line.</param>
+            <param name="leftPixel">The x-coordinate of the first visible pixel. This will normally be zero unless the view is scrolled to the right.</param>
+            <param name="emphasisEndPos">The x-coordinate where emphasized text ends.</param>
+            <returns>Returns the calculated left position.</returns>
+            <param name="isTransitioning">Whether we're in a transitioning state.</param>
+            <param name="transitionOpacity">The opacity of the transition (used if the isTransitioning parameter is true).</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.PaintTextSegment(DevExpress.CodeRush.UserControls.EmphasisCallbackArgs,System.String,DevExpress.CodeRush.UserControls.TextPalette,System.Drawing.Font,System.Drawing.Font,System.Single,System.Single,System.Int32,System.Boolean,System.Int32,System.Drawing.StringFormat)">
+            <summary>
+            Paints the specified text segment on the specified Graphics object.
+            </summary>
+            <param name="args">Emphasis callback arguments.</param>
+            <param name="text">The text to paint.</param>
+            <param name="textPalette">The TextPalette to paint with.</param>
+            <param name="font">The Font to use for painting normal text.</param>
+            <param name="boldFont">The Font to use for painting bold text.</param>
+            <param name="xPos">The x-coordinate of the left of the text.</param>
+            <param name="yPos">The y-coordinate of the top of the text.</param>
+            <param name="lineHeight">The height of the line.</param>
+            <param name="isTransitioning">Whether we're in a transitioning state.</param>
+            <param name="transitionOpacity">The opacity of the transition (used if the isTransitioning parameter is true).</param>
+            <param name="stringFormat">The StringFormat to paint with.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.GetEmphasisCoordinates(System.Drawing.Graphics,DevExpress.CodeRush.StructuralParser.TokenCollection,System.String,System.String,System.Int32,System.Int32,System.Drawing.Font,System.Drawing.Font,System.Drawing.StringFormat,System.Int32,System.Int32@,System.Int32@)">
+            <summary>
+            Gets x coordinates for a specified start and end column positions for a specified token collection, associated text, and font.
+            </summary>
+            <param name="graphics">The Graphics surface the text will be painted on.</param>
+            <param name="tokens">The TokenCollection to evaluate.</param>
+            <param name="lineText">The text associated with the TokenCollection to evaluate.</param>
+            <param name="languageID">The language ID to paint in.</param>
+            <param name="highlightColumStart">The start column index, starting at 0. </param>
+            <param name="highlightColumEnd">The column stop index, starting at 0.</param>
+            <param name="font">The font to use for normal text.</param>
+            <param name="boldFont">The font to use for bolded text.</param>
+            <param name="stringFormat">The StringFormat to evaluate with.</param>
+            <param name="spaceWidth">The width of a space character.</param>
+            <param name="emphasisStartX">This integer out parameter is set to the x-coordinate that corresponds to the highlightColumStart parameter.</param>
+            <param name="emphasisEndX">This integer out parameter is set to the x-coordinate that corresponds to the highlightColumEnd parameter.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.GetTabSize(System.String)">
+            <summary>
+            Gets the tab size for the specified language.
+            </summary>
+            <param name="languageID">The ID of the language to get the tab settings for.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.GetTextWidth(System.Drawing.Graphics,System.String,System.Drawing.Font,System.Drawing.StringFormat)">
+            <summary>
+            Gets the width of the text using the specified font and StringFormat.
+            </summary>
+            <param name="graphics">The Graphics object to measure with.</param>
+            <param name="text">The text to measure.</param>
+            <param name="font">The font to measure with.</param>
+            <param name="stringFormat">The StringFormat to measure with.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.PaintLineBackground(System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>
+            Paints the background for a syntax-highlighted line.
+            </summary>
+            <param name="graphics">The Graphics surface to paint on.</param>
+            <param name="lineRect">The rectangle to paint in.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.PaintLineBackground(System.Drawing.Graphics,System.Drawing.Rectangle,System.Int32)">
+            <summary>
+            Paints the background for a syntax-highlighted line.
+            </summary>
+            <param name="graphics">The Graphics surface to paint on.</param>
+            <param name="lineRect">The rectangle to paint in.</param>
+            <param name="leftPixel">The x-coordinate of the first visible pixel. This will normally be zero unless the view is scrolled to the right.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.PaintLineBackground(System.Drawing.Graphics,System.Drawing.Rectangle,System.Int32,DevExpress.CodeRush.UserControls.LineEmphasis,System.Int32,System.Int32)">
+            <summary>
+            Paints the background for a syntax-highlighted line.
+            </summary>
+            <param name="graphics">The Graphics surface to paint on.</param>
+            <param name="lineRect">The rectangle to paint in.</param>
+            <param name="leftPixel">The x-coordinate of the first visible pixel. This will normally be zero unless the view is scrolled to the right.</param>
+            <param name="lineEmphasis">A LineEmphasis enum element describing how to paint this line.</param>
+            <param name="emphasisStartPos">The x-coordinate where emphasized text starts.</param>
+            <param name="emphasisEndPos">The x-coordinate where emphasized text ends.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.PaintLineBackground(System.Drawing.Graphics,System.Drawing.Rectangle,System.Int32,DevExpress.CodeRush.UserControls.LineEmphasis,System.Int32,System.Int32,System.Drawing.Brush,System.Drawing.Brush)">
+            <summary>
+            Paints the background for a syntax-highlighted line.
+            </summary>
+            <param name="graphics">The Graphics surface to paint on.</param>
+            <param name="lineRect">The rectangle to paint in.</param>
+            <param name="leftPixel">The x-coordinate of the first visible pixel. This will normally be zero unless the view is scrolled to the right.</param>
+            <param name="lineEmphasis">A LineEmphasis enum element describing how to paint this line.</param>
+            <param name="emphasisStartPos">The x-coordinate where emphasized text starts.</param>
+            <param name="emphasisEndPos">The x-coordinate where emphasized text ends.</param>
+            <param name="lowContrastBrush">The Brush to use to paint background area for unimportant text. Pass in null to use the default low-contrast brush.</param>
+            <param name="emphasisBrush">The Brush to use to paint background area for emphasized text. Pass in null to use the default high-contrast brush.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.PaintLineBackground(System.Drawing.Graphics,System.Drawing.Rectangle,System.Int32,DevExpress.CodeRush.UserControls.LineEmphasis,System.Int32,System.Int32,System.Boolean,System.Int32)">
+            <summary>
+            Paints the background for a syntax-highlighted line.
+            </summary>
+            <param name="graphics">The Graphics surface to paint on.</param>
+            <param name="lineRect">The rectangle to paint in.</param>
+            <param name="leftPixel">The x-coordinate of the first visible pixel. This will normally be zero unless the view is scrolled to the right.</param>
+            <param name="lineEmphasis">A LineEmphasis enum element describing how to paint this line.</param>
+            <param name="emphasisStartPos">The x-coordinate where emphasized text starts.</param>
+            <param name="emphasisEndPos">The x-coordinate where emphasized text ends.</param>
+            <param name="isTransitioning">Whether we're in a transitioning state.</param>
+            <param name="transitionOpacity">The opacity of the transition (used if the isTransitioning parameter is true).</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.PaintLineBackground(System.Drawing.Graphics,System.Drawing.Rectangle,System.Int32,DevExpress.CodeRush.UserControls.LineEmphasis,System.Int32,System.Int32,System.Drawing.Brush,System.Drawing.Brush,System.Boolean,System.Int32)">
+            <summary>
+            Paints the background for a syntax-highlighted line.
+            </summary>
+            <param name="graphics">The Graphics surface to paint on.</param>
+            <param name="lineRect">The rectangle to paint in.</param>
+            <param name="leftPixel">The x-coordinate of the first visible pixel. This will normally be zero unless the view is scrolled to the right.</param>
+            <param name="lineEmphasis">A LineEmphasis enum element describing how to paint this line.</param>
+            <param name="emphasisStartPos">The x-coordinate where emphasized text starts.</param>
+            <param name="emphasisEndPos">The x-coordinate where emphasized text ends.</param>
+            <param name="decreaseEmphasisBrush">The Brush to use to paint background area for unimportant text. Pass in null to use the default low-contrast background brush.</param>
+            <param name="emphasisBrush">The Brush to use to paint background area for emphasized text. Pass in null to use the default high-contrast brush.</param>
+            <param name="isTransitioning">Whether we're in a transitioning state.</param>
+            <param name="transitionOpacity">The opacity of the transition (used if the isTransitioning parameter is true).</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.PaintForeground(System.Drawing.Graphics,System.Drawing.Rectangle,System.String,System.String)">
+            <summary>
+            Paints the specified tokens on the specified Graphics object.
+            </summary>
+            <param name="graphics">The Graphics surface to paint on.</param>
+            <param name="rect">The rectangle to paint in.</param>
+            <param name="lineText">The text of the line to paint that corresponds to the tokens passed to this method.</param>
+            <param name="languageID">The ID for the language we're painting (e.g., "Basic", "CSharp", etc.).</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.PaintForegroundTokens(System.Drawing.Graphics,System.Drawing.Rectangle,DevExpress.CodeRush.StructuralParser.TokenCollection,System.String,System.String)">
+            <summary>
+            Paints the specified tokens on the specified Graphics object.
+            </summary>
+            <param name="graphics">The Graphics surface to paint on.</param>
+            <param name="rect">The rectangle to paint in.</param>
+            <param name="tokens">A collection of Tokens.</param>
+            <param name="lineText">The text of the line to paint that corresponds to the tokens passed to this method.</param>
+            <param name="languageID">The ID for the language we're painting (e.g., "Basic", "CSharp", etc.).</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.PaintForegroundTokens(System.Drawing.Graphics,System.Drawing.Rectangle,DevExpress.CodeRush.StructuralParser.TokenCollection,System.String,System.String,System.Drawing.Font,System.Drawing.Font)">
+            <summary>
+            Paints the specified tokens on the specified Graphics object.
+            </summary>
+            <param name="graphics">The Graphics surface to paint on.</param>
+            <param name="rect">The rectangle to paint in.</param>
+            <param name="tokens">A collection of Tokens.</param>
+            <param name="lineText">The text of the line to paint that corresponds to the tokens passed to this method.</param>
+            <param name="languageID">The ID for the language we're painting (e.g., "Basic", "CSharp", etc.).</param>
+            <param name="font">The Font to use for painting normal text.</param>
+            <param name="boldFont">The Font to use for painting bold text.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.PaintForegroundTokens(System.Drawing.Graphics,System.Drawing.Rectangle,DevExpress.CodeRush.StructuralParser.TokenCollection,System.String,System.String,System.Drawing.Font,System.Drawing.Font,System.Single)">
+            <summary>
+            Paints the specified tokens on the specified Graphics object.
+            </summary>
+            <param name="graphics">The Graphics surface to paint on.</param>
+            <param name="rect">The rectangle to paint in.</param>
+            <param name="tokens">A collection of Tokens.</param>
+            <param name="lineText">The text of the line to paint that corresponds to the tokens passed to this method.</param>
+            <param name="languageID">The ID for the language we're painting (e.g., "Basic", "CSharp", etc.).</param>
+            <param name="font">The Font to use for painting normal text.</param>
+            <param name="boldFont">The Font to use for painting bold text.</param>
+            <param name="spaceWidth">The width of a space character in the font we're painting in.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.PaintForegroundTokens(System.Drawing.Graphics,System.Drawing.Rectangle,DevExpress.CodeRush.StructuralParser.TokenCollection,System.String,System.String,System.Drawing.Font,System.Drawing.Font,System.Single,System.Boolean,System.Int32,System.Drawing.StringFormat,DevExpress.CodeRush.UserControls.EmphasisCallback)">
+            <summary>
+            Paints the specified tokens on the specified Graphics object.
+            </summary>
+            <param name="graphics">The Graphics surface to paint on.</param>
+            <param name="rect">The rectangle to paint in.</param>
+            <param name="tokens">A collection of Tokens.</param>
+            <param name="lineText">The text of the line to paint.</param>
+            <param name="languageID">The ID for the language we're painting (e.g., "Basic", "CSharp", etc.).</param>
+            <param name="font">The Font to use for painting normal text.</param>
+            <param name="boldFont">The Font to use for painting bold text.</param>
+            <param name="spaceWidth">The width of a space character, in pixels.</param>
+            <param name="isTransitioning">Whether we're in a transitioning state.</param>
+            <param name="transitionOpacity">The opacity of the transition (used if the isTransitioning parameter is true).</param>
+            <param name="stringFormat">The StringFormat to paint with.</param>
+            <param name="emphasisCallback">A method that matches the LowContrastCallback signature.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.HorizontalLine(System.Drawing.Graphics,System.Single,System.Single,System.Single,System.Boolean,System.Int32,System.Int32@)">
+            <summary>
+            Draws a horizontal line in the border color.
+            </summary>
+            <param name="graphics">The Graphics object to paint on.</param>
+            <param name="yPos">The y coordinate of the horizontal line.</param>
+            <param name="left">The x coordinate of the left of the line.</param>
+            <param name="right">The x coordinate of the right of the line.</param>
+            <param name="isTransitioning">Whether we're in a transitioning state.</param>
+            <param name="transitionOpacity">The opacity of the transition (used if the isTransitioning parameter is true).</param>
+            <param name="lastTransitionOpacity">This reference parameter is set to the last transition opacity and is used to optimize transition painting.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.VerticalLine(System.Drawing.Graphics,System.Single,System.Single,System.Single,System.Boolean,System.Int32,System.Int32@)">
+            <summary>
+            Draws a vertical line in the border color.
+            </summary>
+            <param name="graphics">The Graphics object to paint on.</param>
+            <param name="xPos">The x coordinate of the vertical line.</param>
+            <param name="top">The y coordinate of the top of the line.</param>
+            <param name="bottom">The y coordinate of the bottom of the line.</param>
+            <param name="isTransitioning">Whether we're in a transitioning state.</param>
+            <param name="transitionOpacity">The opacity of the transition (used if the isTransitioning parameter is true).</param>
+            <param name="lastTransitionOpacity">This reference parameter is set to the last transition opacity and is used to optimize transition painting.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.GetBorderPen">
+            <summary>
+            Gets the pen for painting the border around the EmphasisRange.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.GetBorderPen(System.Boolean,System.Int32,System.Int32@)">
+            <summary>
+            Gets the pen for painting the border around the EmphasisRange.
+            </summary>
+            <param name="isTransitioning">Whether we're in a transitioning state.</param>
+            <param name="transitionOpacity">The opacity of the transition (used if the isTransitioning parameter is true).</param>
+            <param name="lastTransitionOpacity">This reference parameter is set to the last transition opacity and is used to optimize transition painting.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.GetDefaultBackBrush(System.Boolean,System.Int32)">
+            <summary>
+            Gets the brush for painting high-contrast (emphasized) background of source code.
+            </summary>
+            <param name="transitioning">Whether we're in a transitioning state.</param>
+            <param name="transitionOpacity">The opacity of the transition (used if the isTransitioning parameter is true).</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.GetDefaultBackBrush(System.Drawing.Brush,System.Boolean,System.Int32)">
+            <summary>
+            Gets the brush for painting high-contrast (emphasized) background of source code.
+            </summary>
+            <param name="overrideBrush">The Brush to use instead of the calculated brush. Set to null to use the calculated brush.</param>
+            <param name="transitioning">Whether we're in a transitioning state.</param>
+            <param name="transitionOpacity">The opacity of the transition (used if the isTransitioning parameter is true).</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.GetDecreasedEmphasisBackBrush(System.Boolean,System.Int32)">
+            <summary>
+            Gets the brush for painting low-contrast (unemphasized) background of source code.
+            </summary>
+            <param name="isTransitioning">Whether we're in a transitioning state.</param>
+            <param name="transitionOpacity">The opacity of the transition (used if the isTransitioning parameter is true).</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.GetDecreasedEmphasisBackBrush(System.Drawing.Brush,System.Boolean,System.Int32)">
+            <summary>
+            Gets the brush for painting low-contrast (unemphasized) background of source code.
+            </summary>
+            <param name="overrideBrush">The Brush to use instead of the calculated brush. Set to null to use the calculated brush.</param>
+            <param name="isTransitioning">Whether we're in a transitioning state.</param>
+            <param name="transitionOpacity">The opacity of the transition (used if the isTransitioning parameter is true).</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.GetIncreasedEmphasisBackBrush(System.Boolean,System.Int32)">
+            <summary>
+            Gets the brush for painting low-contrast (unemphasized) background of source code.
+            </summary>
+            <param name="isTransitioning">Whether we're in a transitioning state.</param>
+            <param name="transitionOpacity">The opacity of the transition (used if the isTransitioning parameter is true).</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.GetIncreasedEmphasisBackBrush(System.Drawing.Brush,System.Boolean,System.Int32)">
+            <summary>
+            Gets the brush for painting low-contrast (unemphasized) background of source code.
+            </summary>
+            <param name="overrideBrush">The Brush to use instead of the calculated brush. Set to null to use the calculated brush.</param>
+            <param name="isTransitioning">Whether we're in a transitioning state.</param>
+            <param name="transitionOpacity">The opacity of the transition (used if the isTransitioning parameter is true).</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.GetTextPalette(System.String)">
+            <summary>
+            Gets a TextPalette instance appropriate for the specified highlightCategory.
+            </summary>
+            <param name="highlightCategory">The highlight category (e.g., "Keyword", "Identifier", "Operator", etc.) to get the TextPalette for.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.GetTextPalette(DevExpress.CodeRush.StructuralParser.Token,System.String)">
+            <summary>
+            Gets a TextPalette instance appropriate for the specified Token.
+            </summary>
+            <param name="token">The Token to get the TextPalette instance for.</param>
+            <param name="languageID">The ID for the language we're painting (e.g., "Basic", "CSharp", etc.).</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.SyntaxPainter.GetTokenCategory(DevExpress.CodeRush.StructuralParser.Token,System.String)">
+            <summary>
+            Gets the category for the specified token.
+            </summary>
+            <param name="token">The Token to check.</param>
+            <param name="languageID">The ID for the language we're painting (e.g., "Basic", "CSharp", etc.).</param>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.SyntaxPainter.EditorFont">
+            <summary>
+            Gets the Font associated with the VS editor.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.SyntaxPainter.EditorBoldFont">
+            <summary>
+            Gets the Font associated with the VS editor.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.SyntaxPainter.TabbedFormat">
+            <summary>
+            The default StringFormat used to measure strings.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.IInvariantCaseLettersElement.Name">
+            <summary>
+            Returns element name.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.IInvariantCaseLettersElement.InActiveFile">
+            <summary>
+            Returns true if element is located in active file.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.IInvariantCaseLettersElement.InActiveType">
+            <summary>
+            Returns true if element is located in active type.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.IInvariantCaseLettersElement.HasEqualName">
+            <summary>
+            Returns true if element has equal name.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.IInvariantCaseLettersElement.NameStartsWithSameText">
+            <summary>
+            Returns true if element name starts with the same name.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.IInvariantCaseLettersElement.HasNameMatch">
+            <summary>
+            Returns true if element has name match.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.IInvariantCaseLettersElement.HasEqualUpperCase">
+            <summary>
+            Returns true if element name has equal upper case letters.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.IInvariantCaseLettersElement.HasEqualFirstLetterInUpperCase">
+            <summary>
+            Returns true if fist upper case letter in the element name is equal.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.IInvariantCaseLettersElement.HasUpperCaseMatch">
+            <summary>
+            Returns true if element has match in upper case letters.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.ElementNodeInfo.CalculateText">
+            <summary>
+            Calculates the text values for LeftText, CenterText, and RightText which are displayed in 
+            the references window. This method is called the first time any of those properties are 
+            accessed.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.ElementNodeInfo.GetCodeLine(DevExpress.CodeRush.StructuralParser.SourceFile,System.Int32)">
+            <summary>
+            Gets a line of text from a source file on disk.
+            </summary>
+            <param name="file">The SourceFile to check.</param>
+            <param name="lineNumber">The line number to grab.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.ElementNodeInfo.GetSummary(DevExpress.DXCore.Controls.XtraTreeList.Nodes.TreeListNode)">
+            <summary>
+            Summarizes references contained in child nodes.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.ElementNodeInfo.IsReference">
+            <summary>
+            True if this node is an actual reference.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.ElementNodeInfo.QuickText">
+            <summary>
+            Returns the element name, or "{Reference}" if the element is null.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.IssueNodeInfo.QuickText">
+            <summary>
+            Returns the element name, or "{CodeIssue}" if the element is null.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.IssueProviderNodeInfo.QuickText">
+            <summary>
+            Returns the element name, or "{CodeIssue}" if the element is null.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.IUpperCaseLettersElement.Name">
+            <summary>
+            Gets element name.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.IUpperCaseLettersElement.HasUpperCaseMatch">
+            <summary>
+            Returns true if element has upper case matches.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.IUpperCaseLettersElement.UpperCaseLetters">
+            <summary>
+            Returns upper case letters.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.UserControls.TreeListNodePainterBase">
+            <summary>
+            Tree list node painter.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TreeListNodePainterBase.#ctor">
+            <summary>
+            Creates new instance of the TreeListNodePainterBase class.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TreeListNodePainterBase.#ctor(System.String)">
+            <summary>
+            Creates new instance of the TreeListNodePainterBase class.
+            </summary>
+            <param name="name">The string used to paint node.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TreeListNodePainterBase.#ctor(DevExpress.CodeRush.UserControls.UpperCaseLettersCache,System.String)">
+            <summary>
+            Creates new instance of the TreeListNodePainterBase class.
+            </summary>
+            <param name="cache">Uppercase letters cache to use.</param>
+            <param name="name">The string used to paint node.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TreeListNodePainterBase.CanDrawQualifier">
+            <summary>
+            Checks if qualifier can be painted.
+            </summary>
+            <returns>True if qualifier can be painted.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TreeListNodePainterBase.CanDrawNodeInfo">
+            <summary>
+            Checks if node info can be painted.
+            </summary>
+            <returns>True if node info can be painted.</returns>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TreeListNodePainterBase.LoadUpperCaseLetters(DevExpress.CodeRush.UserControls.UpperCaseLettersCache)">
+            <summary>
+            Loads uppercase letters info using the given cache.
+            </summary>
+            <param name="cache">The uppercase letters cache to use.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TreeListNodePainterBase.Draw(System.Drawing.Graphics,System.Drawing.Rectangle,System.Boolean)">
+            <summary>
+            Paints node using given graphics.
+            </summary>
+            <param name="gr">The graphics instance to use.</param>
+            <param name="bounds">The bounds to use.</param>
+            <param name="isFocused">True to paint focused node.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TreeListNodePainterBase.Draw(System.Drawing.Graphics,System.Drawing.Rectangle,System.Boolean,System.Boolean)">
+            <summary>
+            Paints node using given graphics.
+            </summary>
+            <param name="gr">The graphics instance to use.</param>
+            <param name="bounds">The bounds to use.</param>
+            <param name="isFocused">True to paint focused node.</param>
+            <param name="isFiltered">True to paint filtering.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TreeListNodePainterBase.Draw(System.Drawing.Graphics,System.Drawing.Rectangle,System.String,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Paints node using given graphics.
+            </summary>
+            <param name="gr">The graphics instance to use.</param>
+            <param name="bounds">The bounds to use.</param>
+            <param name="filterMask">The filter mask to use.</param>
+            <param name="drawQualifier">True to paint node qualifier.</param>
+            <param name="isFocused">True to paint focused node.</param>
+            <param name="isFiltered">True to paint filtering.</param>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.TreeListNodePainterBase.Name">
+            <summary>
+            Gets name of current element.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.TreeListNodePainterBase.Qualifier">
+            <summary>
+            Gets or sets qualifier text. This one will be painted before the node signature.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.TreeListNodePainterBase.NodeInfo">
+            <summary>
+            Gets or sets information about the node. This one will be painted after the node signature.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.TreeListNodePainterBase.IconIndex">
+            <summary>
+            Gets or sets icon index. Set Icons property to define list containing the icons.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.TreeListNodePainterBase.AdditionalIconIndex">
+            <summary>
+            Gets or sets additional icon index. Set AdditionalIcons property to define list containing the icons.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.TreeListNodePainterBase.NodeBackgroundColor">
+            <summary>
+            Gets or sets background color for the node to paint.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.TreeListNodePainterBase.NodeTextColor">
+            <summary>
+            Gets or sets text color for the node to paint.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.TreeListNodePainterBase.DrawSelector">
+            <summary>
+            Defines if draw selector should be painted for the selected nodes.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.TreeListNodePainterBase.MatchColl">
+            <summary>
+            Gets or sets collection of filter matches for current element.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.TreeListNodePainterBase.DrawUpperCaseLetters">
+            <summary>
+            Defines if upper case letters should be painted.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.TreeListNodePainterBase.HasUpperCaseMatch">
+            <summary>
+            Defines if element has uppercase filter matches.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.TreeListNodePainterBase.UpperCaseLetters">
+            <summary>
+            Gets uppercase letters from name of current element.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.TreeListNodePainterBase.Signature">
+            <summary>
+            Gets or sets signature.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.TreeListNodePainterBase.NameIndex">
+            <summary>
+            Gets or sets name index.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TreeListNodePainter.#ctor">
+            <summary>
+            Creates new instance of the TreeListNodePainter class.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TreeListNodePainter.#ctor(System.String)">
+            <summary>
+            Creates new instance of the TreeListNodePainter class.
+            </summary>
+            <param name="name">The string used to paint node.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.TreeListNodePainter.#ctor(DevExpress.CodeRush.UserControls.UpperCaseLettersCache,System.String)">
+            <summary>
+            Creates new instance of the TreeListNodePainter class.
+            </summary>
+            <param name="cache">Uppercase letters cache to use.</param>
+            <param name="name">The string used to paint node.</param>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.TreeListNodePainter.Icons">
+            <summary>
+            Gets or sets ImageList containing icons for the painting.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.TreeListNodePainter.AdditionalIcons">
+            <summary>
+            Gets or sets additional ImageList containing icons for the painting.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.DXCoreTreeListNodePainter.#ctor">
+            <summary>
+            Creates new instance of the DXCoreTreeListNodePainter class.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.DXCoreTreeListNodePainter.#ctor(System.String)">
+            <summary>
+            Creates new instance of the DXCoreTreeListNodePainter class.
+            </summary>
+            <param name="name">The string used to paint node.</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.DXCoreTreeListNodePainter.#ctor(DevExpress.CodeRush.UserControls.UpperCaseLettersCache,System.String)">
+            <summary>
+            Creates new instance of the DXCoreTreeListNodePainter class.
+            </summary>
+            <param name="cache">Uppercase letters cache to use.</param>
+            <param name="name">The string used to paint node.</param>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.DXCoreTreeListNodePainter.Icons">
+            <summary>
+            Gets or sets ImageList containing icons for the painting.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.DXCoreTreeListNodePainter.AdditionalIcons">
+            <summary>
+            Gets or sets additional ImageList containing icons for the painting.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.UserControls.UpperCaseCharInfo">
+            <summary>
+            Stores information about uppercase characters.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.UpperCaseCharInfo.#ctor(System.String)">
+            <summary>
+            Creates new instance of the UpperCaseCharInfo class.
+            </summary>
+            <param name="s">The string to use.</param>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.UpperCaseCharInfo.Letters">
+            <summary>
+            Gets uppercase letters.
+            </summary>
+        </member>
+        <member name="P:DevExpress.CodeRush.UserControls.UpperCaseCharInfo.Indexes">
+            <summary>
+            Gets indexes of uppercase letters.
+            </summary>
+        </member>
+        <member name="T:DevExpress.CodeRush.UserControls.UpperCaseLettersCache">
+            <summary>
+            Cache for storing uppercase letters information.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.UpperCaseLettersCache.#ctor">
+            <summary>
+            Creates new instance of the UpperCaseLettersCache class.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.UpperCaseLettersCache.GetUpperCaseLetters(System.String,System.Collections.Generic.List{System.Int32}@)">
+            <summary>
+            Returns uppercase letters for the given string.
+            </summary>
+            <param name="name">The string to analyze.</param>
+            <param name="upperCaseCharIndexes">Array of uppercase char index.</param>
+            <returns>Returns uppercase letters for the given string.</returns>
+        </member>
+        <member name="T:DevExpress.CodeRush.UserControls.TreeListWithInsideMargins">
+            <summary>
+            TreeList descendant with inside margins.
+            </summary>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.Utils.GetVisibilityFromScope(DevExpress.CodeRush.Core.MemberScope)">
+            <summary>
+            Returs MemberVisibility from MemberScope.
+            </summary>
+            <param name="scope">The MemberScope to define MemberVisibility</param>
+        </member>
+        <member name="M:DevExpress.CodeRush.UserControls.Utils.GetMemberScopeDisplayName(DevExpress.CodeRush.Core.MemberScope,System.String)">
+            <summary>
+            Returns display name for specified MemberScope.
+            </summary>
+            <param name="scope">The MemberScope to get display name</param>    
+            <param name="language">The language ID to use</param>
+        </member>
+        <member name="T:DevExpress.CodeRush.UserControls.ViewInfoWithInsideMargins">
+            <summary>
+            Summary description for ViewInfoWithInsideMargins.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,2706 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DevExpress.DXCore.MetaData</name>
+    </assembly>
+    <members>
+        <member name="T:DevExpress.DXCore.AssemblyParser.ISchemeList">
+            <summary>
+            List of table scheme objects.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.AssemblyParser.ISchemeList.Type">
+            <summary>
+            Gets table scheme type.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.AssemblyParser.ISchemeList.CountScheme">
+            <summary>
+            Gets scheme count.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.EventDefRowLoadedEventArgs">
+            <summary>
+            Provides data for the EventDefRowLoaded event.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.EventDefRowLoadedEventHandler">
+            <summary>
+            Represents the method that will handle the EventDefRowLoaded event.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.PropertyDefRowLoadedEventArgs">
+            <summary>
+            Provides data for the PropertyDefRowLoaded event.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.PropertyDefRowLoadedEventHandler">
+            <summary>
+            Represents the method that will handle the FieldDefRowLoaded event.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.FieldDefRowLoadedEventArgs">
+            <summary>
+            Provides data for the FieldDefRowLoaded event.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.FieldDefRowLoadedEventHandler">
+            <summary>
+            Represents the method that will handle the FieldDefRowLoaded event.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.MethodDefRowLoadedEventArgs">
+            <summary>
+            Provides data for the MethodDefRowLoaded event.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.MethodDefRowLoadedEventHandler">
+            <summary>
+            Represents the method that will handle the MethodDefRowLoaded event.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.TypeDefRowLoadedEventArgs">
+            <summary>
+            Provides data for the TypeDefRowLoaded event.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.TypeDefRowLoadedEventHandler">
+            <summary>
+            Represents the method that will handle the TypeDefRowLoaded event.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.ITypeInfo">
+            <summary>
+            Represents a .NET type.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.IMetaDataInfo">
+            <summary>
+            Represents a metadata item.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IMetaDataInfo.GetDisplayText">
+            <summary>
+            Gets a text representation of this metadata item for display.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IMetaDataInfo.GetDisplayText(DevExpress.DXCore.MetaData.DisplayTextOptions)">
+            <summary>
+            Gets a text representation of this metadata item for display.
+            </summary>
+            <param name="options">Additional options for display text.</param>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMetaDataInfo.Name">
+            <summary>
+            Gets the name of this metadata item.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.IAssemblyItem">
+            <summary>
+            Represents a metadata item that is associated with an assembly.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IAssemblyItem.Assembly">
+            <summary>
+            Gets the assembly that this metadata item is associated with.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.IModuleItem">
+            <summary>
+            Represents a metadata item that is associated with an module.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IModuleItem.Module">
+            <summary>
+            Gets the module that this metadata item is associated with.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.IGenericsSupporter">
+            <summary>
+            Represents a metadata item that supports generics.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IGenericsSupporter.IsGeneric">
+            <summary>
+            Determines whether this metadata item is a generic.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IGenericsSupporter.IsGenericDefinition">
+            <summary>
+            Determines whether this metadata item is a generic definition.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IGenericsSupporter.HasGenericParameters">
+            <summary>
+            Determines whether this metadata item contains any unassigned generic parameters.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IGenericsSupporter.GenericArguments">
+            <summary>
+            Gets the generic arguments of this metadata item.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.IAttributeSupporter">
+            <summary>
+            Represents a metadata item that supports custom attributes.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IAttributeSupporter.GetCustomAttributes(System.Boolean)">
+            <summary>
+            Returns an array of all custom attributes attached to this metadata item.
+            </summary>
+            <param name="inherited">Specifies whether to search the metadata item's inheritance chain to find
+            all attributes.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IAttributeSupporter.IsDefined(System.String,System.Boolean)">
+            <summary>
+            Determines whether the specified attribute is attached to this metadata item.
+            </summary>
+            <param name="attribute">The full type-name of the attribute to search for.</param>
+            <param name="inherited">If true, the metadata item's inheritance chain will also be searched
+            to find the attribute.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.ITypeInfo.FindEvent(DevExpress.DXCore.MetaData.EventPredicate)">
+            <summary>
+            Searches for an event that matches the conditions defined by the specified predicate, and returns the first occurrence.
+            </summary>
+            <param name="predicate">The EventPredicate delegate that defines the conditions of the event to search for.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.ITypeInfo.FindAllEvents(DevExpress.DXCore.MetaData.EventPredicate)">
+            <summary>
+            Retrieves all the events that match the conditions defined by the specified predicate.
+            </summary>
+            <param name="predicate">The EventPredicate delegate that defines the conditions of the events to search for.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.ITypeInfo.FindLastEvent(DevExpress.DXCore.MetaData.EventPredicate)">
+            <summary>
+            Searches for a event that matches the conditions defined by the specified predicate, and returns the last occurrence.
+            </summary>
+            <param name="predicate">The EventPredicate delegate that defines the conditions of the event to search for.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.ITypeInfo.FindField(DevExpress.DXCore.MetaData.FieldPredicate)">
+            <summary>
+            Searches for a field that matches the conditions defined by the specified predicate, and returns the first occurrence.
+            </summary>
+            <param name="predicate">The FieldPredicate delegate that defines the conditions of the field to search for.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.ITypeInfo.FindAllFields(DevExpress.DXCore.MetaData.FieldPredicate)">
+            <summary>
+            Retrieves all the fields that match the conditions defined by the specified predicate.
+            </summary>
+            <param name="predicate">The FieldPredicate delegate that defines the conditions of the fields to search for.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.ITypeInfo.FindLastField(DevExpress.DXCore.MetaData.FieldPredicate)">
+            <summary>
+            Searches for a field that matches the conditions defined by the specified predicate, and returns the last occurrence.
+            </summary>
+            <param name="predicate">The FieldPredicate delegate that defines the conditions of the field to search for.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.ITypeInfo.FindMethod(DevExpress.DXCore.MetaData.MethodPredicate)">
+            <summary>
+            Searches for a method that matches the conditions defined by the specified predicate, and returns the first occurrence.
+            </summary>
+            <param name="predicate">The MethodPredicate delegate that defines the conditions of the method to search for.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.ITypeInfo.FindAllMethods(DevExpress.DXCore.MetaData.MethodPredicate)">
+            <summary>
+            Retrieves all the methods that match the conditions defined by the specified predicate.
+            </summary>
+            <param name="predicate">The MethodPredicate delegate that defines the conditions of the methods to search for.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.ITypeInfo.FindLastMethod(DevExpress.DXCore.MetaData.MethodPredicate)">
+            <summary>
+            Searches for a method that matches the conditions defined by the specified predicate, and returns the last occurrence.
+            </summary>
+            <param name="predicate">The MethodPredicate delegate that defines the conditions of the method to search for.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.ITypeInfo.FindProperty(DevExpress.DXCore.MetaData.PropertyPredicate)">
+            <summary>
+            Searches for a property that matches the conditions defined by the specified predicate, and returns the first occurrence.
+            </summary>
+            <param name="predicate">The PropertyPredicate delegate that defines the conditions of the property to search for.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.ITypeInfo.FindAllProperties(DevExpress.DXCore.MetaData.PropertyPredicate)">
+            <summary>
+            Retrieves all the properties that match the conditions defined by the specified predicate.
+            </summary>
+            <param name="predicate">The PropertyPredicate delegate that defines the conditions of the properties to search for.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.ITypeInfo.FindLastProperty(DevExpress.DXCore.MetaData.PropertyPredicate)">
+            <summary>
+            Searches for a property that matches the conditions defined by the specified predicate, and returns the last occurrence.
+            </summary>
+            <param name="predicate">The PropertyPredicate delegate that defines the conditions of the property to search for.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.ITypeInfo.GetInterfaces">
+            <summary>
+            Gets any interfaces that this type implements directly or are implemented by an ancestor of this type.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.ITypeInfo.Resolve">
+            <summary>
+            Force resolve for unresolved TypeInfo
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.ITypeInfo.IsSubclassOf(System.String)">
+            <summary>
+            Determines if this type is a descendent of the specified type.
+            </summary>
+            <param name="typeName">The full name of specified type to check.</param>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ITypeInfo.Namespace">
+            <summary>
+            Gets the namespace of this type.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ITypeInfo.FullName">
+            <summary>
+            Gets the full name of this type.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ITypeInfo.FullyQualifiedName">
+            <summary>
+            Gets the fully qualified name of this type (the full name plus the assembly name).
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ITypeInfo.BaseType">
+            <summary>
+            Gets the type that this type descends from.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ITypeInfo.Interfaces">
+            <summary>
+            Gets any interfaces that this type implements directly.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ITypeInfo.IsNested">
+            <summary>
+            Determines whether this type is nested inside of another type.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ITypeInfo.ParentType">
+            <summary>
+            Gets the type that is the parent of this type in the case that this type is nested inside of another type.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ITypeInfo.NestedName">
+            <summary>
+            Gets the nested name of this type. If the type is not nested, this returns the same value
+            as Name; otherwise, it returns the name(s) of the ParentType(s) concatenated with Name.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ITypeInfo.Visibility">
+            <summary>
+            Gets the visibility of this type.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ITypeInfo.IsArray">
+            <summary>
+            Determines whether this type is an array.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ITypeInfo.IsByRef">
+            <summary>
+            Determines whether this type is passed by reference.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ITypeInfo.IsPointer">
+            <summary>
+            Determines whether this type is a pointer.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ITypeInfo.HasElementType">
+            <summary>
+            Determines whether this type has an element type. This is only valid if the type is an array,
+            a pointer or is passed by reference.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ITypeInfo.ElementType">
+            <summary>
+            Gets the element type referred to by this array or pointer type.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ITypeInfo.HasDependencyMembers">
+            <summary>
+            Determines whether this type has dependency members.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ITypeInfo.IsClass">
+            <summary>
+            Determines whether this type is a class.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ITypeInfo.IsDelegate">
+            <summary>
+            Determines whether this type descends from System.Delegate.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ITypeInfo.IsEnum">
+            <summary>
+            Determines whether this type descends from System.Enum.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ITypeInfo.IsInterface">
+            <summary>
+            Determines whether this type is an interface.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ITypeInfo.IsValueType">
+            <summary>
+            Determines whether this type descends from System.ValueType.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ITypeInfo.IsVBModule">
+            <summary>
+            Determines whether this type is a Visual Basic module.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ITypeInfo.IsAbstract">
+            <summary>
+            Determines whether this type is abstract.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ITypeInfo.IsSealed">
+            <summary>
+            Determines whether this type is sealed.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ITypeInfo.IsSerializable">
+            <summary>
+            Determines whether this type is serializable.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ITypeInfo.IsImport">
+            <summary>
+            Determines whether this type is import.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ITypeInfo.Fields">
+            <summary>
+            Gets the fields declared on this type.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ITypeInfo.Methods">
+            <summary>
+            Gets the methods declared on this type.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ITypeInfo.Properties">
+            <summary>
+            Gets the properties declared on this type.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ITypeInfo.Events">
+            <summary>
+            Gets the events declared on this type.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ITypeInfo.GenericDefinition">
+            <summary>
+            Gets the generic type definition if this is a generic type with some or all of its generic
+            parameters assigned.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ITypeInfo.IsGenericParameter">
+            <summary>
+            Determines whether this type is an unassigned generic parameter.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ITypeInfo.GenericParameterIndex">
+            <summary>
+            Gets the index of this generic parameter in its parent type or method. If this
+            is not a generic parameter, -1 is returned.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ITypeInfo.DeclaresExtensionMethods">
+            <summary>
+            Determines whether this type declares extension methods.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IArrayTypeInfo.Rank">
+            <summary>
+            Rank is an integer that specifies the number of dimensions in the array
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IArrayTypeInfo.Sizes">
+            <summary>
+            Sizes is an array of integers specifying the sizes of array dimensions. 
+            The sequence starts at the first dimension, and continues for a total number of items.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IArrayTypeInfo.LoBounds">
+            <summary>
+            LoBounds is an array of integers specifying the lower bounds of array dimensions. 
+            The sequence starts at the first dimension, and continues for a total number of items.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.IDynamicSupporter">
+            <summary>
+            Represents a metadata item that supports dynamic attribute.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IDynamicSupporter.IsDynamic">
+            <summary>
+            Determines whether the metada item has dynamic attribute.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.IGenericParamInfo">
+            <summary>
+            Represents a generic type parameter
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IGenericParamInfo.TypeParameterDirection">
+            <summary>
+            Gets the direction of this type (co- and contravariance parameters)
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IGenericParamInfo.GenericParamConstraints">
+            <summary>
+            Gets generic parameter constraints.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.EventPredicate">
+            <summary>
+            Represents the method that defines a set of criteria and determines whether the specified event meets those criteria.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.FieldPredicate">
+            <summary>
+            Represents the method that defines a set of criteria and determines whether the specified field meets those criteria.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.MethodPredicate">
+            <summary>
+            Represents the method that defines a set of criteria and determines whether the specified method meets those criteria.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.PropertyPredicate">
+            <summary>
+            Represents the method that defines a set of criteria and determines whether the specified property meets those criteria.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.TypePredicate">
+            <summary>
+            Represents the method that defines a set of criteria and determines whether the specified type meets those criteria.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.DisplayTextOptions">
+            <summary>
+            Options for GetDisplayText method.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.DisplayTextOptions.None">
+            <summary>
+            Specifies no options.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.DisplayTextOptions.FullNames">
+            <summary>
+            If specified, full type names (including namespace) will be displayed.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.DisplayTextOptions.QualifyNames">
+            <summary>
+            If specified, type names will include qualified assembly name.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.DisplayTextOptions.IncludeCustomModifiers">
+            <summary>
+            If specified, custom modifiers will be displayed.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.DisplayTextOptions.UseGenericParameterNames">
+            <summary>
+            If specified, generic parameters will display names instead of indeces.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.DisplayTextOptions.UseFullAssemblyNames">
+            <summary>
+            If specified, full assembly names (including version, culture and public key token) will be displayed.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.DisplayTextOptions.All">
+            <summary>
+            Specifies all options.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.MetaDataTableType">
+            <summary>
+            Indicates a specific metadata table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.Module">
+            <summary>
+            Indicates the Module table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.TypeRef">
+            <summary>
+            Indicates the TypeRef table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.TypeDef">
+            <summary>
+            Indicates the TypeDef table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.FieldPtr">
+            <summary>
+            Indicates the FieldPtr table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.Field">
+            <summary>
+            Indicates the Field table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.MethodPtr">
+            <summary>
+            Indicates the MethodPtr table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.Method">
+            <summary>
+            Indicates the Method table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.ParamPtr">
+            <summary>
+            Indicates the ParamPtr table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.Param">
+            <summary>
+            Indicates the Param table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.InterfaceImpl">
+            <summary>
+            Indicates the InterfaceImpl table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.MemberRef">
+            <summary>
+            Indicates the MemberRef table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.Constant">
+            <summary>
+            Indicates the Constant table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.CustomAttribute">
+            <summary>
+            Indicates the CustomAttribute table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.FieldMarshal">
+            <summary>
+            Indicates the FieldMarshal table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.DeclSecurity">
+            <summary>
+            Indicates the DeclSecurity table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.ClassLayout">
+            <summary>
+            Indicates the ClassLayout table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.FieldLayout">
+            <summary>
+            Indicates the FieldLayout table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.StandAloneSig">
+            <summary>
+            Indicates the StandAloneSig table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.EventMap">
+            <summary>
+            Indicates the EventMap table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.EventPtr">
+            <summary>
+            Indicates the EventPtr table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.Event">
+            <summary>
+            Indicates the Event table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.PropertyMap">
+            <summary>
+            Indicates the PropertyMap table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.PropertyPtr">
+            <summary>
+            Indicates the PropertyPtr table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.Property">
+            <summary>
+            Indicates the Property table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.MethodSemantics">
+            <summary>
+            Indicates the MethodSemantics table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.MethodImpl">
+            <summary>
+            Indicates the MethodImpl table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.ModuleRef">
+            <summary>
+            Indicates the ModuleRef table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.TypeSpec">
+            <summary>
+            Indicates the TypeSpec table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.ImplMap">
+            <summary>
+            Indicates the ImplMap table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.FieldRVA">
+            <summary>
+            Indicates the FieldRVA table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.ENCLog">
+            <summary>
+            Indicates the ENCLog table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.ENCMap">
+            <summary>
+            Indicates the ENCMap table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.Assembly">
+            <summary>
+            Indicates the Assembly table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.AssemblyProcessor">
+            <summary>
+            Indicates the AssemblyProcessor table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.AssemblyOS">
+            <summary>
+            Indicates the AssemblyOS table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.AssemblyRef">
+            <summary>
+            Indicates the AssemblyRef table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.AssemblyRefProcessor">
+            <summary>
+            Indicates the AssemblyRefProcessor table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.AssemblyRefOS">
+            <summary>
+            Indicates the AssemblyRefOS table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.File">
+            <summary>
+            Indicates the File table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.ExportedType">
+            <summary>
+            Indicates the ExportedType table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.ManifestResource">
+            <summary>
+            Indicates the ManifestResource table.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.MetaDataTableType.NestedClass">
+            <summary>
+            Indicates the NestedClass table.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.PropertyAccess">
+            <summary>
+            Describes the access of a property.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.PropertyAccess.None">
+            <summary>
+            Indicates no access.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.PropertyAccess.ReadOnly">
+            <summary>
+            Indicates read-only access.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.PropertyAccess.WriteOnly">
+            <summary>
+            Indicates write-only access.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.PropertyAccess.ReadWrite">
+            <summary>
+            Indicates read/write access.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.ScopeOptions">
+            <summary>
+            Options for ScopeManager.FromName and ScopeManager.FromFile methods.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.ScopeOptions.None">
+            <summary>
+            Specifies no options.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.ScopeOptions.LoadAssemblyReferences">
+            <summary>
+            If specified, all metadata scope will be loaded with assembly references.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.ScopeOptions.OpenLocal">
+            <summary>
+            If specified, current scope will not be stored in the ScopeManager.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.ScopeOptions.LoadInternalElements">
+            <summary>
+            If specified, all internal elements in metadata scope will be loaded.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.ScopeOptions.LoadPrivateElements">
+            <summary>
+            If specified, all private elements in metadata scope will be loaded.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.ScopeOptions.LoadInvalidTypes">
+            <summary>
+            If specified, all invalid types in metadata scope will be loaded.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.ScopeOptions.LoadMethodBodies">
+            <summary>
+            If specified, method bodies would be loaded and converted to IL instructions.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.ScopeOptions.SkipInstructionArgumentsParsing">
+            <summary>
+            If specified, IL isntructions arguments wouldn't be parsed.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.ScopeOptions.LoadImplAttributeArguments">
+            <summary>
+            If specified, DLLImport and MethodImpl attributes arguments would be loaded.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.ScopeOptions.SkipLoadingTypeDefCore">
+            <summary>
+            If specified, loading MetaDataTypeDefRow core will be skipped
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.ScopeOptions.RaiseTypeDefRowLoadedEvent">
+            <summary>
+            If specified, then raising the ScopeManager.TypeDefRowLoaded event is alowed
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.ScopeOptions.RaiseMemberDefRowLoadedEvent">
+            <summary>
+            If specified, then raising the ScopeManager.MethodDefRowLoaded event is alowed
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.Visibility">
+            <summary>
+            Decribes the visibility of a type or member.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.Visibility.NotReferenceable">
+            <summary>
+            Indicates that this type or member can not be referenced.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.Visibility.Private">
+            <summary>
+            Indicates private visibility.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.Visibility.Family">
+            <summary>
+            Indicates family visibility.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.Visibility.Assembly">
+            <summary>
+            Indicates assembly visibility.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.Visibility.FamilyAndAssembly">
+            <summary>
+            Indicates family and assembly visibility.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.Visibility.FamilyOrAssembly">
+            <summary>
+            Indicates family or assembly visibility.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.Visibility.Public">
+            <summary>
+            Indicates public visibility.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.ScopeClosedEventArgs">
+            <summary>
+            Provides data for the ScopeClosed event.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ScopeClosedEventArgs.Scope">
+            <summary>
+            Gets the closed metadata scope.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.ScopeClosedEventHandler">
+            <summary>
+            Represents the method that will handle the ScopeClosed event.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.ScopeLoadedEventArgs">
+            <summary>
+            Provides data for the ScopeLoaded event.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ScopeLoadedEventArgs.Scope">
+            <summary>
+            Gets the unloaded metadata scope.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.ScopeLoadedEventHandler">
+            <summary>
+            Represents the method that will handle the ScopeLoaded event.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.ScopeOpenedEventArgs">
+            <summary>
+            Provides data for the ScopeOpened event.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ScopeOpenedEventArgs.Scope">
+            <summary>
+            Gets the opened metadata scope.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.ScopeOpenedEventHandler">
+            <summary>
+            Represents the method that will handle the ScopeOpened event.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.ScopeUnloadedEventArgs">
+            <summary>
+            Provides data for the ScopeUnloaded event.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ScopeUnloadedEventArgs.Scope">
+            <summary>
+            Gets the unloaded metadata scope.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.ScopeUnloadedEventHandler">
+            <summary>
+            Represents the method that will handle the ScopeUnloaded event.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.IAssemblyInfo">
+            <summary>
+            Represents a .NET Framework assembly.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IAssemblyInfo.FindType(DevExpress.DXCore.MetaData.TypePredicate)">
+            <summary>
+            Searches for a type that matches the conditions defined by the specified predicate, and returns the first occurrence.
+            </summary>
+            <param name="predicate">The TypePredicate delegate that defines the conditions of the type to search for.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IAssemblyInfo.FindAllTypes(DevExpress.DXCore.MetaData.TypePredicate)">
+            <summary>
+            Retrieves all the types that match the conditions defined by the specified predicate.
+            </summary>
+            <param name="predicate">The TypePredicate delegate that defines the conditions of the types to search for.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IAssemblyInfo.FindLastType(DevExpress.DXCore.MetaData.TypePredicate)">
+            <summary>
+            Searches for a type that matches the conditions defined by the specified predicate, and returns the last occurrence.
+            </summary>
+            <param name="predicate">The TypePredicate delegate that defines the conditions of the type to search for.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IAssemblyInfo.GetType(System.String)">
+            <summary>
+            Gets a type by its name using the default TypeMatchOptions.
+            </summary>
+            <param name="name">The name of the type to retrieve.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IAssemblyInfo.GetType(System.String,DevExpress.DXCore.MetaData.TypeMatchOptions)">
+            <summary>
+            Gets a type by its name using the specified TypeMatchOptions.
+            </summary>
+            <param name="name">The name of the type to retrieve.</param>
+            <param name="options">The TypeMatchOptions to use.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IAssemblyInfo.GetTypes">
+            <summary>
+            Gets an array of types using the default TypeMatchOptions.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IAssemblyInfo.GetTypes(DevExpress.DXCore.MetaData.TypeMatchOptions)">
+            <summary>
+            Gets an array of types using the specified TypeMatchOptions.
+            </summary>
+            <param name="options">The TypeMatchOptions to use.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IAssemblyInfo.GetExportedType(System.String)">
+            <summary>
+            Retrieves a type that is exported from this assembly by name.
+            </summary>
+            <param name="name">The name of the type to retrieve.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IAssemblyInfo.GetExportedTypes">
+            <summary>
+            Retrieves all types that are exported from this assembly.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IAssemblyInfo.GetModule(System.String)">
+            <summary>
+            Retrieves a module by name or returns null if the module cannot be found.
+            </summary>
+            <param name="name">The name of the module to retrieve.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IAssemblyInfo.SetModule(System.Byte[],DevExpress.DXCore.MetaData.ScopeOptions,DevExpress.DXCore.MetaData.IAssemblyResolver,System.Boolean)">
+            <summary>
+            For internal use only.
+            </summary>
+            <param name="bytes"></param>
+            <param name="options"></param>
+            <param name="assemblyResolver"></param>
+            <param name="hasInternalVisibleAttribute"></param>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IAssemblyInfo.Version">
+            <summary>
+            Gets the version of this assembly.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IAssemblyInfo.Culture">
+            <summary>
+            Gets the culture of this assembly.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IAssemblyInfo.PublicKeyToken">
+            <summary>
+            Gets the public key token of this assembly. This value can be null
+            if the assembly is not strongly-named.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IAssemblyInfo.FullName">
+            <summary>
+            Gets the full name of this assembly using its name, version, culture and public
+            key token.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IAssemblyInfo.HashAlgorithm">
+            <summary>
+            Gets the hash algorithm of this assembly.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IAssemblyInfo.PublicKey">
+            <summary>
+            Gets the public key of this assembly. This value can be null if
+            the assembly is not strongly-named.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IAssemblyInfo.Modules">
+            <summary>
+            Gets all modules contained in this assembly.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IAssemblyInfo.Files">
+            <summary>
+            Gets the files contained in this assembly.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IAssemblyInfo.ManifestResources">
+            <summary>
+            Gets the manifest resources contained in this assembly.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.IAssemblyReferenceInfo">
+            <summary>
+            Represents a reference to a .NET Framework assembly.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IAssemblyReferenceInfo.Resolve">
+            <summary>
+            Resolves this reference and returns the assembly that it references.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IAssemblyReferenceInfo.Version">
+            <summary>
+            Gets the version of this assembly reference.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IAssemblyReferenceInfo.Culture">
+            <summary>
+            Gets the culture of this assembly reference.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IAssemblyReferenceInfo.PublicKeyToken">
+            <summary>
+            Gets the public key token of this assembly reference. This value can be null
+            if the assembly is not strongly-named.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IAssemblyReferenceInfo.FullName">
+            <summary>
+            Gets the full name of this assembly reference using its name, version, culture and public
+            key token.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.IAssemblyResolver">
+            <summary>
+            Can be implemented by clients that need to provide custom assembly resolution.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IAssemblyResolver.ResolvePartial(System.String)">
+            <summary>
+            Resolves a partial assembly name to an assembly.
+            </summary>
+            <param name="partialName">The partial assembly name to resolve.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IAssemblyResolver.ResolvePartial(System.String,DevExpress.DXCore.MetaData.ScopeOptions)">
+            <summary>
+            Resolves a partial assembly name to an assembly.
+            </summary>
+            <param name="partialName">The partial assembly name to resolve.</param>
+            <param name="options">Additional options.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IAssemblyResolver.Resolve(System.String)">
+            <summary>
+            Resolves a full assembly name to an assembly.
+            </summary>
+            <param name="fullName">The full assembly name to resolve.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IAssemblyResolver.Resolve(System.String,DevExpress.DXCore.MetaData.ScopeOptions)">
+            <summary>
+            Resolves a full assembly name to an assembly.
+            </summary>
+            <param name="fullName">The full assembly name to resolve.</param>
+            <param name="options">Additional options.</param>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.ICustomAttributeInfo">
+            <summary>
+            Represents a custom attribute.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ICustomAttributeInfo.Type">
+            <summary>
+            Gets the type of this custom attribute.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ICustomAttributeInfo.Arguments">
+            <summary>
+            Gets arguments of this custom attribute.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.IEventInfo">
+            <summary>
+            Represents an event.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.IMemberInfo">
+            <summary>
+            Represents a metadata item that is a member of a type.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMemberInfo.ParentType">
+            <summary>
+            Gets the type that is the parent of this member.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IEventInfo.Type">
+            <summary>
+            Gets the type of this event.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IEventInfo.AddMethod">
+            <summary>
+            Returns the adder method of this event.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IEventInfo.RemoveMethod">
+            <summary>
+            Returns the remove method of this event.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IEventInfo.FireMethod">
+            <summary>
+            Returns the fire method of this event (if any).
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IEventInfo.IsStatic">
+            <summary>
+            Determines whether this event is static.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IEventInfo.Visibility">
+            <summary>
+            Gets the visibility of this event.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.IExportedTypeInfo">
+            <summary>
+            Represents an exported type from a .NET Framework assembly.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.IFieldInfo">
+            <summary>
+            Represents a field.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IFieldInfo.Type">
+            <summary>
+            Gets the type of this field.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IFieldInfo.Visibility">
+            <summary>
+            Gets the visibility of this field.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IFieldInfo.IsInitOnly">
+            <summary>
+            Determines whether this field can only be set in the body of the constructor.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IFieldInfo.IsLiteral">
+            <summary>
+            Determines whether the value of this field is set at compile time and cannot be changed.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IFieldInfo.IsNotSerialized">
+            <summary>
+            Determines whether this field has the NotSerialized attribute.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IFieldInfo.IsStatic">
+            <summary>
+            Determines whether this field is static.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IFieldInfo.Signature">
+            <summary>
+            Gets the signature of this field.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IFieldInfo.IsConst">
+            <summary>
+            Returns true if the field has const modifier.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IFieldInfo.Value">
+            <summary>
+            For internal use only.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.IFileInfo">
+            <summary>
+            Represents a file contained in a .NET Framework assembly.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IFileInfo.Resolve">
+            <summary>
+            Resolves and loads this file if it contains metadata.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IFileInfo.IsMetaData">
+            <summary>
+            Determines whether or not this file contains metadata.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IFileInfo.HashValue">
+            <summary>
+            Gets the hash value of this file.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.IManifestResourceInfo">
+            <summary>
+            Represents a manifest resource of a .NET Framework assembly.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.IMemberRefInfo">
+            <summary>
+            Represents a member reference.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IMemberRefInfo.GetMemberInfo(DevExpress.DXCore.MetaData.ITypeInfo)">
+            <summary>
+            Gets the member info corresponding to this member reference.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMemberRefInfo.Parent">
+            <summary>
+            Gets the parent of this member reference.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMemberRefInfo.Signature">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.IMetaDataScope">
+            <summary>
+            Represents a collection of metadata tables. These tables contain all
+            of the metadata descriptions used by the common language runtime. The
+            IMetaDataScope interface provides to the metadata through the tables
+            themselves or via a tree-like structure rooted at the assembly that 
+            contains the metadata.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IMetaDataScope.GetTable(DevExpress.DXCore.MetaData.MetaDataTableType)">
+            <summary>
+            Retrieves a specified metadata table. This may return null if the table does not exist.
+            </summary>
+            <param name="type">The metadata table to retrieve.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IMetaDataScope.ForceLoad">
+            <summary>
+            Loads this metadata scope from its file on disk.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IMetaDataScope.Reload">
+            <summary>
+            Immediately closes and reloads this metadata scope from its file on disk.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IMetaDataScope.ReloadIfModified">
+            <summary>
+            Reloads this metadata scope if its file on disk has been modified. This returns
+            true if the metadata scope is reloaded.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IMetaDataScope.Close">
+            <summary>
+            Closes this metadata scope. This does not remove the scope but reduces the memory used by it.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IMetaDataScope.Close(System.Boolean)">
+            <summary>
+            Closes this metadata scope and clears all data. 
+            This does not remove the scope but reduces the memory used by it.
+            </summary>    
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IMetaDataScope.IsInvisibleType(System.String)">
+            <summary>
+            Returns true if type with specified name is invisible.
+            </summary>
+            <param name="name">The name of type</param>
+            <returns></returns>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IMetaDataScope.FindType(System.String,System.String)">
+            <summary>
+            Finds a type in the given assembly with the given name.
+            </summary>
+            <param name="typeName">The name of the type to search.</param>
+            <param name="assemblyName">The name of the assembly to search.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IMetaDataScope.FindType(System.String)">
+            <summary>
+            Finds a type in this metadata scope with the given name.
+            </summary>
+            <param name="typeName">The name of the type to search.</param>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMetaDataScope.Location">
+            <summary>
+            Gets the location of this metadata scope on disk. If this metadata scope was opened from a byte array,
+            this property will be null.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMetaDataScope.Assembly">
+            <summary>
+            Gets the assembly that this metadata scope represents. If module represented by this metadata
+            scope does not contain an assembly manifest, this will return null.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMetaDataScope.Module">
+            <summary>
+            Gets the module that this metadata scope represents.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMetaDataScope.Tables">
+            <summary>
+            Gets the metadata tables contained in this metadata scope.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMetaDataScope.IsAssemblyReferencesLoaded">
+            <summary>
+            Gets or Sets assembly references in this metadata scope.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMetaDataScope.FriendAssemblyNames">
+            <summary>
+            Returns friend assembly names.
+            Note: Internal members from current MetaDataScope are opened for these assemblies.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMetaDataScope.XmlNamespaces">
+            <summary>
+            Returns information for xml-namespaces.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMetaDataScope.LoadInternalMembers">
+            <summary>
+            If False then Scope doesn't load Internal members
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMetaDataScope.LoadPrivateMembers">
+            <summary>
+            If False then Scope doesn't load Private members
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.IMetaDataScopeItem">
+            <summary>
+            Provides access to the metadata scope that this instance is associated with.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMetaDataScopeItem.Scope">
+            <summary>
+            Gets the IMetaDataScope that this data is associated with.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.IMetaDataTable">
+            <summary>
+            Represents a metadata table.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMetaDataTable.ID">
+            <summary>
+            Gets the ID number of this metadata table. This value is also known 
+            as the "table index".
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMetaDataTable.Rows">
+            <summary>
+            Gets the rows of this metadata table.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.IMetaDataTableItem">
+            <summary>
+            Represents an item owned by a metadata table.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMetaDataTableItem.Table">
+            <summary>
+            Gets the metadata table that this column or row belongs to.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMetaDataTableItem.ID">
+            <summary>
+            Gets the id of this column or row.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.IMetaDataTableRow">
+            <summary>
+            Represents a row in a metadata table.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMetaDataTableRow.Table">
+            <summary>
+            Gets the metadata table that this column or row belongs to.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMetaDataTableRow.ID">
+            <summary>
+            Gets the id of this column or row.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.ILocalVariable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ILocalVariable.Type">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.IMethodInfo">
+            <summary>
+            Represents a method.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMethodInfo.Visibility">
+            <summary>
+            Gets the visibility of this method.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMethodInfo.ReturnType">
+            <summary>
+            Gets the return type of this method.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMethodInfo.Parameters">
+            <summary>
+            Gets the parameters of this method.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMethodInfo.IsExtern">
+            <summary>
+            Determines whether this method is extern.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMethodInfo.IsPInvokeImpl">
+            <summary>
+            Determines whether this method is P/Invoke declaration (uses DllImport attribute).
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMethodInfo.IsExternMethodImpl">
+            <summary>
+            Determines whether this method have external implementation (uses MethodImpl attribute).
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMethodInfo.IsStatic">
+            <summary>
+            Determines whether this method is static.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMethodInfo.IsFinal">
+            <summary>
+            Determines whether this method can be overridden.
+            </summary>
+            
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMethodInfo.IsVirtual">
+            <summary>
+            Determines whether this method is virtual and can be overridden.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMethodInfo.IsNewSlot">
+            <summary>
+            Determines whether this method is new slot.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMethodInfo.IsHideBySig">
+            <summary>
+            Determines whether only a member of the same kind with exactly the same 
+            signature is hidden in the derived class.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMethodInfo.IsAbstract">
+            <summary>
+            Determines whether this method is abstract.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMethodInfo.IsConstructor">
+            <summary>
+            Determines whether this method is an instance constructor.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMethodInfo.IsTypeInitializer">
+            <summary>
+            Determines whether this method is a type initializer.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMethodInfo.IsExtensionMethod">
+            <summary>
+            Determines whether this method is an extension method.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMethodInfo.ExtensionType">
+            <summary>
+            Gets the type that this method extends if it is an extension method.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMethodInfo.Properties">
+            <summary>
+            Gets the properties that this method is associated with.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMethodInfo.IsPropertyGetter">
+            <summary>
+            Determines whether this is a property getter method.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMethodInfo.IsPropertySetter">
+            <summary>
+            Determines whether this is a property setter method.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMethodInfo.Events">
+            <summary>
+            Gets the events that this method is associated with.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMethodInfo.IsEventAddOn">
+            <summary>
+            Determines whether this is an event add-on method.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMethodInfo.IsEventRemoveOn">
+            <summary>
+            Determines whether this is an event remove-on method.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMethodInfo.IsEventFire">
+            <summary>
+            Determines whether this is an event fire method.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMethodInfo.Signature">
+            <summary>
+            Gets the signature of this method.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IMethodInfo.CodeRVA">
+            <summary>
+            Gets the relative virtual address of the code (CIL) of this method in the assembly image.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.IModuleInfo">
+            <summary>
+            Represents a .NET Framework module.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IModuleInfo.FindField(DevExpress.DXCore.MetaData.FieldPredicate)">
+            <summary>
+            Searches for a global field that matches the conditions defined by the specified predicate, and returns the first occurrence.
+            </summary>
+            <param name="predicate">The FieldPredicate delegate that defines the conditions of the global field to search for.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IModuleInfo.FindAllFields(DevExpress.DXCore.MetaData.FieldPredicate)">
+            <summary>
+            Retrieves all the global fields that match the conditions defined by the specified predicate.
+            </summary>
+            <param name="predicate">The FieldPredicate delegate that defines the conditions of the global fields to search for.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IModuleInfo.FindLastField(DevExpress.DXCore.MetaData.FieldPredicate)">
+            <summary>
+            Searches for a global field that matches the conditions defined by the specified predicate, and returns the last occurrence.
+            </summary>
+            <param name="predicate">The FieldPredicate delegate that defines the conditions of the global field to search for.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IModuleInfo.FindMethod(DevExpress.DXCore.MetaData.MethodPredicate)">
+            <summary>
+            Searches for a global method that matches the conditions defined by the specified predicate, and returns the first occurrence.
+            </summary>
+            <param name="predicate">The MethodPredicate delegate that defines the conditions of the global method to search for.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IModuleInfo.FindAllMethods(DevExpress.DXCore.MetaData.MethodPredicate)">
+            <summary>
+            Retrieves all the global methods that match the conditions defined by the specified predicate.
+            </summary>
+            <param name="predicate">The MethodPredicate delegate that defines the conditions of the global methods to search for.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IModuleInfo.FindLastMethod(DevExpress.DXCore.MetaData.MethodPredicate)">
+            <summary>
+            Searches for a global method that matches the conditions defined by the specified predicate, and returns the last occurrence.
+            </summary>
+            <param name="predicate">The MethodPredicate delegate that defines the conditions of the global method to search for.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IModuleInfo.FindProperty(DevExpress.DXCore.MetaData.PropertyPredicate)">
+            <summary>
+            Searches for a global property that matches the conditions defined by the specified predicate, and returns the first occurrence.
+            </summary>
+            <param name="predicate">The PropertyPredicate delegate that defines the conditions of the global property to search for.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IModuleInfo.FindAllProperties(DevExpress.DXCore.MetaData.PropertyPredicate)">
+            <summary>
+            Retrieves all the global properties that match the conditions defined by the specified predicate.
+            </summary>
+            <param name="predicate">The PropertyPredicate delegate that defines the conditions of the global property to search for.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IModuleInfo.FindLastProperty(DevExpress.DXCore.MetaData.PropertyPredicate)">
+            <summary>
+            Searches for a global property that matches the conditions defined by the specified predicate, and returns the last occurrence.
+            </summary>
+            <param name="predicate">The PropertyPredicate delegate that defines the conditions of the global property to search for.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IModuleInfo.FindType(DevExpress.DXCore.MetaData.TypePredicate)">
+            <summary>
+            Searches for a type that matches the conditions defined by the specified predicate, and returns the first occurrence.
+            </summary>
+            <param name="predicate">The TypePredicate delegate that defines the conditions of the type to search for.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IModuleInfo.FindAllTypes(DevExpress.DXCore.MetaData.TypePredicate)">
+            <summary>
+            Retrieves all the types that match the conditions defined by the specified predicate.
+            </summary>
+            <param name="predicate">The TypePredicate delegate that defines the conditions of the types to search for.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IModuleInfo.FindLastType(DevExpress.DXCore.MetaData.TypePredicate)">
+            <summary>
+            Searches for a type that matches the conditions defined by the specified predicate, and returns the last occurrence.
+            </summary>
+            <param name="predicate">The TypePredicate delegate that defines the conditions of the type to search for.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IModuleInfo.GetType(System.String)">
+            <summary>
+            Gets a type by its name using the default TypeMatchOptions.
+            </summary>
+            <param name="name">The name of the type to retrieve.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IModuleInfo.GetType(System.String,DevExpress.DXCore.MetaData.TypeMatchOptions)">
+            <summary>
+            Gets a type by its name using the specified TypeMatchOptions.
+            </summary>
+            <param name="name">The name of the type to retrieve.</param>
+            <param name="options">The TypeMatchOptions to use.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IModuleInfo.GetTypes">
+            <summary>
+            Gets an array of types using the default TypeMatchOptions.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IModuleInfo.GetTypes(DevExpress.DXCore.MetaData.TypeMatchOptions)">
+            <summary>
+            Gets an array of types using the specified TypeMatchOptions.
+            </summary>
+            <param name="options">The TypeMatchOptions to use.</param>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IModuleInfo.MVID">
+            <summary>
+            Gets the MVID of this module.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IModuleInfo.AssemblyReferences">
+            <summary>
+            Gets references to other .NET Framework assemblies.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IModuleInfo.ModuleReferences">
+            <summary>
+            Gets references to other modules -- managed or unmanaged.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IModuleInfo.GlobalFields">
+            <summary>
+            Gets all of the global fields in this module.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IModuleInfo.GlobalMethods">
+            <summary>
+            Gets all of the global methods in this module.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IModuleInfo.Types">
+            <summary>
+            Gets all of the .NET types in this module.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.IModuleReferenceInfo">
+            <summary>
+            Represents a reference to a module.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.IModuleReferenceInfo.Resolve">
+            <summary>
+            Resolves this reference and returns the managed module that it references or returns
+            null if the referenced module is unmanaged.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.Internal.BaseObject">
+            <summary>
+            The ancestor of all objects in the MetaData API.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.BlobReader.UncompressData(System.UInt32@)">
+            <summary>
+            Uncompresses the next data value from the blob data.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.BlobReader.UncompressSignedData(System.Int32@)">
+            <summary>
+            Uncompresses a signed integer value from the blob data.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.BlobReader.UncompressToken(System.UInt32@)">
+            <summary>
+            Uncompresses a token value from the blob data.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.FormatUtilities.FormatCulture(System.Globalization.CultureInfo)">
+            <summary>
+            Formats a culture for use in a full assembly name.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.FormatUtilities.FormatPublicKeyToken(System.Byte[])">
+            <summary>
+            Formats a public key token for use in a full assembly name.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Info.AssemblyItem.GetAssembly">
+            <summary>
+            Can be overridden by descendents to return a different module in the IAssemblyItem.Assembly property.
+            Note that this will not change the AssemblyItem.Assembly property.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Info.ModuleItem.GetModule">
+            <summary>
+            Can be overridden by descendents to return a different module in the IModuleItem.Module property.
+            Note that this will not change the ModuleItem.Module property.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Info.FieldInfo.LoadSignature">
+            <summary>
+            Loads and parses the signature of this field.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Info.MemberRefInfo.LoadSignature">
+            <summary>
+            Loads and parses the signature of this method.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Info.MethodInfo.LoadSignature">
+            <summary>
+            Loads and parses the signature of this method.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.IParameterInfo">
+            <summary>
+            Represents a parameter.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IParameterInfo.Type">
+            <summary>
+            Gets the type of this parameter.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IParameterInfo.ParentMember">
+            <summary>
+            Gets the member that is the parent of this parameter.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IParameterInfo.IsIn">
+            <summary>
+            Determines whether or not this parameter is an input parameter. This value
+            depends upon an optional metadata flag which compilers are not required
+            to generate.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IParameterInfo.IsOut">
+            <summary>
+            Determines whether or not this parameter is an output parameter. This value
+            depends upon an optional metadata flag which compilers are not required
+            to generate.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IParameterInfo.IsOptional">
+            <summary>
+            Determines whether or not this parameter is an optional parameter. This value
+            depends upon an optional metadata flag which compilers are not required
+            to generate.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IParameterInfo.IsParamArray">
+            <summary>
+            Determines whether or not this parameter is a param array parameter. This value
+            depends upon an optional attribute which compilers are not required to generate.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IParameterInfo.Signature">
+            <summary>
+            Gets the signature of this parameter.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.IPermissionSetInfo">
+            <summary>
+            Represents permission information (declarative security) for a metadata item.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IPermissionSetInfo.Action">
+            <summary>
+            Specifies this action that is performed for this declarative security.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.IPropertyInfo">
+            <summary>
+            Represents a property.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IPropertyInfo.Type">
+            <summary>
+            Gets the type of this property.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IPropertyInfo.Parameters">
+            <summary>
+            Gets the parameters of this property -- if any.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IPropertyInfo.Access">
+            <summary>
+            Gets the access of this property.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IPropertyInfo.CanRead">
+            <summary>
+            Determines whether this property can be read.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IPropertyInfo.CanWrite">
+            <summary>
+            Determines whether this property can be written to.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IPropertyInfo.GetMethod">
+            <summary>
+            Returns the getter method of this property. This will be null if the property is write-only.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IPropertyInfo.SetMethod">
+            <summary>
+            Returns the setter method of this property. This will be null if the property is read-only.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IPropertyInfo.IsStatic">
+            <summary>
+            Determines whether this property is static.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IPropertyInfo.Visibility">
+            <summary>
+            Gets the visibility of this property. If this property has mixed-visibility (i.e. the getter 
+            and setter have different visibility), the highest visibility is returned.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.IPropertyInfo.Signature">
+            <summary>
+            Gets the signature of this property.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Info.PropertyInfo.LoadSignature">
+            <summary>
+            Loads and parses the signature of this property.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Info.TypeDefInfo.GetName">
+            <summary>
+            Gets the name of this type without the namespace.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Info.TypeDefInfo.GetNamespace">
+            <summary>
+            Gets the namespace of this type without the type name.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Info.TypeDefInfo.GetFullName">
+            <summary>
+            Gets the full name of this type -- including any parent types if this type is nested.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Info.TypeRefInfo.GetName">
+            <summary>
+            Gets the name of this type without the namespace.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Info.TypeRefInfo.GetNamespace">
+            <summary>
+            Gest the namespace of this type without the type name.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Info.TypeRefInfo.GetFullName">
+            <summary>
+            Gets the full name of this type -- including any parent types if this type is nested.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Info.UnresolvedAssemblyInfo.#ctor(DevExpress.DXCore.MetaData.Internal.Info.AssemblyReferenceInfo)">
+            <summary>
+            Initializes a new instance of the UnresolvedAssemblyInfo class.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.Internal.LODObject">
+            <summary>
+            Represents a load-on-demand object.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.LODObject.Load">
+            <summary>
+            Overridden by descendents to load this load-on-demand object.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.LODObject.DemandLoad">
+            <summary>
+            Causes this load-on-demand object to be loaded if it hasn't been.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.LODObject.OnLoaded">
+            <summary>
+            Overridden by descendents to react when the state of this load-on-demand object changes to Loaded.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.LODObject.MarkUnloaded">
+            <summary>
+            Marks this load-on-demand object as unloaded. The next call to DemandLoad will cause it to load.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.MetaDataScope.SyncClose(System.Boolean)">
+            <summary>
+            Should always occur on the UI thread.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.MetaDataScope.SearchForType(System.String,System.String)">
+            <summary>
+            Searches for a type in this metadata scope. This method handles searches for nested types
+            properly.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataMethodDefRow.LoadMethodSemantics">
+            <summary>
+            Loads all method semantics of this method definition.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataMethodDefRow.LoadParameters">
+            <summary>
+            Loads all parameters of this method definition.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataMethodDefRow.LoadCustomAttributes">
+            <summary>
+            Loads all custom attributes of this method definition.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataMethodDefRow.LoadData">
+            <summary>
+            Loads the data of this MetaDataMethodDefRow object.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataMethodDefRow.GetSemanticsFlags(System.UInt32)">
+            <summary>
+            Returns the semantics flags for the specified event or property token that this MethodDef is associated with.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataTypeDefRow.LoadInterfaces">
+            <summary>
+            Loads all interfaces implemented by this type definition.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataTypeDefRow.LoadFields">
+            <summary>
+            Loads all field members of this type definition.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataTypeDefRow.LoadMethods">
+            <summary>
+            Loads all method members of this type definition.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataTypeDefRow.LoadProperties">
+            <summary>
+            LOads all property members of this type definition.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataTypeDefRow.LoadEvents">
+            <summary>
+            Loads all event members of this type definition.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataTypeDefRow.LoadCustomAttributes">
+            <summary>
+            Loads all custom attributes of this type definition.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataTypeDefRow.LoadData">
+            <summary>
+            Loads the data of this MetaDataTypeDefRow object.
+            </summary>
+            internal sealed override void LoadData()
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataTypeDefRow.LoadAdditionalData">
+            <summary>
+            Can be overridden by descendents to load any additional data before TypeLoaded event is fired.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataGenericParamConstraintRow.LoadData">
+            <summary>
+            Loads the data of this MetaDataGenericParamConstraintRow object.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataGenericParamRow.LoadData">
+            <summary>
+            Loads the data of this MetaDataGenericParamRow object.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataClassLayoutRow.LoadData">
+            <summary>
+            Loads the data of this MetaDataClassLayoutRow object.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataImplMapRow.LoadData">
+            <summary>
+            Loads the data of this MetaDataImpMapRow object.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataConstantRow.LoadData">
+            <summary>
+            Loads the data of this MetaDataConstant object.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataMethodDefRow2.LoadGenericArguments">
+            <summary>
+            Loads all generic parameters of this method definition.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataMethodDefRow2.LoadData">
+            <summary>
+            Loads the data of this MetaDataMethodDefRow2 object.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataMethodSpecRow.LoadData">
+            <summary>
+            Loads the data of this MetaDataMethodSpecRow object.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataTypeDefRow2.LoadGenericArguments">
+            <summary>
+            Loads all generic parameters of this type definition.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataTypeDefRow2.LoadAdditionalData">
+            <summary>
+            Overridden to load additional data before TypeLoaded event is fired.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataAssemblyRefRow.LoadData">
+            <summary>
+            Loads the data of this MetaDataAssemblyRefRow object.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataAssemblyRow.LoadProperties">
+            <summary>
+            Loads the properties of this assembly.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataAssemblyRow.LoadExportedTypes">
+            <summary>
+            Loads all exported types defined in this assembly.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataAssemblyRow.LoadFiles">
+            <summary>
+            Loads all files defined in this assembly.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataAssemblyRow.LoadManifestResources">
+            <summary>
+            Loads all manifest resources defined in this assembly.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataAssemblyRow.LoadCustomAttributes">
+            <summary>
+            Loads all custom attributes of this type definition.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataAssemblyRow.LoadData">
+            <summary>
+            Loads the data of this MetaDataAssemblyRow object.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataCustomAttributeRow.LoadData">
+            <summary>
+            Loads the data of this MetaDataCustomAttributeRow object.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataEventRow.LoadData">
+            <summary>
+            Loads the data of this MetaDataEventRow object.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataExportedTypeRow.LoadData">
+            <summary>
+            Loads the data of this MetaDataExportedTypeRow object.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataFieldRow.LoadData">
+            <summary>
+            Loads the data of this MetaDataFieldRow object.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataFieldRow.LoadCustomAttributes">
+            <summary>
+            Loads all custom attributes of this field.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataFileRow.LoadData">
+            <summary>
+            Loads the data of this MetaDataFileRow object.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataInterfaceImplRow.LoadData">
+            <summary>
+            Loads the data of this MetaDataInterfaceImplRow object.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataManifestResourceRow.LoadData">
+            <summary>
+            Loads the data of this MetaDataManifestResourceRow object.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataMemberRefRow.LoadData">
+            <summary>
+            Loads the data of this MetaDataMemberRefRow object.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataModuleRefRow.LoadData">
+            <summary>
+            Loads the data of this MetaDataModuleRefRow object.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataModuleRow.LoadAssemblyRefs">
+            <summary>
+            Loads all assembly references defined in this module.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataModuleRow.LoadModuleReferences">
+            <summary>
+            Loads all module references defined in this module.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataModuleRow.LoadData">
+            <summary>
+            Loads the data of this MetaDataModuleRow object.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataParamRow.LoadCustomAttributes">
+            <summary>
+            Loads all custom attributes of this type definition.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataParamRow.LoadData">
+            <summary>
+            Loads the data of this MetaDataParamRow object.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataPropertyRow.LoadCustomAttributes">
+            <summary>
+            Loads all custom attributes of this property.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataPropertyRow.LoadData">
+            <summary>
+            Loads the data of this MetaDataPropertyRow object.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataSignatureRow.LoadData">
+            <summary>
+            Loads the data of this MetaDataSignatureRow object.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataTypeRefRow.LoadData">
+            <summary>
+            Loads the data of this MetaDataTypeRefRow object.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Rows.MetaDataTypeSpecRow.LoadData">
+            <summary>
+            Loads the data of this MetaDataTypeSpecRow object.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.Signatures.IMetaDataSignature">
+            <summary>
+            Represents a metadata signature.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Signatures.IMetaDataSignature.GetDisplayText">
+            <summary>
+            Gets a text representation of this signature for display.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Signatures.IMetaDataSignature.GetDisplayText(DevExpress.DXCore.MetaData.DisplayTextOptions)">
+            <summary>
+            Gets a text representation of this signature for display.
+            </summary>
+            <param name="options">Additional options for display text.</param>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.Signatures.ICustomModifier">
+            <summary>
+            Represents a signature custom modifier.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.Signatures.ICustomModifier.Kind">
+            <summary>
+            Gets the kind of modifier this is (either Optional or Required).
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.Signatures.ICustomModifier.Type">
+            <summary>
+            Gets the type of this modifier.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.Signatures.IFieldSignature">
+            <summary>
+            Represents a field signature.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.Signatures.IFieldSignature.Modifiers">
+            <summary>
+            Gets any custom modifiers for this field signature.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.Signatures.IFieldSignature.Type">
+            <summary>
+            Gets the type of this field signature.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.Signatures.IMethodSignature">
+            <summary>
+            Represents a method signature.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.Signatures.IMethodSignature.CallingConvention">
+            <summary>
+            Gets the calling convention of this method signature.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.Signatures.IMethodSignature.ReturnType">
+            <summary>
+            Gets the return type of this method signature.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.Signatures.IMethodSignature.Parameters">
+            <summary>
+            Gets any parameters for this method signature.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.Signatures.IMethodSignature.IsGeneric">
+            <summary>
+            Determines whether this method signature is generic.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.Signatures.IMethodSignature.HasGenericParameters">
+            <summary>
+            Determines whether this method signature contains any unassigned generic parameters.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.Signatures.IParameterSignature">
+            <summary>
+            Represents a parameter signature.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.Signatures.IParameterSignature.Modifiers">
+            <summary>
+            Gets any custom modifiers for this parameter signature.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.Signatures.IParameterSignature.Type">
+            <summary>
+            Gets the type of this parameter signature.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.Signatures.IPropertySignature">
+            <summary>
+            Represents a property signature.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.Signatures.IPropertySignature.Modifiers">
+            <summary>
+            Gets any custom modifiers for this property signature.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.Signatures.IPropertySignature.Type">
+            <summary>
+            Gets the type of this property signature.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.Signatures.IPropertySignature.Parameters">
+            <summary>
+            Gets any parameters for this property signature.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.Signatures.IReturnTypeSignature">
+            <summary>
+            Represents a return-type signature.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.Signatures.IReturnTypeSignature.Modifiers">
+            <summary>
+            Gets any custom modifiers for this return-type signature.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.Signatures.IReturnTypeSignature.Type">
+            <summary>
+            Gets the type of this return-type signature.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Signatures.SignatureParser.UncompressData(System.UInt32@)">
+            <summary>
+            Uncompresses the next data value from the signature data.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Signatures.SignatureParser.UncompressSignedData(System.Int32@)">
+            <summary>
+            Uncompresses a signed integer value from the signature data.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Internal.Signatures.SignatureParser.UncompressToken(System.UInt32@)">
+            <summary>
+            Uncompresses a token value from the signature data.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.Interop.MetaDataToken">
+            <summary>
+            Contains methods for composing and decomposing metadata tokens.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Interop.MetaDataToken.TokenFromRid(System.UInt32,System.UInt32)">
+            <summary>
+            Composes a metadata token from a row ID (rid) and a token type.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Interop.MetaDataToken.RidFromToken(System.UInt32)">
+            <summary>
+            Returns the row ID (rid) of a metadata token.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Interop.MetaDataToken.TypeFromToken(System.UInt32)">
+            <summary>
+            Returns the token type of a metadata token.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Interop.MetaDataToken.IsNilToken(System.UInt32)">
+            <summary>
+            Determines if the specified metadata token is a nil token (has a row ID of zero).
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Interop.MetaDataToken.GetNilToken(System.UInt32)">
+            <summary>
+            Returns a nil token for the specified token type.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Interop.ASSEMBLYMETADATA.AllocMem">
+            <summary>
+            Allocates necessary memory for this ASSEMBLYMETADATA structure based on the
+            values of the ulProcessor and ulOS fields. After this method is called, FreeMem
+            must be called so that a memory leak doesn't occur.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.Interop.ASSEMBLYMETADATA.FreeMem">
+            <summary>
+            Releases memory for this ASSEMBLYMETADATA structure allocated by AllocMem.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.ScopeManager">
+            <summary>
+            Manages creation and lifetimes of metadata scopes.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.ScopeManager.RemoveScope(System.String)">
+            <summary>
+            Removes scope with the given file name.
+            </summary>
+            <param name="fileName">The file name of the scope to remove.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.ScopeManager.CloseAll">
+            <summary>
+            Closes all metadata scopes. This reduces the memory used by the MetaData API.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.ScopeManager.CloseAll(System.Boolean)">
+            <summary>
+            Closes all metadata scopes. This reduces the memory used by the MetaData API.
+            </summary>
+            <param name="release">Defines whether meta data tables should be released.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.ScopeManager.ClearAll">
+            <summary>
+            Clears all scopes.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.ScopeManager.FromFile(System.String)">
+            <summary>
+            Retrieves an IMetaDataScope by file name.
+            </summary>
+            <param name="fileName">The file name to open the metadata scope from.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.ScopeManager.FromFile(System.String,DevExpress.DXCore.MetaData.ScopeOptions)">
+            <summary>
+            Retrieves an IMetaDataScope by file name.
+            </summary>
+            <param name="fileName">The file name to open the metadata scope from.</param>
+            <param name="options">Additional options.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.ScopeManager.FromFile(System.String,DevExpress.DXCore.MetaData.ScopeOptions,DevExpress.DXCore.MetaData.IAssemblyResolver)">
+            <summary>
+            Retrieves an IMetaDataScope by file name.
+            </summary>
+            <param name="fileName">The file name to open the metadata scope from.</param>
+            <param name="options">Additional options.</param>
+            <param name="assemblyResolver">An optional IAssemblyResolver implementer that provides custom assembly resolution.
+            If a scope already exists for this file name, this parameter is ignored.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.ScopeManager.FromName(System.String)">
+            <summary>
+            Retrieves an IMetaDataScope by a full assembly name.
+            </summary>
+            <param name="assemblyName">The full assembly name to open the metadata scope from.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.ScopeManager.FromName(System.String,DevExpress.DXCore.MetaData.ScopeOptions)">
+            <summary>
+            Retrieves an IMetaDataScope by a full assembly name.
+            </summary>
+            <param name="assemblyName">The full assembly name to open the metadata scope from.</param>
+            <param name="options">Additional options.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.ScopeManager.GetAssemblyPath(System.String)">
+            <summary>
+            Returns assembly path.
+            </summary>
+            <param name="assemblyName">The assembly name to use.</param>
+            <returns>Returns assembly path.</returns>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.ScopeManager.FromPartialName(System.String)">
+            <summary>
+            Retrieves an IMetaDataScope by a partial assembly name.
+            </summary>
+            <param name="assemblyName">The partial assembly name to open the metadata scope from.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.ScopeManager.FromPartialName(System.String,DevExpress.DXCore.MetaData.ScopeOptions)">
+            <summary>
+            Retrieves an IMetaDataScope by a partial assembly name.
+            </summary>
+            <param name="assemblyName">The partial assembly name to open the metadata scope from.</param>
+            <param name="options">Additional options.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.ScopeManager.FromBytes(System.Collections.Generic.IList{System.Byte},DevExpress.DXCore.MetaData.ScopeOptions,DevExpress.DXCore.MetaData.IAssemblyResolver,System.Boolean)">
+            <summary>
+            Retrieves an IMetaDataScope from an array of bytes.
+            </summary>
+            <param name="bytes">The byte array to open the metadata scope from.</param>
+            <param name="options">Additional options.</param>
+            <param name="assemblyResolver">An optional IAssemblyResolver implementer that provides custom assembly resolution.</param>
+            <param name="hasInternalVisibleAttr">Value determining if internals visitble to attrbiute is defined.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.ScopeManager.ForceLoad(DevExpress.DXCore.MetaData.IMetaDataScope)">
+            <summary>
+            Force load meta data scope.
+            </summary>
+            <param name="scope">The scope to load.</param>
+            <returns>IMetaDataScope instance</returns>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.ScopeManager.SchemeFromBytes(System.Byte[])">
+            <summary>
+            Creates list of ISchemeList implementors from the given array of bytes.
+            </summary>
+            <param name="bytes">The array of bytes to use.</param>
+            <returns>Returns list of ISchemeList implementors from the given array of bytes.</returns>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.ScopeManager.IsCoreScope(System.String)">
+            <summary>
+            Returns true for mscorlib scope.
+            </summary>
+            <param name="name">The name of scope to check.</param>
+            <returns>Returns true for mscorlib scope.</returns>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ScopeManager.FrameworkVersion">
+            <summary>
+            Gets the version of the current .NET Framework runtime.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.ScopeManager.All">
+            <summary>
+            Gets an enumerator that iterates all IMetaDataScopes.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.MetaData.ScopeManager.ScopeClosed">
+            <summary>
+            Occurs when a metadata scope is closed.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.MetaData.ScopeManager.ScopeOpened">
+            <summary>
+            Occurs when a metadata scope is opened.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.MetaData.ScopeManager.ScopeLoaded">
+            <summary>
+            Occurs when a metadata scope is loaded.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.MetaData.ScopeManager.ScopeUnloaded">
+            <summary>
+            Occurs when a metadata scope is unloaded.
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.MetaData.ScopeManager.TypeDefRowLoaded">
+            <summary>
+            Occurs when a new MetaDataRow has created
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.MetaData.ScopeManager.MethodDefRowLoaded">
+            <summary>
+            Occurs when a new MetaDataRow has created
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.MetaData.ScopeManager.FieldDefRowLoaded">
+            <summary>
+            Occurs when a new MetaDataRow has created
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.MetaData.ScopeManager.PropertyDefRowLoaded">
+            <summary>
+            Occurs when a new MetaDataRow has created
+            </summary>
+        </member>
+        <member name="E:DevExpress.DXCore.MetaData.ScopeManager.EventDefRowLoaded">
+            <summary>
+            Occurs when a new MetaDataRow has created
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.Signatures.CallingConvention">
+            <summary>
+            Specifies a method calling convention.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.Signatures.CallingConvention.Invalid">
+            <summary>
+            Indicates an invalid calling convention.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.Signatures.CallingConvention.Default">
+            <summary>
+            Indicates the default calling convention.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.Signatures.CallingConvention.VarArg">
+            <summary>
+            Indicates a vararg calling convention.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.Signatures.CallingConvention.C">
+            <summary>
+            Indicates a cdecl calling convention.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.Signatures.CallingConvention.StdCall">
+            <summary>
+            Indicates a stdcall calling convention.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.Signatures.CallingConvention.ThisCall">
+            <summary>
+            Indicates a thiscall calling convention.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.Signatures.CallingConvention.FastCall">
+            <summary>
+            Indicates a fastcall calling convention.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.Signatures.CustomModifierKind">
+            <summary>
+            Specifies a kind of custom modifier.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.Signatures.CustomModifierKind.Optional">
+            <summary>
+            Indicates that a custom modifier is optional.
+            </summary>
+        </member>
+        <member name="F:DevExpress.DXCore.MetaData.Signatures.CustomModifierKind.Required">
+            <summary>
+            Indicates that a custom modifier is required.
+            </summary>
+        </member>
+        <member name="T:DevExpress.DXCore.MetaData.TypeMatchOptions">
+            <summary>
+            Specifies options for searching types.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.TypeMatchOptions.AddNamespace(System.String)">
+            <summary>
+            Adds a namespace to search for types in. If no namespaces are specified, all namespaces
+            will be searched.
+            </summary>
+            <param name="value">The namespace to search for types in.</param>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.TypeMatchOptions.ClearNamespaces">
+            <summary>
+            Clears any namespaces that have been added from the search.
+            </summary>
+        </member>
+        <member name="M:DevExpress.DXCore.MetaData.TypeMatchOptions.RemoveNamespace(System.String)">
+            <summary>
+            Removes a namespace that was previously added from the search.
+            </summary>
+            <param name="value">The namespace to remove</param>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.TypeMatchOptions.Namespaces">
+            <summary>
+            Gets the namespaces that will be searched. If this is empty, all namespaces are searched.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.TypeMatchOptions.Public">
+            <summary>
+            If true, types with Public visibility will be returned from the search. The default is true.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.TypeMatchOptions.Assembly">
+            <summary>
+            If true, types with Assembly visibility will be returned from the search. The default is false.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.TypeMatchOptions.Family">
+            <summary>
+            If true, types with Family visibility will be returned from the search. The default is false.
+            NOTE: This must be used with the Nested property.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.TypeMatchOptions.FamilyOrAssembly">
+            <summary>
+            If true, types with FamilyOrAssembly visibility will be returned from the search. The default is false.
+            NOTE: This must be used with the Nested property.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.TypeMatchOptions.FamilyAndAssembly">
+            <summary>
+            If true, types with FamilyAndAssembly visibility will be returned from the search. The default is false.
+            NOTE: This must be used with the Nested property.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.TypeMatchOptions.Private">
+            <summary>
+            If true, types with Private visibility will be returned from the search. The default is false.
+            NOTE: This must be used with the Nested property.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.TypeMatchOptions.Nested">
+            <summary>
+            If true, nested types will be returned from the search. The default is true.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.TypeMatchOptions.Sealed">
+            <summary>
+            If true, only sealed types will be returned from the search. The default is false.
+            </summary>
+        </member>
+        <member name="P:DevExpress.DXCore.MetaData.TypeMatchOptions.Abstract">
+            <summary>
+            If true, only abstract types will be returned from the search. The default is false.
+            </summary>
+        </member>
+    </members>
+</doc>

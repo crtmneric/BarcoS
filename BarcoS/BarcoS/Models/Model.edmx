@@ -1,0 +1,534 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="desk_rnaModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="desk_rnaModelStoreContainer">
+          <EntitySet Name="Banks" EntityType="desk_rnaModel.Store.Banks" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Brands" EntityType="desk_rnaModel.Store.Brands" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="categories" EntityType="desk_rnaModel.Store.categories" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Companies" EntityType="desk_rnaModel.Store.Companies" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Current_Details" EntityType="desk_rnaModel.Store.Current_Details" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Currenties" EntityType="desk_rnaModel.Store.Currenties" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Features" EntityType="desk_rnaModel.Store.Features" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Products" EntityType="desk_rnaModel.Store.Products" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="users" EntityType="desk_rnaModel.Store.users" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Warehouses" EntityType="desk_rnaModel.Store.Warehouses" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="Banks">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="company_id" Type="int" />
+          <Property Name="bank_name" Type="int" />
+          <Property Name="auth_name" Type="nvarchar(max)" />
+          <Property Name="iban_number" Type="nvarchar(max)" />
+          <Property Name="pos" Type="int" />
+        </EntityType>
+        <EntityType Name="Brands">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="company_id" Type="int" />
+          <Property Name="name" Type="nvarchar(max)" />
+          <Property Name="sef" Type="nvarchar(max)" />
+          <Property Name="text" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="categories">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="company_id" Type="int" />
+          <Property Name="name" Type="nvarchar(max)" />
+          <Property Name="sef" Type="nvarchar(max)" />
+          <Property Name="text" Type="nvarchar(max)" />
+          <Property Name="plu" Type="int" />
+        </EntityType>
+        <EntityType Name="Companies">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="tax_number" Type="nvarchar(max)" />
+          <Property Name="tax_office" Type="nvarchar(max)" />
+          <Property Name="phone" Type="int" />
+          <Property Name="adress" Type="nvarchar(max)" />
+          <Property Name="auth_name" Type="nvarchar(max)" />
+          <Property Name="auth_phone" Type="int" />
+          <Property Name="tax_rate" Type="int" />
+          <Property Name="tax_rate_is_inc" Type="int" />
+          <Property Name="sale_print" Type="int" />
+          <Property Name="barcode_paper_width" Type="nvarchar" MaxLength="50" />
+          <Property Name="barcode_paper_height" Type="nvarchar" MaxLength="50" />
+          <Property Name="sales_screen" Type="int" />
+          <Property Name="reg_date" Type="date" />
+          <Property Name="licence_end_date" Type="date" />
+        </EntityType>
+        <EntityType Name="Current_Details">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="company_id" Type="int" />
+          <Property Name="current_id" Type="int" />
+          <Property Name="type" Type="int" />
+          <Property Name="text" Type="nvarchar(max)" />
+          <Property Name="reg_date" Type="nvarchar(max)" />
+          <Property Name="expiry_date" Type="nvarchar(max)" />
+          <Property Name="price" Type="decimal" Precision="19" Scale="2" />
+        </EntityType>
+        <EntityType Name="Currenties">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="company_id" Type="nvarchar(max)" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" />
+          <Property Name="adress" Type="nvarchar(max)" />
+          <Property Name="tax_office" Type="nvarchar" MaxLength="50" />
+          <Property Name="tax_number" Type="nvarchar" MaxLength="50" />
+          <Property Name="current_type" Type="int" />
+          <Property Name="point_card_number" Type="int" />
+          <Property Name="auth_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="auth_gsm" Type="nvarchar" MaxLength="50" />
+          <Property Name="risk_limit" Type="decimal" Precision="19" Scale="2" />
+          <Property Name="sms_notification" Type="int" />
+          <Property Name="bakiye" Type="decimal" Precision="19" Scale="2" />
+          <Property Name="reg_date" Type="date" />
+        </EntityType>
+        <EntityType Name="Features">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="company_id" Type="int" />
+          <Property Name="name" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Products">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="company_id" Type="int" />
+          <Property Name="name" Type="nvarchar(max)" />
+          <Property Name="sef" Type="nvarchar(max)" />
+          <Property Name="stock_code" Type="nvarchar(max)" />
+          <Property Name="shelf_number" Type="nvarchar(max)" />
+          <Property Name="current" Type="int" />
+          <Property Name="text" Type="nvarchar(max)" />
+          <Property Name="stock" Type="decimal" Precision="10" Scale="4" />
+          <Property Name="brand_id" Type="int" />
+          <Property Name="category_id" Type="int" />
+          <Property Name="risk_limit" Type="decimal" Precision="10" Scale="4" />
+          <Property Name="barcode_number" Type="nvarchar(max)" />
+          <Property Name="purchase_price" Type="decimal" Precision="19" Scale="4" />
+          <Property Name="sale_price" Type="decimal" Precision="19" Scale="4" />
+          <Property Name="third_price" Type="decimal" Precision="19" Scale="4" />
+          <Property Name="features" Type="nvarchar(max)" />
+          <Property Name="product_İmage" Type="image" />
+          <Property Name="unit" Type="int" />
+          <Property Name="registertime" Type="date" />
+          <Property Name="updatetime" Type="date" />
+        </EntityType>
+        <EntityType Name="users">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="company_id" Type="int" />
+          <Property Name="auth_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" />
+          <Property Name="salt" Type="nvarchar" MaxLength="50" />
+          <Property Name="password" Type="int" />
+          <Property Name="token" Type="nvarchar" MaxLength="50" />
+          <Property Name="phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="adress" Type="nvarchar" MaxLength="50" />
+          <Property Name="status" Type="int" />
+          <Property Name="is_admin" Type="int" />
+          <Property Name="store_admin" Type="int" />
+          <Property Name="notification" Type="int" />
+          <Property Name="confirmation" Type="int" />
+          <Property Name="rank" Type="int" />
+          <Property Name="licence_start_date" Type="date" />
+          <Property Name="licence_end_date" Type="date" />
+        </EntityType>
+        <EntityType Name="Warehouses">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="company_id" Type="int" />
+          <Property Name="name" Type="nvarchar(max)" />
+          <Property Name="auth_name" Type="nvarchar(max)" />
+          <Property Name="auth_phone" Type="nvarchar(max)" />
+          <Property Name="adress" Type="nvarchar(max)" />
+          <Property Name="reg_date" Type="date" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="desk_rnaModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="CloudEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Banks" EntityType="desk_rnaModel.Bank" />
+          <EntitySet Name="Brands" EntityType="desk_rnaModel.Brand" />
+          <EntitySet Name="categories" EntityType="desk_rnaModel.category" />
+          <EntitySet Name="Companies" EntityType="desk_rnaModel.Company" />
+          <EntitySet Name="Current_Details" EntityType="desk_rnaModel.Current_Details" />
+          <EntitySet Name="Currenties" EntityType="desk_rnaModel.Currenty" />
+          <EntitySet Name="Features" EntityType="desk_rnaModel.Feature" />
+          <EntitySet Name="Products" EntityType="desk_rnaModel.Product" />
+          <EntitySet Name="users" EntityType="desk_rnaModel.user" />
+          <EntitySet Name="Warehouses" EntityType="desk_rnaModel.Warehouse" />
+        </EntityContainer>
+        <EntityType Name="Bank">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="company_id" Type="Int32" />
+          <Property Name="bank_name" Type="Int32" />
+          <Property Name="auth_name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="iban_number" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="pos" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Brand">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="company_id" Type="Int32" />
+          <Property Name="name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="sef" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="text" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="category">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="company_id" Type="Int32" />
+          <Property Name="name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="sef" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="text" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="plu" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="tax_number" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="tax_office" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="phone" Type="Int32" />
+          <Property Name="adress" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="auth_name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="auth_phone" Type="Int32" />
+          <Property Name="tax_rate" Type="Int32" />
+          <Property Name="tax_rate_is_inc" Type="Int32" />
+          <Property Name="sale_print" Type="Int32" />
+          <Property Name="barcode_paper_width" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="barcode_paper_height" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="sales_screen" Type="Int32" />
+          <Property Name="reg_date" Type="DateTime" Precision="0" />
+          <Property Name="licence_end_date" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="Current_Details">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="company_id" Type="Int32" />
+          <Property Name="current_id" Type="Int32" />
+          <Property Name="type" Type="Int32" />
+          <Property Name="text" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="reg_date" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="expiry_date" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="price" Type="Decimal" Precision="19" Scale="2" />
+        </EntityType>
+        <EntityType Name="Currenty">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="company_id" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="adress" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="tax_office" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="tax_number" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="current_type" Type="Int32" />
+          <Property Name="point_card_number" Type="Int32" />
+          <Property Name="auth_name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="auth_gsm" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="risk_limit" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="sms_notification" Type="Int32" />
+          <Property Name="bakiye" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="reg_date" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="Feature">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="company_id" Type="Int32" />
+          <Property Name="name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="company_id" Type="Int32" />
+          <Property Name="name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="sef" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="stock_code" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="shelf_number" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="current" Type="Int32" />
+          <Property Name="text" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="stock" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="brand_id" Type="Int32" />
+          <Property Name="category_id" Type="Int32" />
+          <Property Name="risk_limit" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="barcode_number" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="purchase_price" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="sale_price" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="third_price" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="features" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="product_İmage" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="unit" Type="Int32" />
+          <Property Name="registertime" Type="DateTime" Precision="0" />
+          <Property Name="updatetime" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="company_id" Type="Int32" />
+          <Property Name="auth_name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="salt" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="password" Type="Int32" />
+          <Property Name="token" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="phone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="adress" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="status" Type="Int32" />
+          <Property Name="is_admin" Type="Int32" />
+          <Property Name="store_admin" Type="Int32" />
+          <Property Name="notification" Type="Int32" />
+          <Property Name="confirmation" Type="Int32" />
+          <Property Name="rank" Type="Int32" />
+          <Property Name="licence_start_date" Type="DateTime" Precision="0" />
+          <Property Name="licence_end_date" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="Warehouse">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="company_id" Type="Int32" />
+          <Property Name="name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="auth_name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="auth_phone" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="adress" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="reg_date" Type="DateTime" Precision="0" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="desk_rnaModelStoreContainer" CdmEntityContainer="CloudEntities">
+          <EntitySetMapping Name="Banks">
+            <EntityTypeMapping TypeName="desk_rnaModel.Bank">
+              <MappingFragment StoreEntitySet="Banks">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="company_id" ColumnName="company_id" />
+                <ScalarProperty Name="bank_name" ColumnName="bank_name" />
+                <ScalarProperty Name="auth_name" ColumnName="auth_name" />
+                <ScalarProperty Name="iban_number" ColumnName="iban_number" />
+                <ScalarProperty Name="pos" ColumnName="pos" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Brands">
+            <EntityTypeMapping TypeName="desk_rnaModel.Brand">
+              <MappingFragment StoreEntitySet="Brands">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="company_id" ColumnName="company_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="sef" ColumnName="sef" />
+                <ScalarProperty Name="text" ColumnName="text" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="categories">
+            <EntityTypeMapping TypeName="desk_rnaModel.category">
+              <MappingFragment StoreEntitySet="categories">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="company_id" ColumnName="company_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="sef" ColumnName="sef" />
+                <ScalarProperty Name="text" ColumnName="text" />
+                <ScalarProperty Name="plu" ColumnName="plu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Companies">
+            <EntityTypeMapping TypeName="desk_rnaModel.Company">
+              <MappingFragment StoreEntitySet="Companies">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="tax_number" ColumnName="tax_number" />
+                <ScalarProperty Name="tax_office" ColumnName="tax_office" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="adress" ColumnName="adress" />
+                <ScalarProperty Name="auth_name" ColumnName="auth_name" />
+                <ScalarProperty Name="auth_phone" ColumnName="auth_phone" />
+                <ScalarProperty Name="tax_rate" ColumnName="tax_rate" />
+                <ScalarProperty Name="tax_rate_is_inc" ColumnName="tax_rate_is_inc" />
+                <ScalarProperty Name="sale_print" ColumnName="sale_print" />
+                <ScalarProperty Name="barcode_paper_width" ColumnName="barcode_paper_width" />
+                <ScalarProperty Name="barcode_paper_height" ColumnName="barcode_paper_height" />
+                <ScalarProperty Name="sales_screen" ColumnName="sales_screen" />
+                <ScalarProperty Name="reg_date" ColumnName="reg_date" />
+                <ScalarProperty Name="licence_end_date" ColumnName="licence_end_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Current_Details">
+            <EntityTypeMapping TypeName="desk_rnaModel.Current_Details">
+              <MappingFragment StoreEntitySet="Current_Details">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="company_id" ColumnName="company_id" />
+                <ScalarProperty Name="current_id" ColumnName="current_id" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="text" ColumnName="text" />
+                <ScalarProperty Name="reg_date" ColumnName="reg_date" />
+                <ScalarProperty Name="expiry_date" ColumnName="expiry_date" />
+                <ScalarProperty Name="price" ColumnName="price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Currenties">
+            <EntityTypeMapping TypeName="desk_rnaModel.Currenty">
+              <MappingFragment StoreEntitySet="Currenties">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="company_id" ColumnName="company_id" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="adress" ColumnName="adress" />
+                <ScalarProperty Name="tax_office" ColumnName="tax_office" />
+                <ScalarProperty Name="tax_number" ColumnName="tax_number" />
+                <ScalarProperty Name="current_type" ColumnName="current_type" />
+                <ScalarProperty Name="point_card_number" ColumnName="point_card_number" />
+                <ScalarProperty Name="auth_name" ColumnName="auth_name" />
+                <ScalarProperty Name="auth_gsm" ColumnName="auth_gsm" />
+                <ScalarProperty Name="risk_limit" ColumnName="risk_limit" />
+                <ScalarProperty Name="sms_notification" ColumnName="sms_notification" />
+                <ScalarProperty Name="bakiye" ColumnName="bakiye" />
+                <ScalarProperty Name="reg_date" ColumnName="reg_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Features">
+            <EntityTypeMapping TypeName="desk_rnaModel.Feature">
+              <MappingFragment StoreEntitySet="Features">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="company_id" ColumnName="company_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="desk_rnaModel.Product">
+              <MappingFragment StoreEntitySet="Products">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="company_id" ColumnName="company_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="sef" ColumnName="sef" />
+                <ScalarProperty Name="stock_code" ColumnName="stock_code" />
+                <ScalarProperty Name="shelf_number" ColumnName="shelf_number" />
+                <ScalarProperty Name="current" ColumnName="current" />
+                <ScalarProperty Name="text" ColumnName="text" />
+                <ScalarProperty Name="stock" ColumnName="stock" />
+                <ScalarProperty Name="brand_id" ColumnName="brand_id" />
+                <ScalarProperty Name="category_id" ColumnName="category_id" />
+                <ScalarProperty Name="risk_limit" ColumnName="risk_limit" />
+                <ScalarProperty Name="barcode_number" ColumnName="barcode_number" />
+                <ScalarProperty Name="purchase_price" ColumnName="purchase_price" />
+                <ScalarProperty Name="sale_price" ColumnName="sale_price" />
+                <ScalarProperty Name="third_price" ColumnName="third_price" />
+                <ScalarProperty Name="features" ColumnName="features" />
+                <ScalarProperty Name="product_İmage" ColumnName="product_İmage" />
+                <ScalarProperty Name="unit" ColumnName="unit" />
+                <ScalarProperty Name="registertime" ColumnName="registertime" />
+                <ScalarProperty Name="updatetime" ColumnName="updatetime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="users">
+            <EntityTypeMapping TypeName="desk_rnaModel.user">
+              <MappingFragment StoreEntitySet="users">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="company_id" ColumnName="company_id" />
+                <ScalarProperty Name="auth_name" ColumnName="auth_name" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="salt" ColumnName="salt" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="token" ColumnName="token" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="adress" ColumnName="adress" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="is_admin" ColumnName="is_admin" />
+                <ScalarProperty Name="store_admin" ColumnName="store_admin" />
+                <ScalarProperty Name="notification" ColumnName="notification" />
+                <ScalarProperty Name="confirmation" ColumnName="confirmation" />
+                <ScalarProperty Name="rank" ColumnName="rank" />
+                <ScalarProperty Name="licence_start_date" ColumnName="licence_start_date" />
+                <ScalarProperty Name="licence_end_date" ColumnName="licence_end_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Warehouses">
+            <EntityTypeMapping TypeName="desk_rnaModel.Warehouse">
+              <MappingFragment StoreEntitySet="Warehouses">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="company_id" ColumnName="company_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="auth_name" ColumnName="auth_name" />
+                <ScalarProperty Name="auth_phone" ColumnName="auth_phone" />
+                <ScalarProperty Name="adress" ColumnName="adress" />
+                <ScalarProperty Name="reg_date" ColumnName="reg_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

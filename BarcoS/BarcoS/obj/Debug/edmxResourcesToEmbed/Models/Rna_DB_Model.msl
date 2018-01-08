@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RnaModelStoreContainer" CdmEntityContainer="RnaEntities">
+    <EntitySetMapping Name="Banks">
+      <EntityTypeMapping TypeName="RnaModel.Bank">
+        <MappingFragment StoreEntitySet="Banks">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="company_id" ColumnName="company_id" />
+          <ScalarProperty Name="bank_name" ColumnName="bank_name" />
+          <ScalarProperty Name="auth_name" ColumnName="auth_name" />
+          <ScalarProperty Name="iban_number" ColumnName="iban_number" />
+          <ScalarProperty Name="pos" ColumnName="pos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Brands">
+      <EntityTypeMapping TypeName="RnaModel.Brand">
+        <MappingFragment StoreEntitySet="Brands">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="company_id" ColumnName="company_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="sef" ColumnName="sef" />
+          <ScalarProperty Name="text" ColumnName="text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Companies">
+      <EntityTypeMapping TypeName="RnaModel.Company">
+        <MappingFragment StoreEntitySet="Companies">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="tax_number" ColumnName="tax_number" />
+          <ScalarProperty Name="tax_office" ColumnName="tax_office" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="adress" ColumnName="adress" />
+          <ScalarProperty Name="auth_name" ColumnName="auth_name" />
+          <ScalarProperty Name="auth_phone" ColumnName="auth_phone" />
+          <ScalarProperty Name="tax_rate" ColumnName="tax_rate" />
+          <ScalarProperty Name="tax_rate_is_inc" ColumnName="tax_rate_is_inc" />
+          <ScalarProperty Name="sale_print" ColumnName="sale_print" />
+          <ScalarProperty Name="barcode_paper_width" ColumnName="barcode_paper_width" />
+          <ScalarProperty Name="barcode_paper_height" ColumnName="barcode_paper_height" />
+          <ScalarProperty Name="sales_screen" ColumnName="sales_screen" />
+          <ScalarProperty Name="reg_date" ColumnName="reg_date" />
+          <ScalarProperty Name="licence_end_date" ColumnName="licence_end_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Features">
+      <EntityTypeMapping TypeName="RnaModel.Feature">
+        <MappingFragment StoreEntitySet="Features">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="company_id" ColumnName="company_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="RnaModel.Product">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="company_id" ColumnName="company_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="sef" ColumnName="sef" />
+          <ScalarProperty Name="stock_code" ColumnName="stock_code" />
+          <ScalarProperty Name="shelf_number" ColumnName="shelf_number" />
+          <ScalarProperty Name="current" ColumnName="current" />
+          <ScalarProperty Name="text" ColumnName="text" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="brand_id" ColumnName="brand_id" />
+          <ScalarProperty Name="category_id" ColumnName="category_id" />
+          <ScalarProperty Name="risk_limit" ColumnName="risk_limit" />
+          <ScalarProperty Name="barcode_number" ColumnName="barcode_number" />
+          <ScalarProperty Name="purchase_price" ColumnName="purchase_price" />
+          <ScalarProperty Name="sale_price" ColumnName="sale_price" />
+          <ScalarProperty Name="third_price" ColumnName="third_price" />
+          <ScalarProperty Name="features" ColumnName="features" />
+          <ScalarProperty Name="product_İmage" ColumnName="product_İmage" />
+          <ScalarProperty Name="unit" ColumnName="unit" />
+          <ScalarProperty Name="registertime" ColumnName="registertime" />
+          <ScalarProperty Name="updatetime" ColumnName="updatetime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Warehouses">
+      <EntityTypeMapping TypeName="RnaModel.Warehouse">
+        <MappingFragment StoreEntitySet="Warehouses">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="company_id" ColumnName="company_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="auth_name" ColumnName="auth_name" />
+          <ScalarProperty Name="auth_phone" ColumnName="auth_phone" />
+          <ScalarProperty Name="adress" ColumnName="adress" />
+          <ScalarProperty Name="reg_date" ColumnName="reg_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
