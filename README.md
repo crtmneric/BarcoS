@@ -31,8 +31,8 @@ I have used DevExpress 15.1 , Entity Framework , log4net logger and some cool cl
 
 FOLDER         | DESCRIPTION
 ------------ | -------------
-[Classes](https://github.com/eftalyurtseven/DestiYazilim/tree/master/RNAPOS/DESKTOP/BarcoS/BarcoS/Classes) | Classes of  project.
-[Resources](https://github.com/eftalyurtseven/DestiYazilim/tree/master/RNAPOS/DESKTOP/BarcoS/BarcoS/Resources) |Resources of project.
+[Classes](https://github.com/crtmneric/BarcoS/tree/master/BarcoS/BarcoS/Classes) | Classes of  project.
+[Resources](https://github.com/crtmneric/BarcoS/tree/master/BarcoS/BarcoS/Resources) |Resources of project.
 [DatabaseScript](https://github.com/crtmneric/BarcoS/blob/master/BarcoS/BarcoS/BarcoSscript.sql) |Database Script of Project.
 
 LOGIN        | 
