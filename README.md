@@ -33,6 +33,7 @@ FOLDER         | DESCRIPTION
 ------------ | -------------
 [Classes](https://github.com/eftalyurtseven/DestiYazilim/tree/master/RNAPOS/DESKTOP/BarcoS/BarcoS/Classes) | Classes of  project.
 [Resources](https://github.com/eftalyurtseven/DestiYazilim/tree/master/RNAPOS/DESKTOP/BarcoS/BarcoS/Resources) |Resources of project.
+[DatabaseScript](https://github.com/crtmneric/BarcoS/blob/master/BarcoS/BarcoS/BarcoSscript.sql) |Database Script of Project.
 
 LOGIN        | 
 ------------|
