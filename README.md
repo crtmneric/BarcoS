@@ -1,7 +1,8 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0f248627d51e4a1195a069aa4ac4c03d)](https://www.codacy.com/app/crtmneric/BarcoS?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=crtmneric/BarcoS&amp;utm_campaign=Badge_Grade)
 
 Barcoseller       | 
 ------------|
-<img src="https://i.hizliresim.com/A12pWr.png" width="800">  |
+<img src="https://cdn.pbrd.co/images/HnJUNL9.png" width="800">  |
 # BarcoS(eller) #
 BarcoS(eller) is a simple Marketing and Selling desktop Application which has an barcode entegration with cool print options.
 ## What's inside ? #
@@ -37,17 +38,17 @@ FOLDER         | DESCRIPTION
 
 LOGIN        | 
 ------------|
-<img src="https://i.hizliresim.com/8YnJO1.png" width="800">  |
+<img src="https://cdn.pbrd.co/images/HnJWdNw.png" width="800">  |
 
 Products,Categories and Brands      | 
 ------------|
-<img src="https://i.hizliresim.com/rOL7v3.png" width="800">  |
+<img src="https://cdn.pbrd.co/images/HnJVkae.png" width="800">  |
 
 Sell Screen        | 
 ------------|
-<img src="https://i.hizliresim.com/76m4pN.png" width="800">  |
+<img src="https://cdn.pbrd.co/images/HnJVDnm.png" width="800">  |
 
 Barcode Printing       | 
 ------------|
-<img src="https://i.hizliresim.com/kOrlaq.png" width="800">  |
+<img src="https://cdn.pbrd.co/images/HnJW44H.png" width="800">  |
 
