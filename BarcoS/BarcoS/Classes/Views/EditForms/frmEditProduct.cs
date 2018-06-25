@@ -113,6 +113,5 @@ namespace BarcoS.Classes.Views.EditForms
             txtCatID.Text =thatCat.id.ToString();
         }
 
-       
     }
 }

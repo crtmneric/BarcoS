@@ -2196,3 +2196,17 @@ System.NotSupportedException: LINQ to Entities 'Int32 ToInt32(System.String)' me
 2018-06-25 10:55:56,053 [1] INFO  log4net.Appender.RollingFileAppender - System Started Succesfully.
 2018-06-25 10:55:58,479 [1] INFO  log4net.Appender.RollingFileAppender - Login successfully with:Admin
 2018-06-25 10:56:46,735 [1] INFO  log4net.Appender.RollingFileAppender - User has been logout:Admin
+2018-06-25 11:29:47,446 [1] INFO  log4net.Appender.RollingFileAppender - System Started Succesfully.
+2018-06-25 11:29:49,605 [1] INFO  log4net.Appender.RollingFileAppender - Login successfully with:Admin
+2018-06-25 11:32:32,671 [1] INFO  log4net.Appender.RollingFileAppender - User has been logout:Admin
+2018-06-25 11:35:04,683 [1] INFO  log4net.Appender.RollingFileAppender - System Started Succesfully.
+2018-06-25 11:35:06,883 [1] INFO  log4net.Appender.RollingFileAppender - Login successfully with:Admin
+2018-06-25 11:36:36,488 [1] INFO  log4net.Appender.RollingFileAppender - User has been logout:Admin
+2018-06-25 14:41:11,403 [1] INFO  log4net.Appender.RollingFileAppender - System Started Succesfully.
+2018-06-25 14:41:14,205 [1] WARN  log4net.Appender.RollingFileAppender - False login attempt! tried to login with this pass :1234
+2018-06-25 14:41:16,504 [1] INFO  log4net.Appender.RollingFileAppender - Login successfully with:Admin
+2018-06-25 14:42:52,951 [1] INFO  log4net.Appender.RollingFileAppender - User has been logout:Admin
+2018-06-25 16:37:09,695 [1] INFO  log4net.Appender.RollingFileAppender - System Started Succesfully.
+2018-06-25 16:37:12,423 [1] INFO  log4net.Appender.RollingFileAppender - Login successfully with:Admin
+2018-06-25 16:37:37,942 [1] INFO  log4net.Appender.RollingFileAppender - a Product has been deleted, Name:yarrak
+2018-06-25 16:37:40,155 [1] INFO  log4net.Appender.RollingFileAppender - User has been logout:Admin
