@@ -2187,3 +2187,12 @@ System.NotSupportedException: LINQ to Entities 'Int32 ToInt32(System.String)' me
 2018-01-08 11:38:44,223 [1] WARN  log4net.Appender.RollingFileAppender - False login attempt! tried to login with this pass :1597
 2018-01-08 11:38:47,378 [1] INFO  log4net.Appender.RollingFileAppender - Login successfully with:Admin
 2018-01-08 11:43:22,695 [1] INFO  log4net.Appender.RollingFileAppender - User has been logout:Admin
+2018-06-25 10:55:00,557 [1] INFO  log4net.Appender.RollingFileAppender - System Started Succesfully.
+2018-06-25 10:55:01,239 [1] INFO  log4net.Appender.RollingFileAppender - System Started Succesfully.
+2018-06-25 10:55:04,350 [1] WARN  log4net.Appender.RollingFileAppender - False login attempt! tried to login with this pass :1235
+2018-06-25 10:55:05,606 [1] WARN  log4net.Appender.RollingFileAppender - False login attempt! tried to login with this pass :9876
+2018-06-25 10:55:07,874 [1] INFO  log4net.Appender.RollingFileAppender - Login successfully with defaulth account.
+2018-06-25 10:55:53,625 [1] INFO  log4net.Appender.RollingFileAppender - User has been logout:
+2018-06-25 10:55:56,053 [1] INFO  log4net.Appender.RollingFileAppender - System Started Succesfully.
+2018-06-25 10:55:58,479 [1] INFO  log4net.Appender.RollingFileAppender - Login successfully with:Admin
+2018-06-25 10:56:46,735 [1] INFO  log4net.Appender.RollingFileAppender - User has been logout:Admin
